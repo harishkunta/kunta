@@ -1,0 +1,4 @@
+administer verathon_bflex_calculator configuration:
+  title: 'Administer verathon_bflex_calculator configuration'
+  description: 'Optional description.'
+  restrict access: true
