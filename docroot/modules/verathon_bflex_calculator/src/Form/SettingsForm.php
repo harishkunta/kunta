@@ -32,6 +32,9 @@ class SettingsForm extends ConfigFormBase
    */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
+    // Getting Default configurations.
+    $config = $this->config('verathon_bflex_calculator.settings');
+    $values = $form_state->getValues();
     // Setting up various sections on the configurable values.
     $form['common'] = [
       '#title' => $this->t('Global Parameters'),
@@ -43,7 +46,7 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Current SU Blex Usage'),
       '#description' => $this->t("Current SU Blex Usage"),
-      '#default_value' => $form_state->getValue('current_su_blex_usage'),
+      '#default_value' => $values['current_su_blex_usage'] ? $values['current_su_blex_usage'] : $config['current_su_blex_usage'],
     ];
     $form['common']['cross_contamination_factor_a'] = [
       '#type' => 'textfield',
