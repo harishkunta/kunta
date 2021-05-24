@@ -8,32 +8,60 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configure Verathon Bflex Calculator settings for this site.
  */
-class SettingsForm extends ConfigFormBase {
+class SettingsForm extends ConfigFormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId()
+  {
     return 'verathon_bflex_calculator_settings';
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames()
+  {
     return ['verathon_bflex_calculator.settings'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state)
+  {
     // Setting up various sections on the configurable values.
     $form['common'] = [
       '#title' => $this->t('Global Parameters'),
       '#type' => 'container',
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
+    ];
+    $form['common']['current_su_blex_usage'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Current SU Blex Usage'),
+      '#description' => $this->t("Current SU Blex Usage"),
+      '#default_value' => $form_state->getValue('current_su_blex_usage'),
+    ];
+    $form['common']['cross_contamination_factor_a'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cross Contamination Factor : A'),
+      '#description' => $this->t("Cross Contamination Factor : A"),
+      '#default_value' => $form_state->getValue('cross_contamination_factor_a'),
+    ];
+    $form['common']['cross_contamination_factor_b'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cross Contamination Factor : B'),
+      '#description' => $this->t("Cross Contamination Factor : B"),
+      '#default_value' => $form_state->getValue('cross_contamination_factor_b'),
+    ];
+    $form['common']['cost_per_infection'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cost Per Infection'),
+      '#description' => $this->t("Cost per infection"),
+      '#default_value' => $form_state->getValue('cost_per_infection'),
     ];
     // Reprocessing Factors.
     $form['reprocessing_cost'] = [
@@ -95,11 +123,11 @@ class SettingsForm extends ConfigFormBase {
       '#collapsed' => TRUE,
     ];
     $form['manual_cleaning']['manual_cleaning_factor_low'] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('Low value'),
-        '#description' => $this->t("Factor's LOW value."),
-        '#default_value' => $form_state->getValue('manual_cleaning_factor_low'),
-      ];
+      '#type' => 'textfield',
+      '#title' => $this->t('Low value'),
+      '#description' => $this->t("Factor's LOW value."),
+      '#default_value' => $form_state->getValue('manual_cleaning_factor_low'),
+    ];
     $form['manual_cleaning']['manual_cleaning_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
@@ -107,11 +135,11 @@ class SettingsForm extends ConfigFormBase {
       '#description' => $this->t("Factor's AVERAGE value."),
     ];
     $form['manual_cleaning']['manual_cleaning_factor_high'] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('High value'),
-        '#description' => $this->t("Factor's HIGH value."),
-        '#default_value' => $form_state->getValue('manual_cleaning_factor_high'),
-      ];
+      '#type' => 'textfield',
+      '#title' => $this->t('High value'),
+      '#description' => $this->t("Factor's HIGH value."),
+      '#default_value' => $form_state->getValue('manual_cleaning_factor_high'),
+    ];
 
     // Visual Inspection Factor
     $form['visual_inspection'] = [
@@ -121,11 +149,11 @@ class SettingsForm extends ConfigFormBase {
       '#collapsed' => TRUE,
     ];
     $form['visual_inspection']['visual_inspection_factor_low'] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('Low value'),
-        '#description' => $this->t("Factor's LOW value."),
-        '#default_value' => $form_state->getValue('visual_inspection_factor_low'),
-      ];
+      '#type' => 'textfield',
+      '#title' => $this->t('Low value'),
+      '#description' => $this->t("Factor's LOW value."),
+      '#default_value' => $form_state->getValue('visual_inspection_factor_low'),
+    ];
     $form['visual_inspection']['visual_inspection_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
@@ -198,7 +226,8 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, FormStateInterface $form_state)
+  {
     if ($form_state->getValue('example') != 'example') {
       $form_state->setErrorByName('example', $this->t('The value is not correct.'));
     }
@@ -208,11 +237,11 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state)
+  {
     $this->config('verathon_bflex_calculator.settings')
       ->set('example', $form_state->getValue('example'))
       ->save();
     parent::submitForm($form, $form_state);
   }
-
 }
