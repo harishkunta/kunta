@@ -4,3 +4,7 @@ services:
     arguments: ['@messenger']
     tags:
       - { name: event_subscriber }
+
+  verathon_bflex_calculator.calculator:
+    class: Drupal\verathon_bflex_calculator\Calculator
+    arguments: ['@config.factory']
