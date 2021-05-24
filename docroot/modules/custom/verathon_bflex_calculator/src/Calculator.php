@@ -71,6 +71,8 @@ class Calculator
   public function __construct(ConfigFactoryInterface $config_factory)
   {
     $this->configFactory = $config_factory;
+    $config = $this->configFactory->getEditable('verathon_bflex_calculator.settings')->get();
+    dump($config);die;
   }
 
   /**
