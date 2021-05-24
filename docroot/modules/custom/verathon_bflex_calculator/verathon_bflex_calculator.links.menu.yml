@@ -1,0 +1,6 @@
+verathon_bflex_calculator.settings_form:
+  title: Verathon Bflex Calculator
+  description: Configure Verathon Bflex Calculator.
+  parent: system.admin_config_system
+  route_name: verathon_bflex_calculator.settings_form
+  weight: 10

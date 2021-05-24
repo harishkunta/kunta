@@ -1,0 +1,6 @@
+services:
+  verathon_bflex_calculator.event_subscriber:
+    class: Drupal\verathon_bflex_calculator\EventSubscriber\VerathonBflexCalculatorSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

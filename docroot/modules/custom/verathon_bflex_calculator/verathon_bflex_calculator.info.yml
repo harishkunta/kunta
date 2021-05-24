@@ -1,0 +1,6 @@
+name: Verathon Bflex Calculator
+type: module
+description: This module will be created for bflex calculator integration.
+package: Verathon
+core: 8.x
+core_version_requirement: ^8 || ^9
