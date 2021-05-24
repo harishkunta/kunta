@@ -143,7 +143,7 @@ class SettingsForm extends ConfigFormBase
 
     // Visual Inspection Factor
     $form['visual_inspection'] = [
-      '#title' => $this->t('Manual Cleaning Factor'),
+      '#title' => $this->t('Visual Inspection Factor'),
       '#type' => 'fieldset',
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
