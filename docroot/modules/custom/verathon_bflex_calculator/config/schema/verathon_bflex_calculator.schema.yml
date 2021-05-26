@@ -1,0 +1,23 @@
+block.settings.verathon_bflex_calculator_current_bronchoscope_usage_form:
+  type: block_settings
+  label: 'Current Bronchoscope Usage Form block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+block.settings.verathon_bflex_calculator_repair_and_maintenance_form:
+  type: block_settings
+  label: 'Repair And Maintenance Form block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+block.settings.verathon_bflex_calculator_hidden_reprocessing_cost_form:
+  type: block_settings
+  label: 'Hidden Reprocessing Cost Form block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
