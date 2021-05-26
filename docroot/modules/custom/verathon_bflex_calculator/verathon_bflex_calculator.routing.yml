@@ -13,3 +13,35 @@ verathon_bflex_calculator.settings_form:
     _form: 'Drupal\verathon_bflex_calculator\Form\SettingsForm'
   requirements:
     _permission: 'administer verathon_bflex_calculator configuration'
+
+verathon_bflex_calculator.bronchoscope_usage:
+  path: '/verathon-bflex-calculator/bronchoscope-usage'
+  defaults:
+    _title: 'Bronchoscope usage'
+    _form: 'Drupal\verathon_bflex_calculator\Form\BronchoscopeUsageForm'
+  requirements:
+    _permission: 'access content'
+
+verathon_bflex_calculator.repair_and_maintenance:
+  path: '/verathon-bflex-calculator/repair-and-maintenance'
+  defaults:
+    _title: 'Repair and maintenance'
+    _form: 'Drupal\verathon_bflex_calculator\Form\RepairAndMaintenanceForm'
+  requirements:
+    _permission: 'access content'
+
+verathon_bflex_calculator.hidden_reprocessing_costs:
+  path: '/verathon-bflex-calculator/hidden-reprocessing-costs'
+  defaults:
+    _title: 'Hidden reprocessing costs'
+    _form: 'Drupal\verathon_bflex_calculator\Form\HiddenReprocessingCosts'
+  requirements:
+    _permission: 'access content'
+
+verathon_bflex_calculator.preventable_infections:
+  path: '/verathon-bflex-calculator/preventable-infections'
+  defaults:
+    _title: 'Preventable infections'
+    _form: 'Drupal\verathon_bflex_calculator\Form\PreventableInfections'
+  requirements:
+    _permission: 'access content'
