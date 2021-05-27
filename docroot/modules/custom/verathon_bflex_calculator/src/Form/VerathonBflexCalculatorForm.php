@@ -31,6 +31,7 @@ class VerathonBflexCalculatorForm extends FormBase {
     $form['actions'] = [
       '#type' => 'actions',
     ];
+    $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
     $form['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Send'),
