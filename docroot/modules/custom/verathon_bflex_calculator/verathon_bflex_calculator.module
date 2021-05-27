@@ -29,9 +29,6 @@ function verathon_bflex_calculator_theme($existing, $type, $theme, $path) {
   return [
     'form__verathon_bflex_calculator_verathon_bflex_calculator' => [
       'render element' => 'form',
-      'variables' => [
-
-      ],
     ]
     ];
 }
