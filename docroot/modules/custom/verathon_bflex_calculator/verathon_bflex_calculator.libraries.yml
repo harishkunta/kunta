@@ -6,8 +6,8 @@ verathon_bflex_calculator:
     component:
       css/verathon-bflex-calculator.css: {}
   dependencies:
+    - core/jquery
     - core/drupalSettings
-    - verathon_bflex_calculator/jquery-labelauty
 
 # Third-party library (self hosted).
 jquery-labelauty:
