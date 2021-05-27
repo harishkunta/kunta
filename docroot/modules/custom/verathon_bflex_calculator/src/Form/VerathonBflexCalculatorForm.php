@@ -8,13 +8,13 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Provides a Verathon Bflex Calculator form.
  */
-class HiddenReprocessingCosts extends FormBase {
+class VerathonBflexCalculatorForm extends FormBase {
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'verathon_bflex_calculator_hidden_reprocessing_costs';
+    return 'verathon_bflex_calculator_verathon_bflex_calculator';
   }
 
   /**
@@ -22,16 +22,6 @@ class HiddenReprocessingCosts extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $form['message'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Message'),
-      '#required' => TRUE,
-    ];
-    $form['message'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Message'),
-      '#required' => TRUE,
-    ];
     $form['message'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Message'),
