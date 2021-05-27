@@ -45,3 +45,11 @@ verathon_bflex_calculator.preventable_infections:
     _form: 'Drupal\verathon_bflex_calculator\Form\PreventableInfections'
   requirements:
     _permission: 'access content'
+
+verathon_bflex_calculator.verathon_bflex_calculator:
+  path: '/bflex-calculator'
+  defaults:
+    _title: 'Bronchocope Cost Calculator'
+    _form: 'Drupal\verathon_bflex_calculator\Form\VerathonBflexCalculatorForm'
+  requirements:
+    _permission: 'access content'

@@ -22,10 +22,36 @@ class BronchoscopeUsageForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $form['message'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Message'),
+    $form['facility_name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Facility name'),
       '#required' => TRUE,
+      '#placeholder' => $this->t('Enter Facility Name here')
+    ];
+
+    $form['total_annual_bronchoscopy_procedures'] = [
+      '#type' => 'range',
+      '#title' => $this->t('Total annual bronchoscopy procedures'),
+      '#required' => TRUE,
+      '#placeholder' => $this->t('Enter Facility Name here'),
+    ];
+    $form['procedures_count_single_usage'] = [
+      '#type' => 'range',
+      '#title' => $this->t('Number of procedures that could be performed with single-use bronchoscopes'),
+      '#required' => TRUE,
+      '#placeholder' => $this->t('Enter Facility Name here'),
+    ];
+    $form['total_annual_bronchoscopy_procedures'] = [
+      '#type' => 'range',
+      '#title' => $this->t('Total annual bronchoscopy procedures'),
+      '#required' => TRUE,
+      '#placeholder' => $this->t('Enter Facility Name here'),
+    ];
+    $form['your_bronchoscope_price'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Your bronchoscope price'),
+      '#required' => TRUE,
+      '#placeholder' => $this->t('Enter Facility Name here'),
     ];
 
     $form['actions'] = [
