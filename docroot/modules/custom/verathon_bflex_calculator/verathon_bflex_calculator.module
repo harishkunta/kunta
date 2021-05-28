@@ -14,22 +14,26 @@
  *
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function verathon_bflex_calculator_theme_suggestions_form_alter(&$suggestions, $variables) {
+function verathon_bflex_calculator_theme_suggestions_form_alter(&$suggestions, $variables)
+{
   if ($variables['theme_hook_original'] == 'form') {
     $suggestions[] = 'form__' . $variables['element']['#form_id'];
   }
 }
 
-/**
- * @inheritDoc
- *
- * Implements hook_theme_registry_alter().
- */
-function verathon_bflex_calculator_theme($existing, $type, $theme, $path) {
-  return [
-    'form__verathon_bflex_calculator_verathon_bflex_calculator' => [
-      'render element' => 'form',
-    ]
-    ];
-}
-
+// /**
+//  * @inheritDoc
+//  *
+//  * Implements hook_theme_registry_alter().
+//  */
+// function verathon_bflex_calculator_theme($existing, $type, $theme, $path)
+// {
+//   return [
+//     'form__verathon_bflex_calculator_verathon_bflex_calculator' => [
+//       // 'render element' => 'form',
+//       'variables' => [
+//         'form' => NULL,
+//       ],
+//     ],
+//   ];
+// }
