@@ -4,3 +4,10 @@ verathon_bflex_calculator.settings_form:
   parent: system.admin_config_system
   route_name: verathon_bflex_calculator.settings_form
   weight: 10
+
+verathon_bflex_calculator.bflex_calculator_content:
+  title: Manage BFlex Calculator Content
+  description: Configure the BFlex Calculator form&#039;s labels and error messages.
+  parent: system.admin_config_system
+  route_name: verathon_bflex_calculator.bflex_calculator_content
+  weight: 10

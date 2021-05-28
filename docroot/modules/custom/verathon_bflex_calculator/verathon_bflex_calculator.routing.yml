@@ -53,3 +53,11 @@ verathon_bflex_calculator.verathon_bflex_calculator:
     _form: 'Drupal\verathon_bflex_calculator\Form\VerathonBflexCalculatorForm'
   requirements:
     _permission: 'access content'
+
+verathon_bflex_calculator.bflex_calculator_content:
+  path: '/admin/config/system/bflex-calculator-content'
+  defaults:
+    _title: 'Bflex calculator content'
+    _form: 'Drupal\verathon_bflex_calculator\Form\BflexCalculatorContentForm'
+  requirements:
+    _permission: 'administer bflex content'

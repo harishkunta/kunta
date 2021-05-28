@@ -11,7 +11,8 @@ use Symfony\Component\HttpKernel\KernelEvents;
 /**
  * Verathon Bflex Calculator event subscriber.
  */
-class VerathonBflexCalculatorSubscriber implements EventSubscriberInterface {
+class VerathonBflexCalculatorSubscriber implements EventSubscriberInterface
+{
 
   /**
    * The messenger.
@@ -26,7 +27,8 @@ class VerathonBflexCalculatorSubscriber implements EventSubscriberInterface {
    * @param \Drupal\Core\Messenger\MessengerInterface $messenger
    *   The messenger.
    */
-  public function __construct(MessengerInterface $messenger) {
+  public function __construct(MessengerInterface $messenger)
+  {
     $this->messenger = $messenger;
   }
 
@@ -36,7 +38,8 @@ class VerathonBflexCalculatorSubscriber implements EventSubscriberInterface {
    * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
    *   Response event.
    */
-  public function onKernelRequest(GetResponseEvent $event) {
+  public function onKernelRequest(GetResponseEvent $event)
+  {
     $this->messenger->addStatus(__FUNCTION__);
   }
 
@@ -46,18 +49,19 @@ class VerathonBflexCalculatorSubscriber implements EventSubscriberInterface {
    * @param \Symfony\Component\HttpKernel\Event\FilterResponseEvent $event
    *   Response event.
    */
-  public function onKernelResponse(FilterResponseEvent $event) {
-    $this->messenger->addStatus(__FUNCTION__);
+  public function onKernelResponse(FilterResponseEvent $event)
+  {
+    // $this->messenger->addStatus(__FUNCTION__);
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents()
+  {
     return [
       KernelEvents::REQUEST => ['onKernelRequest'],
       KernelEvents::RESPONSE => ['onKernelResponse'],
     ];
   }
-
 }
