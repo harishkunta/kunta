@@ -35,7 +35,23 @@ class BflexCalculatorContentForm extends ConfigFormBase
     // Getting Default configurations.
     $config = $this->config('verathon_bflex_calculator.settings')->get();
     $values = $form_state->getValues();
-
+    // Global Form
+    $form['global'] = [
+      '#type' => 'details',
+      '#open' => FALSE,
+      '#collapsible' => TRUE,
+      '#title' => $this->t('Global : Labels')
+    ];
+    $form['global']['result_section_copy'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Result Section : Field Label'),
+      '#default_value' => !empty($values['result_section_copy']) ? $values['result_section_copy'] : $config['result_section_copy'],
+    ];
+    $form['global']['result_button_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Result Button : Label'),
+      '#default_value' => !empty($values['result_button_label']) ? $values['result_button_label'] : $config['result_button_label'],
+    ];
     // Step One Section Fields.
     $form['step_one'] = [
       '#type' => 'details',
@@ -93,7 +109,7 @@ class BflexCalculatorContentForm extends ConfigFormBase
     $form['step_two'] = [
       '#type' => 'details',
       '#open' => FALSE,
-      '#title' => $this->t('Step 2 - Repair and maintenance : Labels'),
+      '#title' => $this->t('Step 2 - Repair and maintenance : Labels')
     ];
     $form['step_two']['total_reusable_bronchoscopes_label'] = [
       '#type' => 'textfield',
@@ -174,25 +190,40 @@ class BflexCalculatorContentForm extends ConfigFormBase
     return parent::buildForm($form, $form_state);
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
-    if ($form_state->getValue('example') != 'example') {
-      $form_state->setErrorByName('example', $this->t('The value is not correct.'));
-    }
-    parent::validateForm($form, $form_state);
-  }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
-    $this->config('verathon_bflex_calculator.settings')
-      ->set('example', $form_state->getValue('example'))
-      ->save();
-    parent::submitForm($form, $form_state);
+    try {
+      $this->config('verathon_bflex_calculator.settings')
+        ->set("result_section_copy", $form_state->getValue("result_section_copy"))
+        ->set("result_button_label", $form_state->getValue("result_button_label"))
+        ->set("facility_name_label", $form_state->getValue("facility_name_label"))
+        ->set("total_annual_bronchoscopy_procedures_label ", $form_state->getValue("total_annual_bronchoscopy_procedures_label "))
+        ->set("total_annual_bronchoscopy_procedures_helptext", $form_state->getValue("total_annual_bronchoscopy_procedures_helptext"))
+        ->set("procedures_count_single_usage_label ", $form_state->getValue("procedures_count_single_usage_label "))
+        ->set("your_bronchoscope_price_label ", $form_state->getValue("your_bronchoscope_price_label "))
+        ->set("your_bronchoscope_price_description ", $form_state->getValue("your_bronchoscope_price_description "))
+        ->set("your_bronchoscope_price_helptext", $form_state->getValue("your_bronchoscope_price_helptext"))
+        ->set("step_one_result_string ", $form_state->getValue("step_one_result_string "))
+        ->set("total_reusable_bronchoscopes_label ", $form_state->getValue("total_reusable_bronchoscopes_label "))
+        ->set("annual_service_cost_per_bronchoscope_label ", $form_state->getValue("annual_service_cost_per_bronchoscope_label "))
+        ->set("annual_out_of_pocket_repair_cost_label ", $form_state->getValue("annual_out_of_pocket_repair_cost_label "))
+        ->set("annual_out_of_pocket_repair_cost_helptext", $form_state->getValue("annual_out_of_pocket_repair_cost_helptext"))
+        ->set("step_two_result_string ", $form_state->getValue("step_two_result_string "))
+        ->set("reprocessing_costs_label ", $form_state->getValue("reprocessing_costs_label "))
+        ->set("reprocessing_range_low_label ", $form_state->getValue("reprocessing_range_low_label "))
+        ->set("reprocessing_range_average_label ", $form_state->getValue("reprocessing_range_average_label "))
+        ->set("reprocessing_range_high_label ", $form_state->getValue("reprocessing_range_high_label "))
+        ->set("step_three_result_string ", $form_state->getValue("step_three_result_string "))
+        ->set("step_four_result_string ", $form_state->getValue("step_four_result_string "))
+        ->set("step_four_final_cost_string ", $form_state->getValue("step_four_final_cost_string "))
+        ->save();
+      parent::submitForm($form, $form_state);
+    } catch (\Exception $e) {
+      \Drupal::messagener()->error($e->getMessage());
+    }
   }
 }
