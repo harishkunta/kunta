@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-develop',
-    'version' => 'dev-develop',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => '384be6510f39815b789f56e000a36daa98aa03f3',
+    'reference' => '38e7989d7c8eae71cc9263e955e36c3d1ca30c98',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
   array (
     'acquia/acquia-cms-project' => 
     array (
-      'pretty_version' => 'dev-develop',
-      'version' => 'dev-develop',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '384be6510f39815b789f56e000a36daa98aa03f3',
+      'reference' => '38e7989d7c8eae71cc9263e955e36c3d1ca30c98',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -331,6 +331,15 @@
       ),
       'reference' => 'fa587178be682efe90d005e3a322590d6ebb59a5',
     ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v0.8.6',
+      'version' => '0.8.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
+    ),
     'drupal/acquia_connector' => 
     array (
       'pretty_version' => '3.0.1',
@@ -452,6 +461,15 @@
       array (
         0 => '9.1.5',
       ),
+    ),
+    'drupal/asset_injector' => 
+    array (
+      'pretty_version' => '2.7.0',
+      'version' => '2.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.7',
     ),
     'drupal/autologout' => 
     array (
@@ -946,6 +964,15 @@
       array (
       ),
       'reference' => '8.x-1.0-beta4',
+    ),
+    'drupal/entity_print' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.2',
     ),
     'drupal/entity_reference' => 
     array (
@@ -2178,6 +2205,15 @@
       ),
       'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
     ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
+    ),
     'php-http/async-client-implementation' => 
     array (
       'provided' => 
@@ -2414,8 +2450,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '^1.0',
+        0 => '^1.0',
+        1 => '1.0',
       ),
     ),
     'psr/http-message' => 
@@ -2481,6 +2517,15 @@
       array (
         0 => 'v1.10.10',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sebastian/cli-parser' => 
     array (

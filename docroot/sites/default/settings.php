@@ -282,7 +282,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'umQUi3IExxbKuhQnwIPwTV0xWdOkMKOH2D-eyM-OrVkWG-WqLA9GpEVukqIcNBR1xKIC7Np4DA';
 
 /**
  * Deployment identifier.
@@ -775,10 +775,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
 
 
 // On Acquia Cloud, this include file configures Drupal to use the correct
@@ -788,3 +784,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/verathon/verathon-settings.inc');
 }
+if (file_exists('/var/www/site-php')) {
+  require('/var/www/site-php/verathon/verathon-settings.inc');
+}
+
+if (file_exists($app_root . '/' . $site_path . '/local.setting.php')) {
+  include $app_root . '/' . $site_path . '/local.setting.php';
+}
+$settings['config_sync_directory'] = 'sites/default/files/config_j7W4kwh61OBLNelAPdxJtWGRWUv2SYD9rzlh7reuqYyNpujJSTbKLcwsSP-3fFt-j5vLCQGmNA/sync';
