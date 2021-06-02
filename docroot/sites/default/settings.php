@@ -788,7 +788,7 @@ if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/verathon/verathon-settings.inc');
 }
 
-if (file_exists($app_root . '/' . $site_path . '/local.setting.php')) {
-  include $app_root . '/' . $site_path . '/local.setting.php';
+if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
+  include $app_root . '/' . $site_path . '/local.settings.php';
 }
 $settings['config_sync_directory'] = 'sites/default/files/config_j7W4kwh61OBLNelAPdxJtWGRWUv2SYD9rzlh7reuqYyNpujJSTbKLcwsSP-3fFt-j5vLCQGmNA/sync';

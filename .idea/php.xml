@@ -154,7 +154,6 @@
       <path value="$PROJECT_DIR$/docroot/vendor/pear/pear_exception" />
       <path value="$PROJECT_DIR$/docroot/vendor/pear/console_getopt" />
       <path value="$PROJECT_DIR$/docroot/vendor/pear/archive_tar" />
-      <path value="$PROJECT_DIR$/docroot/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/docroot/vendor/typo3/phar-stream-wrapper" />
       <path value="$PROJECT_DIR$/docroot/vendor/clue/stream-filter" />
       <path value="$PROJECT_DIR$/docroot/vendor/phenx/php-svg-lib" />
