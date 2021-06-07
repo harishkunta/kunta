@@ -6,6 +6,7 @@ verathon_bflex_calculator:
     component:
       css/verathon-bflex-calculator.css: {}
   dependencies:
+    - core/drupal
     - core/jquery
     - core/drupalSettings
 
