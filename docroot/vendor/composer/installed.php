@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3a2262e3f79be89a8bebebc89ef14a92617c975b',
+    'reference' => '3e910bfb5b1b5bd7bdc648789e7d75c0b24608d5',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3a2262e3f79be89a8bebebc89ef14a92617c975b',
+      'reference' => '3e910bfb5b1b5bd7bdc648789e7d75c0b24608d5',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -498,6 +498,15 @@
       array (
         0 => '9.1.9',
       ),
+    ),
+    'drupal/better_exposed_filters' => 
+    array (
+      'pretty_version' => '5.0.0-beta1',
+      'version' => '5.0.0.0-beta1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-5.0-beta1',
     ),
     'drupal/big_pipe' => 
     array (
@@ -1174,6 +1183,15 @@
       ),
       'reference' => '8.x-1.4',
     ),
+    'drupal/jquery_ui_datepicker' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
     'drupal/jquery_ui_draggable' => 
     array (
       'pretty_version' => '1.2.0',
@@ -1191,6 +1209,24 @@
       array (
       ),
       'reference' => '8.x-1.2',
+    ),
+    'drupal/jquery_ui_slider' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
+    'drupal/jquery_ui_touch_punch' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1.0.0',
     ),
     'drupal/jsonapi' => 
     array (
