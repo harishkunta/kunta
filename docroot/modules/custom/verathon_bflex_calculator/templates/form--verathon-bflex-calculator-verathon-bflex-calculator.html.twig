@@ -1,0 +1,440 @@
+<form method="{{element['#method']}}" id="{{element['#form_id']}}" class="{{element['#attributes']['class'][0]}}" action="{{element['#action']}}" type={{element['#type']}}>
+  {{element.form_id}}
+  {{element.form_token}}
+  {{element.form_build_id}}
+  {{dump(form['#form_values'])}}
+  <div id="bflex-calculator">
+    <div id="hero" class="blueBackground">
+      <div class="container">
+        <div class="row">
+          <div class="heroHead">
+            <h1>Bronchoscope Cost Calculator</h1>
+            <p class="heroHeadDescription">Compare operating costs of single-use bronchoscopes to reusable bronchoscopes in four easy steps.</p>
+            <p>
+              Results are estimated based on annual procedure volume, quantity of reusable bronchoscopes, and common costs associated with reprocessing, repair and maintenance, and preventable infections.
+            </p>
+            <h2>Advantages of Single-use Bronchoscopes</h2>
+          </div>
+        </div>
+        <div class="linkWrapper">
+          <div class="column50">
+            <div class="heroListItem">
+              <img src="reprocessing-icon.png" alt="Reprocessing Icon">
+              <h3>
+                Eliminate reprocessing costs
+              </h3>
+              <p>
+                Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).
+              </p>
+            </div>
+          </div>
+
+          <div class="column50">
+            <div class="heroListItem">
+              <img src="reprocessing-icon.png" alt="Reprocessing Icon">
+              <h3>
+                Eliminate reprocessing costs
+              </h3>
+              <p>
+                Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).
+              </p>
+            </div>
+          </div>
+
+          <div class="column50">
+            <div class="heroListItem">
+              <img src="reprocessing-icon.png" alt="Reprocessing Icon">
+              <h3>
+                Eliminate reprocessing costs
+              </h3>
+              <p>
+                Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).
+              </p>
+            </div>
+          </div>
+
+          <div class="column50">
+            <div class="heroListItem">
+              <img src="reprocessing-icon.png" alt="Reprocessing Icon">
+              <h3>
+                Eliminate reprocessing costs
+              </h3>
+              <p>
+                Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="column100">
+            <nav class="scroll">
+              <img src="scroll-icon.png" alt="down arrow">
+              Scroll to get started
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step1Wrapper">
+      <div class="step">
+        <h1 class="stepHead">
+          <span>Step 1
+          </span>/ 4</h1>
+        <div class="container">
+          <div class="left">
+            <h2 class="stepHeading">Current bronchoscope usage</h2>
+            <div class="descriptionWrapper">
+              <p class="description">Indicate your hospital’s volume of annual bronchoscopy procedures and current costs. We’ll use this data as the basis for your results.</p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="question facilityName_textField" id="facilityName_textField_1">
+              <div class="row">
+                <div class="heading">
+                  <label for="facility_name">{{config.facility_name_label}}</label>
+                </div>
+              </div>
+              <div class="error" id="facilityName_textField_1_textfieldError">Please enter the name of your facility.</div>
+              <div
+                class="row">
+                {# <input type="text" name="facility_name" placeholder="Enter Facility Name Here" required="required" maxlength="200" id="facilityName_textField_1_textField" class="textField"> #}
+                {{element.facility_name}}
+              </div>
+            </div>
+            <div class="question bronchoscopyProcedures_slider" id="bronchoscopyProcedures_slider_1">
+              <div class="row">
+                <div class="heading">
+                  <label for="total_annual_bronchoscopy_procedures" class="label">{{config.total_annual_bronchoscopy_procedures_label}}</label>
+
+                </div>
+              </div>
+              <div class="error" id="bronchoscopyProcedures_slider_1_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div>
+                    {# <input type="range" id="bronchoscopyProcedures_slider_1_slider" class="slider" min="1" max="3000" value="3000" step="1"> #}
+                    {{element.total_annual_bronchoscopy_procedures}}
+                  </div>
+                  <div class="sliderMinMax">
+                    <div class="min">1</div>
+                    <div class="mid"></div>
+                    <div class="max">3000</div>
+                  </div>
+                </div>
+                <div class="column2">
+                  <div>
+                    <div class="unit"></div>
+                    <input type="number" required="required" name="total_annual_bronchoscopy_procedures" class="number" value="3000" id="bronchoscopyProcedures_slider_1_number">
+
+                  </div>
+                </div>
+                <div class="column3">
+                  <a class="tooltip-icon" id="bronchoscopyProcedures_slider_1_icon"><img src="tooltip.png" alt="moreinfo"></a>
+                </div>
+              </div>
+              <div class="row tooktipTextBoxWrapper" id="bronchoscopyProcedures_slider_1_toggleTip">
+                <div class="tooktipTextBox">
+                  <div class="tip-arrow"><img src="tooltip-tip.png" alt="moreinfo"></div>
+                  <div class="tip" id="tip">{{config.total_annual_bronchoscopy_procedures_helptext}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="question numberOfProcedures_slider" id="numberOfProcedures_slider_1">
+              <div class="row">
+                <div class="heading">
+                  <label for="number_of_procedures_that_could_be_performed_with_single-use_bronchoscopes" class="label">{{config.procedures_count_single_usage_label}}</label>
+
+                </div>
+              </div>
+              <div class="error" id="numberOfProcedures_slider_1_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div>
+                    {# <input type="range" id="numberOfProcedures_slider_1_slider" class="slider" min="1" max="3000" value="2250" step="1"> #}
+                    {{element.procedures_count_single_usage}}
+                  </div>
+                  <div class="sliderMinMax">
+                    <div class="min">1</div>
+                    <div class="mid"></div>
+                    <div class="max">3000</div>
+                  </div>
+                </div>
+                <div class="column2">
+                  <div>
+                    <div class="unit"></div><input type="number" required="required" name="number_of_procedures_that_could_be_performed_with_single-use_bronchoscopes" class="number" value="2250" id="numberOfProcedures_slider_1_number">
+                  </div>
+                </div>
+                <div class="column3"></div>
+              </div>
+            </div>
+            <div class="question broncoscopyPrice_numberField" id="broncoscopyPrice_numberField_1">
+              <div class="row">
+                <div class="heading">
+                  <label for="your_bflex™_bronchoscope_price">{{config.your_bronchoscope_price_label}}</label>
+
+                </div>
+              </div>
+              <div class="error" id="broncoscopyPrice_numberField_1_textfieldError"></div>
+              <div class="row">
+                <div class="unit">$</div>
+                <div
+                  class="numberInput">
+                  {# <input type="number" class="numberfield" id="broncoscopyPrice_numberField_1_numberfield" name="your_bflex™_bronchoscope_price" placeholder="Enter Your BFlex Scope Price" step="any"> #}
+                  {{element.total_annual_bronchoscopy_procedures}}</div>
+                <div class="toolTip column3">
+                  <a class="tooltip-icon" id="broncoscopyPrice_numberField_1_icon">
+                    <img src="tooltip.png" alt="moreinfo">
+                  </a>
+                </div>
+              </div>
+              <div class="row tooktipTextBoxWrapper" id="broncoscopyPrice_numberField_1_toggleTip">
+                <div class="tooktipTextBox">
+                  <div class="tip-arrow"><img src="tooltip.png" alt="moreinfo"></div>
+                  <div class="tip" id="tip">{{config.your_bronchoscope_price_helptext}}</div>
+                </div>
+              </div>
+              <label>{{config.your_bronchoscope_price_description}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step2Wrapper">
+      <div class="step">
+        <h1 class="stepHead">
+          <span>Step 2
+          </span>/ 4</h1>
+        <div class="container">
+          <div class="left">
+            <h2 class="stepHeading">Repair and maintenance</h2>
+            <div class="descriptionWrapper">
+              <p class="description"></p>
+              <p>Indicate how many reusable bronchoscopes your hospital currently uses, plus costs for repairs and annual service agreements.
+              </p>
+              <p>If annual out-of-pocket repair costs aren’t readily available, that’s OK. We’ve included a range based on published cost analyses.</p>
+              <p class="footnote">Gupta, D., et al. “Cost-effectiveness analysis of flexible optical scopes for tracheal intubation: a descriptive comparative study of reusable and single-use scopes.” J Clin Anesth. 2011; 23(8): 632-635</p>
+              <p class="footnote">Liu, S., et al. “Cost Identification Analysis of Anesthesia Fiberscope Use for Tracheal Intubation.” J Anesth Clin Res 2012, 3:5.</p>
+              <p></p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="question reusableBronchoscopes_slider" id="reusableBronchoscopes_slider_2">
+              <div class="row">
+                <div class="heading">
+                  <label for="total_number_of_reusable_bronchoscopes" class="label">{{config.step_one_result_string}}</label>
+
+                </div>
+              </div>
+              <div class="error" id="reusableBronchoscopes_slider_2_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div>
+                    {# <input type="range" id="reusableBronchoscopes_slider_2_slider" class="slider" min="1" max="100" value="30" step="1"> #}
+                    {{element.total_reusable_bronchoscopes}}
+                  </div>
+                  <div class="sliderMinMax">
+                    <div class="min">1</div>
+                    <div class="mid"></div>
+                    <div class="max">100</div>
+                  </div>
+                </div>
+                <div class="column2">
+                  <div>
+                    <div class="unit"></div><input type="number" required="required" name="total_number_of_reusable_bronchoscopes" class="number" value="30" id="reusableBronchoscopes_slider_2_number">
+                  </div>
+                </div>
+                <div class="column3"></div>
+              </div>
+            </div>
+            <div class="question serviceAgreementAnnualCost_slider" id="serviceAgreementAnnualCost_slider_2">
+              <div class="row">
+                <div class="heading">
+                  <label for="annual_cost_of_service_agreement_per_bronchoscope" class="label">{{config.total_reusable_bronchoscopes_label}}</label>
+
+                </div>
+              </div>
+              <div class="error" id="serviceAgreementAnnualCost_slider_2_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div>
+                    {# <input type="range" id="serviceAgreementAnnualCost_slider_2_slider" class="slider" min="1" max="5000" value="5000" step="1"> #}
+                    {{element.annual_service_cost_per_bronchoscope}}
+
+                  </div>
+                  <div class="sliderMinMax">
+                    <div class="min">$1</div>
+                    <div class="mid"></div>
+                    <div class="max">$5000</div>
+                  </div>
+                </div>
+                <div class="column2">
+                  <div>
+                    <div class="unit">$</div>
+                    <input type="number" required="required" name="annual_cost_of_service_agreement_per_bronchoscope" class="number" value="5000" id="serviceAgreementAnnualCost_slider_2_number">
+
+                  </div>
+                </div>
+                <div class="column3"></div>
+              </div>
+            </div>
+            <div class="question currentAnnualOopRepairAllFactor_slider" id="currentAnnualOopRepairAllFactor_slider_2">
+              <div class="row">
+                <div class="heading">
+                  <label for="annual_out-of-pocket_repair_costs_for_all_bronchoscopes" class="label">Annual out-of-pocket repair costs for all bronchoscopes</label>
+                </div>
+              </div>
+              <div class="error" id="currentAnnualOopRepairAllFactor_slider_2_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div>
+                    {# <input type="range" id="currentAnnualOopRepairAllFactor_slider_2_slider" class="slider" min="0" max="100" value="0" step="50"> #}
+                    {{element.annual_out_of_pocket_repair_cost}}
+
+                  </div>
+                  <div class="sliderMinMax">
+                    <div class="min">Low</div>
+                    <div class="mid">Average</div>
+                    <div class="max">High</div>
+                  </div>
+                </div>
+                <div class=""></div>
+                <div class="column3">
+                  <a class="tooltip-icon" id="currentAnnualOopRepairAllFactor_slider_2_icon"><img src="tooltip.png" alt="moreinfo"></a>
+                </div>
+              </div>
+              <div class="row tooktipTextBoxWrapper" id="currentAnnualOopRepairAllFactor_slider_2_toggleTip">
+                <div class="tooktipTextBox">
+                  <div class="tip-arrow"><img src="tooltip-tip.png" alt="moreinfo"></div>
+                  <div class="tip" id="tip">{{config.annual_out_of_pocket_repair_cost_helptext}}</div>
+
+                </div>
+              </div>
+              <div class="outputWrap" id="currentAnnualOopRepairAllFactor_slider">
+                <div class="output">
+                  <span>$159,000</span>
+                  {{config.step_two_result_string}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step3Wrapper">
+      <div class="step">
+        <h1 class="stepHead">
+          <span>Step 3
+          </span>/ 4</h1>
+        <div class="container">
+          <div class="left">
+            <h2 class="stepHeading">Hidden reprocessing costs</h2>
+            <div class="descriptionWrapper">
+              <p class="description"></p>
+              <p>Based on the total number of reusable bronchoscopes, your annual reprocessing cost is low, average, or high.</p>
+              <p>This is a conservative estimate that includes common reprocessing costs but not all.*</p>
+              <div class="row">
+                <div class="column50">
+                  <ul>
+                    <li>PPE for personnel</li>
+                    <li>Bedside precleaning
+                    </li>
+                    <li>HLD (high-level disinfection) in an AER (automated endoscope reprocessor)</li>
+                  </ul>
+                </div>
+                <div class="column50">
+                  <ul>
+                    <li>Drying and storage</li>
+                    <li>Leak testing</li>
+                    <li>Manual cleaning</li>
+                    <li>Visual inspection</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="smaller">*Does not include costs associated with repairs by reprocessing technicians, reprocessing due to exceeding hangtime, or the cost of disposing of materials used during reprocessing.</p>
+              <p class="footnote">Ofstead, C.L., et al. “A Glimpse at the True Cost of Reprocessing Endoscopes: Results of a Pilot Project.” www.iahcsmm.org. 2017.</p>
+              <p></p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="question reprocessingCalcMethod_slider" id="reprocessingCalcMethod_slider_3">
+              <div class="row">
+                <div class="heading">
+                  <label for="reprocessing_costs" class="label">Reprocessing costs</label>
+                </div>
+              </div>
+              <div class="error" id="reprocessingCalcMethod_slider_3_textfieldError"></div>
+              <div class="row">
+                <div class="column1">
+                  <div><input type="range" id="reprocessingCalcMethod_slider_3_slider" class="slider" min="0" max="100" value="50" step="50"></div>
+                  <div class="sliderMinMax">
+                    <div class="min">Low</div>
+                    <div class="mid">Average</div>
+                    <div class="max">High</div>
+                  </div>
+                </div>
+                <div class=""></div>
+                <div class="column3"></div>
+              </div>
+              <div class="outputWrap" id="reprocessingCalcMethod_slider">
+                <div class="output">
+                  <span>$101.43</span>
+                  {{config.step_three_result_string}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="step4Wrapper">
+      <div class="step">
+        <h1 class="stepHead">
+          <span>Step 4
+          </span>/ 4</h1>
+        <div class="container">
+          <div class="left">
+            <h2 class="stepHeading">Preventable infections</h2>
+            <div class="descriptionWrapper">
+              <p class="description"></p>
+              <p>The risk of infection is greater with reusable bronchoscopes. With cross contamination and subsequent infection rates considered, this is the estimated number of infections and the estimated annual cost of treatment.*
+              </p>
+              <p class="smaller">*Per Terjesen, C.L., et al. “Early Assessment of the Likely Cost Effectiveness of Single-Use Flexible Video Bronchoscopes.” PharmacoEconomics Open (2017). 1:133-141.  Cost of treatment per infection is $28,383. Rate of cross contamination is 3.34 percent of total bronchoscopy procedures annually. Rate of subsequent infection is 21.25 percent of cross-contaminated bronchoscopy procedures annually.</p>
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="question" id="estimatedNumberOfInfections_statistics">
+            <div class="statistic">
+              <figcaption class="captions">{{config.step_four_result_string}}</figcaption>
+              <figure class="statisticFigure">21.68</figure>
+            </div>
+          </div>
+          <div class="question" id="estimatedAnnualTreatmentCost_statistics">
+            <div class="statistic">
+              <figcaption class="captions">{{config.step_four_final_cost_string}}</figcaption>
+              <figure class="statisticFigure">$615,343</figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="submitSectionWrapper">
+    <div class="container">
+      <div class="row">
+        <div class="column50">
+          <h3>{{config.result_section_copy}}</h3>
+        </div>
+        <div class="column50">
+          {{element.actions}}
+        </div>
+      </div>
+      <div id="logo-hide" class="row">
+        <div class="col-12">
+          <a href="https://verathon.com" target="new"><img src="verathon-logo.png"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></form>
