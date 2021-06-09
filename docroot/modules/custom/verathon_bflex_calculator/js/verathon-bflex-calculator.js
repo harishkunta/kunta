@@ -157,9 +157,8 @@ function validateInput(id) {
   // Behavior definition for Textfield & Number box.
   Drupal.behaviors.input = {
     attach: function (context, settings) {
-
       $(".textField", context).each(function () {
-        $(this).on('focusOut', function () {
+        $(this).on('focusOut change', function () {
           let textFieldId = $(this).attr("id")
           validateInput(textFieldId)
           $("#" + textFieldId).attr("value", $("#" + textFieldId).val());

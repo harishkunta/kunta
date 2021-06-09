@@ -24,6 +24,7 @@ class VerathonBflexCalculatorForm extends FormBase
    */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
+    $config = \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get();
 
     $form['facility_name'] = [
       '#type' => 'textfield',
@@ -91,6 +92,8 @@ class VerathonBflexCalculatorForm extends FormBase
     $form['actions'] = [
       '#type' => 'actions',
     ];
+    dump($config);
+    die;
     $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
     $form['#theme'] = 'form__verathon_bflex_calculator_verathon_bflex_calculator';
     $form['actions']['submit'] = [
