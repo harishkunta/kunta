@@ -28,18 +28,25 @@ function verathon_bflex_calculator_preprocess_form(&$variables)
   }
 }
 
-// /**
-//  * @inheritDoc
-//  *
-//  * Implements hook_theme_registry_alter().
-//  */
-// function verathon_bflex_calculator_theme($existing, $type, $theme, $path)
-// {
-//   return [
-//     'form__verathon_bflex_calculator_verathon_bflex_calculator' => [
-//       'variables' => [
-//         'config' => \Drupal::config('verathon_bflex_calculator.settings')->get(),
-//       ],
-//     ],
-//   ];
-// }
+/**
+ * @inheritDoc
+ *
+ * Implements hook_theme_registry_alter().
+ */
+function verathon_bflex_calculator_theme($existing, $type, $theme, $path)
+{
+  return [
+    'form__verathon_bflex_calculator_verathon_bflex_calculator' => [
+      'render element' => 'form',
+      'variables' => [
+        'config' => \Drupal::config('verathon_bflex_calculator.settings')->get(),
+      ],
+    ],
+    'result__verathon_bflex_calculator_verathon_bflex_calculator' => [
+      'variables' => [
+        'config' => \Drupal::config('verathon_bflex_calculator.settings')->get(),
+        'form_values' => NULL,
+      ],
+    ],
+  ];
+}

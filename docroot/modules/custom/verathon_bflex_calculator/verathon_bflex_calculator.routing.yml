@@ -61,3 +61,11 @@ verathon_bflex_calculator.bflex_calculator_content:
     _form: 'Drupal\verathon_bflex_calculator\Form\BflexCalculatorContentForm'
   requirements:
     _permission: 'administer bflex content'
+
+calculator.result:
+  path: '/bflex-calculator/result'
+  defaults:
+    _title: 'BFlex Calculator - Result'
+    _controller: '\Drupal\verathon_bflex_calculator\Controller\VerathonBflexCalculatorResultController::build'
+  requirements:
+    _permission: 'access content'
