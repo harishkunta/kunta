@@ -30,7 +30,18 @@ class VerathonBflexCalculatorForm extends FormBase
     // check if form has been submitted.
     if ($form_state->has('submitted') && $form_state->get('submitted')) {
       $form['#form_values'] = $values;
-      $form['#calculations'] = \Drupal::service('verathon_bflex_calculator.calculator')->getMock();
+      $arguments = $form_state->get('calculator_args');
+      $form['#calculations'] = \Drupal::service('verathon_bflex_calculator.calculator')->calculate(
+        $arguments['facilityName'],
+        (int) $arguments['totalProcedures'],
+        (int) $arguments['singleUseProcedures'],
+        $arguments['bflexBroncoscopePrice'],
+        (int) $arguments['currentReusableQuantity'],
+        (int) $arguments['currentAnnualServicePer'],
+        'low',
+        //$arguments['reprocessingCalcMethod'],
+        (int) $arguments['currentAnnualOopRepairAllFactor'],
+      );
     }
     // If opening first time.
     else {
@@ -66,6 +77,10 @@ class VerathonBflexCalculatorForm extends FormBase
         '#attributes' => [
           'class' => ['slider'],
         ],
+        '#min' => 1,
+        '#max' => 3000,
+        '#step' => 1,
+        '#default_value' => 2250,
       ];
       $form['your_bronchoscope_price'] = [
         '#type' => 'number',
@@ -169,6 +184,7 @@ class VerathonBflexCalculatorForm extends FormBase
       'reprocessingCalcMethod' => $submission_values['reprocessing_costs_method'],
       'currentAnnualOopRepairAllFactor' => $submission_values['annual_out_of_pocket_repair_cost'],
     ];
+    $form_state->set('calculator_args', $values);
 
     $form_state->set('submitted', true)->setRebuild(true);
   }
