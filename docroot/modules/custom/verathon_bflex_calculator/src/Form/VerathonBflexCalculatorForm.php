@@ -111,10 +111,11 @@ class VerathonBflexCalculatorForm extends FormBase
         '#type' => 'range',
         '#attributes' => [
           'class' => ['slider'],
+          'list' => 'tickmarks',
         ],
-        '#min' => 0,
-        '#max' => 100,
-        '#step' => 50,
+        // '#min' => 0,
+        // '#max' => 100,
+        // '#step' => 50,
         '#default_value' => 50,
       ];
 
