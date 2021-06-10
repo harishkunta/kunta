@@ -26,13 +26,16 @@ class VerathonBflexCalculatorForm extends FormBase
   {
     $config = \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get();
     $values = $form_state->getValues();
-    // dump($values);
-    $form['#submitted'] = false;
+
     // check if form has been submitted.
-    if (!empty($values)) {
-      $form['#submitted'] =  true;
+    if ($form_state->has('submitted') && $form_state->get('submitted')) {
       $form['#form_values'] = $values;
-    } else {
+      $form['#calculations'] = \Drupal::service('verathon_bflex_calculator.calculator')->getMock();
+    }
+    // If opening first time.
+    else {
+      $form_state->set('submitted', false);
+
       $form['facility_name'] = [
         '#type' => 'textfield',
         '#required' => true,
@@ -86,7 +89,6 @@ class VerathonBflexCalculatorForm extends FormBase
         '#attributes' => [
           'class' => ['slider'],
         ],
-        '#required' => true,
       ];
 
       $form['actions'] = [
@@ -101,6 +103,7 @@ class VerathonBflexCalculatorForm extends FormBase
     }
     $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
     $form['#theme'] = 'form__verathon_bflex_calculator_verathon_bflex_calculator';
+    $form['#config'] = $config;
     return $form;
   }
 
@@ -119,7 +122,6 @@ class VerathonBflexCalculatorForm extends FormBase
    */
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
-    $this->messenger()->addStatus($this->t('The message has been sent.'));
-    $form_state->setRedirect('<front>');
+    $form_state->set('submitted', true)->setRebuild(true);
   }
 }
