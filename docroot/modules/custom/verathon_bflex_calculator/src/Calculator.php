@@ -47,33 +47,33 @@ class Calculator
 
     $config = $this->configFactory->getEditable('verathon_bflex_calculator.settings')->get();
     $this->reprocessingCostsLow = [
-      'ppe_personal' => is_numeric($config['ppe_personal_factor_low']) ? $config['ppe_personal_factor_low'] : 5.06, // maps to C20
-      'bedside_preclean' => is_numeric($config['bedside_preclean_factor_low']) ? $config['bedside_preclean_factor_low'] : 4.45, // maps to C21
-      'leak_testing' => is_numeric($config['leak_testing_factor_low']) ? $config['leak_testing_factor_low'] : 2.27, // maps to C22,
-      'manual_cleaning' => is_numeric($config['manual_cleaning_factor_low']) ? $config['manual_cleaning_factor_low'] : 11.12, // maps to C23
-      'visual_inspection' => is_numeric($config['visual_inspection_factor_low']) ? $config['visual_inspection_factor_low'] : 14.62, // maps to C24
-      'hld_in_aer' => is_numeric($config['hld_in_aer_factor_low']) ? $config['hld_in_aer_factor_low'] : 10.74, // maps to C25
-      'drying_storage' => is_numeric($config['drying_storage_factor_low']) ? $config['drying_storage_factor_low'] : 1.88 // maps to C26
+      'ppe_personal' => (!empty($config['ppe_personal_factor_low']) &&  is_numeric($config['ppe_personal_factor_low'])) ? $config['ppe_personal_factor_low'] : 5.06, // maps to C20
+      'bedside_preclean' => (!empty($config['bedside_preclean_factor_low']) && is_numeric($config['bedside_preclean_factor_low'])) ? $config['bedside_preclean_factor_low'] : 4.45, // maps to C21
+      'leak_testing' => (!empty($config['leak_testing_factor_low']) && is_numeric($config['leak_testing_factor_low'])) ? $config['leak_testing_factor_low'] : 2.27, // maps to C22,
+      'manual_cleaning' => (!empty($config['manual_cleaning_factor_low']) && is_numeric($config['manual_cleaning_factor_low'])) ? $config['manual_cleaning_factor_low'] : 11.12, // maps to C23
+      'visual_inspection' => (!empty($config['visual_inspection_factor_low']) && is_numeric($config['visual_inspection_factor_low'])) ? $config['visual_inspection_factor_low'] : 14.62, // maps to C24
+      'hld_in_aer' => (!empty($config['hld_in_aer_factor_low']) && is_numeric($config['hld_in_aer_factor_low'])) ? $config['hld_in_aer_factor_low'] : 10.74, // maps to C25
+      'drying_storage' => (!empty($config['drying_storage_factor_low']) && is_numeric($config['drying_storage_factor_low'])) ? $config['drying_storage_factor_low'] : 1.88 // maps to C26
     ];
 
     $this->reprocessingCostsAverage = [
-      'ppe_personal' => is_numeric($config['ppe_personal_factor_average']) ? $config['ppe_personal_factor_average'] : 11.42, // maps to C20
-      'bedside_preclean' => is_numeric($config['bedside_preclean_factor_average']) ? $config['bedside_preclean_factor_average'] : 11.80, // maps to C21
-      'leak_testing' => is_numeric($config['leak_testing_factor_average']) ? $config['leak_testing_factor_average'] : 3.78, // maps to C22,
-      'manual_cleaning' => is_numeric($config['manual_cleaning_factor_average']) ? $config['manual_cleaning_factor_average'] : 24.12, // maps to C23
-      'visual_inspection' => is_numeric($config['visual_inspection_factor_average']) ? $config['visual_inspection_factor_average'] : 32.16, // maps to C24
-      'hld_in_aer' => is_numeric($config['hld_in_aer_factor_average']) ? $config['hld_in_aer_factor_average'] : 13.98, // maps to C25
-      'drying_storage' => is_numeric($config['drying_storage_factor_average']) ? $config['drying_storage_factor_average'] : 4.17 // maps to C26
+      'ppe_personal' => (!empty($config['ppe_personal_factor_average']) && is_numeric($config['ppe_personal_factor_average'])) ? $config['ppe_personal_factor_average'] : 11.42, // maps to C20
+      'bedside_preclean' => (!empty($config['bedside_preclean_factor_average']) && is_numeric($config['bedside_preclean_factor_average'])) ? $config['bedside_preclean_factor_average'] : 11.80, // maps to C21
+      'leak_testing' => (!empty($config['leak_testing_factor_average']) && is_numeric($config['leak_testing_factor_average'])) ? $config['leak_testing_factor_average'] : 3.78, // maps to C22,
+      'manual_cleaning' => (!empty($config['manual_cleaning_factor_average']) && is_numeric($config['manual_cleaning_factor_average'])) ? $config['manual_cleaning_factor_average'] : 24.12, // maps to C23
+      'visual_inspection' => (!empty($config['visual_inspection_factor_average']) && is_numeric($config['visual_inspection_factor_average'])) ? $config['visual_inspection_factor_average'] : 32.16, // maps to C24
+      'hld_in_aer' => (!empty($config['hld_in_aer_factor_average']) && is_numeric($config['hld_in_aer_factor_average'])) ? $config['hld_in_aer_factor_average'] : 13.98, // maps to C25
+      'drying_storage' => (!empty($config['drying_storage_factor_average']) && is_numeric($config['drying_storage_factor_average'])) ? $config['drying_storage_factor_average'] : 4.17 // maps to C26
     ];
 
     $this->reprocessingCostsHigh = [
-      'ppe_personal' => is_numeric($config['ppe_personal_factor_high']) ? $config['ppe_personal_factor_high'] : 17.78, // maps to C20
-      'bedside_preclean' => is_numeric($config['bedside_preclean_factor_high']) ? $config['bedside_preclean_factor_high'] : 19.14, // maps to C21
-      'leak_testing' => is_numeric($config['leak_testing_factor_high']) ? $config['leak_testing_factor_high'] : 5.28, // maps to C22,
-      'manual_cleaning' => is_numeric($config['manual_cleaning_factor_high']) ? $config['manual_cleaning_factor_high'] : 37.11, // maps to C23
-      'visual_inspection' => is_numeric($config['visual_inspection_factor_high']) ? $config['visual_inspection_factor_high'] : 48.69, // maps to C24
-      'hld_in_aer' => is_numeric($config['hld_in_aer_factor_high']) ? $config['hld_in_aer_factor_high'] : 17.21, // maps to C25
-      'drying_storage' => is_numeric($config['drying_storage_factor_high']) ? $config['drying_storage_factor_high'] : 6.45 // maps to C26
+      'ppe_personal' => (!empty($config['ppe_personal_factor_high']) && is_numeric($config['ppe_personal_factor_high'])) ? $config['ppe_personal_factor_high'] : 17.78, // maps to C20
+      'bedside_preclean' => (!empty($config['bedside_preclean_factor_high']) && is_numeric($config['bedside_preclean_factor_high'])) ? $config['bedside_preclean_factor_high'] : 19.14, // maps to C21
+      'leak_testing' => (!empty($config['leak_testing_factor_high']) && is_numeric($config['leak_testing_factor_high'])) ? $config['leak_testing_factor_high'] : 5.28, // maps to C22,
+      'manual_cleaning' => (!empty($config['manual_cleaning_factor_high']) && is_numeric($config['manual_cleaning_factor_high'])) ? $config['manual_cleaning_factor_high'] : 37.11, // maps to C23
+      'visual_inspection' => (!empty($config['visual_inspection_factor_high']) && is_numeric($config['visual_inspection_factor_high'])) ? $config['visual_inspection_factor_high'] : 48.69, // maps to C24
+      'hld_in_aer' => (!empty($config['hld_in_aer_factor_high']) && is_numeric($config['hld_in_aer_factor_high'])) ? $config['hld_in_aer_factor_high'] : 17.21, // maps to C25
+      'drying_storage' => (!empty($config['drying_storage_factor_high']) && is_numeric($config['drying_storage_factor_high'])) ? $config['drying_storage_factor_high'] : 6.45 // maps to C26
     ];
   }
 
@@ -447,6 +447,77 @@ class Calculator
 
     if (count($errors)) {
       throw new \Exception('An error occured while processing the form. ' . implode(' ', $errors));
+    }
+  }
+
+  /**
+   * @method
+   * This method returns a mock response of the calculator.
+   */
+  public function getMock()
+  {
+    try {
+      $results = $this->calculate('My Facility', 1000, 750, 265, 30, 2200, 'low', 53);;
+      $results = [
+        'current_annual_oop_repair_all_factor' => 53,
+        'facility_name' => 'My Facility',
+        'cost_per_infection' => 28383,
+        'reprocessing_costs' => [
+          'method' => 'low',
+          'details' => [
+            'ppe_personal' => 5.06,
+            'bedside_preclean' => 4.45,
+            'leak_testing' => 2.27,
+            'manual_cleaning' => 11.12,
+            'visual_inspection' => 14.62,
+            'hld_in_aer' => 10.74,
+            'drying_storage' => 1.88
+          ]
+        ],
+        'current_costs' => [
+          'equipment_costs' => [
+            'single_use_scopes' => 0,
+            'total_su_bflex_cost' => 0
+          ],
+          'repair_maintenance' => [
+            'reusable_scopes_quantity' => 30,
+            'service_agreement_per_bronchoscope' => 2200,
+            'annual_oop_repair_all' =>  53000,
+            'total_annual_maint_repair' => 119000,
+          ],
+          'reprocessing' => [
+            'total_annual_reprocessing_costs' => 50140
+          ],
+          'treating_infections' => [
+            'patient_infections' => 7.23,
+            'annual_costs' => 205067,
+          ],
+          'total_costs' => 374207,
+        ],
+        'reducing_costs' => [
+          'equipment_costs' => [
+            'single_use_scopes' => 750,
+            'total_su_bflex_cost' => 198750
+          ],
+          'repair_maintenance' => [
+            'reusable_scopes_quantity' => 30,
+            'service_agreement_per_bronchoscope' => 2200,
+            'annual_oop_repair_all' => 13250,
+            'total_annual_maint_repair' => 79250
+          ],
+          'reprocessing' => [
+            'total_annual_reprocessing_costs' => 12535
+          ],
+          'treating_infections' => [
+            'patient_infections' => 1.81,
+            'annual_costs' =>  51267
+          ],
+          'total_costs' =>  341802
+        ],
+      ];
+      return $results;
+    } catch (\Exception $e) {
+      return [];
     }
   }
 }
