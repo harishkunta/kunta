@@ -457,7 +457,8 @@ class Calculator
   public function getMock()
   {
     try {
-      $results = $this->calculate('My Facility', 1000, 750, 265, 30, 2200, 'low', 53);;
+      $results = $this->calculate('My Facility', 1000, 750, 265, 30, 2200, 'low', 53);
+      return $results;
       $results = [
         'current_annual_oop_repair_all_factor' => 53,
         'facility_name' => 'My Facility',
