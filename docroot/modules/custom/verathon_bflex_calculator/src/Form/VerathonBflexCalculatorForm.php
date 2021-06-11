@@ -179,7 +179,7 @@ class VerathonBflexCalculatorForm extends FormBase
       'facilityName' => $submission_values['facility_name'],
       'totalProcedures' => $submission_values['total_annual_bronchoscopy_procedures'],
       'singleUseProcedures' => $submission_values['procedures_count_single_usage'],
-      'bflexBroncoscopePrice' => $submission_values['your_bronchoscope_price'],
+      'bflexBroncoscopePrice' => (is_numeric($submission_values['your_bronchoscope_price']) && !empty($submission_values['your_bronchoscope_price'])) ? $submission_values['your_bronchoscope_price'] : 1,
       'currentReusableQuantity' => $submission_values['total_reusable_bronchoscopes'],
       'currentAnnualServicePer' => $submission_values['annual_service_cost_per_bronchoscope'],
       'reprocessingCalcMethod' => $submission_values['reprocessing_costs_method'],
