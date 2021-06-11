@@ -149,7 +149,7 @@ class VerathonBflexCalculatorForm extends FormBase
 
       $form['actions']['submit'] = [
         '#type' => 'submit',
-        '#value' => $this->t('Send'),
+        '#value' => $config['result_button_label'] ? $config['result_button_label'] : 'See Results',
       ];
     }
     $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
