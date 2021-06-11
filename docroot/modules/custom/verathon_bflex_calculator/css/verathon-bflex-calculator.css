@@ -779,8 +779,8 @@ hr:not([size]) {
 
     .results-page-hero .container,
     .results.container,
-.results-page-footer-ribbon .container {
-    padding: 0px;
-    flex-wrap: nowrap;
-}
+    .results-page-footer-ribbon .container {
+        padding: 0px;
+        flex-wrap: nowrap;
+    }
 }
