@@ -58,6 +58,16 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#collapsible' => TRUE,
       '#title' => $this->t('Step 1 - Current bronchoscope usage : Labels'),
     ];
+    $form['step_one']['step_one_heading'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Step One - Section Heading'),
+      '#default_value' => $config['step_one_heading'],
+    ];
+    $form['step_one']['step_one_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Step One - Section Description'),
+      '#default_value' => $config['step_one_description']['value'],
+    ];
     $form['step_one']['facility_name_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Facility name : Field Label'),
@@ -110,6 +120,16 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#open' => FALSE,
       '#title' => $this->t('Step 2 - Repair and maintenance : Labels')
     ];
+    $form['step_two']['step_two_heading'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Step Two - Section Heading'),
+      '#default_value' => $config['step_two_heading'],
+    ];
+    $form['step_two']['step_two_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Step Two - Section Description'),
+      '#default_value' => $config['step_two_description']['value'],
+    ];
     $form['step_two']['total_reusable_bronchoscopes_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Total Number of Reusable Bronchoscopes : Field Label'),
@@ -143,6 +163,16 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#open' => FALSE,
       '#title' => $this->t('Step 3 - Hidden reprocessing costs : Labels'),
     ];
+    $form['step_three']['step_three_heading'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Step Three - Section Heading'),
+      '#default_value' => $config['step_two_heading'],
+    ];
+    $form['step_three']['step_three_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Step Three - Section Description'),
+      '#default_value' => $config['step_three_description']['value'],
+    ];
     $form['step_three']['reprocessing_costs_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Reprocessing costs : Field Label'),
@@ -174,6 +204,16 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'details',
       '#open' => FALSE,
       '#title' => $this->t('Step 4 - Preventable infections : Labels'),
+    ];
+    $form['step_four']['step_four_heading'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Step Four - Section Heading'),
+      '#default_value' => $config['step_four_heading'],
+    ];
+    $form['step_four']['step_four_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Step Four - Section Description'),
+      '#default_value' => $config['step_four_description']['value'],
     ];
     $form['step_four']['step_four_result_string'] = [
       '#type' => 'textfield',
@@ -219,6 +259,15 @@ class BflexCalculatorContentForm extends ConfigFormBase
         ->set("step_three_result_string", $form_state->getValue("step_three_result_string"))
         ->set("step_four_result_string", $form_state->getValue("step_four_result_string"))
         ->set("step_four_final_cost_string", $form_state->getValue("step_four_final_cost_string"))
+
+        ->set("step_one_heading", $form_state->getValue("step_one_heading"))
+        ->set("step_two_heading", $form_state->getValue("step_two_heading"))
+        ->set("step_three_heading", $form_state->getValue("step_three_heading"))
+        ->set("step_four_heading", $form_state->getValue("step_four_heading"))
+        ->set("step_one_description", $form_state->getValue("step_one_description"))
+        ->set("step_two_description", $form_state->getValue("step_two_description"))
+        ->set("step_three_description", $form_state->getValue("step_three_description"))
+        ->set("step_four_description", $form_state->getValue("step_four_description"))
         ->save();
       parent::submitForm($form, $form_state);
     } catch (\Exception $e) {

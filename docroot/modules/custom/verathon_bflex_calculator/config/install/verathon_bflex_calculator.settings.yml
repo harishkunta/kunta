@@ -23,29 +23,49 @@ hld_in_aer_factor_high: '17.21'
 dying_storage_factor_low: '1.88'
 dying_storage_factor_average: '4.17'
 dying_storage_factor_high: '6.45'
-
 result_section_copy: 'See the BFlex™ Bronchoscope Advantage'
 result_button_label: 'See Results'
 facility_name_label: 'Facility name'
 total_annual_bronchoscopy_procedures_label: 'Total annual bronchoscopy procedures'
 total_annual_bronchoscopy_procedures_helptext:
-  value: 'Include billable bronchoscopies, as well as other procedures that utilize a bronchoscope (bronchoscopy-assisted intubations, double-lumen tube placements, etc.)'
+  value: "<p>Include billable bronchoscopies, as well as other procedures that utilize a bronchoscope (bronchoscopy-assisted intubations, double-lumen tube placements, etc.)</p>\r\n"
+  format: filtered_html
 procedures_count_single_usage_label: 'Number of procedures that could be performed with single-use bronchoscopes'
 your_bronchoscope_price_label: 'Your BFlex™ bronchoscope price'
 your_bronchoscope_price_description: 'If you do not know the price leave this field blank.'
 your_bronchoscope_price_helptext:
-  value: 'Contact sales for pricing.'
+  value: "<p>Contact sales for pricing.</p>\r\n"
+  format: filtered_html
 step_one_result_string: 'Total number of reusable bronchoscopes'
 total_reusable_bronchoscopes_label: 'Annual cost of service agreement per bronchoscope'
 annual_service_cost_per_bronchoscope_label: 'Annual cost of service agreement per bronchoscope'
 annual_out_of_pocket_repair_cost_label: 'Annual out-of-pocket repair costs for all bronchoscopes'
 annual_out_of_pocket_repair_cost_helptext:
-  value: 'Cost of repairs per use can range from $53 (low) to $148 (high). Annual out-of-pocket repair costs equal the cost of repairs per use multiplied by total annual procedures.'
+  value: "<p>Cost of repairs per use can range from $53 (low) to $148 (high). Annual out-of-pocket repair costs equal the cost of repairs per use multiplied by total annual procedures.</p>\r\n"
+  format: filtered_html
 step_two_result_string: 'annual out-of-pocket repair costs'
 reprocessing_costs_label: 'Reprocessing costs'
-reprocessing_range_low_label: 'Low'
-reprocessing_range_average_label: 'Average'
-reprocessing_range_high_label: 'High'
+reprocessing_range_low_label: Low
+reprocessing_range_average_label: Average
+reprocessing_range_high_label: High
 step_three_result_string: 'per procedure with reusable scopes'
 step_four_result_string: 'Estimated number of infections due to cross contamination:'
 step_four_final_cost_string: 'Estimated annual treatment cost:'
+_core:
+  default_config_hash: DQliEHWDEHmij9Cm45NGaD2kQmvOhn_W1alL-KxX0NY
+step_one_heading: 'Current bronchoscope usage'
+step_two_heading: 'Repair and maintenance'
+step_three_heading: 'Hidden reprocessing costs'
+step_four_heading: 'Preventable infections'
+step_one_description:
+  value: "<p>Indicate your hospital’s volume of annual bronchoscopy procedures and current costs. We’ll use this data as the basis for your results.</p>\r\n"
+  format: filtered_html
+step_two_description:
+  value: "<p class=\"description\">&nbsp;</p>\r\n\r\n<p>Indicate how many reusable bronchoscopes your hospital currently uses, plus costs for repairs and annual service agreements.</p>\r\n\r\n<p>If annual out-of-pocket repair costs aren’t readily available, that’s OK. We’ve included a range based on published cost analyses.</p>\r\n\r\n<p class=\"footnote\">Gupta, D., et al. “Cost-effectiveness analysis of flexible optical scopes for tracheal intubation: a descriptive comparative study of reusable and single-use scopes.” J Clin Anesth. 2011; 23(8): 632-635</p>\r\n\r\n<p class=\"footnote\">Liu, S., et al. “Cost Identification Analysis of Anesthesia Fiberscope Use for Tracheal Intubation.” J Anesth Clin Res 2012, 3:5.</p>\r\n"
+  format: cohesion
+step_three_description:
+  value: "<p class=\"description\">&nbsp;</p>\r\n\r\n<p>Based on the total number of reusable bronchoscopes, your annual reprocessing cost is low, average, or high.</p>\r\n\r\n<p>This is a conservative estimate that includes common reprocessing costs but not all.*</p>\r\n\r\n<div class=\"row\">\r\n<div class=\"column50\">\r\n<ul>\r\n\t<li>PPE for personnel</li>\r\n\t<li>Bedside precleaning</li>\r\n\t<li>HLD (high-level disinfection) in an AER (automated endoscope reprocessor)</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"column50\">\r\n<ul>\r\n\t<li>Drying and storage</li>\r\n\t<li>Leak testing</li>\r\n\t<li>Manual cleaning</li>\r\n\t<li>Visual inspection</li>\r\n</ul>\r\n</div>\r\n</div>\r\n\r\n<p class=\"smaller\">*Does not include costs associated with repairs by reprocessing technicians, reprocessing due to exceeding hangtime, or the cost of disposing of materials used during reprocessing.</p>\r\n\r\n<p class=\"footnote\">Ofstead, C.L., et al. “A Glimpse at the True Cost of Reprocessing Endoscopes: Results of a Pilot Project.” www.iahcsmm.org. 2017.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: cohesion
+step_four_description:
+  value: "<p class=\"description\">&nbsp;</p>\r\n\r\n<p>The risk of infection is greater with reusable bronchoscopes. With cross contamination and subsequent infection rates considered, this is the estimated number of infections and the estimated annual cost of treatment.*</p>\r\n\r\n<p class=\"smaller\">*Per Terjesen, C.L., et al. “Early Assessment of the Likely Cost Effectiveness of Single-Use Flexible Video Bronchoscopes.” PharmacoEconomics Open (2017). 1:133-141. Cost of treatment per infection is $28,383. Rate of cross contamination is 3.34 percent of total bronchoscopy procedures annually. Rate of subsequent infection is 21.25 percent of cross-contaminated bronchoscopy procedures annually.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: cohesion
