@@ -41,11 +41,25 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#collapsible' => TRUE,
       '#title' => $this->t('Global : Labels')
     ];
+    $form['global']['bflex_page_header'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Page Header : Hero Head'),
+      '#default_value' => $config['bflex_page_header']['value'],
+      '#description' => $this->t('This field supports HTML tags'),
+
+    ];
+    $form['global']['bflex_page_description'] = [
+      '#type' => 'text_format',
+      '#title' => $this->t('Page Description : Field Label'),
+      '#description' => $this->t('This field supports HTML tags'),
+      '#default_value' => $config['bflex_page_description']['value'],
+    ];
     $form['global']['result_section_copy'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Result Section : Field Label'),
       '#default_value' => $config['result_section_copy'],
     ];
+
     $form['global']['result_button_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Result Button : Label'),
@@ -268,6 +282,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
         ->set("step_two_description", $form_state->getValue("step_two_description"))
         ->set("step_three_description", $form_state->getValue("step_three_description"))
         ->set("step_four_description", $form_state->getValue("step_four_description"))
+        ->set("bflex_page_header", $form_state->getValue("bflex_page_header"))
+        ->set("bflex_page_description", $form_state->getValue("bflex_page_description"))
         ->save();
       parent::submitForm($form, $form_state);
     } catch (\Exception $e) {
