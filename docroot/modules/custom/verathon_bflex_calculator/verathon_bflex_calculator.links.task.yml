@@ -1,0 +1,17 @@
+verathon_bflex_calculator.settings_form:
+  title: Calculation Factors
+  route_name: verathon_bflex_calculator.settings_form
+  weight: 1
+  base_route: verathon_bflex_calculator.settings_form
+
+verathon_bflex_calculator.bflex_calculator_content:
+  title: Calculator - Labels
+  route_name: verathon_bflex_calculator.bflex_calculator_content
+  weight: 2
+  base_route: verathon_bflex_calculator.settings_form
+
+verathon_bflex_calculator.bflex_calculator_result_content:
+  title: Calculator Results - Labels
+  route_name: verathon_bflex_calculator.bflex_calculator_result_content
+  weight: 3
+  base_route: verathon_bflex_calculator.settings_form
