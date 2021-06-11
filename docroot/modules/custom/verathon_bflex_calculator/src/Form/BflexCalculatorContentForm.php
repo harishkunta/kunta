@@ -46,13 +46,16 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#title' => $this->t('Page Header : Hero Head'),
       '#default_value' => $config['bflex_page_header']['value'],
       '#description' => $this->t('This field supports HTML tags'),
-
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['global']['bflex_page_description'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Page Description : Field Label'),
       '#description' => $this->t('This field supports HTML tags'),
       '#default_value' => $config['bflex_page_description']['value'],
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['global']['result_section_copy'] = [
       '#type' => 'textfield',
@@ -81,6 +84,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'text_format',
       '#title' => $this->t('Step One - Section Description'),
       '#default_value' => $config['step_one_description']['value'],
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['step_one']['facility_name_label'] = [
       '#type' => 'textfield',
@@ -94,8 +99,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
     ];
     $form['step_one']['total_annual_bronchoscopy_procedures_helptext'] = [
       '#type' => 'text_format',
-      '#format' => 'filtered_html',
-      '#allowed_formats' => array('filtered_html'),
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
       '#title' => $this->t('Total Annual Bronchoscopy Procedures : Help text'),
       '#default_value' => $config['total_annual_bronchoscopy_procedures_helptext']['value'],
     ];
@@ -116,8 +121,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
     ];
     $form['step_one']['your_bronchoscope_price_helptext'] = [
       '#type' => 'text_format',
-      '#format' => 'filtered_html',
-      '#allowed_formats' => array('filtered_html'),
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
       '#title' => $this->t('Bronchscope Price : Help text'),
       '#default_value' => $config['your_bronchoscope_price_helptext']['value'],
     ];
@@ -143,6 +148,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'text_format',
       '#title' => $this->t('Step Two - Section Description'),
       '#default_value' => $config['step_two_description']['value'],
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['step_two']['total_reusable_bronchoscopes_label'] = [
       '#type' => 'textfield',
@@ -161,8 +168,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
     ];
     $form['step_two']['annual_out_of_pocket_repair_cost_helptext'] = [
       '#type' => 'text_format',
-      '#format' => 'filtered_html',
-      '#allowed_formats' => array('filtered_html'),
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
       '#title' => $this->t('Annual out-of-pocket repair costs : Help text'),
       '#default_value' => $config['annual_out_of_pocket_repair_cost_helptext']['value'],
     ];
@@ -186,6 +193,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'text_format',
       '#title' => $this->t('Step Three - Section Description'),
       '#default_value' => $config['step_three_description']['value'],
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['step_three']['reprocessing_costs_label'] = [
       '#type' => 'textfield',
@@ -228,6 +237,8 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'text_format',
       '#title' => $this->t('Step Four - Section Description'),
       '#default_value' => $config['step_four_description']['value'],
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
     ];
     $form['step_four']['step_four_result_string'] = [
       '#type' => 'textfield',
