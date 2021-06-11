@@ -447,10 +447,10 @@
             <h1>Your Cost-Comparison Results</h1>
             <p>
               Here’s how your current costs for reusables stack up against sterile single-use
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      bronchoscopes. By integrating BFlex™ with your inventory, you can help to reduce preventable
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      infections from cross contamination and save time on repairs and reprocessing.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    bronchoscopes. By integrating BFlex™ with your inventory, you can help to reduce preventable
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    infections from cross contamination and save time on repairs and reprocessing.
               <span class="boldText">This comparison is conservative. It omits the capital acquisition
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              costs and operational budgets associated with reusable bronchoscopes.<span></span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              costs and operational budgets associated with reusable bronchoscopes.<span></span>
               </span>
             </p>
           </div>
@@ -535,7 +535,7 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.equipment_costs.total_su_bflex_cost}}</p>
+            <p class="value float">{{calculation.reducing_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
 
           </div>
         </div>
@@ -592,7 +592,7 @@
             <p>Annual cost of service agreement per reusable bronchoscope</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.current_costs.repair_maintenance.service_agreement_per_bronchoscope}}</p>
+            <p class="value float">{{calculation.current_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
           </div>
         </div>
         <div class="row">
@@ -608,7 +608,7 @@
             <p>Annual cost of service agreement per reusable bronchoscope</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.repair_maintenance.service_agreement_per_bronchoscope}}</p>
+            <p class="value float">{{calculation.reducing_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
 
           </div>
         </div>
@@ -628,7 +628,7 @@
             <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.current_costs.repair_maintenance.annual_oop_repair_all}}</p>
+            <p class="value float">{{calculation.current_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
 
 
           </div>
@@ -646,7 +646,7 @@
             <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
           </div>
           <div class="column7">
-            <p class="value float">${{calculation.reducing_costs.repair_maintenance.annual_oop_repair_all}}</p>
+            <p class="value float">{{calculation.reducing_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
 
           </div>
         </div>
@@ -666,7 +666,7 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.current_costs.repair_maintenance.total_annual_maint_repair}}</p>
+            <p class="value float">{{calculation.current_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
           </div>
         </div>
       </div>
@@ -677,7 +677,7 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.repair_maintenance.total_annual_maint_repair}}</p>
+            <p class="value float">{{calculation.reducing_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
 
           </div>
         </div>
@@ -734,7 +734,8 @@
             <p>PPE for personnel</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.ppe_personal}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
           </div>
         </div>
         <div class="row">
@@ -750,7 +751,8 @@
             <p>PPE for personnel</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.ppe_personal}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
           </div>
         </div>
         <div class="row">
@@ -769,7 +771,7 @@
             <p>Bedside precleaning</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.bedside_preclean}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
 
 
           </div>
@@ -787,7 +789,8 @@
             <p>Bedside precleaning</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.bedside_preclean}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -807,7 +810,8 @@
             <p>Leak testing</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.leak_testing}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -824,7 +828,9 @@
             <p>Leak testing</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.leak_testing}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+
+
           </div>
         </div>
         <div class="row">
@@ -843,7 +849,8 @@
             <p>Manual cleaning</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.manual_cleaning}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -860,7 +867,8 @@
             <p>Manual cleaning</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.manual_cleaning}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -880,7 +888,8 @@
             <p>Visual inspection</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.visual_inspection}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+
           </div>
         </div>
         <div class="row">
@@ -896,7 +905,9 @@
             <p>Visual inspection</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.visual_inspection}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+
+
           </div>
         </div>
         <div class="row">
@@ -915,7 +926,7 @@
             <p>HLD in an AER</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.hld_in_aer}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
 
 
           </div>
@@ -933,7 +944,8 @@
             <p>HLD in an AER</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.hld_in_aer}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -953,7 +965,8 @@
             <p>Drying and storage</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.drying_storage}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+
 
           </div>
         </div>
@@ -970,7 +983,9 @@
             <p>Drying and storage</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reprocessing_costs.details.drying_storage}}</p>
+            <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+
+
           </div>
         </div>
         <div class="row">
@@ -989,11 +1004,9 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.current_costs.reprocessing.total_annual_reprocessing_costs}}</p>
+            <p class="value float">{{calculation.current_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
           </div>
         </div>
-        {{dump(calculation)}}
-
       </div>
       <!-- WITH -->
       <div class="column6 with total">
@@ -1002,7 +1015,8 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.reprocessing.total_annual_reprocessing_costs}}</p>
+            <p class="value float">{{calculation.reducing_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
+
 
           </div>
         </div>
@@ -1062,7 +1076,8 @@
             <p>Cost per infection</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.cost_per_infection}}</p>
+            <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+
 
           </div>
         </div>
@@ -1079,7 +1094,8 @@
             <p>Cost per infection</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.cost_per_infection}}</p>
+            <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+
 
           </div>
         </div>
@@ -1099,7 +1115,8 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.current_costs.treating_infections.annual_costs}}</p>
+            <p class="value float">{{calculation.current_costs.treating_infections.annual_costs|currency}}</p>
+
 
           </div>
         </div>
@@ -1111,7 +1128,8 @@
             <p>Annual cost</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.treating_infections.annual_costs}}</p>
+            <p class="value float">{{calculation.reducing_costs.treating_infections.annual_costs|currency}}</p>
+
 
           </div>
         </div>
@@ -1125,10 +1143,10 @@
       <div class="column6  total grand">
         <div class="row">
           <div class="column7">
-            <p>Annual Estimated Operating Costs</p>
+            <p>{{"Annual Estimated Operating Costs"}}</p>
           </div>
           <div class="column5 ">
-            <p class="value float">${{calculation.current_costs.total_costs}}</p>
+            <p class="value float">{{calculation.current_costs.total_costs|currency}}</p>
 
           </div>
         </div>
@@ -1140,7 +1158,8 @@
             <p>Annual Estimated Operating Costs</p>
           </div>
           <div class="column5">
-            <p class="value float">${{calculation.reducing_costs.total_costs}}</p>
+            <p class="value float">{{calculation.reducing_costs.total_costs|currency}}</p>
+
 
           </div>
         </div>
