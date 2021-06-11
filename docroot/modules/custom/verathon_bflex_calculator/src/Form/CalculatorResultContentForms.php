@@ -30,13 +30,18 @@ class CalculatorResultContentForm extends ConfigFormBase
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
+  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state)
+  {
+    return parent::buildForm($form, $form_state);
+  }
+  public function buildFormd(array $form, FormStateInterface $form_state)
   {
     // Getting Default configurations.
-    // $config = $this->config('verathon_bflex_calculator.settings')->get();
-    // $values = $form_state->getValues();
+    $form = [];
+    $config = $this->config('verathon_bflex_calculator.settings')->get();
+    $values = $form_state->getValues();
     // Global Form
-    /* $form['current'] = [
+    $form['current'] = [
       '#type' => 'details',
       '#open' => FALSE,
       '#collapsible' => TRUE,
@@ -570,9 +575,6 @@ class CalculatorResultContentForm extends ConfigFormBase
       '#default_value' => !empty($values['result_with_preventable_infections_costs_label']) ? $values['result_with_preventable_infections_costs_label'] : $config['result_with_preventable_infections_costs_label'],
     ];
 
-
-
-*/
     return parent::buildForm($form, $form_state);
   }
 

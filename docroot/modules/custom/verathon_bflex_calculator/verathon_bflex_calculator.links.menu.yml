@@ -12,9 +12,9 @@ verathon_bflex_calculator.bflex_calculator_content:
   route_name: verathon_bflex_calculator.bflex_calculator_content
   weight: 10
 
-verathon_bflex_calculator.bflex_calculator_result_content:
+verathon_bflex_calculator.bflex_result_content:
   title: Calculator Result - Labels
-  description: Manage strings and labels on Bflex Calculator Results Page.
+  description: Manage Results page content.
   parent: verathon_bflex_calculator.settings_form
-  route_name: verathon_bflex_calculator.bflex_calculator_result_content
+  route_name: verathon_bflex_calculator.bflex_result_content
   weight: 10

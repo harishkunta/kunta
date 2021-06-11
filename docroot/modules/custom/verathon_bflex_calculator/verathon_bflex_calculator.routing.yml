@@ -22,14 +22,6 @@ verathon_bflex_calculator.bflex_calculator_content:
   requirements:
     _permission: 'administer bflex content'
 
-verathon_bflex_calculator.bflex_calculator_result_content:
-  path: '/admin/config/system/bflex-calculator-result-content'
-  defaults:
-    _title: 'Result Page - Labels'
-    _form: 'Drupal\verathon_bflex_calculator\Form\CalculatorResultContentForm'
-  requirements:
-    _permission: 'administer site configuration'
-
 calculator.result:
   path: '/bflex-calculator/result'
   defaults:
@@ -39,3 +31,11 @@ calculator.result:
     _permission: 'access content'
 
 
+
+verathon_bflex_calculator.bflex_result_content:
+  path: '/admin/config/system/bflex-result-content'
+  defaults:
+    _title: 'Bflex Results Page Content'
+    _form: 'Drupal\verathon_bflex_calculator\Form\BflexResultContentForm'
+  requirements:
+    _permission: 'administer site configuration'
