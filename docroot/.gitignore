@@ -13,8 +13,8 @@
 /robots.txt
 /update.php
 /web.config
-
-docroot/sites/default/local.setting.php
+/docroot/sites/default/local.setting.php
 /docroot/sites/default/local.setting.php
 sites/default/local.settings.php
-
+vendor/*
+sites/default/*
