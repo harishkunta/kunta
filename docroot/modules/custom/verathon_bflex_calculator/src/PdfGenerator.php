@@ -2,14 +2,12 @@
 
 namespace Drupal\verathon_bflex_calculator;
 
-use Dompdf\Dompdf;
-use Mpdf\Mpdf;
 
 
 /**
  * PdfGenerator service.
  */
-class PdfGenerator extends Dompdf
+class PdfGenerator
 {
   protected $_serviceId;
 
