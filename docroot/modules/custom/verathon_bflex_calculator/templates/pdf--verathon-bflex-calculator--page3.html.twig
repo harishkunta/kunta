@@ -313,6 +313,7 @@
 
   /*# sourceMappingURL=pdf_page3.css.map */
 </style>
+
 <div class="bflexResults_wrapper">
   <div class="bflexResults">
     <div id="bflex-calculator-header" class="results-page-hero">
@@ -324,7 +325,7 @@
               <p>
                 Here’s how your current costs for reusables stack up against sterile single-use bronchoscopes. By integrating BFlex™ with your inventory, you can help to reduce preventable infections from cross contamination and save time on repairs and reprocessing.
                 <span class="boldText">This comparison is conservative. It omits the capital acquisition
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              costs and operational budgets associated with reusable bronchoscopes.<span></span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        costs and operational budgets associated with reusable bronchoscopes.<span></span>
                 </span>
               </p>
             </div>
@@ -357,9 +358,7 @@
         <div class="column6">
           <h3>Current bronchoscope usage</h3>
         </div>
-        <div class="column6 ">
-          <h3>Current bronchoscope usage</h3>
-        </div>
+        <div class="column6 "></div>
       </div>
       <div
         class="row result">
@@ -370,7 +369,7 @@
               <p>Single-use BFlex bronchoscopes</p>
             </div>
             <div class="column5">
-              <p class="value float">0</p>
+              <p class="value float">{{calculation.current_costs.equipment_costs.single_use_scopes|number_format}}</p>
             </div>
           </div>
           <div class="row">
@@ -386,7 +385,7 @@
               <p class="grey-text">Single-use BFlex bronchoscopes</p>
             </div>
             <div class="column5">
-              <p class="value float">1343</p>
+              <p class="value float">{{calculation.reducing_costs.equipment_costs.single_use_scopes}}</p>
             </div>
           </div>
           <div class="row">
@@ -405,45 +404,29 @@
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$0</p>
+              <p class="value float">{{calculation.current_costs.equipment_costs.total_su_bflex_cost}}</p>
+
             </div>
           </div>
         </div>
         <!-- WITH -->
-        <div class="column6 total">
+        <div class="column6 with total">
           <div class="row">
             <div class="column7">
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$6,715</p>
+              <p class="value float">{{calculation.reducing_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
+
             </div>
           </div>
         </div>
       </div>
       <div class="row result-section">
         <div class="column6">
-          <div class="row">
-            <div class="column7">
-              <h3>Repair and maintenance costs
-                <sup>1</sup>
-              </h3>
-            </div>
-            <div class="column5">
-              <p class="value float">Low</p>
-            </div>
-          </div>
+          <h3>Repair and maintenance costs</h3>
         </div>
-        <div class="column6 ">
-          <div class="row">
-            <div class="column7">
-              <h3>Repair and maintenance costs</h3>
-            </div>
-            <div class="column5">
-              <p class="value float"></p>
-            </div>
-          </div>
-        </div>
+        <div class="column6 "></div>
       </div>
       <div
         class="row result">
@@ -454,7 +437,12 @@
               <p>Reusable bronchoscopes (QTY)</p>
             </div>
             <div class="column5">
-              <p class="value float">30</p>
+              <p class="value float">{{calculation.current_costs.repair_maintenance.reusable_scopes_quantity}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -465,7 +453,12 @@
               <p>Reusable bronchoscopes (QTY)</p>
             </div>
             <div class="column5">
-              <p class="value float">30</p>
+              <p class="value float">{{calculation.reducing_costs.repair_maintenance.reusable_scopes_quantity}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -479,7 +472,12 @@
               <p>Annual cost of service agreement per reusable bronchoscope</p>
             </div>
             <div class="column5">
-              <p class="value float">$5,000</p>
+              <p class="value float">{{calculation.current_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -490,7 +488,13 @@
               <p>Annual cost of service agreement per reusable bronchoscope</p>
             </div>
             <div class="column5">
-              <p class="value float">$5,000</p>
+              <p class="value float">{{calculation.reducing_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -504,7 +508,9 @@
               <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
             </div>
             <div class="column5">
-              <p class="value float">$119,674</p>
+              <p class="value float">{{calculation.current_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -519,8 +525,9 @@
             <div class="column7">
               <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
             </div>
-            <div class="column5">
-              <p class="value float">$48,495</p>
+            <div class="column7">
+              <p class="value float">{{calculation.reducing_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
+
             </div>
           </div>
           <div class="row">
@@ -539,18 +546,19 @@
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$269,674</p>
+              <p class="value float">{{calculation.current_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
             </div>
           </div>
         </div>
         <!-- WITH -->
-        <div class="column6 total">
+        <div class="column6 with total">
           <div class="row">
             <div class="column7">
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$198,495</p>
+              <p class="value float">{{calculation.reducing_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
+
             </div>
           </div>
         </div>
@@ -558,22 +566,41 @@
       </div>
       <div class="row result-section">
         <div class="column6">
+          <h3>Reprocessing costs per use</h3>
+        </div>
+        <div class="column6 "></div>
+      </div>
+      <div
+        class="row result reprocessing-costs">
+        <!-- CURRENT -->
+        <div class="column6 ">
           <div class="row">
             <div class="column7">
-              <h3>Reprocessing costs per use</h3>
+              <p>Reprocessing costs</p>
             </div>
             <div class="column5">
               <p class="value float">Average</p>
             </div>
           </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
+            </div>
+          </div>
         </div>
-        <div class="column6 ">
+        <!-- WITH -->
+        <div class="column6">
           <div class="row">
             <div class="column7">
-              <h3>Reprocessing costs per use</h3>
+              <p>Reprocessing costs</p>
             </div>
             <div class="column5">
-              <p class="value float"></p>
+              <p class="value float">Average</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -587,7 +614,8 @@
               <p>PPE for personnel</p>
             </div>
             <div class="column5">
-              <p class="value float">$11.42</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
             </div>
           </div>
           <div class="row">
@@ -603,7 +631,8 @@
               <p>PPE for personnel</p>
             </div>
             <div class="column5">
-              <p class="value float">$11.42</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
             </div>
           </div>
           <div class="row">
@@ -622,7 +651,9 @@
               <p>Bedside precleaning</p>
             </div>
             <div class="column5">
-              <p class="value float">$11.8</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -638,7 +669,9 @@
               <p>Bedside precleaning</p>
             </div>
             <div class="column5">
-              <p class="value float">$11.8</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -657,7 +690,9 @@
               <p>Leak testing</p>
             </div>
             <div class="column5">
-              <p class="value float">$3.78</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -673,7 +708,9 @@
               <p>Leak testing</p>
             </div>
             <div class="column5">
-              <p class="value float">$3.78</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -692,7 +729,9 @@
               <p>Manual cleaning</p>
             </div>
             <div class="column5">
-              <p class="value float">$24.12</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -708,7 +747,9 @@
               <p>Manual cleaning</p>
             </div>
             <div class="column5">
-              <p class="value float">$24.12</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -727,7 +768,8 @@
               <p>Visual inspection</p>
             </div>
             <div class="column5">
-              <p class="value float">$32.16</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+
             </div>
           </div>
           <div class="row">
@@ -743,7 +785,9 @@
               <p>Visual inspection</p>
             </div>
             <div class="column5">
-              <p class="value float">$32.16</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -762,7 +806,9 @@
               <p>HLD in an AER</p>
             </div>
             <div class="column5">
-              <p class="value float">$13.98</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -778,7 +824,9 @@
               <p>HLD in an AER</p>
             </div>
             <div class="column5">
-              <p class="value float">$13.98</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -797,7 +845,9 @@
               <p>Drying and storage</p>
             </div>
             <div class="column5">
-              <p class="value float">$4.17</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -813,7 +863,9 @@
               <p>Drying and storage</p>
             </div>
             <div class="column5">
-              <p class="value float">$4.17</p>
+              <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -832,18 +884,20 @@
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$229,029</p>
+              <p class="value float">{{calculation.current_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
             </div>
           </div>
         </div>
         <!-- WITH -->
-        <div class="column6 total">
+        <div class="column6 with total">
           <div class="row">
             <div class="column7">
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$92,808</p>
+              <p class="value float">{{calculation.reducing_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
+
+
             </div>
           </div>
         </div>
@@ -851,13 +905,9 @@
       </div>
       <div class="row result-section">
         <div class="column6">
-          <h3>Preventable infections
-            <sup>3</sup>
-          </h3>
-        </div>
-        <div class="column6 ">
           <h3>Preventable infections</h3>
         </div>
+        <div class="column6 "></div>
       </div>
       <div
         class="row result ">
@@ -868,7 +918,14 @@
               <p>Patient infections due to cross contamination</p>
             </div>
             <div class="column5">
-              <p class="value float">16.31</p>
+              <p class="value float">{{calculation.current_costs.treating_infections.patient_infections}}</p>
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -879,7 +936,13 @@
               <p>Patient infections due to cross contamination</p>
             </div>
             <div class="column5">
-              <p class="value float">6.61</p>
+              <p class="value float">{{calculation.reducing_costs.treating_infections.patient_infections}}</p>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="column12">
+              <hr>
             </div>
           </div>
         </div>
@@ -893,7 +956,9 @@
               <p>Cost per infection</p>
             </div>
             <div class="column5">
-              <p class="value float">$28,383</p>
+              <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -909,7 +974,9 @@
               <p>Cost per infection</p>
             </div>
             <div class="column5">
-              <p class="value float">$28,383</p>
+              <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+
+
             </div>
           </div>
           <div class="row">
@@ -928,18 +995,22 @@
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$463,042</p>
+              <p class="value float">{{calculation.current_costs.treating_infections.annual_costs|currency}}</p>
+
+
             </div>
           </div>
         </div>
         <!-- WITH -->
-        <div class="column6 total">
+        <div class="column6 with total">
           <div class="row">
             <div class="column7">
               <p>Annual cost</p>
             </div>
             <div class="column5">
-              <p class="value float">$187,636</p>
+              <p class="value float">{{calculation.reducing_costs.treating_infections.annual_costs|currency}}</p>
+
+
             </div>
           </div>
         </div>
@@ -952,30 +1023,34 @@
         <div class="column6  total grand">
           <div class="row">
             <div class="column7">
-              <p>Annual Estimated Operating Costs</p>
+              <p>{{"Annual Estimated Operating Costs"}}</p>
             </div>
             <div class="column5 ">
-              <p class="value float">$961,744</p>
+              <p class="value float">{{calculation.current_costs.total_costs|currency}}</p>
+
             </div>
           </div>
         </div>
         <!-- WITH -->
-        <div class="column6 total grand">
+        <div class="column6 with total grand">
           <div class="row">
             <div class="column7">
               <p>Annual Estimated Operating Costs</p>
             </div>
             <div class="column5">
-              <p class="value float">$485,654</p>
+              <p class="value float">{{calculation.reducing_costs.total_costs|currency}}</p>
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
   <div class="container footnote">
     <p>Prepopulated repair costs based on published cost analyses: Gupta, D., et al. “Cost-effectiveness analysis of flexible optical scopes for tracheal intubation: a descriptive comparative study of reusable and single-use scopes.” J Clin Anesth. 2011; 23(8):
-                                                                                                                                                                                                                                          632-635. Liu, S., et al. “Cost Identification Analysis of Anesthesia Fiberscope Use for Tracheal Intubation.” J Anesth Clin Res 2012, 3:5.
+                                                                                                                                                                                                                                                                                                                                                                                                                        632-635. Liu, S., et al. “Cost Identification Analysis of Anesthesia Fiberscope Use for Tracheal Intubation.” J Anesth Clin Res 2012, 3:5.
     </p>
     <p></p>
     <p>
@@ -983,7 +1058,7 @@
     </p>
     <p>
       Terjesen, C.L., et al. “Early Assessment of the Likely Cost Effectiveness of Single-Use Flexible Video Bronchoscopes.” PharmacoEconomics Open (2017). 1:133-141. Cost of treatment per infection is $28,383. Rate of cross contamination is 3.34 percent of
-                                                                                                                                                                                                                                                  total bronchoscopy procedures annually. Rate of subsequent infection is 21.25 percent of cross-contaminated bronchoscopy procedures annually.
+                                                                                                                                                                                                                                                                                                                                                                                                                                total bronchoscopy procedures annually. Rate of subsequent infection is 21.25 percent of cross-contaminated bronchoscopy procedures annually.
     </p>
   </div>
 </div>

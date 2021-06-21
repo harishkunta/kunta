@@ -4,6 +4,7 @@ namespace Drupal\verathon_bflex_calculator\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides a Verathon Bflex Calculator form.
@@ -38,10 +39,21 @@ class VerathonBflexCalculatorForm extends FormBase
         $arguments['bflexBroncoscopePrice'],
         (int) $arguments['currentReusableQuantity'],
         (int) $arguments['currentAnnualServicePer'],
-        'low',
-        //$arguments['reprocessingCalcMethod'],
+        \Drupal::service('verathon_bflex_calculator.calculator')->getReprocessingMethodByValue($arguments['reprocessingCalcMethod']),
         (int) $arguments['currentAnnualOopRepairAllFactor'],
       );
+      $url = Url::fromRoute('verathon_bflex_calculator.pdf');
+      $url->setOption('query', [
+        'fn' => $arguments['facilityName'],
+        'tp' => (int) $arguments['totalProcedures'],
+        'sup' => (int) $arguments['singleUseProcedures'],
+        'bbp' => $arguments['bflexBroncoscopePrice'],
+        'crq' => (int) $arguments['currentReusableQuantity'],
+        'casp' => (int) $arguments['currentAnnualServicePer'],
+        'rcm' => \Drupal::service('verathon_bflex_calculator.calculator')->getReprocessingMethodByValue($arguments['reprocessingCalcMethod']),
+        'caoraf' => (int) $arguments['currentAnnualOopRepairAllFactor'],
+      ]);
+      $form['#pdf_url'] = $url;
     }
     // If opening first time.
     else {
