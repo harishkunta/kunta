@@ -8,3 +8,6 @@ services:
     class: Drupal\verathon_bflex_calculator\TwigExtension\TwigCustomExtension
     tags:
       - { name: twig.extension }
+
+  verathon_bflex_calculator.pdf_generator:
+    class: Drupal\verathon_bflex_calculator\PdfGenerator

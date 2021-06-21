@@ -48,5 +48,23 @@ function verathon_bflex_calculator_theme($existing, $type, $theme, $path)
         'form_values' => NULL,
       ],
     ],
+    'pdf__verathon_bflex_calculator__page1' => [
+      'variables' => [
+        'config' => \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get(),
+        // 'calculations' => \Drupal::service('verathon_bflex_calculator.calculator'),
+      ],
+    ],
+    'pdf__verathon_bflex_calculator__page2' => [
+      'variables' => [
+        'config' => \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get(),
+        // 'calculations' => \Drupal::service('verathon_bflex_calculator.calculator'),
+      ],
+    ],
+    'pdf__verathon_bflex_calculator__page3' => [
+      'variables' => [
+        'config' => \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get(),
+        // 'calculations' => \Drupal::service('verathon_bflex_calculator.calculator'),
+      ],
+    ],
   ];
 }

@@ -39,3 +39,11 @@ verathon_bflex_calculator.bflex_result_content:
     _form: 'Drupal\verathon_bflex_calculator\Form\BflexResultContentForm'
   requirements:
     _permission: 'administer site configuration'
+
+verathon_bflex_calculator.pdf:
+  path: '/bflex-calculator/pdf'
+  defaults:
+    _title: 'Verathon BFlex Calculator - Report'
+    _controller: '\Drupal\verathon_bflex_calculator\Controller\VerathonBflexPdfController::build'
+  requirements:
+    _permission: 'access content'

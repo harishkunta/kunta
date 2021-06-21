@@ -1,0 +1,266 @@
+.bflexResults_wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.bflexResults_wrapper .bflexResults {
+    border: .0625rem #c7c7c7 solid;
+}
+
+.bflexResults_wrapper .bflexResults * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bflexResults_wrapper .bflexResults .ribbon-wrapper .container>div:nth-child(2) {
+    background-color: rgba(0, 191, 178, 0.2);
+}
+
+.bflexResults_wrapper .bflexResults .container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.bflexResults_wrapper .bflexResults .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+.bflexResults_wrapper .bflexResults p {
+    margin-bottom: .625rem;
+}
+
+.bflexResults_wrapper .bflexResults sup {
+    font-weight: 400;
+    font-size: .6875rem;
+}
+
+.bflexResults_wrapper .bflexResults .blueBackground .row>div:nth-child(2) {
+    position: relative;
+}
+
+.bflexResults_wrapper .bflexResults .blueBackground .row>div:nth-child(2) p {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    text-align: right;
+    width: 85%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bflexResults_wrapper .bflexResults .hero {
+    padding-top: 4.1875rem;
+}
+
+.bflexResults_wrapper .bflexResults .hero h1 {
+    font-weight: bold;
+    font-size: 1.5625rem;
+    color: #fff;
+}
+
+.bflexResults_wrapper .bflexResults .hero p {
+    font-size: .75rem;
+    line-height: 1rem;
+    max-width: 32.25rem;
+    color: #e4e4e4;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.bflexResults_wrapper .bflexResults .blueBackground {
+    background-color: #003C71;
+    color: #fff;
+    width: 100%;
+    padding: 2.1875rem 1.875rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bflexResults_wrapper .bflexResults .boldText {
+    font-weight: bolder;
+    color: white;
+}
+
+.bflexResults_wrapper .bflexResults .ribbon-wrapper {
+    width: 100%;
+}
+
+.bflexResults_wrapper .bflexResults .ribbon-wrapper .container .column6 {
+    padding: 1.75rem 1.875rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bflexResults_wrapper .bflexResults .ribbon-wrapper .container .column6:nth-child(2) {
+    padding-left: .9375rem;
+}
+
+.bflexResults_wrapper .bflexResults .bigger {
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: #003C71;
+    margin-bottom: .5rem;
+}
+
+.bflexResults_wrapper .bflexResults .ribbon-wrapper p {
+    margin-bottom: 0;
+}
+
+.bflexResults_wrapper .bflexResults .result-section,
+.bflexResults_wrapper .bflexResults .row.result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.bflexResults_wrapper .bflexResults .results h3 {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.bflexResults_wrapper .bflexResults .results p,
+.bflexResults_wrapper .bflexResults .grey-text {
+    color: #5c5c5c;
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row div.total p {
+    font-weight: 800;
+    color: #003C71;
+    font-size: .8125rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row div.total.with p,
+.bflexResults_wrapper .bflexResults h2.green {
+    color: #00BFB2;
+}
+
+.bflexResults_wrapper .bflexResults p.value {
+    font-size: .8125rem;
+    font-weight: 800;
+}
+
+.bflexResults_wrapper .bflexResults .grand p {
+    margin-bottom: 3rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result.reprocessing p {
+    font-size: .75rem;
+    margin-bottom: .1875rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row div.total.grand p {
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    color: black;
+    font-weight: 800;
+}
+
+.bflexResults_wrapper .bflexResults .results .result-section>div:nth-child(2),
+.bflexResults_wrapper .bflexResults .results .row.result>div:nth-child(2) {
+    background-color: rgba(0, 191, 178, 0.2);
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result>div:nth-child(2) {
+    padding-right: .9375rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result>div:first-child,
+.bflexResults_wrapper .bflexResults .results .result-section>div:first-child {
+    padding-left: .9375rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bflexResults_wrapper .bflexResults .container.results {
+    display: block;
+    margin-top: 0;
+}
+
+.bflexResults_wrapper .bflexResults .result .row>*,
+.bflexResults_wrapper .bflexResults .result-section .row>.column5 {
+    padding: 0 .9375rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bflexResults_wrapper .bflexResults .result-section h3 {
+    padding-left: .9375rem;
+    font-weight: 800;
+}
+
+.bflexResults_wrapper .bflexResults hr {
+    margin-bottom: 1rem;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25;
+}
+
+.bflexResults_wrapper .bflexResults hr:not([size]) {
+    height: .0625rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result.reprocessing hr {
+    display: none;
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result.reprocessing .value {
+    font-size: .625rem;
+}
+
+.bflexResults_wrapper .bflexResults .results .row.result.reprocessing hr.show {
+    display: block;
+    margin-top: .75rem;
+}
+
+.bflexResults_wrapper .bflexResults #blue-footer-ribbon {
+    margin-top: -0.625rem;
+}
+
+.bflexResults_wrapper .bflexResults .column6 {
+    width: 50%;
+}
+
+.bflexResults_wrapper .bflexResults .column12 {
+    width: 100%;
+}
+
+.bflexResults_wrapper .bflexResults .column5 {
+    width: 33.3%;
+}
+
+.bflexResults_wrapper .bflexResults .column7 {
+    width: 66.6%;
+}
+
+.bflexResults_wrapper .bflexResults .float {
+    float: right;
+}
+
+.bflexResults_wrapper .container.footnote p {
+    display: block;
+    font-size: .5625rem;
+    line-height: .625rem;
+    margin: .4375rem 0;
+    font-style: italic;
+    color: #b7b7b7;
+}
+
+
+/*# sourceMappingURL=pdf_page3.css.map */
