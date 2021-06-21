@@ -27,7 +27,7 @@ class VerathonBflexPdfController extends ControllerBase
    *
    * @var \Drupal\example\ExampleInterface
    */
-  protected $verathonBflexCalculatorPdfGenerator;
+  protected $calculations;
   protected $pdfService;
 
   /**
@@ -36,22 +36,20 @@ class VerathonBflexPdfController extends ControllerBase
    * @param \Drupal\example\ExampleInterface $verathon_bflex_calculator_pdf_generator
    *   The verathon_bflex_calculator.pdf_generator service.
    */
-  // public function __construct(PdfGenerator $pdf_service, Calculator $verathon_bflex_calculator_pdf_generator)
-  // {
-  //   $this->verathonBflexCalculatorPdfGenerator = $verathon_bflex_calculator_pdf_generator;
-  //   $this->pdfService = $pdf_service;
-  // }
+  public function __construct(Calculator $verathon_bflex_calculator_pdf_generator)
+  {
+    $this->calculator = $verathon_bflex_calculator_pdf_generator;
+  }
 
-  // /**
-  //  * {@inheritdoc}
-  //  */
-  // public static function create(ContainerInterface $container)
-  // {
-  //   return new static(
-  //     $container->get('verathon_bflex_calculator.pdf_generator'),
-  //     $container->get('verathon_bflex_calculator.calculator')
-  //   );
-  // }
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container)
+  {
+    return new static(
+      $container->get('verathon_bflex_calculator.calculator')
+    );
+  }
 
   /**
    * Builds the response.
@@ -79,7 +77,8 @@ class VerathonBflexPdfController extends ControllerBase
       $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page1.css" rel="stylesheet"  />';
       $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page2.css" rel="stylesheet" />';
       $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page3.css" rel="stylesheet" />';
-
+      $request = \Drupal::request();
+      $query_params = $request->query->all();
       $page1 = [
         '#theme' => 'pdf__verathon_bflex_calculator__page1'
       ];
@@ -87,13 +86,24 @@ class VerathonBflexPdfController extends ControllerBase
         '#theme' => 'pdf__verathon_bflex_calculator__page2'
       ];
       $page3 = [
-        '#theme' => 'pdf__verathon_bflex_calculator__page3'
+        '#theme' => 'pdf__verathon_bflex_calculator__page3',
+        '#calculation' => $this->calculator->calculate(
+          $query_params['fn'],
+          (int) $query_params['tp'],
+          (int) $query_params['sup'],
+          $query_params['bbp'],
+          (int) $query_params['crq'],
+          (int) $query_params['casp'],
+          $query_params['rcm'],
+          (int) $query_params['caoraf']
+        )
       ];
+
+
       $page1 = \Drupal::service('renderer')->render($page1);
       $page2 = \Drupal::service('renderer')->render($page2);
       $page3 = \Drupal::service('renderer')->render($page3);
       $html  = $page1 . $page2 . $page3;
-
       $job = (new Job())
         ->addTask(
           (new Task('import/raw', 'upload-html'))

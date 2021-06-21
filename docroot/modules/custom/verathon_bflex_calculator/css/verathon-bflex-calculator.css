@@ -345,6 +345,12 @@ body {
     width: 95%;
 }
 
+.bflex-calculator .question .tip p {
+    color: white;
+    font-size: .9375rem;
+    line-height: 1.125rem;
+}
+
 .bflex-calculator .column2 {
     padding: 0 .75rem;
 }
@@ -739,6 +745,10 @@ body {
     float: left;
     position: relative;
     top: -0.4375rem;
+}
+
+#currentAnnualOopRepairAllFactor_slider_2_toggleTip .arrow::before {
+    left: -40px;
 }
 
 @media screen and (min-width: 768px) {
