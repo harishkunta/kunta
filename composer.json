@@ -1,5 +1,7 @@
 {
     "require": {
-        "dompdf/dompdf": "^1.0"
+        "dompdf/dompdf": "^1.0",
+        "cloudconvert/cloudconvert-php": "^3.2",
+        "php-http/guzzle6-adapter": "^2.0"
     }
 }
