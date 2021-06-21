@@ -47,6 +47,7 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'fbeead2280a8f3911a1fe6dd034f7d5e' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvancedInterface.php',
         '96f8d8288528d52059397cad6ec61f17' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvanced.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -97,6 +98,7 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
             'Symfony\\Component\\Serializer\\' => 29,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -109,7 +111,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
-            'Svg\\' => 4,
             'Solarium\\' => 9,
             'Shaper\\Tests\\' => 13,
             'Shaper\\' => 7,
@@ -157,9 +158,11 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'H' => 
         array (
             'Http\\Promise\\' => 13,
+            'Http\\Message\\MultipartStream\\' => 29,
             'Http\\Message\\' => 13,
             'Http\\Factory\\Guzzle\\' => 20,
             'Http\\Discovery\\' => 15,
+            'Http\\Client\\Common\\' => 19,
             'Http\\Client\\' => 12,
             'Http\\Adapter\\Guzzle6\\' => 21,
         ),
@@ -202,7 +205,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
             'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 38,
             'Drupal\\Component\\' => 17,
             'DrupalCodeGenerator\\' => 20,
-            'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Collections\\' => 28,
@@ -223,6 +225,7 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
             'Composer\\Installers\\' => 20,
             'CommerceGuys\\Addressing\\' => 24,
             'Clue\\StreamFilter\\' => 18,
+            'CloudConvert\\' => 13,
         ),
         'A' => 
         array (
@@ -345,6 +348,10 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
         ),
+        'Symfony\\Component\\OptionsResolver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/options-resolver',
+        ),
         'Symfony\\Component\\Mime\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
@@ -392,10 +399,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'Symfony\\Bridge\\PsrHttpMessage\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
-        ),
-        'Svg\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
         'Solarium\\' => 
         array (
@@ -502,6 +505,10 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         array (
             0 => __DIR__ . '/..' . '/php-http/promise/src',
         ),
+        'Http\\Message\\MultipartStream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-http/multipart-stream-builder/src',
+        ),
         'Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/message/src',
@@ -514,6 +521,10 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'Http\\Discovery\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/discovery/src',
+        ),
+        'Http\\Client\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-http/client-common/src',
         ),
         'Http\\Client\\' => 
         array (
@@ -635,10 +646,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         array (
             0 => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src',
         ),
-        'Dompdf\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
-        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -707,6 +714,10 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         array (
             0 => __DIR__ . '/..' . '/clue/stream-filter/src',
         ),
+        'CloudConvert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cloudconvert/cloudconvert-php/src',
+        ),
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack',
@@ -747,9 +758,12 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
             array (
                 0 => __DIR__ . '/..' . '/stack/builder/src',
             ),
-            'Sabberworm\\CSS' => 
+        ),
+        'J' => 
+        array (
+            'JsonMapper' => 
             array (
-                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+                0 => __DIR__ . '/..' . '/netresearch/jsonmapper/src',
             ),
         ),
         'H' => 
@@ -792,8 +806,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'Drupal' => __DIR__ . '/../..' . '/core/lib/Drupal.php',
         'DrupalFinder\\DrupalFinder' => __DIR__ . '/..' . '/webflo/drupal-finder/src/DrupalFinder.php',
         'Drupal\\Component\\DependencyInjection\\Container' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/DependencyInjection/Container.php',
@@ -821,11 +833,6 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'Drupal\\Core\\Installer\\InstallerRedirectTrait' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/Installer/InstallerRedirectTrait.php',
         'Drupal\\Core\\Site\\Settings' => __DIR__ . '/../..' . '/core/lib/Drupal/Core/Site/Settings.php',
         'Drupal\\acquia_cms\\Composer\\ConfigureProject' => __DIR__ . '/../..' . '/profiles/contrib/acquia_cms/src/Composer/ConfigureProject.php',
-        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
-        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
-        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
-        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
-        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Localheinz\\Diff\\Chunk' => __DIR__ . '/..' . '/localheinz/diff/src/Chunk.php',
         'Localheinz\\Diff\\ConfigurationException' => __DIR__ . '/..' . '/localheinz/diff/src/Exception/ConfigurationException.php',
@@ -1445,8 +1452,10 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Type\\CallableType' => __DIR__ . '/..' . '/sebastian/type/src/CallableType.php',
         'SebastianBergmann\\Type\\Exception' => __DIR__ . '/..' . '/sebastian/type/src/exception/Exception.php',
+        'SebastianBergmann\\Type\\FalseType' => __DIR__ . '/..' . '/sebastian/type/src/FalseType.php',
         'SebastianBergmann\\Type\\GenericObjectType' => __DIR__ . '/..' . '/sebastian/type/src/GenericObjectType.php',
         'SebastianBergmann\\Type\\IterableType' => __DIR__ . '/..' . '/sebastian/type/src/IterableType.php',
+        'SebastianBergmann\\Type\\LogicException' => __DIR__ . '/..' . '/sebastian/type/src/exception/LogicException.php',
         'SebastianBergmann\\Type\\MixedType' => __DIR__ . '/..' . '/sebastian/type/src/MixedType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/ObjectType.php',

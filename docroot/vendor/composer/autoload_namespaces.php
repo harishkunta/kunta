@@ -9,7 +9,7 @@ return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Stiphle' => array($vendorDir . '/davedevelopment/stiphle/src'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
-    'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
+    'JsonMapper' => array($vendorDir . '/netresearch/jsonmapper/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Dflydev\\DotAccessData' => array($vendorDir . '/dflydev/dot-access-data/src'),
     'Console' => array($vendorDir . '/pear/console_getopt'),
