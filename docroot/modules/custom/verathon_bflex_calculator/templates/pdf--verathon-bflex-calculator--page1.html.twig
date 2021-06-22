@@ -1,80 +1,72 @@
 <style>
-  .pdf_page1_wrapper
-  {
-    height: 63.25rem;
-    max-width: 53.125rem;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+	.pdf_page1_wrapper {
+		height: 63.25rem;
+		max-width: 53.125rem;
+		margin: 0 auto;
+		font-family: Arial, Helvetica, sans-serif;
+	}
 
-  .pdf_page1_wrapper .container.pdf_page1
-  {
-    padding: 4.375rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+	.pdf_page1_wrapper .container.pdf_page1 {
+		padding: 4.375rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		height: 100%;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
-  .pdf_page1_wrapper .container.pdf_page1 .img-wrap
-  {
-    width: 50%;
-  }
+	.pdf_page1_wrapper .container.pdf_page1 .img-wrap {
+		width: 50%;
+	}
 
-  .pdf_page1_wrapper .container.pdf_page1 p
-  {
-    font-size: 3.125rem;
-    line-height: 4.0625rem;
-    color: #003C71;
-  }
+	.pdf_page1_wrapper .container.pdf_page1 p {
+		font-size: 3.125rem;
+		line-height: 4.0625rem;
+		color: #003C71;
+	}
 
-  .pdf_page1_wrapper .container.pdf_page1 p span
-  {
-    font-weight: 800;
-  }
+	.pdf_page1_wrapper .container.pdf_page1 p span {
+		font-weight: 800;
+	}
 
-  .pdf_page1_wrapper .container.pdf_page1 p.pdf_intro_footnote
-  {
-    font-size: 1.6875rem;
-    line-height: 1.875rem;
-    color: black;
-  }
+	.pdf_page1_wrapper .container.pdf_page1 p.pdf_intro_footnote {
+		font-size: 1.6875rem;
+		line-height: 1.875rem;
+		color: black;
+	}
 
-  .glidescope-logo::before
-  {
-    content: url('../images/SB-Logo.PNG');
-    display: block;
-  }
+	.glidescope-logo::before {
+		content: url('../images/SB-Logo.PNG');
+		display: block;
+	}
 
-  .verathon-logo::before
-  {
-    content: url('../images/verathon-Logo.PNG');
-    display: block;
-  }
+	.verathon-logo::before {
+		content: url('../images/verathon-Logo.PNG');
+		display: block;
+	}
 
 
-  /*# sourceMappingURL=pdf_page1.css.map */
+	/*# sourceMappingURL=pdf_page1.css.map */
 </style>
 <div class="pdf_page1_wrapper" style=" height: 63.25rem; max-width: 53.125rem; margin: 0 auto; font-family: Arial, Helvetica, sans-serif;">
-  <div class="container pdf_page1">
-    <div class="img-wrap glidescope-logo"></div>
-    <div class="pdf_intro">
-      <p style="font-size: 3.125rem;line-height: 4.0625rem;color: #003C71;">
-        <span class="boldText">Your Cost-Comparison
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Snapshot</span>:Single-use vs. reusable bronchoscopes</p>
-      <p class="pdf_intro_footnote">See how current operating costs for reusable bronchoscopes at
-        <span class="boldText">{{request}}</span>
-        compare to single-use.</p>
-    </div>
-    <div class="img-wrap verathon-logo"></div>
-  </div>
+	<div class="container pdf_page1">
+		<div class="img-wrap glidescope-logo"></div>
+		<div class="pdf_intro">
+			<p>
+				<span class="boldText">Your Cost-Comparison
+																																																							                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Snapshot</span>:Single-use vs. reusable bronchoscopes</p>
+			<p class="pdf_intro_footnote">See how current operating costs for reusable bronchoscopes at
+				<span class="boldText">{{request}}</span>
+				compare to single-use.</p>
+		</div>
+		<div class="img-wrap verathon-logo"></div>
+	</div>
 </div>
