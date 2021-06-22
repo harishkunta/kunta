@@ -15,10 +15,8 @@
           {{config.bflex_page_description.value|raw}}
           <div class="row">
             <div class="column100">
-              <nav
-                class="scroll scroll-icon">
-                {# <img src="scroll-icon.png" alt="down arrow"> #}
-                Scroll to get started
+              <nav class="scroll scroll-icon">
+                {{config.scroll_text}}
               </nav>
             </div>
           </div>
@@ -78,16 +76,12 @@
                     </div>
                   </div>
                   <div class="column3">
-                    <a
-                      class="tooltip-icon tooltip" id="bronchoscopyProcedures_slider_1_icon">{# <img src="tooltip.png" alt="moreinfo"> #}
-                    </a>
+                    <a class="tooltip-icon tooltip" id="bronchoscopyProcedures_slider_1_icon"></a>
                   </div>
                 </div>
                 <div class="row tooktipTextBoxWrapper" id="bronchoscopyProcedures_slider_1_toggleTip">
                   <div class="tooktipTextBox">
-                    <div
-                      class="tip-arrow arrow">{# <img src="tooltip-tip.png" alt="moreinfo"> #}
-                    </div>
+                    <div class="tip-arrow arrow"></div>
                     <div class="tip" id="tip">{{config.total_annual_bronchoscopy_procedures_helptext.value|striptags}}</div>
                   </div>
                 </div>
@@ -128,22 +122,15 @@
                 <div class="error" id="broncoscopyPrice_numberField_1_textfieldError"></div>
                 <div class="row">
                   <div class="unit">$</div>
-                  <div
-                    class="numberInput">
-                    {# <input type="number" class="numberfield" id="broncoscopyPrice_numberField_1_numberfield" name="your_bflex™_bronchoscope_price" placeholder="Enter Your BFlex Scope Price" step="any"> #}
+                  <div class="numberInput">
                     {{element.your_bronchoscope_price}}</div>
-
                   <div class="toolTip column3">
-                    <a
-                      class="tooltip-icon tooltip" id="broncoscopyPrice_numberField_1_icon">{# <img src="tooltip.png" alt="moreinfo"> #}
-                    </a>
+                    <a class="tooltip-icon tooltip" id="broncoscopyPrice_numberField_1_icon"></a>
                   </div>
                 </div>
                 <div class="row tooktipTextBoxWrapper" id="broncoscopyPrice_numberField_1_toggleTip">
                   <div class="tooktipTextBox">
-                    <div
-                      class="tip-arrow arrow">{# <img src="tooltip.png" alt="moreinfo"> #}
-                    </div>
+                    <div class="tip-arrow arrow"></div>
                     <div class="tip" id="tip">{{config.your_bronchoscope_price_helptext.value|striptags}}</div>
                   </div>
                 </div>
@@ -170,14 +157,12 @@
                 <div class="row">
                   <div class="heading">
                     <label for="total_number_of_reusable_bronchoscopes" class="label">{{config.step_one_result_string}}</label>
-
                   </div>
                 </div>
                 <div class="error" id="reusableBronchoscopes_slider_2_textfieldError"></div>
                 <div class="row">
                   <div class="column1">
                     <div>
-                      {# <input type="range" id="reusableBronchoscopes_slider_2_slider" class="slider" min="1" max="100" value="30" step="1"> #}
                       {{element.total_reusable_bronchoscopes}}
                     </div>
                     <div class="sliderMinMax">
@@ -205,9 +190,7 @@
                 <div class="row">
                   <div class="column1">
                     <div>
-                      {# <input type="range" id="serviceAgreementAnnualCost_slider_2_slider" class="slider" min="1" max="5000" value="5000" step="1"> #}
                       {{element.annual_service_cost_per_bronchoscope}}
-
                     </div>
                     <div class="sliderMinMax">
                       <div class="min">$1</div>
@@ -228,16 +211,14 @@
               <div class="question currentAnnualOopRepairAllFactor_slider" id="currentAnnualOopRepairAllFactor_slider_2">
                 <div class="row">
                   <div class="heading">
-                    <label for="annual_out-of-pocket_repair_costs_for_all_bronchoscopes" class="label">Annual out-of-pocket repair costs for all bronchoscopes</label>
+                    <label for="annual_out-of-pocket_repair_costs_for_all_bronchoscopes" class="label">{{config.annual_out_of_pocket_repair_cost_label}}</label>
                   </div>
                 </div>
                 <div class="error" id="currentAnnualOopRepairAllFactor_slider_2_textfieldError"></div>
                 <div class="row">
                   <div class="column1">
                     <div>
-                      {# <input type="range" id="currentAnnualOopRepairAllFactor_slider_2_slider" class="slider" min="0" max="100" value="0" step="50"> #}
                       {{element.annual_out_of_pocket_repair_cost}}
-
                     </div>
                     <div class="sliderMinMax">
                       <div class="min">Low</div>
@@ -370,34 +351,26 @@
     {% set calculation = element['#calculations'] %}
     <div class="bflexResults">
       <div id="bflex-calculator-header" class="results-page-hero">
-
         <div id="hero" class="hero blueBackground">
           <div class="container">
             <div class="row">
               <div class="heroHead">
-                <h1>Your Cost-Comparison Results</h1>
-                <p>
-                  Here’s how your current costs for reusables stack up against sterile single-use
-                                                                                                                                                                                                                                                                                                                  																																																																																																												                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              bronchoscopes. By integrating BFlex™ with your inventory, you can help to reduce preventable
-                                                                                                                                                                                                                                                                                                                  																																																																																																												                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              infections from cross contamination and save time on repairs and reprocessing.
-                  <span class="boldText">This comparison is conservative. It omits the capital acquisition
-                                                                                                                                                                                                                                                                                                                                                    																																																																																																																								                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            costs and operational budgets associated with reusable bronchoscopes.<span></span>
-                  </span>
-                </p>
+                <h1>{{config.result_page_heading}}</h1>
+                {{config.result_page_description.value|raw}}
               </div>
             </div>
-            <a class="button-result-page" href="{{element['#pdf_url']}}">Generate Custom Report</a>
+            <a class="button-result-page" href="{{element['#pdf_url']}}">{{config.download_button_text}}</a>
           </div>
         </div>
         <div class="ribbon-wrapper">
           <div class="container">
             <div class="column6">
-              <h2 class="heading bigger">Current operating costs</h2>
-              <p class="grey-text">Using reusable bronchoscopes only</p>
+              <h2 class="heading bigger">{{config.result_current_main_heading}}</h2>
+              <p class="grey-text">{{config.result_current_sub_heading}}</p>
             </div>
             <div class="column6">
-              <h2 class="heading bigger green">With BFlex</h2>
-              <p class="grey-text">Combined with existing reusable bronchoscope inventory</p>
+              <h2 class="heading bigger green">{{config.result_with_main_heading}}</h2>
+              <p class="grey-text">{{config.result_with_sub_heading}}</p>
             </div>
           </div>
         </div>
@@ -406,7 +379,7 @@
       <div class="container results">
         <div class="row result-section">
           <div class="column6">
-            <h3>Current bronchoscope usage</h3>
+            <h3>{{config.result_current_bronchoscope_heading}}</h3>
           </div>
           <div class="column6 "></div>
         </div>
@@ -416,7 +389,7 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Single-use BFlex bronchoscopes</p>
+                <p>{{config.result_current_single_usage_count_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.equipment_costs.single_use_scopes|number_format}}</p>
@@ -432,7 +405,7 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p class="grey-text">Single-use BFlex bronchoscopes</p>
+                <p class="grey-text">{{config.result_current_single_usage_count_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.equipment_costs.single_use_scopes}}</p>
@@ -451,7 +424,7 @@
           <div class="column6  total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_current_bronchoscope_cost_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.equipment_costs.total_su_bflex_cost}}</p>
@@ -463,7 +436,8 @@
           <div class="column6 with total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_with_bronchoscope_cost_label}}</p>
+
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
@@ -474,7 +448,7 @@
         </div>
         <div class="row result-section">
           <div class="column6">
-            <h3>Repair and maintenance costs</h3>
+            <h3>{{config.result_current_repair_maintenance_heading}}</h3>
           </div>
           <div class="column6 "></div>
         </div>
@@ -484,7 +458,8 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Reusable bronchoscopes (QTY)</p>
+                <p>{{config.result_current_reusable_bronchoscope_usage_label}}</p>
+
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.repair_maintenance.reusable_scopes_quantity}}</p>
@@ -500,7 +475,7 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Reusable bronchoscopes (QTY)</p>
+                <p>{{config.result_with_reusable_bronchoscope_usage_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.repair_maintenance.reusable_scopes_quantity}}</p>
@@ -520,7 +495,8 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Annual cost of service agreement per reusable bronchoscope</p>
+                <p>{{config.result_current_annual_cost_of_service_label}}</p>
+
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
@@ -536,7 +512,7 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Annual cost of service agreement per reusable bronchoscope</p>
+                <p>{{config.result_with_annual_cost_of_service_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
@@ -556,7 +532,7 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
+                <p>{{config.result_current_annual_oop_cost_of_service_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
@@ -574,7 +550,7 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Annual out-of-pocket repair costs for all reusable bronchoscopes</p>
+                <p>{{config.result_with_annual_oop_cost_of_service_label}}</p>
               </div>
               <div class="column7">
                 <p class="value float">{{calculation.reducing_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
@@ -594,7 +570,7 @@
           <div class="column6 total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_current_repair_maintenance_costs_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
@@ -605,7 +581,7 @@
           <div class="column6 with total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_with_repair_maintenance_costs_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
@@ -617,7 +593,7 @@
         </div>
         <div class="row result-section">
           <div class="column6">
-            <h3>Reprocessing costs per use</h3>
+            <h3>{{config.result_current_reprocessing_costs_heading}}</h3>
           </div>
           <div class="column6 "></div>
         </div>
@@ -627,10 +603,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Reprocessing costs</p>
+                <p>{{config.result_current_reprocessing_cost_left_column_heading}}</p>
               </div>
               <div class="column5">
-                <p class="value float">Average</p>
+                <p class="value float">{{config.result_current_reprocessing_cost_right_column_heading}}</p>
               </div>
             </div>
             <div class="row">
@@ -643,10 +619,11 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Reprocessing costs</p>
+                <p>{{config.result_with_reprocessing_cost_left_column_heading}}</p>
+
               </div>
               <div class="column5">
-                <p class="value float">Average</p>
+                <p class="value float">{{config.result_with_reprocessing_cost_right_column_heading}}</p>
               </div>
             </div>
             <div class="row">
@@ -662,7 +639,7 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>PPE for personnel</p>
+                <p>{{config.result_current_ppe_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
@@ -679,7 +656,7 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>PPE for personnel</p>
+                <p>{{config.result_with_ppe_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
@@ -699,7 +676,7 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Bedside precleaning</p>
+                <p>{{config.result_current_bedside_precleaning_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
@@ -717,12 +694,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Bedside precleaning</p>
+                <p>{{config.result_with_bedside_precleaning_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -738,12 +713,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Leak testing</p>
+                <p>{{config.result_current_leak_testing_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -756,12 +729,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Leak testing</p>
+                <p>{{config.result_with_leak_testing_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -777,12 +748,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Manual cleaning</p>
+                <p>{{config.result_current_manual_cleaning_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -795,12 +764,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Manual cleaning</p>
+                <p>{{config.result_current_manual_cleaning_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -816,7 +783,7 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Visual inspection</p>
+                <p>{{config.result_current_visual_inspection_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
@@ -833,12 +800,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Visual inspection</p>
+                <p>{{config.result_with_visual_inspection_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -854,12 +819,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>HLD in an AER</p>
+                <p>{{config.result_current_hld_in_aer_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -872,12 +835,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>HLD in an AER</p>
+                <p>{{config.result_with_hld_in_aer_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -893,12 +854,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Drying and storage</p>
+                <p>{{config.result_current_dying_storage_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -911,12 +870,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Drying and storage</p>
+                <p>{{config.result_current_dying_storage_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -932,7 +889,8 @@
           <div class="column6  total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_current_reprocessing_costs_label}}</p>
+
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
@@ -943,12 +901,10 @@
           <div class="column6 with total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_with_reprocessing_costs_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
-
-
               </div>
             </div>
           </div>
@@ -956,7 +912,7 @@
         </div>
         <div class="row result-section">
           <div class="column6">
-            <h3>Preventable infections</h3>
+            <h3>{{config.result_current_preventable_infections_heading}}</h3>
           </div>
           <div class="column6 "></div>
         </div>
@@ -966,12 +922,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Patient infections due to cross contamination</p>
+                <p>{{config.result_current_preventable_infections_patient_infections_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.treating_infections.patient_infections}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -984,11 +938,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Patient infections due to cross contamination</p>
+                <p>{{config.result_with_preventable_infections_patient_infections_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.treating_infections.patient_infections}}</p>
-
               </div>
             </div>
             <div class="row">
@@ -1004,12 +957,10 @@
           <div class="column6 ">
             <div class="row">
               <div class="column7">
-                <p>Cost per infection</p>
+                <p>{{config.result_current_cost_per_infection_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.cost_per_infection|currency}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -1022,12 +973,10 @@
           <div class="column6">
             <div class="row">
               <div class="column7">
-                <p>Cost per infection</p>
+                <p>{{config.result_with_cost_per_infection_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.cost_per_infection|currency}}</p>
-
-
               </div>
             </div>
             <div class="row">
@@ -1043,12 +992,11 @@
           <div class="column6  total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_current_preventable_infections_costs_label}}</p>
+
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.current_costs.treating_infections.annual_costs|currency}}</p>
-
-
               </div>
             </div>
           </div>
@@ -1056,25 +1004,21 @@
           <div class="column6 with total">
             <div class="row">
               <div class="column7">
-                <p>Annual cost</p>
+                <p>{{config.result_with_preventable_infections_costs_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.treating_infections.annual_costs|currency}}</p>
-
-
               </div>
             </div>
           </div>
-
         </div>
-
         <div
           class="row result">
           <!-- CURRENT -->
           <div class="column6  total grand">
             <div class="row">
               <div class="column7">
-                <p>{{"Annual Estimated Operating Costs"}}</p>
+                <p>{{config.result_current_grand_total_label}}</p>
               </div>
               <div class="column5 ">
                 <p class="value float">{{calculation.current_costs.total_costs|currency}}</p>
@@ -1086,12 +1030,10 @@
           <div class="column6 with total grand">
             <div class="row">
               <div class="column7">
-                <p>Annual Estimated Operating Costs</p>
+                <p>{{config.result_with_grand_total_label}}</p>
               </div>
               <div class="column5">
                 <p class="value float">{{calculation.reducing_costs.total_costs|currency}}</p>
-
-
               </div>
             </div>
           </div>
@@ -1101,10 +1043,10 @@
         <div class="blueBackground">
           <div class="container footer">
             <div class="column6">
-              <h2>Single-Use. Safer Investment.</h2>
+              <h2>{{config.result_page_footer}}</h2>
             </div>
             <div class="column6 float-right">
-              <a class="button-result-page" href="{{element['#pdf_url']}}">Generate Custom Report</a>
+              <a class="button-result-page" href="{{element['#pdf_url']}}">{{config.download_button_text}}</a>
             </div>
           </div>
         </div>

@@ -64,15 +64,15 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Page Heading'),
         ],
-        '#default_value' => !empty($values['result_page_heading']) ? $values['result_page_heading'] : $config['result_page_heading'],
+        '#default_value' => $config['result_page_heading'],
       ];
-      // $form['global']['result_page_description'] = [
-      //   '#type' => 'text_format',
-      //   '#format' => 'cohesion',
-      //   '#allowed_formats' => ['cohesion'],
-      //   '#title' => $this->t('Description'),
-      //   '#default_value' => !empty($values['result_page_description']) ? $values['result_page_description'] : $config['result_page_description'],
-      // ];
+      $form['global']['result_page_description'] = [
+        '#type' => 'text_format',
+        '#format' => 'cohesion',
+        '#allowed_formats' => ['cohesion'],
+        '#title' => $this->t('Description'),
+        '#default_value' => $config['result_page_description']['value'],
+      ];
 
       $form['global']['result_page_footer'] = [
         '#type' => 'textfield',
@@ -80,10 +80,17 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Footer Text'),
         ],
-        '#default_value' => !empty($values['result_page_footer']) ? $values['result_page_footer'] : $config['result_page_footer'],
+        '#default_value' => $config['result_page_footer'],
       ];
 
-
+      $form['global']['download_button_text'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Download button  - Label'),
+        '#attributes' => [
+          'placeholder' => $this->t('Download button  - Label'),
+        ],
+        '#default_value' => $config['download_button_text'],
+      ];
 
       // GEnerating fields for the current section.
       $form['current']['current_bronchoscope_usage'] = [
@@ -111,21 +118,21 @@ class BflexResultContentForm extends ConfigFormBase
         '#title' => $this->t('Preventable Infections')
       ];
       // Gloabl Current Fields
-      $form['current']['result_current_current_main_heading'] = [
+      $form['current']['result_current_main_heading'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Heading - Label'),
         '#attributes' => [
           'placeholder' => $this->t('CURRENT OPERATING COSTS'),
         ],
-        '#default_value' => !empty($values['result_current_current_main_heading']) ? $values['result_current_current_main_heading'] : $config['result_current_current_main_heading'],
+        '#default_value' => $config['result_current_main_heading'],
       ];
-      $form['current']['result_current_current_sub_heading'] = [
+      $form['current']['result_current_sub_heading'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Sub-heading - Label'),
         '#attributes' => [
           'placeholder' => $this->t('Using reusable bronchoscopes only'),
         ],
-        '#default_value' => !empty($values['result_current_current_sub_heading']) ? $values['result_current_current_sub_heading'] : $config['result_current_current_sub_heading'],
+        '#default_value' => $config['result_current_sub_heading'],
       ];
       $form['current']['result_current_grand_total_label'] = [
         '#type' => 'textfield',
@@ -133,7 +140,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Estimated Operating Costs'),
         ],
-        '#default_value' => !empty($values['result_current_grand_total_label']) ? $values['result_current_grand_total_label'] : $config['result_current_grand_total_label'],
+        '#default_value' => $config['result_current_grand_total_label'],
       ];
 
       // Bronchoscope section fields
@@ -143,7 +150,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Current bronchoscope usage'),
         ],
-        '#default_value' => !empty($values['result_current_bronchoscope_heading']) ? $values['result_current_bronchoscope_heading'] : $config['result_current_bronchoscope_heading'],
+        '#default_value' => $config['result_current_bronchoscope_heading'],
       ];
       $form['current']['current_bronchoscope_usage']['result_current_single_usage_count_label'] = [
         '#type' => 'textfield',
@@ -151,7 +158,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Current bronchoscope usage'),
         ],
-        '#default_value' => !empty($values['result_current_single_usage_count_label']) ? $values['result_current_single_usage_count_label'] : $config['result_current_single_usage_count_label'],
+        '#default_value' => $config['result_current_single_usage_count_label'],
       ];
       $form['current']['current_bronchoscope_usage']['result_current_bronchoscope_cost_label'] = [
         '#type' => 'textfield',
@@ -159,7 +166,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_current_bronchoscope_cost_label']) ? $values['result_current_bronchoscope_cost_label'] : $config['result_current_bronchoscope_cost_label'],
+        '#default_value' => $config['result_current_bronchoscope_cost_label'],
       ];
 
       // Repair & Maintenance Costs Section fields
@@ -169,7 +176,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Repair and maintenance costs'),
         ],
-        '#default_value' => !empty($values['result_current_repair_maintenance_heading']) ? $values['result_current_repair_maintenance_heading'] : $config['result_current_repair_maintenance_heading'],
+        '#default_value' => $config['result_current_repair_maintenance_heading'],
       ];
       $form['current']['repair_maintenance_usage']['result_current_reusable_bronchoscope_usage_label'] = [
         '#type' => 'textfield',
@@ -177,7 +184,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reusable bronchoscopes (QTY)'),
         ],
-        '#default_value' => !empty($values['result_current_reusable_bronchoscope_usage_label']) ? $values['result_current_reusable_bronchoscope_usage_label'] : $config['result_current_reusable_bronchoscope_usage_label'],
+        '#default_value' => $config['result_current_reusable_bronchoscope_usage_label'],
       ];
       $form['current']['repair_maintenance_usage']['result_current_annual_cost_of_service_label'] = [
         '#type' => 'textfield',
@@ -185,7 +192,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual cost of service agreement per reusable bronchoscope'),
         ],
-        '#default_value' => !empty($values['result_current_annual_cost_of_service_label']) ? $values['result_current_annual_cost_of_service_label'] : $config['result_current_annual_cost_of_service_label'],
+        '#default_value' => $config['result_current_annual_cost_of_service_label'],
       ];
       $form['current']['repair_maintenance_usage']['result_current_annual_oop_cost_of_service_label'] = [
         '#type' => 'textfield',
@@ -193,7 +200,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual out-of-pocket repair costs for all reusable bronchoscopes'),
         ],
-        '#default_value' => !empty($values['result_current_annual_oop_cost_of_service_label']) ? $values['result_current_annual_oop_cost_of_service_label'] : $config['result_current_annual_oop_cost_of_service_label'],
+        '#default_value' => $config['result_current_annual_oop_cost_of_service_label'],
       ];
       $form['current']['repair_maintenance_usage']['result_current_repair_maintenance_costs_label'] = [
         '#type' => 'textfield',
@@ -201,7 +208,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_current_repair_maintenance_costs_label']) ? $values['result_current_repair_maintenance_costs_label'] : $config['result_current_repair_maintenance_costs_label'],
+        '#default_value' => $config['result_current_repair_maintenance_costs_label'],
       ];
 
       // Repair & Maintenance Costs Section fields
@@ -211,7 +218,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reprocessing costs per use'),
         ],
-        '#default_value' => !empty($values['result_current_reprocessing_costs_heading']) ? $values['result_current_reprocessing_costs_heading'] : $config['result_current_reprocessing_costs_heading'],
+        '#default_value' => $config['result_current_reprocessing_costs_heading'],
       ];
       $form['current']['reprocessing_costs']['result_current_reprocessing_cost_left_column_heading'] = [
         '#type' => 'textfield',
@@ -219,7 +226,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reprocessing costs'),
         ],
-        '#default_value' => !empty($values['result_current_reprocessing_cost_left_column_heading']) ? $values['result_current_reprocessing_cost_left_column_heading'] : $config['result_current_reprocessing_cost_left_column_heading'],
+        '#default_value' => $config['result_current_reprocessing_cost_left_column_heading'],
       ];
       $form['current']['reprocessing_costs']['result_current_reprocessing_cost_right_column_heading'] = [
         '#type' => 'textfield',
@@ -227,7 +234,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Average'),
         ],
-        '#default_value' => !empty($values['result_current_reprocessing_cost_right_column_heading']) ? $values['result_current_reprocessing_cost_right_column_heading'] : $config['result_current_reprocessing_cost_right_column_heading'],
+        '#default_value' => $config['result_current_reprocessing_cost_right_column_heading'],
       ];
       $form['current']['reprocessing_costs']['result_current_ppe_label'] = [
         '#type' => 'textfield',
@@ -235,7 +242,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('PPE for personnel'),
         ],
-        '#default_value' => !empty($values['result_current_ppe_label']) ? $values['result_current_ppe_label'] : $config['result_current_ppe_label'],
+        '#default_value' => $config['result_current_ppe_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_bedside_precleaning_label'] = [
         '#type' => 'textfield',
@@ -243,7 +250,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Bedside precleaning'),
         ],
-        '#default_value' => !empty($values['result_current_bedside_precleaning_label']) ? $values['result_current_bedside_precleaning_label'] : $config['result_current_bedside_precleaning_label'],
+        '#default_value' => $config['result_current_bedside_precleaning_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_leak_testing_label'] = [
         '#type' => 'textfield',
@@ -251,7 +258,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Leak testing'),
         ],
-        '#default_value' => !empty($values['result_current_leak_testing_label']) ? $values['result_current_leak_testing_label'] : $config['result_current_leak_testing_label'],
+        '#default_value' => $config['result_current_leak_testing_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_manual_cleaning_label'] = [
         '#type' => 'textfield',
@@ -259,7 +266,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Manual cleaning'),
         ],
-        '#default_value' => !empty($values['result_current_manual_cleaning_label']) ? $values['result_current_manual_cleaning_label'] : $config['result_current_manual_cleaning_label'],
+        '#default_value' => $config['result_current_manual_cleaning_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_visual_inspection_label'] = [
         '#type' => 'textfield',
@@ -267,7 +274,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Visual Inspection'),
         ],
-        '#default_value' => !empty($values['result_current_visual_inspection_label']) ? $values['result_current_visual_inspection_label'] : $config['result_current_visual_inspection_label'],
+        '#default_value' => $config['result_current_visual_inspection_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_hld_in_aer_label'] = [
         '#type' => 'textfield',
@@ -275,7 +282,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('HLD in an AER'),
         ],
-        '#default_value' => !empty($values['result_current_hld_in_aer_label']) ? $values['result_current_hld_in_aer_label'] : $config['result_current_hld_in_aer_label'],
+        '#default_value' => $config['result_current_hld_in_aer_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_dying_storage_label'] = [
         '#type' => 'textfield',
@@ -283,7 +290,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Dying and Storage'),
         ],
-        '#default_value' => !empty($values['result_current_dying_storage_label']) ? $values['result_current_dying_storage_label'] : $config['result_current_dying_storage_label'],
+        '#default_value' => $config['result_current_dying_storage_label'],
       ];
       $form['current']['reprocessing_costs']['result_current_reprocessing_costs_label'] = [
         '#type' => 'textfield',
@@ -291,7 +298,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_current_reprocessing_costs_label']) ? $values['result_current_reprocessing_costs_label'] : $config['result_current_reprocessing_costs_label'],
+        '#default_value' => $config['result_current_reprocessing_costs_label'],
       ];
 
       // Preventable Infections Section Fields.
@@ -301,7 +308,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Preventable Infections'),
         ],
-        '#default_value' => !empty($values['result_current_preventable_infections_heading']) ? $values['result_current_preventable_infections_heading'] : $config['result_current_preventable_infections_heading'],
+        '#default_value' => $config['result_current_preventable_infections_heading'],
       ];
       $form['current']['preventable_infections']['result_current_preventable_infections_patient_infections_label'] = [
         '#type' => 'textfield',
@@ -309,7 +316,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Patient infections due to cross contamination'),
         ],
-        '#default_value' => !empty($values['result_current_preventable_infections_patient_infections_label']) ? $values['result_current_preventable_infections_patient_infections_label'] : $config['result_current_preventable_infections_patient_infections_label'],
+        '#default_value' => $config['result_current_preventable_infections_patient_infections_label'],
       ];
       $form['current']['preventable_infections']['result_current_cost_per_infection_label'] = [
         '#type' => 'textfield',
@@ -317,7 +324,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Cost per infection'),
         ],
-        '#default_value' => !empty($values['result_current_cost_per_infection_label']) ? $values['result_current_cost_per_infection_label'] : $config['result_current_cost_per_infection_label'],
+        '#default_value' => $config['result_current_cost_per_infection_label'],
       ];
       $form['current']['preventable_infections']['result_current_preventable_infections_costs_label'] = [
         '#type' => 'textfield',
@@ -325,7 +332,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_current_preventable_infections_costs_label']) ? $values['result_current_preventable_infections_costs_label'] : $config['result_current_preventable_infections_costs_label'],
+        '#default_value' => $config['result_current_preventable_infections_costs_label'],
       ];
 
       // GEnerating fields for the current section.
@@ -355,29 +362,29 @@ class BflexResultContentForm extends ConfigFormBase
       ];
 
       // Global With Fields
-      $form['with']['bflex_current_current_main_heading'] = [
+      $form['with']['result_with_main_heading'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Heading - Label'),
         '#attributes' => [
-          'placeholder' => $this->t('CURRENT OPERATING COSTS'),
+          'placeholder' => $this->t('Current operating costs'),
         ],
-        '#default_value' => !empty($values['bflex_current_current_main_heading']) ? $values['bflex_current_current_main_heading'] : $config['bflex_current_current_main_heading'],
+        '#default_value' => $config['result_with_main_heading'],
       ];
-      $form['with']['bflex_current_current_sub_heading'] = [
+      $form['with']['result_with_sub_heading'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Sub-heading - Label'),
         '#attributes' => [
           'placeholder' => $this->t('Using reusable bronchoscopes only'),
         ],
-        '#default_value' => !empty($values['bflex_current_current_sub_heading']) ? $values['bflex_current_current_sub_heading'] : $config['bflex_current_current_sub_heading'],
+        '#default_value' => $config['result_with_sub_heading'],
       ];
-      $form['with']['bflex_current_grand_total_label'] = [
+      $form['with']['result_with_grand_total_label'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Annual Estimated Operating Costs - Label'),
         '#attributes' => [
           'placeholder' => $this->t('Annual Estimated Operating Costs'),
         ],
-        '#default_value' => !empty($values['bflex_current_grand_total_label']) ? $values['bflex_current_grand_total_label'] : $config['bflex_current_grand_total_label'],
+        '#default_value' => $config['result_with_grand_total_label'],
       ];
       // Bronchoscope section fields
       $form['with']['bflex_bronchoscope_usage']['result_with_bronchoscope_heading'] = [
@@ -386,7 +393,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Current bronchoscope usage'),
         ],
-        '#default_value' => !empty($values['result_with_bronchoscope_heading']) ? $values['result_with_bronchoscope_heading'] : $config['result_with_bronchoscope_heading'],
+        '#default_value' => $config['result_with_bronchoscope_heading'],
       ];
       $form['with']['bflex_bronchoscope_usage']['result_with_single_usage_count_label'] = [
         '#type' => 'textfield',
@@ -394,7 +401,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Current bronchoscope usage'),
         ],
-        '#default_value' => !empty($values['result_with_single_usage_count_label']) ? $values['result_with_single_usage_count_label'] : $config['result_with_single_usage_count_label'],
+        '#default_value' => $config['result_with_single_usage_count_label'],
       ];
       $form['with']['bflex_bronchoscope_usage']['result_with_bronchoscope_cost_label'] = [
         '#type' => 'textfield',
@@ -402,7 +409,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_with_bronchoscope_cost_label']) ? $values['result_with_bronchoscope_cost_label'] : $config['result_with_bronchoscope_cost_label'],
+        '#default_value' => $config['result_with_bronchoscope_cost_label'],
       ];
 
       // Repair & Maintenance Costs Section fields
@@ -412,7 +419,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Repair and maintenance costs'),
         ],
-        '#default_value' => !empty($values['result_with_repair_maintenance_heading']) ? $values['result_with_repair_maintenance_heading'] : $config['result_with_repair_maintenance_heading'],
+        '#default_value' => $config['result_with_repair_maintenance_heading'],
       ];
       $form['with']['bflex_repair_maintenance_usage']['result_with_reusable_bronchoscope_usage_label'] = [
         '#type' => 'textfield',
@@ -420,7 +427,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reusable bronchoscopes (QTY)'),
         ],
-        '#default_value' => !empty($values['result_with_reusable_bronchoscope_usage_label']) ? $values['result_with_reusable_bronchoscope_usage_label'] : $config['result_with_reusable_bronchoscope_usage_label'],
+        '#default_value' => $config['result_with_reusable_bronchoscope_usage_label'],
       ];
       $form['with']['bflex_repair_maintenance_usage']['result_with_annual_cost_of_service_label'] = [
         '#type' => 'textfield',
@@ -428,7 +435,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual cost of service agreement per reusable bronchoscope'),
         ],
-        '#default_value' => !empty($values['result_with_annual_cost_of_service_label']) ? $values['result_with_annual_cost_of_service_label'] : $config['result_with_annual_cost_of_service_label'],
+        '#default_value' => $config['result_with_annual_cost_of_service_label'],
       ];
       $form['with']['bflex_repair_maintenance_usage']['result_with_annual_oop_cost_of_service_label'] = [
         '#type' => 'textfield',
@@ -436,7 +443,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual out-of-pocket repair costs for all reusable bronchoscopes'),
         ],
-        '#default_value' => !empty($values['result_with_annual_oop_cost_of_service_label']) ? $values['result_with_annual_oop_cost_of_service_label'] : $config['result_with_annual_oop_cost_of_service_label'],
+        '#default_value' => $config['result_with_annual_oop_cost_of_service_label'],
       ];
       $form['with']['bflex_repair_maintenance_usage']['result_with_repair_maintenance_costs_label'] = [
         '#type' => 'textfield',
@@ -444,7 +451,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_with_repair_maintenance_costs_label']) ? $values['result_with_repair_maintenance_costs_label'] : $config['result_with_repair_maintenance_costs_label'],
+        '#default_value' => $config['result_with_repair_maintenance_costs_label'],
       ];
 
       // Repair & Maintenance Costs Section fields
@@ -454,7 +461,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reprocessing costs per use'),
         ],
-        '#default_value' => !empty($values['result_with_reprocessing_costs_heading']) ? $values['result_with_reprocessing_costs_heading'] : $config['result_with_reprocessing_costs_heading'],
+        '#default_value' => $config['result_with_reprocessing_costs_heading'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_reprocessing_cost_left_column_heading'] = [
         '#type' => 'textfield',
@@ -462,7 +469,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Reprocessing costs'),
         ],
-        '#default_value' => !empty($values['result_with_reprocessing_cost_left_column_heading']) ? $values['result_with_reprocessing_cost_left_column_heading'] : $config['result_with_reprocessing_cost_left_column_heading'],
+        '#default_value' => $config['result_with_reprocessing_cost_left_column_heading'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_reprocessing_cost_right_column_heading'] = [
         '#type' => 'textfield',
@@ -470,7 +477,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Average'),
         ],
-        '#default_value' => !empty($values['result_with_reprocessing_cost_right_column_heading']) ? $values['result_with_reprocessing_cost_right_column_heading'] : $config['result_with_reprocessing_cost_right_column_heading'],
+        '#default_value' => $config['result_with_reprocessing_cost_right_column_heading'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_ppe_label'] = [
         '#type' => 'textfield',
@@ -478,7 +485,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('PPE for personnel'),
         ],
-        '#default_value' => !empty($values['result_with_ppe_label']) ? $values['result_with_ppe_label'] : $config['result_with_ppe_label'],
+        '#default_value' => $config['result_with_ppe_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_bedside_precleaning_label'] = [
         '#type' => 'textfield',
@@ -486,7 +493,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Bedside precleaning'),
         ],
-        '#default_value' => !empty($values['result_with_bedside_precleaning_label']) ? $values['result_with_bedside_precleaning_label'] : $config['result_with_bedside_precleaning_label'],
+        '#default_value' => $config['result_with_bedside_precleaning_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_leak_testing_label'] = [
         '#type' => 'textfield',
@@ -494,7 +501,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Leak testing'),
         ],
-        '#default_value' => !empty($values['result_with_leak_testing_label']) ? $values['result_with_leak_testing_label'] : $config['result_with_leak_testing_label'],
+        '#default_value' => $config['result_with_leak_testing_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_manual_cleaning_label'] = [
         '#type' => 'textfield',
@@ -502,7 +509,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Manual cleaning'),
         ],
-        '#default_value' => !empty($values['result_with_manual_cleaning_label']) ? $values['result_with_manual_cleaning_label'] : $config['result_with_manual_cleaning_label'],
+        '#default_value' => $config['result_with_manual_cleaning_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_visual_inspection_label'] = [
         '#type' => 'textfield',
@@ -510,7 +517,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Visual Inspection'),
         ],
-        '#default_value' => !empty($values['result_with_visual_inspection_label']) ? $values['result_with_visual_inspection_label'] : $config['result_with_visual_inspection_label'],
+        '#default_value' => $config['result_with_visual_inspection_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_hld_in_aer_label'] = [
         '#type' => 'textfield',
@@ -518,7 +525,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('HLD in an AER'),
         ],
-        '#default_value' => !empty($values['result_with_hld_in_aer_label']) ? $values['result_with_hld_in_aer_label'] : $config['result_with_hld_in_aer_label'],
+        '#default_value' => $config['result_with_hld_in_aer_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_dying_storage_label'] = [
         '#type' => 'textfield',
@@ -526,7 +533,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Dying and Storage'),
         ],
-        '#default_value' => !empty($values['result_with_dying_storage_label']) ? $values['result_with_dying_storage_label'] : $config['result_with_dying_storage_label'],
+        '#default_value' => $config['result_with_dying_storage_label'],
       ];
       $form['with']['bflex_reprocessing_costs']['result_with_reprocessing_costs_label'] = [
         '#type' => 'textfield',
@@ -534,7 +541,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_with_reprocessing_costs_label']) ? $values['result_with_reprocessing_costs_label'] : $config['result_with_reprocessing_costs_label'],
+        '#default_value' => $config['result_with_reprocessing_costs_label'],
       ];
 
       // Preventable Infections Section Fields.
@@ -544,7 +551,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Preventable Infections'),
         ],
-        '#default_value' => !empty($values['result_with_preventable_infections_heading']) ? $values['result_with_preventable_infections_heading'] : $config['result_with_preventable_infections_heading'],
+        '#default_value' => $config['result_with_preventable_infections_heading'],
       ];
       $form['with']['bflex_preventable_infections']['result_with_preventable_infections_patient_infections_label'] = [
         '#type' => 'textfield',
@@ -552,7 +559,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Patient infections due to cross contamination'),
         ],
-        '#default_value' => !empty($values['result_with_preventable_infections_patient_infections_label']) ? $values['result_with_preventable_infections_patient_infections_label'] : $config['result_with_preventable_infections_patient_infections_label'],
+        '#default_value' => $config['result_with_preventable_infections_patient_infections_label'],
       ];
       $form['with']['bflex_preventable_infections']['result_with_cost_per_infection_label'] = [
         '#type' => 'textfield',
@@ -560,7 +567,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Cost per infection'),
         ],
-        '#default_value' => !empty($values['result_with_cost_per_infection_label']) ? $values['result_with_cost_per_infection_label'] : $config['result_with_cost_per_infection_label'],
+        '#default_value' => $config['result_with_cost_per_infection_label'],
       ];
       $form['with']['bflex_preventable_infections']['result_with_preventable_infections_costs_label'] = [
         '#type' => 'textfield',
@@ -568,7 +575,7 @@ class BflexResultContentForm extends ConfigFormBase
         '#attributes' => [
           'placeholder' => $this->t('Annual Cost'),
         ],
-        '#default_value' => !empty($values['result_with_preventable_infections_costs_label']) ? $values['result_with_preventable_infections_costs_label'] : $config['result_with_preventable_infections_costs_label'],
+        '#default_value' => $config['result_with_preventable_infections_costs_label'],
       ];
 
       return parent::buildForm($form, $form_state);
@@ -596,7 +603,7 @@ class BflexResultContentForm extends ConfigFormBase
 
         // Saving Fields.
         ->set('result_page_heading', $form_state->getValue('result_page_heading'))
-        // ->set('result_page_description', $form_state->getValue('result_page_description'))
+        ->set('result_page_description', $form_state->getValue('result_page_description'))
         ->set('result_page_footer', $form_state->getValue('result_page_footer'))
         ->set('result_current_main_heading', $form_state->getValue('result_current_main_heading'))
         ->set('result_current_sub_heading', $form_state->getValue('result_current_sub_heading'))
@@ -623,6 +630,7 @@ class BflexResultContentForm extends ConfigFormBase
         ->set('result_current_preventable_infections_patient_infections_label', $form_state->getValue('result_current_preventable_infections_patient_infections_label'))
         ->set('result_current_cost_per_infection_label', $form_state->getValue('result_current_cost_per_infection_label'))
         ->set('result_current_preventable_infections_costs_label', $form_state->getValue('result_current_preventable_infections_costs_label'))
+        ->set('result_current_repair_maintenance_costs_label', $form_state->getValue('result_current_repair_maintenance_costs_label'))
 
         // With fields
         ->set('result_with_main_heading', $form_state->getValue('result_with_main_heading'))
@@ -650,6 +658,12 @@ class BflexResultContentForm extends ConfigFormBase
         ->set('result_with_preventable_infections_patient_infections_label', $form_state->getValue('result_with_preventable_infections_patient_infections_label'))
         ->set('result_with_cost_per_infection_label', $form_state->getValue('result_with_cost_per_infection_label'))
         ->set('result_with_preventable_infections_costs_label', $form_state->getValue('result_with_preventable_infections_costs_label'))
+        ->set('result_with_main_heading', $form_state->getValue('result_with_main_heading'))
+        ->set('result_with_sub_heading', $form_state->getValue('result_with_sub_heading'))
+        ->set('result_with_repair_maintenance_costs_label', $form_state->getValue('result_with_repair_maintenance_costs_label'))
+        ->set('result_with_grand_total_label', $form_state->getValue('result_with_grand_total_label'))
+        ->set('scroll_text', $form_state->getValue('scroll_text'))
+        ->set('download_button_text', $form_state->getValue('download_button_text'))
 
         ->save();
       parent::submitForm($form, $form_state);

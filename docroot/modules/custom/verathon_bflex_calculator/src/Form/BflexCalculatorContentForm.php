@@ -68,6 +68,14 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#title' => $this->t('Result Button : Label'),
       '#default_value' => $config['result_button_label'],
     ];
+    $form['global']['scroll_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mouse Scroll  - Label'),
+      '#attributes' => [
+        'placeholder' => $this->t('Mouse Scroll'),
+      ],
+      '#default_value' => $config['scroll_text'],
+    ];
     // Step One Section Fields.
     $form['step_one'] = [
       '#type' => 'details',
@@ -311,6 +319,7 @@ class BflexCalculatorContentForm extends ConfigFormBase
         ->set("bflex_page_description", $form_state->getValue("bflex_page_description"))
         ->set('facility_name_error_text', $form_state->getValue('facility_name_error_text'))
         ->set('total_reusable_bronchoscopes_error_text', $form_state->getValue('total_reusable_bronchoscopes_error_text'))
+        ->set('scroll_text', $form_state->getValue('scroll_text'))
         ->save();
       parent::submitForm($form, $form_state);
     } catch (\Exception $e) {
