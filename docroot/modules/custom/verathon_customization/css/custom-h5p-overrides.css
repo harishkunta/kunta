@@ -1,3 +1,6 @@
+.h5p-image-hotspot { 
+  font-size: 1.2rem;
+}
 .h5p-content-controls {
   display: none;
 }
@@ -15,16 +18,19 @@
   padding: 0;
 }
 .h5p-image-hotspot-popup-body .h5p-text {
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 @media only screen and (min-device-width: 768px) {
+  .h5p-image-hotspot { 
+    font-size: 2rem;
+  }
   .h5p-image-hotspot-popup {
     width: 80%;
     max-width: 520px;
   }
   .h5p-image-hotspot-popup-body .h5p-text {
-    padding: 52px;
+    padding: 3.25rem;
     max-width: 50%;
   }
   .h5p-image-hotspot-popup-body {
