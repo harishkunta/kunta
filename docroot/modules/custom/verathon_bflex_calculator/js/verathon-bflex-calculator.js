@@ -26,7 +26,7 @@ function validateInput(id, type) {
   let errorCheck = false;
   if (type === "textFieldInput") {
     if (!$("#" + id).val()) {
-      $("#" + errorId).html("Please enter the name of your facility.")
+      // $("#" + errorId).html("Please enter the name of your facility.")
       $("#" + errorId).css("display", "block");
       errorCheck = true;
     } else {
@@ -46,7 +46,7 @@ function validateInput(id, type) {
       let value2 = Number($("#edit-total-annual-bronchoscopy-procedures").val())
       let numberOfProcedures_errorId = "numberOfProcedures_slider_1_textfieldError"
       if (value1 > value2) {
-        $("#" + numberOfProcedures_errorId).html("This value must be less than or equal to the total annual bronchoscopy procedures.");
+        // $("#" + numberOfProcedures_errorId).html("This value must be less than or equal to the total annual bronchoscopy procedures.");
         !$("#" + numberOfProcedures_errorId).hasClass("active") ? $("#" + numberOfProcedures_errorId).addClass("active") : null;
         errorCheck = true;
       } else if (value1 < value2) {

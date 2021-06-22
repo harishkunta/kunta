@@ -27,7 +27,7 @@ class VerathonBflexPdfController extends ControllerBase
    *
    * @var \Drupal\example\ExampleInterface
    */
-  protected $verathonBflexCalculatorPdfGenerator;
+  protected $calculations;
   protected $pdfService;
 
   /**
@@ -36,22 +36,20 @@ class VerathonBflexPdfController extends ControllerBase
    * @param \Drupal\example\ExampleInterface $verathon_bflex_calculator_pdf_generator
    *   The verathon_bflex_calculator.pdf_generator service.
    */
-  // public function __construct(PdfGenerator $pdf_service, Calculator $verathon_bflex_calculator_pdf_generator)
-  // {
-  //   $this->verathonBflexCalculatorPdfGenerator = $verathon_bflex_calculator_pdf_generator;
-  //   $this->pdfService = $pdf_service;
-  // }
+  public function __construct(Calculator $verathon_bflex_calculator_pdf_generator)
+  {
+    $this->calculator = $verathon_bflex_calculator_pdf_generator;
+  }
 
-  // /**
-  //  * {@inheritdoc}
-  //  */
-  // public static function create(ContainerInterface $container)
-  // {
-  //   return new static(
-  //     $container->get('verathon_bflex_calculator.pdf_generator'),
-  //     $container->get('verathon_bflex_calculator.calculator')
-  //   );
-  // }
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container)
+  {
+    return new static(
+      $container->get('verathon_bflex_calculator.calculator')
+    );
+  }
 
   /**
    * Builds the response.
@@ -59,27 +57,23 @@ class VerathonBflexPdfController extends ControllerBase
   public function build()
   {
     try {
-      $this->pdfService = new Dompdf();
+      // Getting all query parameters from the URL to generate the calculations for PDF.
+      $request = \Drupal::request();
+      $query_params = $request->query->all();
+
+      // If Query Parameters empty then redirect to Calculator page.
+      if (empty($query_params)) {
+        $response = new RedirectResponse("/bflex-calculator");
+        $response->send();
+      }
+
+      // Calling CloudConvert API for PDF generation.
       $cloudconvert = new CloudConvert([
-        // FIXME REPLACE WITH PRODUCTION ENV VAR
-        //'api_key' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAxOThlNWRjODVkYWNhNDU4YThhNDhjZWFkNDc5NTllNjRkNTViNmNlMzk2ZjFlZmFjZWVkZjE0NGVkYzg2MzJhOGU3MGEzNTAxNWFjNWEiLCJpYXQiOiIxNjA3OTY5ODk4LjA3ODU2MCIsIm5iZiI6IjE2MDc5Njk4OTguMDc4NTYzIiwiZXhwIjoiNDc2MzY0MzQ5OC4wMzA5OTAiLCJzdWIiOiI0NzU5NTcyNSIsInNjb3BlcyI6WyJ0YXNrLndyaXRlIiwidGFzay5yZWFkIl19.HmEWMxShHnW0k4bOyChJDKFpo_WGBowgPV6bVne_DHMFFBaEgxx73DIZYc7im3uzajgZI8vn8z1Lsh7V5ZqWlIW28lkJI1TsSKLR1DP-kTQBpO_xvEiD1e8msHOYCV9bUp6kNk-r5Wp3i4j_Z2LsuXfUSLXBxm3ItNAJTra9VRcX0FwSe-DLAyA0YGO1SjTh3eakh6-uaisWmqNATavAgjfDW-YQFzcwkiSztSWHO-5RtvsjCDRXNQVtGAvS75aiNSURXaWEigmb8urGdk3NKFWCpsOzmNyneLZhNboPtb6sRIjPLDiicWWol4KfrYfIsJF7BSnkuYHDanbtX2koeCXClGOxGqfNqkZ_HlKPD9ssTNY-uZahMy1qJvBfR7h5BZeFje_azTixrHqHsuBhIUCbQIjC5B54z1hduCHZ7539RHP9xPVHMuD1cCOHxChZTYoLn4bcfef68npKSmOX3jKbdIrviAuUZec6NT9OsFqYdNxfGMduvGJMjEYatcRLlT4KguMkmBLk0r60szWRCy-7sTMhpqgi3hM7xlUDlVSOB8tRj-TGRbbmt6et1kh_AYGl4GGKcKpuYCGDa6lfA8tt5-kTzsueIuBCDbFvKZ-5aRLzSBfQsQ3xnUxd-Gqj0W3LEcoDdp4zoceO1UC15vjseWo8lEXSNaryciX3E6U',
         'api_key' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2U3NDYyNjYzYTMxZTI0NDU5ZWQ1YjJhZjNkYzc1ZTM1NDBiNmNlYjlkMzdlN2QzY2IzYWNhMGU2ZTRiZGRhZGVmOGU3NDFhM2UyOGY3OWIiLCJpYXQiOiIxNjE2MDE3MDk3Ljc1NjkyMiIsIm5iZiI6IjE2MTYwMTcwOTcuNzU2OTI1IiwiZXhwIjoiNDc3MTY5MDY5Ny43MTU3NjIiLCJzdWIiOiI0OTcyNjI3NSIsInNjb3BlcyI6WyJ0YXNrLnJlYWQiLCJ0YXNrLndyaXRlIl19.cb_As43_tQZvoytXOa5eUDhLy_RcTf7u5UOg9yeTxkUI8cb0A-tWdQoDH9JhUj18yH2jfM5zfOrzQnsfsrfnZAN9334SM_K1mXvZxbRbjqhV66v0Q-oqKlEcu0XCHYkUNZTuxWtjqafvEQP9lUTf9iZ3auQYluMcobcM98mVh_ENTLsud7vzoI50prbkcyDVKFcnzAJCXkyJjdI2Pwpbe86htwsykQQyqQY_VQZafY_nr7DUTc9Hpx9LRzyxxsE8CIJNAGxsend9lH89DxkKcxpAEopX6_re1SsOGgbMFX00KypFflEvpruqk7zQHkYRxkXEqkWIB39LaMfTvhfeWa8sHuQJMO5gJpbt_wEUdXajUySIRX0qQmLvh3M2wBDQWaAQQNe97ENOA6rk8Jct9rx3JAaGxgFSTE2eh3zt3PQlMLnXn1fF2E1HoSN-Pqp-tH3kiAnnOcfMOpedpjwOCBThKZkVGy4jjlc74bQXzqlHNKMJkj4OVCr5WHL3y4ncl1vqZvnFMPDpiOU8LI31Tzin7TnAHXGbMlVYg3bWB8VDXzvXL9TEUFmUtEzrqSJO-Bs2k7KPFbbDie_p5lowEWCd9_76WgPDkl9bziv8k11CjG8qCtby6tHoJd-Jx_LlUr6KlEUNd6quILs-b8wtKawax0EYZnqBVozWFACmS_w',
         'sandbox' => false
       ]);
 
-
-      $module_handler = \Drupal::service('module_handler');
-      $module_path = $module_handler->getModule('verathon_bflex_calculator')->getPath();
-
-      $css_page =  file_get_contents($module_path . '/css/pdf_page1.css');
-      $css_page .=  file_get_contents($module_path . '/css/pdf_page2.css');
-      $css_page .=  file_get_contents($module_path . '/css/pdf_page3.css');
-      $css_page .= "<style>" . $css_page . "</style>";
-
-      $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page1.css" rel="stylesheet"  />';
-      $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page2.css" rel="stylesheet" />';
-      $more .= '<link type="text/css" href="' . $module_path . '/css/pdf_page3.css" rel="stylesheet" />';
-
+      // Getting All HTML pages to generate the PDF.
       $page1 = [
         '#theme' => 'pdf__verathon_bflex_calculator__page1'
       ];
@@ -87,13 +81,26 @@ class VerathonBflexPdfController extends ControllerBase
         '#theme' => 'pdf__verathon_bflex_calculator__page2'
       ];
       $page3 = [
-        '#theme' => 'pdf__verathon_bflex_calculator__page3'
+        '#theme' => 'pdf__verathon_bflex_calculator__page3',
+        '#calculation' => $this->calculator->calculate(
+          $query_params['fn'],
+          (int) $query_params['tp'],
+          (int) $query_params['sup'],
+          $query_params['bbp'],
+          (int) $query_params['crq'],
+          (int) $query_params['casp'],
+          $query_params['rcm'],
+          (int) $query_params['caoraf']
+        )
       ];
+
+      // Calling theme renderer to parse the HTML with values provided as arguments.
       $page1 = \Drupal::service('renderer')->render($page1);
       $page2 = \Drupal::service('renderer')->render($page2);
       $page3 = \Drupal::service('renderer')->render($page3);
       $html  = $page1 . $page2 . $page3;
 
+      // Setting up cloudconvert API jobs.
       $job = (new Job())
         ->addTask(
           (new Task('import/raw', 'upload-html'))
@@ -125,15 +132,20 @@ class VerathonBflexPdfController extends ControllerBase
             ->set('archive_multiple_files', false)
         );
 
+      // Setting up cloud convert API call for creation of jobs and execution.
       $cloudconvert->jobs()->create($job);
       $cloudconvert->jobs()->wait($job); // Wait for job completion
+
+      // Fetching all URLs and sending them as for preview.
       foreach ($job->getExportUrls() as $file) {
         $response = new RedirectResponse($file->url);
         $response->send();
       }
+      exit(0);
     } catch (\Exception $e) {
-      print $e->getMessage();
-      die;
+      \Drupal::logger('bflex-calculator')->error($e->getMessage());
+      $response = new RedirectResponse("/bflex-calculator");
+      $response->send();
     }
   }
 }

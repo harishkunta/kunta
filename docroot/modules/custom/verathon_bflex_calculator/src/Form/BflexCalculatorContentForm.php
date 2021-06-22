@@ -68,6 +68,14 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#title' => $this->t('Result Button : Label'),
       '#default_value' => $config['result_button_label'],
     ];
+    $form['global']['scroll_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Mouse Scroll  - Label'),
+      '#attributes' => [
+        'placeholder' => $this->t('Mouse Scroll'),
+      ],
+      '#default_value' => $config['scroll_text'],
+    ];
     // Step One Section Fields.
     $form['step_one'] = [
       '#type' => 'details',
@@ -91,6 +99,13 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Facility name : Field Label'),
       '#default_value' => $config['facility_name_label'],
+    ];
+    $form['step_one']['facility_name_error_text'] = [
+      '#type' => 'text_format',
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
+      '#title' => $this->t('Empty Facility name Error Message'),
+      '#default_value' => $config['facility_name_error_text']['value'],
     ];
     $form['step_one']['total_annual_bronchoscopy_procedures_label'] = [
       '#type' => 'textfield',
@@ -155,6 +170,13 @@ class BflexCalculatorContentForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Total Number of Reusable Bronchoscopes : Field Label'),
       '#default_value' => $config['total_reusable_bronchoscopes_label'],
+    ];
+    $form['step_two']['total_reusable_bronchoscopes_error_text'] = [
+      '#type' => 'text_format',
+      '#format' => 'cohesion',
+      '#allowed_formats' => array('cohesion'),
+      '#title' => $this->t('Less Total Bronchoscope Error Message'),
+      '#default_value' => $config['total_reusable_bronchoscopes_error_text']['value'],
     ];
     $form['step_two']['annual_service_cost_per_bronchoscope_label'] = [
       '#type' => 'textfield',
@@ -295,6 +317,9 @@ class BflexCalculatorContentForm extends ConfigFormBase
         ->set("step_four_description", $form_state->getValue("step_four_description"))
         ->set("bflex_page_header", $form_state->getValue("bflex_page_header"))
         ->set("bflex_page_description", $form_state->getValue("bflex_page_description"))
+        ->set('facility_name_error_text', $form_state->getValue('facility_name_error_text'))
+        ->set('total_reusable_bronchoscopes_error_text', $form_state->getValue('total_reusable_bronchoscopes_error_text'))
+        ->set('scroll_text', $form_state->getValue('scroll_text'))
         ->save();
       parent::submitForm($form, $form_state);
     } catch (\Exception $e) {

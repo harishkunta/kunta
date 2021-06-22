@@ -523,4 +523,15 @@ class Calculator
       return [];
     }
   }
+  public function getReprocessingMethodByValue($value = 50)
+  {
+
+    $array =  [
+      '0' => 'low',
+      '50' => 'average',
+      '100' => 'high',
+    ];
+
+    return $array[$value];
+  }
 }
