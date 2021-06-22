@@ -62,7 +62,7 @@ class VerathonBflexPdfController extends ControllerBase
       $query_params = $request->query->all();
 
       // If Query Parameters empty then redirect to Calculator page.
-      if (empty($query_parameters)) {
+      if (empty($query_params)) {
         $response = new RedirectResponse("/bflex-calculator");
         $response->send();
       }
