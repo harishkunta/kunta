@@ -5,8 +5,7 @@
             if(parseInt($(this)[0].style.left) > 50) {
                 var interval = setInterval(function () { 
                     var popUpLeft = $(".h5p-image-hotspots-overlay.visible .h5p-image-hotspot-popup").css("left");
-                    console.log(1);
-                    if( popUpLeft == '0px') {
+                    if( popUpLeft == '0px' || popUpLeft == '0') {
                         clearInterval(interval);
                         let popUpPointerLeft = $(".h5p-image-hotspots-overlay.visible .h5p-image-hotspot-popup-pointer").css("left");
       /* edit */  //    var popUpPointertop = $(".h5p-image-hotspots-overlay.visible .h5p-image-hotspot-popup-pointer").css("top");
@@ -19,6 +18,7 @@
                     }
                  }, 1);
             }
+
             // else {
             //     var interval2 = setInterval(function() {
             //             console.log("hi");
