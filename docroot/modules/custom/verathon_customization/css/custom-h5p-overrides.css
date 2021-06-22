@@ -1,13 +1,7 @@
-/* Comments will be removed after design is finalised by client */
 .h5p-content-controls {
   display: none;
 }
-/* .h5p-image-hotspot-popup::before {
-    content: url("../assets/line.png");
-    height: fit-content;
-} */
 .h5p-image-hotspot-popup {
-  max-width: 30%;
   padding: 0;
 }
 .h5p-image-hotspot-has-header .h5p-image-hotspot-popup-body {
@@ -17,22 +11,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0;
 }
 .h5p-image-hotspot-popup-body .h5p-text {
-  padding: 52px;
-  max-width: 50%;
+  padding: 40px;
 }
 
-/* .h5p-image-hotspot-popup {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: transparent;
-    box-shadow: none;
-    height: auto;
-    max-width: 50%;
-    padding: 0;
+@media only screen and (min-device-width: 768px) {
+  .h5p-image-hotspot-popup {
+    width: 80%;
+    max-width: 520px;
   }
-.h5p-image-hotspot-popup-content, .h5p-image {
-    background-color: white;
-} */
+  .h5p-image-hotspot-popup-body .h5p-text {
+    padding: 52px;
+    max-width: 50%;
+  }
+  .h5p-image-hotspot-popup-body {
+    flex-direction: row;
+  }
+}
