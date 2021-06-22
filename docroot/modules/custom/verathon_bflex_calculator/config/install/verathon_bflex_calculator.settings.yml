@@ -52,7 +52,7 @@ step_three_result_string: 'per procedure with reusable scopes'
 step_four_result_string: 'Estimated number of infections due to cross contamination:'
 step_four_final_cost_string: 'Estimated annual treatment cost:'
 _core:
-  default_config_hash: u_HLsv1ESM1rr-Jpj8MX8jQCmlyWYMIDWmSBItVSvsM
+  default_config_hash: ql3tugW9DdrbReOfLTAL7BAPvZ-iM8MaCs65MdHqInc
 step_one_heading: 'Current bronchoscope usage'
 step_two_heading: 'Repair and maintenance'
 step_three_heading: 'Repair and maintenance'
@@ -74,4 +74,10 @@ bflex_page_header:
   format: cohesion
 bflex_page_description:
   value: "<div class=\"linkWrapper\">\r\n<div class=\"column50\">\r\n<div class=\"heroListItem reprocessing-icon\">\r\n<h3>Eliminate reprocessing costs</h3>\r\n\r\n<p>Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).</p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"column50\">\r\n<div class=\"heroListItem repairs-icon\">\r\n<h3>Eliminate reprocessing costs</h3>\r\n\r\n<p>Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).</p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"column50\">\r\n<div class=\"heroListItem service-icon\">\r\n<h3>Eliminate reprocessing costs</h3>\r\n\r\n<p>Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).</p>\r\n</div>\r\n</div>\r\n\r\n<div class=\"column50\">\r\n<div class=\"heroListItem contamination-icon\">\r\n<h3>Eliminate reprocessing costs</h3>\r\n\r\n<p>Single-use bronchoscopes don’t need reprocessing. Getting reusables patient-ready is extensive and time consuming: the cost for reprocessing one endoscope ranges from $50.14 to $152.66 (Ofstead, C.L., et al.).</p>\r\n</div>\r\n</div>\r\n</div>\r\n"
+  format: cohesion
+facility_name_error_text:
+  value: "<p>Please enter the name of your facility.</p>\r\n"
+  format: cohesion
+total_reusable_bronchoscopes_error_text:
+  value: "<p>This value must be less than or equal to the total annual bronchoscopy procedures.</p>\r\n"
   format: cohesion
