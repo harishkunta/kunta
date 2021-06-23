@@ -277,6 +277,12 @@ body {
     margin: 0;
 }
 
+.bflex-calculator .form-number::-webkit-outer-spin-button,
+.bflex-calculator .form-number::-webkit-inner-spin-button {
+    -webkit-appearance: auto;
+    height: 22px;
+}
+
 .bflex-calculator input[type=number] {
     -moz-appearance: textfield;
 }
