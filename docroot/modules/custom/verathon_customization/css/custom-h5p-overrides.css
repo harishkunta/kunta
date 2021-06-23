@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 .h5p-image-hotspot { 
   font-size: 1.2rem;
 }
+=======
+>>>>>>> 6b0e9d08 (Adding final css and js files for static image hotspot after client confirmation)
 .h5p-content-controls {
   display: none;
 }
@@ -18,6 +21,7 @@
   padding: 0;
 }
 .h5p-image-hotspot-popup-body .h5p-text {
+<<<<<<< HEAD
   padding: 2.5rem;
 }
 
@@ -25,12 +29,22 @@
   .h5p-image-hotspot { 
     font-size: 2rem;
   }
+=======
+  padding: 40px;
+}
+
+@media only screen and (min-device-width: 768px) {
+>>>>>>> 6b0e9d08 (Adding final css and js files for static image hotspot after client confirmation)
   .h5p-image-hotspot-popup {
     width: 80%;
     max-width: 520px;
   }
   .h5p-image-hotspot-popup-body .h5p-text {
+<<<<<<< HEAD
     padding: 3.25rem;
+=======
+    padding: 52px;
+>>>>>>> 6b0e9d08 (Adding final css and js files for static image hotspot after client confirmation)
     max-width: 50%;
   }
   .h5p-image-hotspot-popup-body {
