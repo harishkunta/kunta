@@ -348,7 +348,7 @@
       </div>
     </form>
   {% else %}
-    {% set calculation = element['#calculations'] %}
+    {% set calculation = el ement['#calculations'] %}
     <div class="bflexResults">
       <div id="bflex-calculator-header" class="results-page-hero">
         <div id="hero" class="hero blueBackground">
@@ -427,7 +427,7 @@
                 <p>{{config.result_current_bronchoscope_cost_label}}</p>
               </div>
               <div class="column5">
-                <p class="value float">{{calculation.current_costs.equipment_costs.total_su_bflex_cost}}</p>
+                <p class="value float">{{calculation.current_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
 
               </div>
             </div>
