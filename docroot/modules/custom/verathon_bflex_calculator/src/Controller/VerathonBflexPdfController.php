@@ -91,7 +91,9 @@ class VerathonBflexPdfController extends ControllerBase
           (int) $query_params['casp'],
           $query_params['rcm'],
           (int) $query_params['caoraf']
-        )
+        ),
+        '#config' => \Drupal::config('verathon_bflex_calculator.settings')->get(),
+
       ];
 
       // Calling theme renderer to parse the HTML with values provided as arguments.
