@@ -1,7 +1,7 @@
 //to calculate maintenance cost
 function calculateMaintenanceCost() {
     var $totalprocedures = $('#edit-total-annual-bronchoscopy-procedures').val();
-    var $repairstatus = $('#edit-procedures-count-single-usage').val();
+    var $repairstatus = $('#edit-annual-out-of-pocket-repair-cost').val();
     var $repaircost = $repairstatus < 50 ? 53 : ($repairstatus > 50 ? 148 : 100);
     $('.currentAnnualOopRepairAllFactor_slider').find('span').text(`$${Intl.NumberFormat().format($totalprocedures * $repaircost)}`);
 }
@@ -49,7 +49,7 @@ function validateInput(id, type) {
                 // $("#" + numberOfProcedures_errorId).html("This value must be less than or equal to the total annual bronchoscopy procedures.");
                 !$("#" + numberOfProcedures_errorId).hasClass("active") ? $("#" + numberOfProcedures_errorId).addClass("active") : null;
                 errorCheck = true;
-            } else if (value1 < value2) {
+            } else {
                 $("#" + numberOfProcedures_errorId).removeClass("active");
                 $("#" + errorId).removeClass("active");
                 calculateMaintenanceCost();
@@ -153,7 +153,7 @@ function triggerAction(id, type) {
                     triggerAction(sliderId, "slider");
                     validateInput(sliderId, "sliderFieldInput");
                     $("#" + sliderId).attr("value", $("#" + sliderId).val());
-                    if (sliderId == "edit-procedures-count-single-usage") {
+                    if (sliderId == "edit-procedures-count-single-usage" || sliderId == "edit-annual-out-of-pocket-repair-cost") {
                         calculateMaintenanceCost();
                     } else if (sliderId == "edit-reprocessing-costs-method") {
                         calculateReprocessingCost();
