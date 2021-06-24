@@ -25,7 +25,7 @@ class TwigCustomExtension extends AbstractExtension
   // The actual implementation of the filter.
   public function currency($context, $decimal = 0, $symbol = '$')
   {
-    if (($context)) {
+    if (($context) || $content === 0) {
       $context =  $symbol . ' ' . number_format($context, $decimal);
     }
     return $context;

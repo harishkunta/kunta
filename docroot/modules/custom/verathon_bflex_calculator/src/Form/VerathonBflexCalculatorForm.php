@@ -92,7 +92,7 @@ class VerathonBflexCalculatorForm extends FormBase
         '#min' => 1,
         '#max' => 3000,
         '#step' => 1,
-        '#default_value' => 2250,
+        '#default_value' => 3000,
       ];
       $form['your_bronchoscope_price'] = [
         '#type' => 'number',
@@ -164,7 +164,10 @@ class VerathonBflexCalculatorForm extends FormBase
         '#value' => $config['result_button_label'] ? $config['result_button_label'] : 'See Results',
       ];
     }
+
     $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
+    $form['#attached']['drupalSettings']['config'] = $config;
+
     $form['#theme'] = 'form__verathon_bflex_calculator_verathon_bflex_calculator';
     $form['#config'] = $config;
     return $form;
