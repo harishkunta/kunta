@@ -1,0 +1,18 @@
+<?php
+function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
+  $styles[] = (object) array(
+    // Path relative to drupal root
+    'path' => drupal_get_path('module', 'verathon_customization') . '/css/custom-h5p-overrides.css',
+    // Cache buster
+    'version' => '?ver=1',
+  );
+}
+function verathon_customization_h5p_scripts_alter(&$scripts, $libraries, $mode) {
+    $scripts[] = (object) array(
+      // Path relative to drupal root
+      'path' => drupal_get_path('module', 'verathon_customization') . '/js/custom-h5p-overrides.js',
+      // Cache buster
+      'version' => '?ver=1',
+    );
+}
+

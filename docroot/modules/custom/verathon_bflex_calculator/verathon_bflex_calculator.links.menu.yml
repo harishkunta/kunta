@@ -1,0 +1,20 @@
+verathon_bflex_calculator.settings_form:
+  title: BFlex Configurations
+  description: Manage Bflex calculation factors.
+  parent: system.admin_config_system
+  route_name: verathon_bflex_calculator.settings_form
+  weight: 10
+
+verathon_bflex_calculator.bflex_calculator_content:
+  title: Calculator - Labels
+  description: Configure the BFlex Calculator form&#039;s labels and error messages.
+  parent: verathon_bflex_calculator.settings_form
+  route_name: verathon_bflex_calculator.bflex_calculator_content
+  weight: 10
+
+verathon_bflex_calculator.bflex_result_content:
+  title: Calculator Result - Labels
+  description: Manage Results page content.
+  parent: verathon_bflex_calculator.settings_form
+  route_name: verathon_bflex_calculator.bflex_result_content
+  weight: 10

@@ -1,0 +1,170 @@
+.pdf_page2_wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pdf_page2_wrapper ol,
+.pdf_page2_wrapper ul {
+    list-style: none;
+}
+
+.pdf_page2_wrapper .page2 {
+    padding: 4.375rem;
+}
+
+.pdf_page2_wrapper .page2 h1 {
+    color: #003C71;
+    font-size: 2.75rem;
+    margin: 0 0 1rem;
+}
+
+.pdf_page2_wrapper .page2 sup {
+    font-size: .625rem;
+    text-transform: uppercase;
+}
+
+.pdf_page2_wrapper .page2 .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.pdf_page2_wrapper .page2 .content p {
+    font-size: .8125rem;
+    line-height: 1.1875rem;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66%;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .container_top_left {
+    padding-right: .75rem;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section h3,
+.pdf_page2_wrapper .page2 .content .left_section h4,
+.pdf_page2_wrapper .page2 .content .left_section h2 {
+    font-weight: 800;
+    margin: 0;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section h3 {
+    font-size: 16px;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features {
+    padding: 0;
+    margin-top: 1.875rem;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item>div:nth-child(2) {
+    padding: 0 .75rem;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item .feature_img {
+    width: 16.66%;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item .feature_img img {
+    width: 100%;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item .feature_item_content {
+    width: 83.33%;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item .feature_item_content h4 {
+    font-size: 1rem;
+}
+
+.pdf_page2_wrapper .page2 .content .left_section .features .feature_item .feature_item_content p.description_light {
+    color: #9e9e9e;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33%;
+    padding-top: 3.125rem;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section .container_top_right {
+    padding: .75rem;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section .container_top_right .quote {
+    color: #00BFB2;
+    font-style: italic;
+    font-size: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section .container_top_right .quote_from {
+    font-size: .625rem;
+    color: grey;
+    line-height: .8125rem;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section .container_bottom_right {
+    padding: 0 .625rem;
+}
+
+.pdf_page2_wrapper .page2 .content .right_section .container_bottom_right img {
+    width: 100%;
+}
+
+.pdf_page2_wrapper .page2 .footnotes {
+    font-size: .5625rem;
+    line-height: 1.125rem;
+    font-style: italic;
+    color: #939393;
+}
+
+.pdf_page2_wrapper .page2 .footnotes ul {
+    padding: 0;
+}
+
+.pdf_page2_wrapper .page2 .footnotes ul li span {
+    position: relative;
+    bottom: .125rem;
+}
+
+.icon1::before {
+    content: url(../images/icon1.PNG);
+    display: block;
+}
+
+.icon2::before {
+    content: url(../images/icon2.PNG);
+    display: block;
+}
+
+.icon3::before {
+    content: url(../images/icon3.PNG);
+    display: block;
+}
+
+.icon4::before {
+    content: url(../images/icon4.PNG);
+    display: block;
+}
+
+.right-bottom:before {
+    content: url(../images/right_bottom.PNG);
+    display: block;
+}
+
+
+/*# sourceMappingURL=pdf_page2.css.map */
