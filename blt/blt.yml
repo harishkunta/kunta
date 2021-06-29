@@ -1,0 +1,15 @@
+project:
+  machine_name: verathon-phase-2
+  prefix: SSC
+  human_name: 'Verathon'
+  profile:
+    name: standard
+git:
+  default_branch: develop
+  remotes:
+    - 'verathon@svn-23450.prod.hosting.acquia.com:verathon.git'
+deploy:
+  tag_source: true
+drush:
+  aliases:
+    remote: 'verathon.dev'

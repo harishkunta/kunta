@@ -2,6 +2,9 @@
     "require": {
         "dompdf/dompdf": "^1.0",
         "cloudconvert/cloudconvert-php": "^3.2",
-        "php-http/guzzle6-adapter": "^2.0"
-    }
+        "php-http/guzzle6-adapter": "^2.0",
+        "acquia/blt": "^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
