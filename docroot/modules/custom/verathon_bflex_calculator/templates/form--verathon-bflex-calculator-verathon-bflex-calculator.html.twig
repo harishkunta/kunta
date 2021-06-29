@@ -1,5 +1,4 @@
 {% set config = element['#strings'] %}
-
 {% if not element['#form_values']|length %}
   <form method="{{element['#method']}}" id="{{element['#form_id']}}" class="{{element['#attributes']['class'][0]}}" action="{{element['#action']}}" type={{element['#type']}}>
     {{element.form_id}}
@@ -352,6 +351,7 @@
     <div class="bflexResults">
       <div id="bflex-calculator-header" class="results-page-hero">
         <div id="hero" class="hero blueBackground">
+
           <div class="container">
             <div class="row">
               <div class="heroHead">

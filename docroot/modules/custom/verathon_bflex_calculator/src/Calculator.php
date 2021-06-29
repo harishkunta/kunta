@@ -21,7 +21,7 @@ class Calculator
   private const CROSS_CONTAMINATION_FACTOR_A = .034; // maps to first factor in C28
   private const CROSS_CONTAMINATION_FACTOR_B = .2125; // maps to second factor in C28
   private const COST_PER_INFECTION = 28383; // maps to C30
-
+  protected const DEFAULT_BRONCHOSCOPE_PRICE = 295;
   protected $reprocessingCostsLow;
   protected $reprocessingCostsAverage;
   protected $reprocessingCostsHigh;
@@ -136,7 +136,13 @@ class Calculator
     $reprocessingCalcMethod,
     $currentAnnualOopRepairAllFactor
   ) {
+    // Calling configurations here for calculation factors.
+    $config = $this->configFactory->getEditable('verathon_bflex_calculator.settings')->get();
 
+    // Default valid value.
+    $bflexBroncoscopePrice =  (is_numeric($bflexBroncoscopePrice) && $bflexBroncoscopePrice > 0) ? $bflexBroncoscopePrice : (((int) $config['default_bronchoscope_price']) ? $config['default_bronchoscope_price'] : $this->DEFAULT_BRONCHOSCOPE_PRICE);
+
+    // Validating the inputs for calculations.
     $this->validateInputs(
       $totalProcedures,
       $singleUseProcedures,
@@ -146,7 +152,6 @@ class Calculator
       $reprocessingCalcMethod,
       $currentAnnualOopRepairAllFactor
     );
-
     $this->facilityName = $facilityName;
     $this->totalProcedures = $totalProcedures;
     $this->singleUseProcedures = $singleUseProcedures;
@@ -155,11 +160,10 @@ class Calculator
     $this->currentReusableQuantity = $currentReusableQuantity;
     $this->currentAnnualServicePer = $currentAnnualServicePer;
     $this->reprocessingCalcMethod = $reprocessingCalcMethod;
-    $this->currentAnnualOopRepairAllFactor = $currentAnnualOopRepairAllFactor;
+    $this->currentAnnualOopRepairAllFactor = $this->validateAnnualOopRepairFactor($currentAnnualOopRepairAllFactor);
 
     // This is a stop-gap.  In the futute, this quantity will come in as an input.
     $this->reducingReusableScopes = $this->currentReusableQuantity;
-
     return [
       'current_annual_oop_repair_all_factor' => $this->currentAnnualOopRepairAllFactor,
       'facility_name' => $this->facilityName,
@@ -168,6 +172,24 @@ class Calculator
       'current_costs' => $this->getCurrentCosts(),
       'reducing_costs' => $this->getReducingCosts(),
     ];
+  }
+
+  /**
+   * This method parse the annual oop factor .
+   *
+   * @param numeric $value
+   *  Factor value from RANGE.
+   *
+   *
+   */
+  protected function validateAnnualOopRepairFactor($value)
+  {
+    $config = $this->configFactory->getEditable('verathon_bflex_calculator.settings')->get();
+    $low_value = $config['annual_oop_repair_factor_low'] ? $config['annual_oop_repair_factor_low'] : 53;
+    $average_value =  $config['annual_oop_repair_factor_average'] ? $config['annual_oop_repair_factor_average'] : 100;
+    $max_value =  $config['annual_oop_repair_factor_high'] ? $config['annual_oop_repair_factor_high'] : 148;
+
+    return $value < 50 ? $low_value : ($value > 50 ? $max_value : $average_value);
   }
 
   /**

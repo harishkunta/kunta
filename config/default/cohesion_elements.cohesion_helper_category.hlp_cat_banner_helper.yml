@@ -1,0 +1,13 @@
+uuid: 7129fe84-611c-4c52-8411-657104039b16
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_cat_banner_helper
+label: 'Banner Helper'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: true
+class: category-15
+weight: 2

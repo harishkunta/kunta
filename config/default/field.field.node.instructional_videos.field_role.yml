@@ -1,0 +1,29 @@
+uuid: a15d9097-d403-4bff-9def-c2c1474f058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_role
+    - node.type.instructional_videos
+    - taxonomy.vocabulary.role
+id: node.instructional_videos.field_role
+field_name: field_role
+entity_type: node
+bundle: instructional_videos
+label: Role
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      role: role
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

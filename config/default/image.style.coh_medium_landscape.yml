@@ -1,0 +1,17 @@
+uuid: f844ac54-d131-4cc9-873b-ec565a75a97f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tFIQSh0H_B-ZWDygfFlu0N80Hw7c4QJ2DhAife0HCh8
+name: coh_medium_landscape
+label: 'Medium landscape (768x512)'
+effects:
+  823dd069-3fea-44d7-a594-104ad44a4fba:
+    uuid: 823dd069-3fea-44d7-a594-104ad44a4fba
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 512
+      anchor: center-center

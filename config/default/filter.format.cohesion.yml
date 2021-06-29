@@ -1,0 +1,63 @@
+uuid: 47a9bddd-da8f-4f75-82b0-4a31c8425c95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+  module:
+    - editor
+    - media
+_core:
+  default_config_hash: IaZK-44Ht6CfwWs2Eexe-P6NSidU9c-ReAGMusQ6JFE
+name: 'Site Studio'
+format: cohesion
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -9
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <li> <dt> <dd> <img src alt data-entity-type data-entity-uuid> <u> <ul type class="coh-style-pagination-list coh-style-tick-list"> <ol start type class="coh-style-pagination-list coh-style-tick-list"> <pre> <button class="coh-style-button-cta coh-style-button-solid coh-style-button-unstyled coh-style-button-outline"> <dl class="coh-style-pagination-list coh-style-tick-list"> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <a href hreflang class=" coh-style-link-location-with-icon coh-style-link-with-icon coh-style-link-button-fluid-width coh-style-link-button coh-style-link-button-light coh-style-link-button-dark coh-style-link-button-color"> <p class="coh-style-image-caption coh-style-video-caption coh-style-paragraph-large coh-style-paragraph-extra-large coh-style-paragraph-small"> <h1 class="heading-2 heading-1 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <h2 id class="heading-3 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <h3 id class="heading-4 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <h4 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <h5 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <h6 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-xl coh-style-pre-heading-light"> <span class="red-pill blue-pill coh-style-breadcrumb-block coh-style-button-cta coh-style-pagination-list coh-style-button-solid coh-style-button-unstyled coh-style-button-outline coh-style-link-location-with-icon coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-link-with-icon coh-style-link-button-fluid-width coh-style-link-button coh-style-tick-list coh-style-image-caption coh-style-video-caption coh-style-paragraph-large coh-color-black coh-color-color-1 coh-color-color-3 coh-color-color-4 coh-color-gray coh-color-light-1 coh-color-light-2 coh-color-white coh-style-paragraph-extra-large coh-style-link-button-light coh-style-heading-2-size coh-style-pre-heading-dark coh-style-heading-5-size coh-style-link-button-dark coh-style-paragraph-small coh-style-pre-heading-blue coh-style-heading-xl coh-style-link-button-color coh-style-verathon-solutions-wrap coh-style-pre-heading-light coh-color-brand-color-light coh-color-brand-color coh-color-brand-color-dark coh-color-gray-10 coh-color-gray-20 coh-color-gray-30 coh-color-gray-70 coh-color-gray-80 coh-color-gray-90 coh-color-verathon-blue coh-color-verathon-silver coh-color-bladderscan coh-color-bflex coh-color-verathon-gray-1"> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: embedded
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

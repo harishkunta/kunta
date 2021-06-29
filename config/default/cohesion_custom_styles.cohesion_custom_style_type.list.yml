@@ -1,0 +1,7 @@
+uuid: d53da550-e288-4338-a016-e62fe18d1b2e
+langcode: en
+status: true
+dependencies: {  }
+id: list
+label: List
+element: 'ul,ol,dl'

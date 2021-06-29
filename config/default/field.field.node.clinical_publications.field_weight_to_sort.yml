@@ -1,0 +1,23 @@
+uuid: 9f789f12-a9f9-4ad6-b5f3-145e6ab34a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_to_sort
+    - node.type.clinical_publications
+  module:
+    - options
+id: node.clinical_publications.field_weight_to_sort
+field_name: field_weight_to_sort
+entity_type: node
+bundle: clinical_publications
+label: 'Clinical Publication Weight to Sort'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 20
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

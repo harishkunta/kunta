@@ -1,0 +1,30 @@
+uuid: 6399ed7a-f301-4280-a86a-e299009d47bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - cohesion
+    - views
+  theme:
+    - stable
+_core:
+  default_config_hash: HeRbhZZ0F_rH0I0FhQSPVfj716EcxHdLGZsDUOkG99M
+id: stable_exposed_form_search
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-search'
+settings:
+  id: 'views_exposed_filter_block:search-search'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -1,0 +1,29 @@
+uuid: 5f84ccd4-f95b-4f3c-be5f-6cba20d0b626
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_line
+    - node.type.article
+    - taxonomy.vocabulary.product_line
+id: node.article.field_product_line
+field_name: field_product_line
+entity_type: node
+bundle: article
+label: 'Product Line'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_line: product_line
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

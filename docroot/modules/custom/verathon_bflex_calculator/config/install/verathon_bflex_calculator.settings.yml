@@ -52,7 +52,7 @@ step_three_result_string: 'per procedure with reusable scopes'
 step_four_result_string: 'Estimated number of infections due to cross contamination:'
 step_four_final_cost_string: 'Estimated annual treatment cost:'
 _core:
-  default_config_hash: ql3tugW9DdrbReOfLTAL7BAPvZ-iM8MaCs65MdHqInc
+  default_config_hash: StobAiD42l7k5dtqjDV1GnzfczuKlHvx7Sa8l0AsSDs
 step_one_heading: 'Current bronchoscope usage'
 step_two_heading: 'Repair and maintenance'
 step_three_heading: 'Repair and maintenance'
@@ -140,3 +140,7 @@ result_current_repair_maintenance_costs_label: 'Annual Cost'
 result_with_repair_maintenance_costs_label: 'Annual Cost'
 scroll_text: 'Scroll to get started'
 download_button_text: 'Generate Custom Report'
+default_bronchoscope_price: '265'
+annual_oop_repair_factor_low: '53'
+annual_oop_repair_factor_average: '100'
+annual_oop_repair_factor_high: '148'

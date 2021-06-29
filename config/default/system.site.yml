@@ -1,0 +1,14 @@
+uuid: 072a8df1-3363-402b-b209-008d598c58f2
+name: Verathon
+mail: Umesh.handore@tadigital.com
+slogan: ''
+page:
+  403: ''
+  404: /node/76
+  front: /node/16
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

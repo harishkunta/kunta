@@ -1,0 +1,8 @@
+uuid: 6fba5a0c-b647-43e9-a6a2-effcf8754820
+langcode: en
+status: true
+dependencies: {  }
+name: Department
+vid: department
+description: 'This vocabulary is used for mentioned the departments and map it to the contents..'
+weight: 0

@@ -1,0 +1,18 @@
+uuid: fc2fa8ad-b099-4e11-8ffb-2c8eec98b72b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clinical_publications
+id: node.clinical_publications.title
+field_name: title
+entity_type: node
+bundle: clinical_publications
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

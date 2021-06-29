@@ -1,0 +1,4 @@
+name: Inhoudstype
+widget:
+  config:
+    reset_text: 'Alles weergeven'

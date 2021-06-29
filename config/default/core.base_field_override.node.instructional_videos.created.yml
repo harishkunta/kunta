@@ -1,0 +1,18 @@
+uuid: 1047b9aa-7c5d-4140-b431-4878172e795a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.instructional_videos
+id: node.instructional_videos.created
+field_name: created
+entity_type: node
+bundle: instructional_videos
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

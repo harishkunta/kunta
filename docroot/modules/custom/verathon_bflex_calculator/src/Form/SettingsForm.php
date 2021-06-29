@@ -34,7 +34,6 @@ class SettingsForm extends ConfigFormBase
   {
     // Getting Default configurations.
     $config = $this->config('verathon_bflex_calculator.settings')->get();
-    $values = $form_state->getValues();
     // Setting up various sections on the configurable values.
     $form['common'] = [
       '#title' => $this->t('Global Parameters'),
@@ -42,30 +41,61 @@ class SettingsForm extends ConfigFormBase
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
     ];
+    $form['common']['default_bronchoscope_price'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Default Bronchoscope Price'),
+      '#description' => $this->t("This price will be used for calculation if nothing is provided."),
+      '#default_value' => $config['default_bronchoscope_price'],
+      '#required' => TRUE,
+    ];
+    $form['common']['annual_oop_repair_factor_low'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Annual OOP Repair Price Factor : LOW'),
+      '#description' => $this->t("Calculation Factor"),
+      '#default_value' => $config['annual_oop_repair_factor_low'],
+      '#required' => TRUE,
+    ];
+    $form['common']['annual_oop_repair_factor_average'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Annual OOP Repair Price Factor : AVERAGE'),
+      '#description' => $this->t("Calculation Factor"),
+      '#default_value' => $config['annual_oop_repair_factor_average'],
+      '#required' => TRUE,
+    ];
+    $form['common']['annual_oop_repair_factor_high'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Annual OOP Repair Price Factor : HIGH'),
+      '#description' => $this->t("Calculation Factor"),
+      '#default_value' => $config['annual_oop_repair_factor_high'],
+      '#required' => TRUE,
+    ];
+
     $form['common']['current_su_blex_usage'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Current SU Blex Usage'),
       '#description' => $this->t("Current SU Blex Usage"),
-      '#default_value' => !empty($values['current_su_blex_usage']) ? $values['current_su_blex_usage'] : $config['current_su_blex_usage'],
+      '#required' => TRUE,
+      '#default_value' => $config['current_su_blex_usage'],
     ];
     $form['common']['cross_contamination_factor_a'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Cross Contamination Factor : A'),
       '#description' => $this->t("Cross Contamination Factor : A"),
-      '#default_value' => !empty($values['cross_contamination_factor_a']) ? $values['cross_contamination_factor_a'] : $config['cross_contamination_factor_a'],
+      '#required' => TRUE,
+      '#default_value' => $config['cross_contamination_factor_a'],
     ];
     $form['common']['cross_contamination_factor_b'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Cross Contamination Factor : B'),
       '#description' => $this->t("Cross Contamination Factor : B"),
-      '#default_value' => !empty($values['cross_contamination_factor_b']) ? $values['cross_contamination_factor_b'] : $config['cross_contamination_factor_b'],
+      '#default_value' => $config['cross_contamination_factor_b'],
 
     ];
     $form['common']['cost_per_infection'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Cost Per Infection'),
       '#description' => $this->t("Cost per infection"),
-      '#default_value' => !empty($values['cost_per_infection']) ? $values['cost_per_infection'] : $config['cost_per_infection'],
+      '#default_value' => $config['cost_per_infection'],
 
     ];
     // Reprocessing Factors.
@@ -79,21 +109,21 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['reprocessing_factor_low']) ? $values['reprocessing_factor_low'] : $config['reprocessing_factor_low'],
+      '#default_value' => $config['reprocessing_factor_low'],
 
     ];
     $form['reprocessing_cost']['reprocessing_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['reprocessing_factor_average']) ? $values['reprocessing_factor_average'] : $config['reprocessing_factor_average'],
+      '#default_value' => $config['reprocessing_factor_average'],
 
     ];
     $form['reprocessing_cost']['reprocessing_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['reprocessing_factor_high']) ? $values['reprocessing_factor_high'] : $config['reprocessing_factor_high'],
+      '#default_value' => $config['reprocessing_factor_high'],
     ];
 
     // Bedside Preclean Factors
@@ -107,21 +137,21 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['bedside_preclean_factor_low']) ? $values['bedside_preclean_factor_low'] : $config['bedside_preclean_factor_low'],
+      '#default_value' => $config['bedside_preclean_factor_low'],
 
     ];
     $form['bedside_preclean']['bedside_preclean_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['bedside_preclean_factor_average']) ? $values['bedside_preclean_factor_average'] : $config['bedside_preclean_factor_average'],
+      '#default_value' => $config['bedside_preclean_factor_average'],
 
     ];
     $form['bedside_preclean']['bedside_preclean_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['bedside_preclean_factor_high']) ? $values['bedside_preclean_factor_high'] : $config['bedside_preclean_factor_high'],
+      '#default_value' => $config['bedside_preclean_factor_high'],
 
     ];
 
@@ -136,21 +166,21 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['manual_cleaning_factor_low']) ? $values['manual_cleaning_factor_low'] : $config['manual_cleaning_factor_low'],
+      '#default_value' => $config['manual_cleaning_factor_low'],
 
     ];
     $form['manual_cleaning']['manual_cleaning_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['manual_cleaning_factor_average']) ? $values['manual_cleaning_factor_average'] : $config['manual_cleaning_factor_average'],
+      '#default_value' => $config['manual_cleaning_factor_average'],
 
     ];
     $form['manual_cleaning']['manual_cleaning_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['manual_cleaning_factor_high']) ? $values['manual_cleaning_factor_high'] : $config['manual_cleaning_factor_high'],
+      '#default_value' => $config['manual_cleaning_factor_high'],
 
     ];
 
@@ -165,21 +195,21 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['visual_inspection_factor_low']) ? $values['visual_inspection_factor_low'] : $config['visual_inspection_factor_low'],
+      '#default_value' => $config['visual_inspection_factor_low'],
 
     ];
     $form['visual_inspection']['visual_inspection_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['visual_inspection_factor_average']) ? $values['visual_inspection_factor_average'] : $config['visual_inspection_factor_average'],
+      '#default_value' => $config['visual_inspection_factor_average'],
 
     ];
     $form['visual_inspection']['visual_inspection_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['visual_inspection_factor_high']) ? $values['visual_inspection_factor_high'] : $config['visual_inspection_factor_high'],
+      '#default_value' => $config['visual_inspection_factor_high'],
 
     ];
 
@@ -194,21 +224,21 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['hld_in_aer_factor_low']) ? $values['hld_in_aer_factor_low'] : $config['hld_in_aer_factor_low'],
+      '#default_value' => $config['hld_in_aer_factor_low'],
 
     ];
     $form['hld_in_aer']['hld_in_aer_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['hld_in_aer_factor_average']) ? $values['hld_in_aer_factor_average'] : $config['hld_in_aer_factor_average'],
+      '#default_value' => $config['hld_in_aer_factor_average'],
 
     ];
     $form['hld_in_aer']['hld_in_aer_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['hld_in_aer_factor_high']) ? $values['hld_in_aer_factor_high'] : $config['hld_in_aer_factor_high'],
+      '#default_value' => $config['hld_in_aer_factor_high'],
 
     ];
 
@@ -223,22 +253,23 @@ class SettingsForm extends ConfigFormBase
       '#type' => 'textfield',
       '#title' => $this->t('Low value'),
       '#description' => $this->t("Factor's LOW value."),
-      '#default_value' => !empty($values['dying_storage_factor_low']) ? $values['dying_storage_factor_low'] : $config['dying_storage_factor_low'],
+      '#default_value' => $config['dying_storage_factor_low'],
 
     ];
     $form['dying_storage']['dying_storage_factor_average'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Average value'),
       '#description' => $this->t("Factor's AVERAGE value."),
-      '#default_value' => !empty($values['dying_storage_factor_average']) ? $values['dying_storage_factor_average'] : $config['dying_storage_factor_average'],
+      '#default_value' => $config['dying_storage_factor_average'],
 
     ];
     $form['dying_storage']['dying_storage_factor_high'] = [
       '#type' => 'textfield',
       '#title' => $this->t('High value'),
       '#description' => $this->t("Factor's HIGH value."),
-      '#default_value' => !empty($values['dying_storage_factor_high']) ? $values['dying_storage_factor_high'] : $config['dying_storage_factor_high'],
+      '#default_value' => $config['dying_storage_factor_high'],
     ];
+
 
 
     return parent::buildForm($form, $form_state);
@@ -249,10 +280,6 @@ class SettingsForm extends ConfigFormBase
    */
   public function validateForm(array &$form, FormStateInterface $form_state)
   {
-    if ($form_state->getValue('example') != 'example') {
-      $form_state->setErrorByName('example', $this->t('The value is not correct.'));
-    }
-    parent::validateForm($form, $form_state);
   }
 
   /**
@@ -261,7 +288,33 @@ class SettingsForm extends ConfigFormBase
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
     $this->config('verathon_bflex_calculator.settings')
-      ->set('example', $form_state->getValue('example'))
+      ->set('current_su_blex_usage', $form_state->getValue('current_su_blex_usage'))
+      ->set('cross_contamination_factor_a', $form_state->getValue('cross_contamination_factor_a'))
+      ->set('cross_contamination_factor_b', $form_state->getValue('cross_contamination_factor_b'))
+      ->set('cost_per_infection', $form_state->getValue('cost_per_infection'))
+      ->set('reprocessing_factor_low', $form_state->getValue('reprocessing_factor_low'))
+      ->set('reprocessing_factor_average', $form_state->getValue('reprocessing_factor_average'))
+      ->set('reprocessing_factor_high', $form_state->getValue('reprocessing_factor_high'))
+      ->set('bedside_preclean', $form_state->getValue('bedside_preclean'))
+      ->set('bedside_preclean_factor_low', $form_state->getValue('bedside_preclean_factor_low'))
+      ->set('bedside_preclean_factor_average', $form_state->getValue('bedside_preclean_factor_average'))
+      ->set('bedside_preclean_factor_high', $form_state->getValue('bedside_preclean_factor_high'))
+      ->set('manual_cleaning_factor_low', $form_state->getValue('manual_cleaning_factor_low'))
+      ->set('manual_cleaning_factor_average', $form_state->getValue('manual_cleaning_factor_average'))
+      ->set('manual_cleaning_factor_high', $form_state->getValue('manual_cleaning_factor_high'))
+      ->set('visual_inspection_factor_low', $form_state->getValue('visual_inspection_factor_low'))
+      ->set('visual_inspection_factor_average', $form_state->getValue('visual_inspection_factor_average'))
+      ->set('visual_inspection_factor_high', $form_state->getValue('visual_inspection_factor_high'))
+      ->set('hld_in_aer_factor_low', $form_state->getValue('hld_in_aer_factor_low'))
+      ->set('hld_in_aer_factor_average', $form_state->getValue('hld_in_aer_factor_average'))
+      ->set('hld_in_aer_factor_high', $form_state->getValue('hld_in_aer_factor_high'))
+      ->set('dying_storage_factor_low', $form_state->getValue('dying_storage_factor_low'))
+      ->set('dying_storage_factor_average', $form_state->getValue('dying_storage_factor_average'))
+      ->set('dying_storage_factor_high', $form_state->getValue('dying_storage_factor_high'))
+      ->set('default_bronchoscope_price', $form_state->getValue('default_bronchoscope_price'))
+      ->set('annual_oop_repair_factor_low', $form_state->getValue('annual_oop_repair_factor_low'))
+      ->set('annual_oop_repair_factor_average', $form_state->getValue('annual_oop_repair_factor_average'))
+      ->set('annual_oop_repair_factor_high', $form_state->getValue('annual_oop_repair_factor_high'))
       ->save();
     parent::submitForm($form, $form_state);
   }

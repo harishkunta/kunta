@@ -1,0 +1,13 @@
+uuid: e8fc4a89-d102-4916-80f6-126f61753e99
+langcode: en
+status: true
+dependencies: {  }
+id: padding-small
+label: null
+json_values: '{"uid":"padding-small","value":"20px","inuse":true,"locked":true}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: true
+modified: true
+selectable: true
+weight: 1

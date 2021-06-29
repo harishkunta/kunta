@@ -1,0 +1,10 @@
+uuid: 0dca47d6-74b5-4d89-b896-e37813e1a65f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_news_right_column
+label: 'Featured News - Right Column'
+targetEntityType: node
+cache: true

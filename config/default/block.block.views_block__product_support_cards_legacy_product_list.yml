@@ -1,0 +1,33 @@
+uuid: 714700e9-d852-4776-abbe-a3904917e1ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_support_cards
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: views_block__product_support_cards_legacy_product_list
+theme: cohesion_theme
+region: dx8_hidden
+weight: 1
+provider: null
+plugin: 'views_block:product_support_cards-legacy_product_list'
+settings:
+  id: 'views_block:product_support_cards-legacy_product_list'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

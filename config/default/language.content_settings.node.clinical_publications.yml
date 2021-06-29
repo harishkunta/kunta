@@ -1,0 +1,18 @@
+uuid: 8c234bff-ae22-4f62-8ec1-5163516f8d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clinical_publications
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.clinical_publications
+target_entity_type_id: node
+target_bundle: clinical_publications
+default_langcode: site_default
+language_alterable: false

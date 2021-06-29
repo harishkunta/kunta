@@ -1,0 +1,18 @@
+uuid: d0a22c5d-a714-4513-b7ea-2e7c4defe875
+langcode: en
+status: false
+dependencies: {  }
+id: node_place_featured_news
+label: 'Featured News - Left Column (Node, Place)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: place
+view_mode: featured_news
+master_template: ''

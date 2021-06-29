@@ -1,0 +1,22 @@
+uuid: 6543bd5d-1dfa-4085-817e-a505011705c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_detail
+id: block_content.product_detail.status
+field_name: status
+entity_type: block_content
+bundle: product_detail
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

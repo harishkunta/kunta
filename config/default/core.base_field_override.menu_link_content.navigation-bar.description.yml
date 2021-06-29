@@ -1,0 +1,18 @@
+uuid: 2154e230-b4aa-43a9-9021-165c8877df21
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.navigation-bar
+id: menu_link_content.navigation-bar.description
+field_name: description
+entity_type: menu_link_content
+bundle: navigation-bar
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

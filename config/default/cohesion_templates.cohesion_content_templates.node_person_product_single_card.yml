@@ -1,0 +1,18 @@
+uuid: 91a8b59b-cb1e-46f5-bf7d-ee3c32917728
+langcode: en
+status: false
+dependencies: {  }
+id: node_person_product_single_card
+label: 'Product Single Card (Node, Person)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: person
+view_mode: product_single_card
+master_template: ''

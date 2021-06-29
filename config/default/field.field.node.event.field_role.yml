@@ -1,0 +1,29 @@
+uuid: 2e02c9b8-1bfb-4712-8ad2-88e61a38185c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_role
+    - node.type.event
+    - taxonomy.vocabulary.role
+id: node.event.field_role
+field_name: field_role
+entity_type: node
+bundle: event
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      role: role
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

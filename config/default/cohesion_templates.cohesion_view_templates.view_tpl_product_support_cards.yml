@@ -1,0 +1,14 @@
+uuid: b4ccb92e-2aa8-4fb3-af0b-e61a982b3471
+langcode: en
+status: true
+dependencies: {  }
+id: view_tpl_product_support_cards
+label: 'Product Support Cards'
+json_values: '{"canvas":[{"type":"container","uid":"drupal-view","title":"View container","status":{"collapsed":false},"uuid":"f6e515d8-bc72-491b-bcd8-625d6551e22b","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"drupal-view-contents","title":"View content","status":{"collapsed":false},"uuid":"6dad031d-5c32-4458-bf27-841bd73d537f","parentUid":"drupal-view","isContainer":true,"children":[{"type":"container","uid":"pattern-repeater","title":"Pattern repeater","mimicParent":true,"status":{"collapsed":false},"uuid":"2f5d1e08-daaf-4a54-b730-a8c688f4f75c","parentUid":"drupal-view-contents","isContainer":true,"children":[{"type":"item","uid":"drupal-view-item","title":"View item","status":{"collapsed":true},"uuid":"8db537f2-aa54-476a-90a1-bd85826bb4f1","parentUid":"pattern-repeater","isContainer":false,"children":[]}]}]}]}],"mapper":{"f6e515d8-bc72-491b-bcd8-625d6551e22b":{},"6dad031d-5c32-4458-bf27-841bd73d537f":{},"2f5d1e08-daaf-4a54-b730-a8c688f4f75c":{},"8db537f2-aa54-476a-90a1-bd85826bb4f1":{}},"model":{"8db537f2-aa54-476a-90a1-bd85826bb4f1":{"settings":{"title":"View item","view_mode":[{"entity_type":"node","bundle":"product","view_mode":"default"}],"settings":{"view_mode":[{"entity_type":"node","bundle":"all","view_mode":"default"}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"view-item"}}}},"previewModel":{"8db537f2-aa54-476a-90a1-bd85826bb4f1":{}},"variableFields":{"8db537f2-aa54-476a-90a1-bd85826bb4f1":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: true
+twig_template: views-view--cohesion-view-tpl-product-support-cards

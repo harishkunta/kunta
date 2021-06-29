@@ -1,0 +1,10 @@
+uuid: cefe96c1-052e-40d2-8fc6-8993c89a5fae
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.product_support_cards
+label: 'Product Support Cards'
+targetEntityType: taxonomy_term
+cache: true

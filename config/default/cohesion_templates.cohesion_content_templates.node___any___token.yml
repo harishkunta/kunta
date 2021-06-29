@@ -1,0 +1,18 @@
+uuid: d8983e7f-3df3-40a9-a0a7-cb5992bdba5c
+langcode: en
+status: false
+dependencies: {  }
+id: node___any___token
+label: 'Token (Node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: __any__
+view_mode: token
+master_template: ''

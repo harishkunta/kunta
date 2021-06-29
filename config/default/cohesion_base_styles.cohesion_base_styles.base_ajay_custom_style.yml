@@ -1,0 +1,13 @@
+uuid: 249d9cc6-25a1-4f49-8bb4-33d1cd9cd7ea
+langcode: en
+status: true
+dependencies: {  }
+id: base_ajay_custom_style
+label: 'Ajay custom base style'
+json_values: '{"preview":{"text":"<p>Preview for Ajay''s custom style<\/p>\n","textFormat":"cohesion"},"styles":{"styles":{"xl":{"color":{"value":{"link":true,"name":"Brand color","uid":"brand-color","class":".coh-color-brand-color","variable":"$coh-color-brand-color","value":{"hex":"#26a3dd","rgba":"rgba(38, 163, 221, 1)"},"inuse":true,"wysiwyg":true,"tags":["Color"]}},"font-family":{"value":"$coh-font-playfair-display"},"font-weight":{"value":"bold"},"font-size":{"value":"30"},"line-height":{"value":"10"},"text-align":{"value":"center"}}},"settings":{"element":"Ajay custom base style"}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":null,"selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":false},{"name":"word-spacing","active":false},{"name":"text-indent","active":false}]}]},{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: null

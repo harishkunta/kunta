@@ -62,6 +62,9 @@ class VerathonBflexCalculatorForm extends FormBase
       $form['facility_name'] = [
         '#type' => 'textfield',
         '#required' => true,
+        '#attributes' => [
+          'placeholder' => $this->t('Enter Facility Name here'),
+        ]
       ];
 
       $form['total_annual_bronchoscopy_procedures'] = [
@@ -96,6 +99,9 @@ class VerathonBflexCalculatorForm extends FormBase
       ];
       $form['your_bronchoscope_price'] = [
         '#type' => 'number',
+        '#attributes' => [
+          'placeholder' => $this->t('Enter Your BFlex Scope Price'),
+        ]
       ];
 
       // Repair & Maintenance Form Fields.
@@ -123,12 +129,11 @@ class VerathonBflexCalculatorForm extends FormBase
         '#type' => 'range',
         '#attributes' => [
           'class' => ['slider'],
-          'list' => 'tickmarks',
         ],
         '#min' => 0,
         '#max' => 100,
         '#step' => 50,
-        '#default_value' => 50,
+        '#default_value' => 0,
       ];
 
       // Hidden Reprocessing Costs.
@@ -194,7 +199,7 @@ class VerathonBflexCalculatorForm extends FormBase
       'facilityName' => $submission_values['facility_name'],
       'totalProcedures' => $submission_values['total_annual_bronchoscopy_procedures'],
       'singleUseProcedures' => $submission_values['procedures_count_single_usage'],
-      'bflexBroncoscopePrice' => (is_numeric($submission_values['your_bronchoscope_price']) && !empty($submission_values['your_bronchoscope_price'])) ? $submission_values['your_bronchoscope_price'] : 1,
+      'bflexBroncoscopePrice' => $submission_values['your_bronchoscope_price'],
       'currentReusableQuantity' => $submission_values['total_reusable_bronchoscopes'],
       'currentAnnualServicePer' => $submission_values['annual_service_cost_per_bronchoscope'],
       'reprocessingCalcMethod' => $submission_values['reprocessing_costs_method'],

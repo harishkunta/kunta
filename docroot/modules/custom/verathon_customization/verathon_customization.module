@@ -1,4 +1,7 @@
 <?php
+
+use Drupal\Core\Form\FormStateInterface;
+
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
     // Path relative to drupal root
@@ -16,3 +19,18 @@ function verathon_customization_h5p_scripts_alter(&$scripts, $libraries, $mode) 
     );
 }
 
+/**
+* Implements hook_form_alter().
+*/
+function verathon_customization_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'views_exposed_form' && isset($form['field_product_line'])) {
+    if ('views-exposed-form-et-search-block-search' === $form['#id']) {
+      // Rename the All option label.
+      $form['field_product_line']['#options']['All'] = t('All Products');
+    }
+    if ('views-exposed-form-acquia-search-search' === $form['#id']) {
+      // Rename the All option label.
+      $form['field_product_line']['#options']['All'] = t('All');
+    }
+  }
+}

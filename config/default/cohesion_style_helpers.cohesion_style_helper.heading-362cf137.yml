@@ -1,0 +1,13 @@
+uuid: ec132de9-9879-4d45-86b9-4227413734cd
+langcode: en
+status: true
+dependencies: {  }
+id: heading-362cf137
+label: 'Banner Heading'
+json_values: '{"settings":{"title":"Heading","element":"h1","customStyle":[{"customStyle":""}],"settings":{"element":"h1","customStyle":[{"customStyle":""}]},"content":"Amet, Massa Tortor Iaculis Tincidunt"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"heading"},"styles":{"xl":{"margin":{"margin-bottom":{"value":"2rem"}},"font-weight":{"value":"700"},"font-size":{"value":"2rem"},"line-height":{"value":"3rem"},"text-align":{"value":"left"},"color":{"value":{"name":"White","uid":"white","value":{"hex":"#ffffff","rgba":"rgba(255, 255, 255, 1)"},"wysiwyg":true,"class":".coh-color-white","variable":"$coh-color-white","inuse":true,"link":true,"tags":["Light"]}}},"xs":{"text-align":{"value":"center"},"color":{"value":{"value":{"hex":"#4f4f4f","rgba":"rgba(79, 79, 79, 1)"}}}}}}}'
+json_mapper: '{"settings":{"formDefinition":[{"formKey":"heading-settings","children":[{"formKey":"heading-element","breakpoints":[],"activeFields":[{"name":"element","active":true}]},{"formKey":"heading-heading","breakpoints":[],"activeFields":[{"name":"content","active":true}]},{"formKey":"heading-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"styles":{"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]},{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"},{"name":"xs"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":true},{"name":"color","active":true}]},{"formKey":"font-sizing-and-alignment","breakpoints":[{"name":"xl"},{"name":"xs"}],"activeFields":[{"name":"font-size","active":true},{"name":"line-height","active":true},{"name":"text-align","active":true},{"name":"letter-spacing","active":true},{"name":"word-spacing","active":true},{"name":"text-indent","active":true}]}]}],"selectorType":"topLevel","items":[],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom_style_type: heading

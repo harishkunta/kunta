@@ -1,0 +1,18 @@
+uuid: 8d782b6a-920c-4171-90b7-7dcb28e71c09
+langcode: en
+status: false
+dependencies: {  }
+id: menu_link_content_navigation-bar
+label: 'Token (Menu_link_content, Navigation Menu)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: menu_link_content
+bundle: navigation-bar
+view_mode: token
+master_template: ''

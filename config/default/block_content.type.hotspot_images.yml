@@ -1,0 +1,8 @@
+uuid: f79e72b9-ff92-47a0-a478-70563bcdb5ea
+langcode: en
+status: true
+dependencies: {  }
+id: hotspot_images
+label: 'Hotspot Images'
+revision: 0
+description: 'Hotspot Images Custom Block Type'

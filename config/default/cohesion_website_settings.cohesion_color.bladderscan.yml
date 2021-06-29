@@ -1,0 +1,13 @@
+uuid: 13274e3d-bf41-4201-8c30-686eea926051
+langcode: en
+status: true
+dependencies: {  }
+id: bladderscan
+label: BladderScan
+json_values: '{"link":true,"value":{"value":{"hex":"#4d86a0","rgba":"rgba(77, 134, 160, 1)"}},"name":"BladderScan","uid":"bladderscan","class":".coh-color-bladderscan","variable":"$coh-color-bladderscan","wysiwyg":true,"tags":[{"label":"Blue 2","value":"blue-2"}]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 14

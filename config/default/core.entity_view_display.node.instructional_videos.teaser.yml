@@ -1,0 +1,51 @@
+uuid: e1196a90-d235-48df-a225-6ce1d578878c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.instructional_videos.body
+    - field.field.node.instructional_videos.field_department
+    - field.field.node.instructional_videos.field_product_line
+    - field.field.node.instructional_videos.field_role
+    - field.field.node.instructional_videos.field_select_parent
+    - field.field.node.instructional_videos.field_topic
+    - field.field.node.instructional_videos.field_video_thumbnail
+    - field.field.node.instructional_videos.field_video_url
+    - field.field.node.instructional_videos.field_year
+    - node.type.instructional_videos
+  module:
+    - text
+    - user
+id: node.instructional_videos.teaser
+targetEntityType: node
+bundle: instructional_videos
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_department: true
+  field_product_line: true
+  field_role: true
+  field_select_parent: true
+  field_topic: true
+  field_video_thumbnail: true
+  field_video_url: true
+  field_year: true
+  langcode: true
+  search_api_excerpt: true

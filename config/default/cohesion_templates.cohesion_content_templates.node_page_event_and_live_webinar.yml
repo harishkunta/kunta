@@ -1,0 +1,18 @@
+uuid: 90f56632-bcbf-4119-bd6b-94bbc0f5d824
+langcode: en
+status: false
+dependencies: {  }
+id: node_page_event_and_live_webinar
+label: 'Event and Live Webinars (Node, Page)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: page
+view_mode: event_and_live_webinars
+master_template: ''

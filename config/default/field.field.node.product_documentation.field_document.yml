@@ -1,0 +1,29 @@
+uuid: beff6325-5379-4a4a-976f-b862080f6c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.product_documentation
+    - taxonomy.vocabulary.documents
+id: node.product_documentation.field_document
+field_name: field_document
+entity_type: node
+bundle: product_documentation
+label: 'Document Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      documents: documents
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
