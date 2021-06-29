@@ -784,10 +784,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/verathon/verathon-settings.inc');
 }
-if (file_exists('/var/www/site-php')) {
-  require('/var/www/site-php/verathon/verathon-settings.inc');
+if (file_exists('d:/site-php')) {
+  require('d:/site-php/verathon-settings.inc');
 }
-
 if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
   include $app_root . '/' . $site_path . '/local.settings.php';
 }
