@@ -35,7 +35,8 @@
         "drupal/core-recommended": "^9.1",
         "drupal/core-vendor-hardening": "^9.1",
         "drupal/inline_entity_form": "^1.0@RC",
-        "drupal/menu_item_extras": "^2.15"
+        "drupal/menu_item_extras": "^2.15",
+        "drush/drush": "^10.5"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -110,6 +111,11 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/google_tag": {
+                "Removes Moderation dashboard filters from container settings" : "patches/exclude-conditions_3158416_12.patch"
+            }
+        }
     }
 }
