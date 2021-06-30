@@ -31,6 +31,7 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
     if ('views-exposed-form-acquia-search-search' === $form['#id']) {
       // Rename the All option label.
       $form['field_product_line']['#options']['All'] = t('All');
+      $form['#attached']['library'][] = 'verathon_customization/verathon_search';
     }
   }
 }
