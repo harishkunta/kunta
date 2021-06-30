@@ -1,0 +1,22 @@
+uuid: d6752550-7491-446c-8d8d-efa9cb0e889a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clinical_publications
+id: node.clinical_publications.promote
+field_name: promote
+entity_type: node
+bundle: clinical_publications
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

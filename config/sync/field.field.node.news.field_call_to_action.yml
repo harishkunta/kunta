@@ -1,0 +1,23 @@
+uuid: 8147b3e3-9e52-42b8-b54b-1c93f4de87e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_to_action
+    - node.type.news
+  module:
+    - link
+id: node.news.field_call_to_action
+field_name: field_call_to_action
+entity_type: node
+bundle: news
+label: 'Call To Action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

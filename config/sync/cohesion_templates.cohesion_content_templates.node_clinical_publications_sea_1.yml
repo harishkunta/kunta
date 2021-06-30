@@ -1,0 +1,18 @@
+uuid: 527dbbf0-f439-4d96-8822-e84dcd72159b
+langcode: en
+status: false
+dependencies: {  }
+id: node_clinical_publications_sea_1
+label: 'Search Results (Node, Clinical Publications)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: clinical_publications
+view_mode: search_results
+master_template: ''

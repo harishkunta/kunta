@@ -1,0 +1,18 @@
+uuid: c3922de1-6eb3-4735-852f-86359fdbe664
+langcode: en
+status: false
+dependencies: {  }
+id: node_country_and_region_card
+label: 'Card (Node, Country and Region)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: country_and_region
+view_mode: card
+master_template: ''

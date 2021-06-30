@@ -1,0 +1,39 @@
+uuid: 0d108734-ee72-468e-9aeb-e539900e9838
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.country_and_region.body
+    - field.field.node.country_and_region.field_country
+    - field.field.node.country_and_region.field_country1
+    - node.type.country_and_region
+  module:
+    - text
+    - user
+id: node.country_and_region.teaser
+targetEntityType: node
+bundle: country_and_region
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_country: true
+  field_country1: true
+  langcode: true
+  search_api_excerpt: true

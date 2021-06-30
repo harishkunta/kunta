@@ -1,0 +1,81 @@
+uuid: 44d29f05-a32c-4ec3-af8a-ef514d23ca60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_documentation.body
+    - field.field.node.product_documentation.field_document
+    - field.field.node.product_documentation.field_language
+    - field.field.node.product_documentation.field_media
+    - node.type.product_documentation
+  module:
+    - inline_entity_form
+    - media_library
+    - text
+id: node.product_documentation.default
+targetEntityType: node
+bundle: product_documentation
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_document:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_language:
+    weight: 16
+    settings:
+      form_mode: default
+      revision: false
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_media:
+    weight: 26
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  moderation_state: true
+  path: true
+  promote: true
+  publish_on: true
+  publish_state: true
+  status: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true
+  url_redirects: true

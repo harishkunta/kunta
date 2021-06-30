@@ -1,0 +1,18 @@
+uuid: dae82ed0-c1cb-461e-9151-e7a87af80115
+langcode: en
+status: false
+dependencies: {  }
+id: node_config_check_token
+label: 'Token (Node, Config Check)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: config_check
+view_mode: token
+master_template: ''

@@ -1,0 +1,18 @@
+uuid: a4e83da4-8eee-4e01-ae2c-9f33b4974d0d
+langcode: en
+status: false
+dependencies: {  }
+id: node_clinical_publications_guide
+label: 'Guides and Articles (Node, Clinical Publications)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: clinical_publications
+view_mode: guides_and_articles
+master_template: ''

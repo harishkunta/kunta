@@ -1,0 +1,53 @@
+uuid: 0d7b1163-101e-4888-9590-f82c18158786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - image.style.coh_small_square
+    - media.type.image
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: fJuTkNuB9dKTff2h8WhfGklyENwSt1f26HbgZdVZcDI
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: coh_small_square
+      image_link: ''
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_categories: true
+  field_tags: true
+  image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true

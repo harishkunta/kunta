@@ -1,0 +1,22 @@
+uuid: 97a66cd1-d5a7-44e0-9363-5da711e306b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.year
+id: taxonomy_term.year.status
+field_name: status
+entity_type: taxonomy_term
+bundle: year
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: 6b12d862-4ab8-48e7-89de-1ec312250778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.document
+    - node.type.product_documentation
+id: node.product_documentation.field_media
+field_name: field_media
+entity_type: node
+bundle: product_documentation
+label: 'Document Upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 2fdf538a-6e52-4137-90c5-66a9c4d0548a
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_role_token
+label: 'Token (Taxonomy_term, Role)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: role
+view_mode: token
+master_template: ''

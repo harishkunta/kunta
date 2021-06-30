@@ -1,0 +1,23 @@
+uuid: 70ffd75e-d0fa-4908-af7b-d87651dca4ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_to_sort
+    - node.type.article
+  module:
+    - options
+id: node.article.field_weight_to_sort
+field_name: field_weight_to_sort
+entity_type: node
+bundle: article
+label: 'Article Weight to Sort'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 20
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

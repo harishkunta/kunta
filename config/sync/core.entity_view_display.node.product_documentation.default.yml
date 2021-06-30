@@ -1,0 +1,60 @@
+uuid: 2683d584-6694-4330-af94-3ed05ef6f412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_documentation.body
+    - field.field.node.product_documentation.field_document
+    - field.field.node.product_documentation.field_language
+    - field.field.node.product_documentation.field_media
+    - node.type.product_documentation
+  module:
+    - text
+    - user
+id: node.product_documentation.default
+targetEntityType: node
+bundle: product_documentation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_document:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_language:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_media:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

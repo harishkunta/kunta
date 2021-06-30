@@ -1,0 +1,18 @@
+uuid: 4d196740-5eae-4ba1-9e39-ca57b7736567
+langcode: en
+status: false
+dependencies: {  }
+id: media_video_small
+label: 'Small (Media, Video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: video
+view_mode: small
+master_template: ''

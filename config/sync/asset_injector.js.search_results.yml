@@ -1,0 +1,26 @@
+uuid: 00f320a9-73fe-49da-b48d-c9896bb76124
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - system
+id: search_results
+label: 'Search Results - Temporary'
+code: "jQuery(document).ready(function () {\n    var getUrlParameter = function getUrlParameter(param) {\n        var pageUrl = window.location.search.substring(1),\n            urlVariables = pageUrl.split('&'),\n            urlParams,\n            i;\n\n        for (i = 0; i < urlVariables.length; i++) {\n            urlParams = urlVariables[i].split('=');\n\n            if (urlParams[0] === param) {\n                return typeof urlParams[1] === undefined ? true : decodeURIComponent(urlParams[1]);\n            }\n        }\n        return false;\n    };\n    var chipsArray = getUrlParameter('keywords');\n\n    if (chipsArray.length) {\n        chipsArray = chipsArray.split('+');\n        chipsArray = chipsArray.filter(function (el) {\n            return el != \"\";\n        });\n        chipsArray = chipsArray.join(' ');\n    }\n\n\n    if (chipsArray.length > 1) {\n        chipsArray = chipsArray.split(',');\n\n        if (chipsArray.length > 5) {\n            chipsArray.length = 5;\n            $('.search-keywords-warning').removeClass('d-none');\n        }\n\n        var chipsLen = chipsArray.length;\n        var chips = document.querySelector(\".chips\");\n        for (chip = 0; chip < chipsLen; chip++) {\n            chips.appendChild(function () {\n                var _chip = document.createElement('div');\n\n                _chip.classList.add('chip');\n                _chip.append(\n                    (function () {\n                        var _chip_text = document.createElement('span');\n                        _chip_text.classList.add('chip-text');\n                        _chip_text.innerHTML = chipsArray[chip];\n\n                        return _chip_text;\n                    })(),\n                    (function () {\n                        var _chip_close = document.createElement('span');\n                        _chip_close.classList.add('chip-button');\n                        _chip_close.innerHTML = 'x';\n                        _chip_close.addEventListener('click', chipClickHandler);\n\n                        return _chip_close;\n                    })()\n                );\n\n                return _chip;\n            }());\n        }\n    }\n\n\n    function chipClickHandler(event) {\n        var removedChip = event.currentTarget.parentNode.children[0].innerText;\n        chipsArray = chipsArray.map(chip => chip.trim());\n        var index = chipsArray.indexOf(removedChip);\n        if (index !== -1) {\n            chipsArray.splice(index, 1);\n        }\n        chips.removeChild(event.currentTarget.parentNode);\n        var updatedstring = chipsArray.join(', ');\n        jQuery('#edit-keywords--2').val(updatedstring);\n        jQuery('#edit-submit-acquia-search--2').trigger('click');\n    }\n});"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: true
+noscript: ''
+noscriptRegion: {  }

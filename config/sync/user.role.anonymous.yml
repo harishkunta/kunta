@@ -1,0 +1,16 @@
+uuid: cafb8a34-bcb7-4945-884a-4ff23e6ecd77
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KYARbYeGRZ-INq-rg4NeHiuEYecKAgslhGiPztbR-fY
+id: anonymous
+label: 'Anonymous user'
+weight: -2
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use search_api_autocomplete for acquia_search'
+  - 'use search_api_autocomplete for et_search_block'
+  - 'use search_api_autocomplete for search'
+  - 'view media'

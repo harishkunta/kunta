@@ -1,0 +1,5 @@
+name: Categorie
+url_alias: categorie
+widget:
+  config:
+    reset_text: 'Alles weergeven'

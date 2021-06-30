@@ -1,0 +1,10 @@
+uuid: 24ceb157-3bb8-402c-b696-e92a15ab2e37
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_news
+label: 'Featured News - Left Column'
+targetEntityType: node
+cache: true

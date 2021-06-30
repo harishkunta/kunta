@@ -1,0 +1,23 @@
+uuid: a38296f3-5679-4214-8d05-d422a52f4231
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - system
+id: category_accessory_block
+label: 'Category Accessory Block'
+code: ".category-accessory-container {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: row;\n    flex-direction: row;\n    width: 60%;\n    margin: 0 auto;\n    margin-bottom: 3.75rem;\n}\n\n.category-accessory-container.content-first {\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n    -ms-flex-direction: row-reverse;\n    flex-direction: row-reverse;\n}\n\n@media screen and (max-width: 480px) {\n    .category-accessory-container.content-first {\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n        flex-direction: column;\n    }\n}\n\n@media screen and (max-width: 480px) {\n    .category-accessory-container {\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n        flex-direction: column;\n        width: 100%;\n        padding: 0 0 5rem 0;\n    }\n}\n\n.category-accessory-container .category-accessory-banner {\n    width: 50%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n@media screen and (max-width: 480px) {\n    .category-accessory-container .category-accessory-banner {\n        width: 100%;\n    }\n}\n\n.category-accessory-container .category-accessory-banner .banner-img {\n    width: 100%;\n    padding: 1rem;\n    object-fit: contain;\n    max-height: 400px;\n}\n\n.category-accessory-container .category-accessory-content {\n    width: 50%;\n    padding: 2.5rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-pack: justify;\n    -ms-flex-pack: justify;\n    justify-content: space-between;\n}\n\n@media screen and (max-width: 480px) {\n    .category-accessory-container .category-accessory-content {\n        width: 100%;\n        padding: 1.25rem;\n    }\n}\n\n.category-accessory-container .category-accessory-content .tagline {\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 19px;\n    letter-spacing: 0.13em;\n    text-align: left;\n    text-transform: uppercase;\n    max-width: 29rem;\n}\n\n.category-accessory-container .category-accessory-content .header {\n    font-size: 24px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 29px;\n    letter-spacing: 0em;\n    text-align: left;\n    max-width: 29rem;\n}\n\n.category-accessory-container .category-accessory-content .description {\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 28px;\n    letter-spacing: 0em;\n    text-align: left;\n    max-width: 29rem;\n    margin-bottom: 1.8125rem;\n}"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

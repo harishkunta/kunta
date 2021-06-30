@@ -1,0 +1,18 @@
+uuid: f105ba7a-7de2-407e-9a83-ba457d39fee3
+langcode: en
+status: false
+dependencies: {  }
+id: media_video_product_support_docu
+label: 'Product Support Document (Media, Video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: video
+view_mode: product_support_document
+master_template: ''

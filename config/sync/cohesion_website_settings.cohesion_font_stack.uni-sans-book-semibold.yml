@@ -1,0 +1,13 @@
+uuid: 85e5e7fc-54a0-405f-a7b3-45209b2b7c9f
+langcode: en
+status: true
+dependencies: {  }
+id: uni-sans-book-semibold
+label: 'Uni Sans Book Semibold'
+json_values: '{"inuse":false,"systemfont":false,"link":true,"name":"Uni Sans Book Semibold","uid":"uni-sans-book-semibold","class":".coh-font-uni-sans-book-semibold","variable":"$coh-font-uni-sans-book-semibold","fontStack":"''Uni Sans Book Semibold'', Arial, ''Helvetica Neue'', Helvetica, sans-serif","smoothing":{"firefox":true,"webkit":true}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+source: fontStacks

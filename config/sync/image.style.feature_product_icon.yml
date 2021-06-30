@@ -1,0 +1,15 @@
+uuid: 7db9f635-e076-4d43-9e28-1fd53f79a40d
+langcode: en
+status: true
+dependencies: {  }
+name: feature_product_icon
+label: 'Feature Product Icon (300*169)'
+effects:
+  0da0e84d-6a24-4d22-961a-8cbcaa807630:
+    uuid: 0da0e84d-6a24-4d22-961a-8cbcaa807630
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 169
+      upscale: false

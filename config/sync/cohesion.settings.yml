@@ -1,0 +1,23 @@
+image_browser:
+  config:
+    type: medialib_imagebrowser
+    dx8_entity_browser: media_browser
+    cohesion_media_lib_types:
+      - image
+      - 0
+      - 0
+  content:
+    type: medialib_imagebrowser
+    dx8_entity_browser: media_browser
+    cohesion_media_lib_types:
+      - image
+      - 0
+      - 0
+use_dx8: enable
+_core:
+  default_config_hash: 4kZneIaBDbHpqCrQbR1KnFUZG6UeY80LWWCAfcwiyrs
+api_key: opalraven-58733
+organization_key: verathoninc-78700
+site_id: 072a8df1-3363-402b-b209-008d598c58f2
+api_url: 'https://api.cohesiondx.com'
+asset_is_imported: '1'

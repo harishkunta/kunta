@@ -1,0 +1,18 @@
+uuid: 70dd1562-3e6b-46a5-94a2-4289ba36882a
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+id: support_component
+label: 'Support Component'
+code: "/*@supports (-webkit-touch-callout: none) {*/\n/*    CSS specific to iOS devices */\n/*   @media screen and (max-width: 767px) {*/\n/*     .support-component {*/\n/*       flex-direction: row;*/\n/*     }*/\n/*        .support-component > div{*/\n/*     margin-bottom:2rem;*/\n/*   }*/\n   \n/*   .support-component > div:last-child{*/\n/*     margin-bottom:0;*/\n/*   }*/\n/*   }*/\n   \n/*   @media only screen and (max-device-width: 1024px) and (orientation:landscape) {*/\n/*       For landscape layouts only */\n/*      .support-component > div:first-child{*/\n/*       margin-right:2rem;*/\n/*      }*/\n/*    }*/\n   \n/*       @media screen and (min-width: 768px) and (max-width: 1300px) {*/\n/*      .support-component {*/\n/*        display: grid;*/\n/*        grid-template-columns: 1fr 1fr 1fr;*/\n/*        gap: 1rem;*/\n/*     }*/\n\n/*    }*/\n  \n\n/*}*/\n   @media screen and (min-width: 768px) {\n     .support-component {\n       margin-right: -1.5rem !important;\n     }\n      .support-component > div {\n        margin-right: 1.5rem !important;\n        max-width: 50% !important;\n      }\n   }\n@media screen and (min-width: 1024px) {\n  .support-component > div {\n    max-width: 30% !important;\n  }\n}"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+contexts: {  }
+media: all
+preprocess: true
