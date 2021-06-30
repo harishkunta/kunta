@@ -1,0 +1,18 @@
+uuid: f4f33344-89ae-4070-9a49-34a4bf6e8136
+langcode: en
+status: false
+dependencies: {  }
+id: node_sailesh_harish_instructiona
+label: 'Instructional Videos Component (Node, Sailesh & Harish)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: sailesh_harish
+view_mode: instructional_videos_component
+master_template: ''

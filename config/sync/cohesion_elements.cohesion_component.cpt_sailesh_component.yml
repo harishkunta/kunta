@@ -1,0 +1,19 @@
+uuid: f9fa987c-0c8a-42b6-b2cd-01bfce8cc3f6
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_sailesh_component
+label: 'SAILESH COMPONENT'
+json_values: '{"canvas":[],"componentForm":[],"mapper":{},"model":[],"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_feature_sections
+preview_image: {  }
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-sailesh-component
+weight: 0
