@@ -763,6 +763,15 @@ body {
     list-style: unset;
 }
 
+.bflexResults .button-result-page:hover {
+    background-color: #d8d8d8;
+}
+
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-submit:hover {
+    background-color: #00BFB2;
+    transition: none;
+}
+
 @media screen and (min-width: 768px) {
     .bflex-calculator .container {
         flex-wrap: nowrap;
