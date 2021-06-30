@@ -1,0 +1,18 @@
+uuid: b7a1bd57-fd88-40ec-9e37-3509ad8c0339
+langcode: en
+status: false
+dependencies: {  }
+id: node_nithish_harsh_card
+label: 'Card (Node, Nithish & Harsh)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: nithish_harsh
+view_mode: card
+master_template: ''

@@ -1,0 +1,19 @@
+uuid: 5a5b01a0-691f-450e-8607-28a0d2edfebe
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_harsh_nithish_new_
+label: 'Harsh & Nithish - New '
+json_values: '{"canvas":[],"componentForm":[],"mapper":{},"model":[],"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_feature_sections
+preview_image: {  }
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-harsh-nithish-new-
+weight: 0
