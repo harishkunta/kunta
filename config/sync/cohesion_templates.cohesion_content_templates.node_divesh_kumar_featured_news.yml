@@ -1,0 +1,18 @@
+uuid: 2c1c170f-d468-4018-ab54-3e5b6df7b88d
+langcode: en
+status: false
+dependencies: {  }
+id: node_divesh_kumar_featured_news
+label: 'Featured News - Left Column (Node, Divesh Kumar)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: divesh_kumar
+view_mode: featured_news
+master_template: ''

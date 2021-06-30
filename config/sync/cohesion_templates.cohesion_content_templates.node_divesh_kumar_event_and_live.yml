@@ -1,0 +1,18 @@
+uuid: 7a7895f2-ee57-4413-b5b2-a0131579e640
+langcode: en
+status: false
+dependencies: {  }
+id: node_divesh_kumar_event_and_live
+label: 'Event and Live Webinars (Node, Divesh Kumar)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: divesh_kumar
+view_mode: event_and_live_webinars
+master_template: ''

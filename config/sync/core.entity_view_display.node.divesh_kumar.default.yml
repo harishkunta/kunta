@@ -1,0 +1,33 @@
+uuid: f76bc1bb-a060-41fa-bc5c-49356845bf14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.divesh_kumar.body
+    - node.type.divesh_kumar
+  module:
+    - text
+    - user
+id: node.divesh_kumar.default
+targetEntityType: node
+bundle: divesh_kumar
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

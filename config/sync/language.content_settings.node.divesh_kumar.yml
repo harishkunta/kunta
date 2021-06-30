@@ -1,0 +1,11 @@
+uuid: 32632d7a-a8e2-45f2-947e-dde41214e74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.divesh_kumar
+id: node.divesh_kumar
+target_entity_type_id: node
+target_bundle: divesh_kumar
+default_langcode: site_default
+language_alterable: false
