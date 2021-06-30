@@ -1,8 +1,0 @@
-uuid: f4615633-14eb-411b-adef-21bc0d076a83
-langcode: en
-status: true
-dependencies: {  }
-id: navigation-bar
-label: 'Navigation Menu'
-description: ''
-locked: false

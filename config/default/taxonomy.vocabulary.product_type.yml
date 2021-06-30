@@ -1,8 +1,0 @@
-uuid: fc8ecb4c-4104-4979-be78-7a48e368cba4
-langcode: en
-status: true
-dependencies: {  }
-name: 'Product Type (Product)'
-vid: product_type
-description: 'A taxonomy to differential products'
-weight: 0

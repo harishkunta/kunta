@@ -1,9 +1,0 @@
-label: Panels
-variant_settings:
-  blocks:
-    bcc91274-24b8-4755-9bf5-e6f104674898:
-      label: 'Laatste updates'
-      views_label: 'Laatste updates'
-    1a06173d-634b-4475-a80b-d23a9773083b:
-      label: 'Recent aangemaakt'
-      views_label: 'Recent aangemaakt'

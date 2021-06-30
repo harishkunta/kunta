@@ -1,8 +1,0 @@
-uuid: 89ca226d-a2ee-4833-9392-c2ff1048d64a
-langcode: en
-status: true
-dependencies: {  }
-name: Languages
-vid: languages
-description: 'A taxonomy to provide Language selection'
-weight: 0

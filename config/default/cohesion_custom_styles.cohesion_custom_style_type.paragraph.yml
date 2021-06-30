@@ -1,7 +1,0 @@
-uuid: 09ce8867-0075-47c1-8bce-2671b8422b3c
-langcode: en
-status: true
-dependencies: {  }
-id: paragraph
-label: Paragraph
-element: p

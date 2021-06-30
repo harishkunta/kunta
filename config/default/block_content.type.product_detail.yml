@@ -1,8 +1,0 @@
-uuid: cf9a189d-2751-456c-9e16-5d5c2a117cf5
-langcode: en
-status: true
-dependencies: {  }
-id: product_detail
-label: 'Product Detail'
-revision: 0
-description: ''

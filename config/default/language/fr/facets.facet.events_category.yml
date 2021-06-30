@@ -1,5 +1,0 @@
-name: Catégorie
-url_alias: 'la catégorie'
-widget:
-  config:
-    reset_text: 'Tout afficher'

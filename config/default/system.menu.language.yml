@@ -1,8 +1,0 @@
-uuid: 2e2a38b6-d1e9-414d-9fdd-9dd6ab0b4810
-langcode: en
-status: true
-dependencies: {  }
-id: language
-label: Language
-description: ''
-locked: false

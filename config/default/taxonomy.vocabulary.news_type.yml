@@ -1,8 +1,0 @@
-uuid: b0e6550d-3e87-4013-8b09-391d7f5a741e
-langcode: en
-status: true
-dependencies: {  }
-name: 'News Type'
-vid: news_type
-description: 'Descriptive metadata, for categorizing news content and making search engines happy'
-weight: 0

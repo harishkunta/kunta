@@ -1,7 +1,0 @@
-uuid: 78c4a12e-eb73-4a28-bafa-6eef56da0084
-langcode: en
-status: true
-dependencies: {  }
-id: link
-label: Link
-element: a

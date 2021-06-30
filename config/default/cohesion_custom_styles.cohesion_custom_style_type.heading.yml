@@ -1,7 +1,0 @@
-uuid: 0ffcdbd6-870e-485b-94d8-fb347922d648
-langcode: en
-status: true
-dependencies: {  }
-id: heading
-label: Heading
-element: 'h1,h2,h3,h4,h5,h6'

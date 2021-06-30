@@ -1,9 +1,0 @@
-uuid: a2cd4f31-39b7-41d4-94b7-38247fe7cc72
-langcode: en
-status: true
-dependencies: {  }
-id: pack_ver_home
-label: 'VER - Home'
-description: ''
-excluded_entity_types: '[]'
-settings: '{"1d6166cd-e6a6-453b-8167-fa1b6fd80f5f":{"type":"cohesion_style_helper","items":[],"checked":false}}'
