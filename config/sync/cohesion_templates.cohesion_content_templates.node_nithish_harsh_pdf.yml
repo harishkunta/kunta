@@ -1,0 +1,18 @@
+uuid: b458d4b7-1bb0-4dc2-a39d-ac3c8b6fe02e
+langcode: en
+status: false
+dependencies: {  }
+id: node_nithish_harsh_pdf
+label: 'PDF (Node, Nithish & Harsh)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: nithish_harsh
+view_mode: pdf
+master_template: ''
