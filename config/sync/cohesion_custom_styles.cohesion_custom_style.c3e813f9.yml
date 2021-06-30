@@ -1,0 +1,17 @@
+uuid: 72ea2f95-68c6-4c15-81f9-c07271e3cc69
+langcode: en
+status: true
+dependencies: {  }
+id: c3e813f9
+label: menu-canvas-open
+json_values: '{"preview":{"text":"<p><button class=\"coh-preview\" type=\"button\">Default content for ''Button''<\/button><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"button","class":"","combinator":"","pseudo":""},"c3d0e530-9664-46e5-921d-72d14030c987":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{}},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"height"},"customCss":{"value":"100% !important"}},{"customCssProperty":{"value":"display"},"customCss":{"value":"block !important"}}]}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"Button","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"c3d0e530-9664-46e5-921d-72d14030c987"}],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-menu-canvas-open
+custom_style_type: button
+available_in_wysiwyg: false
+parent: null
+weight: 0

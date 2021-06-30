@@ -1,0 +1,20 @@
+uuid: 19a9e8ef-b770-4ea1-b4d2-abe6b4482635
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_short_description
+field_name: field_short_description
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

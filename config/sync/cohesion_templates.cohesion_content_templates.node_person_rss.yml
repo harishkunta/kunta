@@ -1,0 +1,18 @@
+uuid: b32629b8-9180-476b-9482-fa8807c9ef39
+langcode: en
+status: false
+dependencies: {  }
+id: node_person_rss
+label: 'RSS (Node, Person)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: person
+view_mode: rss
+master_template: ''

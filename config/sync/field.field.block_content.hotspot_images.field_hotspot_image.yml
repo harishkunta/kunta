@@ -1,0 +1,23 @@
+uuid: 9ff5875a-3730-4a23-a1e4-5015362b7d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hotspot_images
+    - field.storage.block_content.field_hotspot_image
+  module:
+    - h5p
+id: block_content.hotspot_images.field_hotspot_image
+field_name: field_hotspot_image
+entity_type: block_content
+bundle: hotspot_images
+label: 'Hotspot Image'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    h5p_content_id: null
+default_value_callback: ''
+settings: {  }
+field_type: h5p

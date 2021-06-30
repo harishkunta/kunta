@@ -1,0 +1,18 @@
+uuid: dc1e62ac-7e91-406a-ab3c-74a2b12d7820
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.instructional_videos
+id: node.instructional_videos.title
+field_name: title
+entity_type: node
+bundle: instructional_videos
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

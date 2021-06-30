@@ -1,0 +1,61 @@
+uuid: 84e56b04-a558-4658-8452-cc79bfbddc00
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.product_single_card
+    - field.field.node.product_documentation.body
+    - field.field.node.product_documentation.field_document
+    - field.field.node.product_documentation.field_language
+    - field.field.node.product_documentation.field_media
+    - node.type.product_documentation
+  module:
+    - text
+    - user
+id: node.product_documentation.product_single_card
+targetEntityType: node
+bundle: product_documentation
+mode: product_single_card
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_document:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_language:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_media:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

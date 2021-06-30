@@ -1,0 +1,20 @@
+uuid: b0ebeef6-66fc-4d05-a5a4-49e8fe14870f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - options
+id: node.news.publish_state
+field_name: publish_state
+entity_type: node
+bundle: news
+label: 'Publish state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

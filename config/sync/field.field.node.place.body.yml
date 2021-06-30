@@ -1,0 +1,25 @@
+uuid: a31d3ae6-4956-47bd-9938-90d885f1dfaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.place
+  module:
+    - text
+_core:
+  default_config_hash: EZEm9F0QQPkwXFz_i2SZDtxpQr4wF1UQg7EYqR7dZN4
+id: node.place.body
+field_name: body
+entity_type: node
+bundle: place
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

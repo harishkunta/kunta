@@ -1,0 +1,18 @@
+uuid: 3b5fb9eb-9af7-4398-be4b-bef095b9fb38
+langcode: en
+status: false
+dependencies: {  }
+id: node_news_product_support_cards
+label: 'Product Support Cards (Node, News)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: news
+view_mode: product_support_cards
+master_template: ''

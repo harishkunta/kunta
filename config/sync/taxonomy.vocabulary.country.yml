@@ -1,0 +1,8 @@
+uuid: 31a77eb3-a07b-4de8-a290-a35d830d9a41
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+vid: country
+description: 'List of countries.'
+weight: 0

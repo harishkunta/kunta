@@ -1,0 +1,31 @@
+uuid: c7e361fd-da3a-4314-be72-ccd9c8b43e7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+    - language
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+_core:
+  default_config_hash: YDDhVYgb19fYjTSf_9KAa_zZgFVLc_Y2sEqPIF6xubY
+id: stable_language_switcher
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

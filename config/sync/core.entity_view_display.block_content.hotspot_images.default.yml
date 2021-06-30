@@ -1,0 +1,36 @@
+uuid: c5d03c6b-414d-4eac-bf61-5fae15931ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hotspot_images
+    - field.field.block_content.hotspot_images.body
+    - field.field.block_content.hotspot_images.field_hotspot_image
+  module:
+    - h5p
+    - text
+id: block_content.hotspot_images.default
+targetEntityType: block_content
+bundle: hotspot_images
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hotspot_image:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: h5p_default
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

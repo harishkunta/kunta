@@ -1,0 +1,29 @@
+uuid: d6dc9e80-fb53-4d2e-acb4-1d71ddb5be5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_parent
+    - node.type.article
+    - node.type.page
+id: node.article.field_select_parent
+field_name: field_select_parent
+entity_type: node
+bundle: article
+label: 'Select Parent'
+description: 'Choose the related parent product page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

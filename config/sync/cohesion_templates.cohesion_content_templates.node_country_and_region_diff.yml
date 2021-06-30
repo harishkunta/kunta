@@ -1,0 +1,18 @@
+uuid: a195a419-8745-4657-b695-1d4f3966020c
+langcode: en
+status: false
+dependencies: {  }
+id: node_country_and_region_diff
+label: 'Revision comparison (Node, Country and Region)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: country_and_region
+view_mode: diff
+master_template: ''

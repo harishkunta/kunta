@@ -1,0 +1,18 @@
+uuid: 08fb84d6-5837-4900-a7aa-233145b63d1e
+langcode: en
+status: false
+dependencies: {  }
+id: node_country_and_region_guides_a
+label: 'Guides and Articles (Node, Country and Region)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: country_and_region
+view_mode: guides_and_articles
+master_template: ''

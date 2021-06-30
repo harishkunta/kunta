@@ -1,0 +1,10 @@
+uuid: fedc0a3d-b063-4b9b-94df-bf9c67abedf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.product_single_card
+label: 'Product Single Card'
+targetEntityType: node
+cache: true

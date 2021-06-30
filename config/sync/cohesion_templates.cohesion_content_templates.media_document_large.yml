@@ -1,0 +1,18 @@
+uuid: d331bb81-9fdd-492d-a869-ba26e193ee78
+langcode: en
+status: false
+dependencies: {  }
+id: media_document_large
+label: 'Large (Media, Document)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: document
+view_mode: large
+master_template: ''

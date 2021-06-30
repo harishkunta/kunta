@@ -1,0 +1,18 @@
+uuid: cbba3106-8c7e-45ee-8c0d-11d8d05ed9ea
+langcode: en
+status: false
+dependencies: {  }
+id: media_video_small_landscape
+label: 'Small landscape (Media, Video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: video
+view_mode: small_landscape
+master_template: ''

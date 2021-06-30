@@ -1,0 +1,42 @@
+uuid: 1a6a3659-a523-404c-ba5a-c1abd694c168
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.clinical_publication_article
+  module:
+    - cohesion
+    - collapsiblock
+    - node
+    - views
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: views_block__clinical_publication_article_clinical_publication
+theme: cohesion_theme
+region: dx8_hidden
+weight: -16
+provider: null
+plugin: 'views_block:clinical_publication_article-clinical_publication'
+settings:
+  id: 'views_block:clinical_publication_article-clinical_publication'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

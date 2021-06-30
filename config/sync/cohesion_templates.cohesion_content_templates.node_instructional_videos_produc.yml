@@ -1,0 +1,18 @@
+uuid: 2d38b8dd-0c53-4464-a540-f6714eb49729
+langcode: en
+status: false
+dependencies: {  }
+id: node_instructional_videos_produc
+label: 'Product Single Card (Node, Instructional Videos)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: instructional_videos
+view_mode: product_single_card
+master_template: ''

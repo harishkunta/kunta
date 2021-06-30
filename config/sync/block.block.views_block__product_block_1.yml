@@ -1,0 +1,33 @@
+uuid: 0f697608-6bb1-4574-8563-0d39237d85e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: views_block__product_block_1
+theme: cohesion_theme
+region: dx8_hidden
+weight: 4
+provider: null
+plugin: 'views_block:product-block_1'
+settings:
+  id: 'views_block:product-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -1,0 +1,14 @@
+uuid: 86550b29-cbd3-47a7-8b63-e10d15e33005
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_cat_product_components
+label: 'Product Components'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: false
+selectable: true
+class: category-4
+weight: 8

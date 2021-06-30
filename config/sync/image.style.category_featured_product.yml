@@ -1,0 +1,14 @@
+uuid: a5b442b7-3f0a-4741-9c38-8ab3ebac042a
+langcode: en
+status: true
+dependencies: {  }
+name: category_featured_product
+label: 'Category Featured Product'
+effects:
+  9b309215-d5be-4286-9e83-859318cad12a:
+    uuid: 9b309215-d5be-4286-9e83-859318cad12a
+    id: image_resize
+    weight: 2
+    data:
+      width: 765
+      height: 452

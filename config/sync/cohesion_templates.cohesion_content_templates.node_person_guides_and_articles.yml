@@ -1,0 +1,18 @@
+uuid: 9861c441-931c-4c12-993b-97be0fc4f071
+langcode: en
+status: false
+dependencies: {  }
+id: node_person_guides_and_articles
+label: 'Guides and Articles (Node, Person)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: person
+view_mode: guides_and_articles
+master_template: ''

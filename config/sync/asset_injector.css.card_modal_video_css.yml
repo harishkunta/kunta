@@ -1,0 +1,18 @@
+uuid: 07ca260a-335a-4acb-ad34-6612e90bbae3
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+id: card_modal_video_css
+label: 'Instructional VIdeo'
+code: ".instruction-video-container {\n    padding: 3.9rem 1.25rem;\n    margin: 0;\n}\n.instruction-video-header {\n    text-align: center;\n    margin-bottom: 2rem;\n}\n.instruction-video-header::before, .instruction-video-header::after {\n    display: none;\n}\n.instruction-video-header h2 {\n    font-size: 1rem;\n    font-weight: 700;\n    letter-spacing: 0.125rem;\n    text-transform: uppercase;\n    margin: 0;\n}\n.instruction-video-header a {\n    font-size: 1.125rem;\n    line-height: 1.5rem;\n    color: #0078AB;\n    display: none;\n}\n.instruction-video-header a:hover {\n    color: #009EE0;\n}\n.video-cards-container {\n    display: flex;\n    flex-wrap: wrap;\n}\n.instruction-video-container .mobile-instruction-video-link a {\n    font-size: 1.125rem;\n    line-height: 1.5rem;\n    color: #0078AB;\n    text-align: center;\n    width: 100%;\n    margin-top: 0.5rem;\n}\n.instruction-video-container .mobile-instruction-video-link a:hover {\n    color: #009EE0;\n}\n.video-cards-container .video-card article {\n    display: flex;\n    flex-direction: column;\n}\n.video-card .video-card-thumbnail {\n    flex-basis: 50%;\n    position: relative;\n    width: 100%;\n    min-width: 10.625rem;\n    margin-bottom: 1.5rem;\n}\n.video-card .video-card-thumbnail img {\n    width: 100%;\n}\n.video-card-thumbnail button {\n    background-color: transparent;\n    cursor: pointer;\n    padding: 0;\n    border: none;\n    position: absolute;\n    top: 45%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n}\n.video-card-thumbnail button::before {\n    content: url($symbols.play.circle.fill.png);\n}\n.video-card .video-card-details {\n    flex-basis: 50%;\n    padding: 2rem 0.625rem;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    margin-bottom: 1.5rem;\n}\n.video-card .video-card-details h3 {\n    font-size: 1.5rem;\n    font-weight: 700;\n    line-height: 1.8125rem;\n    margin-bottom: 1.5rem;\n    flex-grow: 1;\n}\n.video-card .video-card-details p {\n    font-size: 1.125rem;\n    margin: 0;\n}\n\n@media only screen and (min-device-width: 768px) { \n    .instruction-video-container {\n        margin-left: auto;\n        margin-right: auto;\n        padding: 3.9375rem 0.625rem;\n    }\n    .instruction-video-header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n    .instruction-video-header a {\n        display: inline-block;\n    }\n    .instruction-video-container .mobile-instruction-video-link a {\n        display: none;\n    }\n    .video-cards-container .video-card {\n        flex-basis: 48%;\n        flex-direction: row;\n        max-width: 48%;\n    }\n    .video-cards-container .video-card article {\n        flex-direction: row;\n        height: 100%;\n    }\n    .video-cards-container .video-card:nth-child(odd) {\n        margin-right: 1.25rem;\n    }\n    .video-card .video-card-thumbnail {\n        margin-right: 1.5625rem;\n        width: auto;\n        height: fit-content;\n    }\n  .video-card .video-card-details {\n      padding: 0.625rem;\n  }\n}"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

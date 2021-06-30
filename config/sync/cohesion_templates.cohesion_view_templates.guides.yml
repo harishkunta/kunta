@@ -1,0 +1,14 @@
+uuid: b78d145d-f497-415d-8db4-a9ba75f67491
+langcode: en
+status: true
+dependencies: {  }
+id: guides
+label: 'Guides and Articles'
+json_values: '{"canvas":[{"type":"container","uid":"drupal-view","title":"View container","status":{"collapsed":false},"uuid":"999e41da-e83c-4f4a-b5cd-4888cefff4fd","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"drupal-view-contents","title":"View content","status":{"collapsed":false},"uuid":"bebfeb02-f777-46fc-b35f-f180ef05755c","parentUid":"drupal-view","isContainer":true,"children":[{"type":"container","uid":"pattern-repeater","title":"Pattern repeater","mimicParent":true,"status":{"collapsed":false},"uuid":"2a8f694e-8167-413a-98fb-26c21ba779f4","parentUid":"drupal-view-contents","isContainer":true,"children":[{"type":"item","uid":"drupal-view-item","title":"View item","status":{"collapsed":true},"uuid":"24148853-09d0-4bf7-b62e-436e7197ffd1","parentUid":"pattern-repeater","isContainer":false,"children":[]}]}]}]}],"mapper":{"999e41da-e83c-4f4a-b5cd-4888cefff4fd":{},"bebfeb02-f777-46fc-b35f-f180ef05755c":{},"2a8f694e-8167-413a-98fb-26c21ba779f4":{},"24148853-09d0-4bf7-b62e-436e7197ffd1":{"settings":{"formDefinition":[{"formKey":"view-item-settings","children":[{"formKey":"view-item-mode","breakpoints":[],"activeFields":[{"name":"view_mode","active":true},{"name":"entity_type","active":true},{"name":"bundle","active":true},{"name":"view_mode","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"24148853-09d0-4bf7-b62e-436e7197ffd1":{"settings":{"title":"View item","view_mode":[{"entity_type":"node","bundle":"article","view_mode":"default"}],"settings":{"view_mode":[{"entity_type":"node","bundle":"all","view_mode":"default"}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"view-item"}}}},"previewModel":{"24148853-09d0-4bf7-b62e-436e7197ffd1":{}},"variableFields":{"24148853-09d0-4bf7-b62e-436e7197ffd1":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: true
+twig_template: views-view--cohesion-guides

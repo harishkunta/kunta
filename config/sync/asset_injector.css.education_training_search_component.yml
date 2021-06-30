@@ -1,0 +1,31 @@
+uuid: d9af9a4b-e6a0-4f87-959b-9c6be4e0a636
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - node
+    - system
+id: education_training_search_component
+label: 'Education & Training - Search Component'
+code: ".education-training .search form {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n          margin-right: auto;\n          margin-left: auto;\n          max-width: 777px;\n          min-height: 52px;\n}\n\n.education-training .search form > * {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n\n.education-training .search form .form-type-select {\n  position: relative;\n}\n\n.education-training .search form .form-type-select::after {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-60%);\n  right: 15px;\n  pointer-events: none;\n}\n\n@media screen and (max-width: 480px) {\n  .education-training .search form > * {\n    margin-bottom: 0.75rem;\n  }\n}\n\n@media screen and (max-width: 480px) {\n  .education-training .search form {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n}\n\n.education-training .search form .form-select:not(.editor) {\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 24px;\n  letter-spacing: 0em;\n  text-align: center;\n  padding: 14px 24px;\n  background: #EFEFEF;\n  padding-right: 30px;\n}\n\n.education-training .search form .form-submit {\n  padding: 1rem 2rem;\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 20px;\n  letter-spacing: 0.1em;\n  text-align: center;\n  text-transform: uppercase;\n  color: #fff;\n  background-color: #51B5DF;\n}\n\n@media screen and (max-width: 480px) {\n  .education-training .search form .form-submit {\n    width: 100%;\n  }\n}\n\n.education-training .search form .form-submit:hover {\n  background-color: #0078AB;\n  -webkit-transition: background-color 300ms;\n  transition: background-color 300ms;\n}\n\n.education-training .search input.form-autocomplete {\n  background: #fff;\n  padding: 14px 12px;\n  width: 423px;\n}\n\n@media screen and (max-width: 834px) {\n  .education-training .search input.form-autocomplete {\n    width: 100%;\n  }\n}\n\n.product-support form .form-type-select:first-child {\n\tdisplay:none;\n}\n\n.product-support input.form-autocomplete {\n  background: #fff;\n  max-width: 587px;\n  line-height: 26px;\n}\n\n@media screen and (max-width: 834px) {\n  .product-support input.form-autocomplete {\n    width: 100%;\n  }\n}\n\n.product-support form {\n  max-width: 777px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: flex-start;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n}\n\n.product-support form > * {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n\n@media screen and (max-width: 480px) {\n  .product-support form > * {\n    margin-bottom: 0.75rem;\n  }\n}\n\n@media screen and (max-width: 480px) {\n  .product-support form {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n}\n\n.product-support form .form-item {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.product-support form .form-submit {\n  padding: 1rem 2rem;\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 20px;\n  letter-spacing: 0.1em;\n  text-align: center;\n  text-transform: uppercase;\n  color: #fff;\n  background-color: #51B5DF;\n  width: 190px;\n}\n\n@media screen and (max-width: 480px) {\n  .product-support form .form-submit {\n    width: 100%;\n    margin-bottom: 28px;\n  }\n}\n\n.product-support form .form-submit:hover {\n  background-color: #0078AB;\n  -webkit-transition: background-color 300ms;\n  transition: background-color 300ms;\n}"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

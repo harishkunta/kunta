@@ -1,0 +1,18 @@
+uuid: 14a85872-039b-4f3f-a35b-b0d727b8ea6e
+langcode: en
+status: false
+dependencies: {  }
+id: node___any___card
+label: 'Card (Node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: __any__
+view_mode: card
+master_template: ''

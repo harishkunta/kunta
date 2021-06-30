@@ -1,0 +1,17 @@
+uuid: 1bc6f4ff-3207-4b5c-b09a-510f3a06cf95
+langcode: en
+status: true
+dependencies: {  }
+id: d11669b3
+label: verathon-solutions-wrap
+json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"custom-css":[{"customCssProperty":{"value":"overflow"},"customCss":{"value":"hidden"}}],"max-width":{"value":"1600px"},"margin":{"margin-top":{"value":"0"},"margin-bottom":{"value":"0"},"margin-left":{"value":"auto"},"margin-right":{"value":"auto"}},"position":{"value":"relative"}}}},"variableFields":[]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"width","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-width","active":true},{"name":"max-width","active":true},{"name":"width","active":true}]},{"formKey":"position","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-verathon-solutions-wrap
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 0

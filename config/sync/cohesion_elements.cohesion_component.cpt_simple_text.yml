@@ -1,0 +1,19 @@
+uuid: 69da3c4f-f670-4a2c-8280-f2d65dde89c5
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_simple_text
+label: 'Simple Text'
+json_values: '{"canvas":[{"type":"item","uid":"wysiwyg","title":"WYSIWYG","status":{"collapsed":true},"uuid":"961b16ac-8e7e-4f8c-8e17-08f5e2745fd5","parentUid":"root","isContainer":false,"children":[]}],"componentForm":[{"type":"form-field","uid":"form-wysiwyg","title":"WYSIWYG","translate":true,"status":{"collapsed":false},"uuid":"ce35c99a-031a-4c2c-a5c9-ef15b46f82a6","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"961b16ac-8e7e-4f8c-8e17-08f5e2745fd5":{}},"model":{"961b16ac-8e7e-4f8c-8e17-08f5e2745fd5":{"settings":{"title":"WYSIWYG","content":"[field.ce35c99a-031a-4c2c-a5c9-ef15b46f82a6]"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"wysiwyg"}}},"ce35c99a-031a-4c2c-a5c9-ef15b46f82a6":{"settings":{"title":"header","type":"cohWysiwyg","schema":{"type":"object"},"machineName":"header","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"},"model":{}}},"previewModel":{"ce35c99a-031a-4c2c-a5c9-ef15b46f82a6":{},"961b16ac-8e7e-4f8c-8e17-08f5e2745fd5":{"settings":{"content":{"text":"","textFormat":"cohesion"}}}},"variableFields":{"ce35c99a-031a-4c2c-a5c9-ef15b46f82a6":[],"961b16ac-8e7e-4f8c-8e17-08f5e2745fd5":["settings.content"]},"meta":{"fieldHistory":[{"uuid":"ce35c99a-031a-4c2c-a5c9-ef15b46f82a6","type":"form-wysiwyg","machineName":"header"},{"uuid":"aa6b0616-9797-4c01-af88-0937d05d3b32","type":"form-image","machineName":"image"},{"uuid":"2136c55f-d000-4b63-84fb-6732e280fdcf","type":"form-input","machineName":"image-title"}]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_atoms
+preview_image: {  }
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-simple-text
+weight: 0

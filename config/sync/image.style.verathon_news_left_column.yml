@@ -1,0 +1,15 @@
+uuid: 21527739-80e6-46a8-8778-a9eb668d351f
+langcode: en
+status: true
+dependencies: {  }
+name: verathon_news_left_column
+label: 'Verathon News Left Column'
+effects:
+  3140eab6-e065-49e8-af48-c67e298108a6:
+    uuid: 3140eab6-e065-49e8-af48-c67e298108a6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 648
+      height: 365
+      anchor: center-center

@@ -1,0 +1,18 @@
+uuid: 1bbb2755-bc44-42d8-9dab-80319a47070e
+langcode: en
+status: false
+dependencies: {  }
+id: node_config_check_featured_news_
+label: 'Featured News - Right Column (Node, Config Check)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: config_check
+view_mode: featured_news_right_column
+master_template: ''

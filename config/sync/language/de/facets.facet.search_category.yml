@@ -1,0 +1,5 @@
+name: Kategorie
+url_alias: Kategorie
+widget:
+  config:
+    reset_text: 'Alle anzeigen'
