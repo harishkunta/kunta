@@ -20,7 +20,6 @@ function calculateCrossContaminationInfectionCost() {
     $('#estimatedAnnualTreatmentCost_statistics').find('figure').text(`$${Intl.NumberFormat().format($annualTreatmentCost)}`);
 }
 
-
 function validateInput(id, type) {
     let errorId = $("#" + id).closest(".question").find(".error").attr("id");
     let errorCheck = false;
