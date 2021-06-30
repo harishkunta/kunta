@@ -410,13 +410,44 @@ body {
 .bflex-calculator .submitSectionWrapper .form-submit {
     background-color: #003C71;
     color: white;
+    padding: .8125rem;
+}
+
+.bflex-calculator .submitSectionWrapper .row>.column50:first-child {
+    margin-bottom: 1.25rem;
+}
+
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions {
+    position: relative;
+}
+
+.bflex-calculator .submitSectionWrapper .form-submit,
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText {
     font-size: .9375rem;
     font-weight: bold;
     width: 100%;
     text-align: center;
     border: 0;
     outline: 0;
-    padding: .8125rem;
+}
+
+.bflex-calculator #edit-submit.disabled,
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText {
+    background-color: #D8D8D8;
+    color: black;
+}
+
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText {
+    padding: .3125rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-60%);
+}
+
+.bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText em {
+    color: #D11E39;
+    font-style: normal;
 }
 
 .bflex-calculator .submitSectionWrapper h3 {

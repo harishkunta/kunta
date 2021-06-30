@@ -105,6 +105,23 @@ function validateInput(id, type) {
             }
         }
     }
+    let checkOverallErrors = false;
+    $(".error").each(function() {
+        if (($(this).css('display') == 'block') || ($(".error.active").length > 0)) {
+            checkOverallErrors = true;
+        }
+    })
+    let button = $("#edit-submit");
+    if (checkOverallErrors == true) {
+        button.prop('disabled', true);
+        button.addClass("disabled");
+        !$("#disableSubmitText").length ? $("<span class='disableSubmitText' id='disableSubmitText'>Fix form errors in <em>red</em> to calculate.</span>").insertAfter("#edit-submit") : null;
+        $("#disableSubmitText").length ? $("#disableSubmitText").css("display", "inline") : null;
+    } else {
+        button.prop('disabled', false);
+        button.removeClass("disabled");
+        $("#disableSubmitText").length ? $("#disableSubmitText").css("display", "none") : null;
+    }
     return errorCheck;
 }
 
@@ -132,13 +149,13 @@ function triggerAction(id, type) {
 }
 
 
-(function ($, Drupal) {
+(function($, Drupal) {
     console.log(Drupal.settings);
     //Behavior definition for tooltip.
     Drupal.behaviors.tooltip = {
-        attach: function (context, settings) {
-            $(".tooltip-icon", context).each(function () {
-                $(this).on('click', function () {
+        attach: function(context, settings) {
+            $(".tooltip-icon", context).each(function() {
+                $(this).on('click', function() {
                     triggerAction($(this).attr("id"), "tooltip")
                 });
             });
@@ -147,9 +164,9 @@ function triggerAction(id, type) {
 
     // Behavior Definition for Slider.
     Drupal.behaviors.slider = {
-        attach: function (context, settings) {
-            $(".slider", context).each(function () {
-                $(this).on('change', function () {
+        attach: function(context, settings) {
+            $(".slider", context).each(function() {
+                $(this).on('change', function() {
                     let sliderId = $(this).attr("id");
                     triggerAction(sliderId, "slider");
                     validateInput(sliderId, "sliderFieldInput");
@@ -166,9 +183,9 @@ function triggerAction(id, type) {
 
     // Behavior defination of Number calculations.
     Drupal.behaviors.number = {
-        attach: function (context, settings) {
-            $(".number", context).each(function () {
-                $(this).on('change', function () {
+        attach: function(context, settings) {
+            $(".number", context).each(function() {
+                $(this).on('change', function() {
                     let numberId = $(this).attr("id")
                     triggerAction(numberId, "number")
                     validateInput(numberId, "slider_numberFieldInput")
@@ -184,17 +201,17 @@ function triggerAction(id, type) {
 
     // Behavior definition for Textfield & Number box.
     Drupal.behaviors.input = {
-        attach: function (context, settings) {
-            $(".form-text", context).each(function () {
-                $(this).on('focusout', function () {
+        attach: function(context, settings) {
+            $(".form-text", context).each(function() {
+                $(this).on('focusout', function() {
                     let textFieldId = $(this).attr("id")
                     validateInput(textFieldId, "textFieldInput");
                     $("#" + textFieldId).attr("value", $("#" + textFieldId).val());
                 });
             });
 
-            $(".form-number", context).each(function () {
-                $(this).on('change', function () {
+            $(".form-number", context).each(function() {
+                $(this).on('change', function() {
                     let numberId = $(this).attr("id")
                     validateInput(numberId, "numberFieldInput")
                     $("#" + numberId).attr("value", $("#" + numberId).val());
