@@ -1,0 +1,23 @@
+uuid: 15a6cbda-3034-475e-8f6d-2af75e8cb897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sailesh_harish
+  module:
+    - text
+id: node.sailesh_harish.body
+field_name: body
+entity_type: node
+bundle: sailesh_harish
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
