@@ -15,7 +15,7 @@ function calculateReprocessingCost() {
 function calculateCrossContaminationInfectionCost() {
     var $totalProcedures = $('#edit-total-annual-bronchoscopy-procedures').val(),
         $totalCost = Math.fround(($totalProcedures * 0.034 * 0.2125).toFixed(2)),
-        $annualTreatmentCost = Math.ceil($totalCost * 28383);
+        $annualTreatmentCost = Math.floor(($totalCost * 28383) + 0.5);
     $('#estimatedNumberOfInfections_statistics').find('figure').text(Intl.NumberFormat().format($totalCost));
     $('#estimatedAnnualTreatmentCost_statistics').find('figure').text(`$${Intl.NumberFormat().format($annualTreatmentCost)}`);
 }
