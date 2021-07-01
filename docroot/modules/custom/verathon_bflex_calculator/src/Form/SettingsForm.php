@@ -106,7 +106,7 @@ class SettingsForm extends ConfigFormBase
     ];
     $form['cloud_convert']['cc_api_key'] = [
       '#title' => $this->t('CloudConvert API KEY'),
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#description' => $this->t('The PDF generation will be done via CloudConvert API.'),
       '#required' => TRUE,
       '#default_value' => $config['cc_api_key'],
