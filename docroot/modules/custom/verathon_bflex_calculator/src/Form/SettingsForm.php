@@ -98,6 +98,18 @@ class SettingsForm extends ConfigFormBase
       '#default_value' => $config['cost_per_infection'],
 
     ];
+    $form['cloud_convert'] = [
+      '#title' => $this->t('CloudConvert API'),
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    ];
+    $form['cloud_convert']['cc_api_key'] = [
+      '#title' => $this->t('CloudConvert API KEY'),
+      '#description' => $this->t('The PDF generation will be done via CloudConvert API.'),
+      '#required' => TRUE,
+      '#default_value' => $config['cc_api_key'],
+    ];
     // Reprocessing Factors.
     $form['reprocessing_cost'] = [
       '#title' => $this->t('Reprocessing Cost'),
@@ -315,6 +327,8 @@ class SettingsForm extends ConfigFormBase
       ->set('annual_oop_repair_factor_low', $form_state->getValue('annual_oop_repair_factor_low'))
       ->set('annual_oop_repair_factor_average', $form_state->getValue('annual_oop_repair_factor_average'))
       ->set('annual_oop_repair_factor_high', $form_state->getValue('annual_oop_repair_factor_high'))
+      ->set('cc_api_key', $form_state->getValue('cc_api_key'))
+
       ->save();
     parent::submitForm($form, $form_state);
   }
