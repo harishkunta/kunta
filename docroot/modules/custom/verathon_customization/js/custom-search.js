@@ -36,14 +36,15 @@
 
         if (chipsArray.length > 1) {
           chipsArray = chipsArray.split(',');
-
           /* 
               Maximum allowable chips are set to 5 
           */
-          if (chipsArray.length > 5) {
-            chipsArray.length = 5;
+          const maxChips = 5;
+          if (chipsArray.length > maxChips) {
+            chipsArray.length = maxChips;
             $('.search-keywords-warning').removeClass('d-none');
           }
+
           /* 
               Adding chips adding event listener for close button on chip 
           */
