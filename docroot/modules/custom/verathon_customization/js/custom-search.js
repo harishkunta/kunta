@@ -2,6 +2,10 @@
   Drupal.behaviors.search = {
     attach: function (context, settings) {
       $(document).ready(function () {
+        /* 
+            Fetches the url parameter 
+            Takes parameter name as input
+        */
         var getUrlParameter = function getUrlParameter(param) {
           var pageUrl = window.location.search.substring(1),
             urlVariables = pageUrl.split('&'),
@@ -19,10 +23,13 @@
         };
         var chipsArray = getUrlParameter('keywords');
 
+        /* 
+            Filtering all the empty search strings 
+        */
         if (chipsArray.length) {
           chipsArray = chipsArray.split('+');
           chipsArray = chipsArray.filter(function (el) {
-              return el != "";
+            return el != "";
           });
           chipsArray = chipsArray.join(' ');
         }
@@ -30,13 +37,18 @@
         if (chipsArray.length > 1) {
           chipsArray = chipsArray.split(',');
 
+          /* 
+              Maximum allowable chips are set to 5 
+          */
           if (chipsArray.length > 5) {
             chipsArray.length = 5;
             $('.search-keywords-warning').removeClass('d-none');
           }
-
-          var chipsLen = chipsArray.length;
-          var chips = document.querySelector(".chips");
+          /* 
+              Adding chips adding event listener for close button on chip 
+          */
+          var chipsLen = chipsArray.length,
+            chips = document.querySelector(".chips");
           for (chip = 0; chip < chipsLen; chip++) {
             chips.appendChild(function () {
               var _chip = document.createElement('div');
@@ -64,6 +76,10 @@
             }());
           }
         }
+
+        /* 
+            Handling close button click on every chip created 
+        */
         function chipClickHandler(event) {
           var removedChip = event.currentTarget.parentNode.children[0].innerText;
           chipsArray = chipsArray.map(chip => chip.trim());
