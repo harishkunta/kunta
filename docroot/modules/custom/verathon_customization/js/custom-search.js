@@ -23,7 +23,9 @@
         };
         var chipsArray = getUrlParameter('keywords');
 
-        // Filtering all the empty search strings
+        /* 
+            Filtering all the empty search strings 
+        */
         if (chipsArray.length) {
           chipsArray = chipsArray.split('+');
           chipsArray = chipsArray.filter(function (el) {
@@ -35,12 +37,16 @@
         if (chipsArray.length > 1) {
           chipsArray = chipsArray.split(',');
 
-          // Maximum allowable chips are set to 5
+          /* 
+              Maximum allowable chips are set to 5 
+          */
           if (chipsArray.length > 5) {
             chipsArray.length = 5;
             $('.search-keywords-warning').removeClass('d-none');
           }
-          // Adding chips adding event listener for close button on chip
+          /* 
+              Adding chips adding event listener for close button on chip 
+          */
           var chipsLen = chipsArray.length,
             chips = document.querySelector(".chips");
           for (chip = 0; chip < chipsLen; chip++) {
@@ -71,7 +77,9 @@
           }
         }
 
-        // Handling close button click on every chip created
+        /* 
+            Handling close button click on every chip created 
+        */
         function chipClickHandler(event) {
           var removedChip = event.currentTarget.parentNode.children[0].innerText;
           chipsArray = chipsArray.map(chip => chip.trim());
