@@ -105,7 +105,7 @@ class VerathonBflexPdfController extends ControllerBase
         ->addTask(
           (new Task('import/raw', 'upload-html'))
             ->set('file', $html)
-            ->set('filename', 'bflex-calculator.html')
+            ->set('filename', 'bflex-savings.html')
             ->set('engine', 'wkhtml')
             ->set('page_width', 21.59)
             ->set('page_height', 27.94)
