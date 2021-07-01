@@ -209,7 +209,7 @@ class BflexCalculatorContentForm extends ConfigFormBase
     $form['step_three']['step_three_heading'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Step Three - Section Heading'),
-      '#default_value' => $config['step_two_heading'],
+      '#default_value' => $config['step_three_heading'],
     ];
     $form['step_three']['step_three_description'] = [
       '#type' => 'text_format',
