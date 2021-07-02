@@ -1,1 +1,3 @@
-Verathon project - merge1
+<<<<<<< README.md
+testing Verathon pipeline
+=======
