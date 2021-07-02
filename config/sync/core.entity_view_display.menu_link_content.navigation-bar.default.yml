@@ -1,0 +1,32 @@
+uuid: 3a46b171-af06-4c64-a413-e2862ec19635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.navigation-bar.field_video
+    - system.menu.navigation-bar
+id: menu_link_content.navigation-bar.default
+targetEntityType: menu_link_content
+bundle: navigation-bar
+mode: default
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_video:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

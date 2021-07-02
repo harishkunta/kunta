@@ -1,0 +1,76 @@
+<style>
+	.pdf_page1_wrapper {
+		height: 63.75rem;
+		max-width: 53.125rem;
+		margin: 0 auto;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.pdf_page1_wrapper .container.pdf_page1 {
+		padding: 4.375rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		height: 100%;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.pdf_page1_wrapper .container.pdf_page1 .img-wrap {
+		width: 50%;
+	}
+
+	.pdf_page1_wrapper .container.pdf_page1 p {
+		font-size: 2.8125rem;
+		line-height: 4.0625rem;
+		color: #003C71;
+	}
+
+	.pdf_page1_wrapper .container.pdf_page1 p span {
+		font-weight: 800;
+	}
+
+	.pdf_page1_wrapper .container.pdf_page1 p.pdf_intro_footnote {
+		font-size: 1.5625rem;
+		line-height: 1.875rem;
+		color: black;
+	}
+
+	.glidescope-logo {
+		background: url('{{url('<front>')}}modules/custom/verathon_bflex_calculator/images/SB-Logo.PNG');
+	}
+
+	.glidescope-logo::before {
+		content: url('{{url('<front>')}}modules/custom/verathon_bflex_calculator/images/SB-Logo.PNG');
+		display: block;
+	}
+
+	.verathon-logo::before {
+		content: url('{{url('<front>')}}modules/custom/verathon_bflex_calculator/images/verathon-Logo.PNG');
+		display: block;
+	}
+
+
+	/*# sourceMappingURL=pdf_page1.css.map */
+</style>
+<div class="pdf_page1_wrapper" style="height: 63.25rem; max-width: 53.125rem; margin: 0 auto; font-family: Arial, Helvetica, sans-serif;">
+	<div class="container pdf_page1">
+		<div class="img-wrap glidescope-logo"></div>
+		<div class="pdf_intro">
+			<p>
+				<span class="boldText">Your Cost-Comparison Snapshot</span>:Single-use vs. reusable bronchoscopes</p>
+			<p class="pdf_intro_footnote">See how current operating costs for reusable bronchoscopes at
+				<span class="boldText">{{config.facility_name}}
+				</span>
+				compare to single-use.</p>
+		</div>
+		<div class="img-wrap verathon-logo"></div>
+	</div>
+</div>

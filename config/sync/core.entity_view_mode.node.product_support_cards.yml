@@ -1,0 +1,10 @@
+uuid: 7c8cc7d8-00f5-4beb-a03d-ae7e91f3c63e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.product_support_cards
+label: 'Product Support Cards'
+targetEntityType: node
+cache: true

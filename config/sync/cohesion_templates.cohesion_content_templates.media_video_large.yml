@@ -1,0 +1,18 @@
+uuid: ad28eba0-c727-4998-ab0a-59af1af1a94e
+langcode: en
+status: false
+dependencies: {  }
+id: media_video_large
+label: 'Large (Media, Video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: video
+view_mode: large
+master_template: ''

@@ -1,0 +1,19 @@
+uuid: 5fb1a61e-a448-4109-9d1f-4c08781df358
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_description
+    - node.type.event
+id: node.event.field_job_description
+field_name: field_job_description
+entity_type: node
+bundle: event
+label: 'Job Description'
+description: 'Write the Job Description of the Contact person.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

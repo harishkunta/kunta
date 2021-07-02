@@ -1,0 +1,13 @@
+uuid: c8a9304e-15ea-46e7-8add-a14d2276f4f4
+langcode: en
+status: true
+dependencies: {  }
+id: margin-bottom-small
+label: null
+json_values: '{"uid":"margin-bottom-small","value":"20px"}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 4

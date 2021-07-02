@@ -1,0 +1,13 @@
+uuid: a6138050-6e40-4322-ac19-3f6e4619e21c
+langcode: en
+status: true
+dependencies: {  }
+id: verathon-blue
+label: 'Verathon Blue'
+json_values: '{"link":true,"value":{"value":{"hex":"#51b5df","rgba":"rgba(81, 181, 223, 1)"}},"name":"Verathon Blue","uid":"verathon-blue","class":".coh-color-verathon-blue","variable":"$coh-color-verathon-blue","wysiwyg":true,"tags":[{"label":"Blue","value":"blue"}]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+weight: 12

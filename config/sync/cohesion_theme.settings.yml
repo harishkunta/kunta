@@ -1,0 +1,13 @@
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  cohesion_build_assets: true
+logo:
+  use_default: false
+  path: sites/default/files/2021-05/logo_0.png
+favicon:
+  use_default: true
+  path: profiles/contrib/acquia_cms/acquia_cms.png
+  mimetype: image/png

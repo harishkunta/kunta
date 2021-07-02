@@ -1,0 +1,14 @@
+uuid: 309f055e-1b52-4f31-a98b-6d00d3820c64
+langcode: en
+status: true
+dependencies: {  }
+id: view_tpl_no_longer_supported
+label: 'No Longer Supported - Legacy Devices'
+json_values: '{"canvas":[{"type":"container","uid":"drupal-view","title":"View container","status":{"collapsed":false},"uuid":"236a49a0-fb25-4064-b2cc-f33a73fa5556","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"drupal-view-contents","title":"View content","status":{"collapsed":false},"uuid":"12b30256-3a17-4e82-88ec-5a8a2bd97bae","parentUid":"drupal-view","isContainer":true,"children":[{"type":"container","uid":"pattern-repeater","title":"Pattern repeater","mimicParent":true,"status":{"collapsed":false},"uuid":"465e0b11-04c4-4b58-8312-13962cb81678","parentUid":"drupal-view-contents","isContainer":true,"children":[{"type":"item","uid":"drupal-view-item","title":"View item","status":{"collapsed":true},"uuid":"0277e941-72f8-4222-b605-2f527f2adf84","parentUid":"pattern-repeater","isContainer":false,"children":[]}]}]}]}],"mapper":{"236a49a0-fb25-4064-b2cc-f33a73fa5556":{},"12b30256-3a17-4e82-88ec-5a8a2bd97bae":{},"465e0b11-04c4-4b58-8312-13962cb81678":{},"0277e941-72f8-4222-b605-2f527f2adf84":{"settings":{"formDefinition":[{"formKey":"view-item-settings","children":[{"formKey":"view-item-mode","breakpoints":[],"activeFields":[{"name":"view_mode","active":true},{"name":"entity_type","active":true},{"name":"bundle","active":true},{"name":"view_mode","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"0277e941-72f8-4222-b605-2f527f2adf84":{"settings":{"title":"View item","view_mode":[{"entity_type":"node","bundle":"product","view_mode":"default"}],"settings":{"view_mode":[{"entity_type":"node","bundle":"all","view_mode":"default"}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"view-item"}}}},"previewModel":{"0277e941-72f8-4222-b605-2f527f2adf84":{}},"variableFields":{"0277e941-72f8-4222-b605-2f527f2adf84":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: true
+twig_template: views-view--cohesion-view-tpl-no-longer-supported

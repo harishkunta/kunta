@@ -1,0 +1,14 @@
+uuid: 62b1b5f9-4d73-4ad9-9abd-c45fe5655e64
+langcode: en
+status: true
+dependencies: {  }
+name: product_support_cards
+label: 'Product Support Cards (307*244)'
+effects:
+  11f61f5b-e16b-4a45-a780-1796ae7db4b9:
+    uuid: 11f61f5b-e16b-4a45-a780-1796ae7db4b9
+    id: image_resize
+    weight: 1
+    data:
+      width: 307
+      height: 244

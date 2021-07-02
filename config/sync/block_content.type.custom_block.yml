@@ -1,0 +1,8 @@
+uuid: e65a20b7-2ec2-4147-bdf6-e1be22119a4c
+langcode: en
+status: true
+dependencies: {  }
+id: custom_block
+label: 'Custom Block'
+revision: 0
+description: ''

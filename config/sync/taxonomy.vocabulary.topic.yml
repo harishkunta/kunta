@@ -1,0 +1,8 @@
+uuid: 89f3812c-244b-4d85-ac50-820b8e155aaf
+langcode: en
+status: true
+dependencies: {  }
+name: Topic
+vid: topic
+description: 'This vocabulary is used for creating the topic for the content.'
+weight: 0

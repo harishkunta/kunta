@@ -1,0 +1,18 @@
+uuid: 953334f6-1259-43a7-9060-b19a93397be9
+langcode: en
+status: false
+dependencies: {  }
+id: menu_link_content_language_token
+label: 'Token (Menu_link_content, Language)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: menu_link_content
+bundle: language
+view_mode: token
+master_template: ''

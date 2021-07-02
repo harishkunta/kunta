@@ -1,0 +1,29 @@
+uuid: e9567d11-2756-430b-8486-10f8267d1d0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_thumbnail
+    - media.type.image
+    - node.type.instructional_videos
+id: node.instructional_videos.field_video_thumbnail
+field_name: field_video_thumbnail
+entity_type: node
+bundle: instructional_videos
+label: 'Video Thumbnail'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

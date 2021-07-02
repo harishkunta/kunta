@@ -1,0 +1,18 @@
+uuid: c19336f8-ca53-492b-836a-b4e3fa2a62ce
+langcode: en
+status: false
+dependencies: {  }
+id: node_product_documentation_searc
+label: 'Search index (Node, Product Documentation)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: product_documentation
+view_mode: search_index
+master_template: ''

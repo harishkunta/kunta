@@ -1,0 +1,13 @@
+diff --git a/google_tag.module b/google_tag.module
+index b622e66..ea2eddc 100644
+--- a/google_tag.module
++++ b/google_tag.module
+@@ -88,7 +88,7 @@ function google_tag_plugin_filter_condition_alter(array &$definitions, array $ex
+     // Remove condition plugins defined by core and domain.
+     $definitions = array_diff_key($definitions, array_flip([
+       'current_theme', 'language', 'node_type', 'request_path', 'user_role',
+-      'domain',
++      'domain', 'moderation_dashboard_access', 'has_moderated_content_type',
+     ]));
+ 
+     $language_manager = \Drupal::service('language_manager');

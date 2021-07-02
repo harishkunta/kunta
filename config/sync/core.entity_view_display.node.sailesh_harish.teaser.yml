@@ -1,0 +1,35 @@
+uuid: d136f014-99b4-4b53-aba8-7205676888e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sailesh_harish.body
+    - node.type.sailesh_harish
+  module:
+    - text
+    - user
+id: node.sailesh_harish.teaser
+targetEntityType: node
+bundle: sailesh_harish
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

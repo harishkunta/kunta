@@ -1,0 +1,49 @@
+verathon_bflex_calculator.settings_form:
+  path: '/admin/config/system/verathon-bflex-calculator'
+  defaults:
+    _title: 'Verathon Bflex Calculator settings'
+    _form: 'Drupal\verathon_bflex_calculator\Form\SettingsForm'
+  requirements:
+    _permission: 'administer verathon_bflex_calculator configuration'
+
+verathon_bflex_calculator.verathon_bflex_calculator:
+  path: '/bflex-calculator'
+  defaults:
+    _title: 'Bronchocope Cost Calculator'
+    _form: 'Drupal\verathon_bflex_calculator\Form\VerathonBflexCalculatorForm'
+  requirements:
+    _permission: 'access content'
+
+verathon_bflex_calculator.bflex_calculator_content:
+  path: '/admin/config/system/bflex-calculator-content'
+  defaults:
+    _title: 'Calculator - Labels'
+    _form: 'Drupal\verathon_bflex_calculator\Form\BflexCalculatorContentForm'
+  requirements:
+    _permission: 'administer bflex content'
+
+calculator.result:
+  path: '/bflex-calculator/result'
+  defaults:
+    _title: 'BFlex Calculator - Result'
+    _controller: '\Drupal\verathon_bflex_calculator\Controller\VerathonBflexCalculatorResultController::build'
+  requirements:
+    _permission: 'access content'
+
+
+
+verathon_bflex_calculator.bflex_result_content:
+  path: '/admin/config/system/bflex-result-content'
+  defaults:
+    _title: 'Bflex Results Page Content'
+    _form: 'Drupal\verathon_bflex_calculator\Form\BflexResultContentForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+verathon_bflex_calculator.pdf:
+  path: '/bflex-calculator/pdf'
+  defaults:
+    _title: 'Verathon BFlex Calculator - Report'
+    _controller: '\Drupal\verathon_bflex_calculator\Controller\VerathonBflexPdfController::build'
+  requirements:
+    _permission: 'access content'

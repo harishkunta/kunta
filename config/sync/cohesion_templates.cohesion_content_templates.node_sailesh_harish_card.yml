@@ -1,0 +1,18 @@
+uuid: 6ce4882f-b8c3-437f-b7b3-cf4988a5e7c6
+langcode: en
+status: false
+dependencies: {  }
+id: node_sailesh_harish_card
+label: 'Card (Node, Sailesh & Harish)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: sailesh_harish
+view_mode: card
+master_template: ''

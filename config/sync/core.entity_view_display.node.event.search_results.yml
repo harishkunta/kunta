@@ -1,0 +1,95 @@
+uuid: 51ce3f66-9836-49bd-affa-7a2f9cd9dec0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_results
+    - field.field.node.event.body
+    - field.field.node.event.field_categories
+    - field.field.node.event.field_contact_number
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_department
+    - field.field.node.event.field_door_time
+    - field.field.node.event.field_email
+    - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_end
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_information
+    - field.field.node.event.field_event_place
+    - field.field.node.event.field_event_published_on
+    - field.field.node.event.field_event_start
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_job_description
+    - field.field.node.event.field_product_line
+    - field.field.node.event.field_role
+    - field.field.node.event.field_select_parent
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_topic
+    - field.field.node.event.field_year
+    - node.type.event
+  module:
+    - smart_trim
+    - user
+_core:
+  default_config_hash: gMnUY1XUVRmk2WC9XUn0hg58JlLGgg-daUFdfQnsiZ0
+id: node.event.search_results
+targetEntityType: node
+bundle: event
+mode: search_results
+content:
+  body:
+    type: smart_trim
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 128
+      trim_type: chars
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: trim
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_categories: true
+  field_contact_number: true
+  field_contact_person: true
+  field_department: true
+  field_door_time: true
+  field_email: true
+  field_event_duration: true
+  field_event_end: true
+  field_event_image: true
+  field_event_information: true
+  field_event_place: true
+  field_event_published_on: true
+  field_event_start: true
+  field_event_type: true
+  field_job_description: true
+  field_product_line: true
+  field_role: true
+  field_select_parent: true
+  field_tags: true
+  field_topic: true
+  field_year: true
+  langcode: true
+  search_api_excerpt: true

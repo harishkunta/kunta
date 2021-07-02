@@ -1,0 +1,36 @@
+uuid: fddf91fc-9137-4c67-a8bd-b0af525be5e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - ctools
+    - moderation_dashboard
+id: gtm_pzz6ht2
+label: GTM-PZZ6HT2
+weight: 0
+container_id: GTM-PZZ6HT2
+data_layer: dataLayer
+include_classes: false
+whitelist_classes: "google\nnonGooglePixels\nnonGoogleScripts\nnonGoogleIframes"
+blacklist_classes: "customScripts\ncustomPixels"
+include_environment: false
+environment_id: env-129
+environment_token: J4Uk0OZl-hgagxsBeDyJMQ
+path_toggle: 'exclude listed'
+path_list: "/admin*\n/batch*\n/node/add*\n/node/*/edit\n/node/*/delete\n/user/*/edit*\n/user/*/cancel*"
+role_toggle: 'exclude listed'
+role_list: {  }
+status_toggle: 'exclude listed'
+status_list: "403\n404"
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  moderation_dashboard_access:
+    id: moderation_dashboard_access
+    negate: true
+    context_mapping:
+      dashboard_user: '@user.current_user_context:current_user'
+      current_user: '@user.current_user_context:current_user'

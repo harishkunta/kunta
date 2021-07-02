@@ -1,0 +1,23 @@
+uuid: 6a971f37-8145-4323-9fde-febfa2eed54f
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - system
+id: category_benefit_block_css
+label: 'Category Benefit Block Css'
+code: ".category-benefit-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n}\n\n.category-benefit-container.content-first {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n      -ms-flex-direction: row-reverse;\n          flex-direction: row-reverse;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container.content-first {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n}\n\n.category-benefit-container.content-first .category-benefit-content {\n  padding-left: 10%;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    padding: 0 1.25rem 5rem 1.25rem;\n  }\n}\n\n.category-benefit-container .category-benefit-banner {\n  width: 50%;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container .category-benefit-banner {\n    width: 100%;\n  }\n}\n\n.category-benefit-container .category-benefit-banner .banner-img {\n  width: 100%;\n}\n\n.category-benefit-container .category-benefit-content {\n  width: 50%;\n  padding: 5rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container .category-benefit-content {\n    width: 100%;\n    padding: 1.25rem;\n  }\n}\n\n.category-benefit-container .category-benefit-content .tagline {\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 19px;\n  letter-spacing: 0.13em;\n  text-align: left;\n  text-transform: uppercase;\n  max-width: 29rem;\n  margin-bottom: 1.5em;\n}\n\n.category-benefit-container .category-benefit-content .header {\n  font-size: 24px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 29px;\n  letter-spacing: 0em;\n  text-align: left;\n  max-width: 29rem;\n}\n\n.category-benefit-container .category-benefit-content .description {\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0em;\n  text-align: left;\n  max-width: 29rem;\n  margin-bottom: 1.8125rem;\n}\n\n.category-benefit-container .category-benefit-content .benefit-statistics {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.category-benefit-container .category-benefit-content .benefit-statistics .stats {\n  padding: 1.5625rem;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container .category-benefit-content .benefit-statistics .stats {\n    padding: 0;\n  }\n}\n\n.category-benefit-container .category-benefit-content .benefit-statistics .stats:not(:last-of-type) {\n  margin-right: 2.5rem;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container .category-benefit-content .benefit-statistics .stats:not(:last-of-type) {\n    margin-right: 1.5rem;\n  }\n}\n.category-benefit-container .category-benefit-content .benefit-statistics .stats .percentage {\n  font-size: 40px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 40px;\n  letter-spacing: 0em;\n  text-align: center;\n}\n\n.category-benefit-container .category-benefit-content .benefit-statistics .stats .percentage::after {\n  content: '%';\n}\n\n.category-benefit-container .category-benefit-content .benefit-statistics .stats .benefit-text {\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0em;\n  text-align: center;\n}\n\n@media screen and (max-width: 480px) {\n  .category-benefit-container .category-benefit-content .benefit-statistics .stats .benefit-text {\n    font-size: 14px;\n  }\n}"
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

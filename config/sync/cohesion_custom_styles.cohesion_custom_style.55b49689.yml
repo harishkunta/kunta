@@ -1,0 +1,17 @@
+uuid: 9cb2bbf5-99d9-461b-9b3b-3a5d95019a90
+langcode: en
+status: true
+dependencies: {  }
+id: 55b49689
+label: 'UI Styling'
+json_values: '{"preview":{"text":"<div class=\"container coh-style-ui-styling\">\n<h1 class=\"heading\">Hai!!<\/h1>\n<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"padding":{"padding-top":{"value":"40px"},"padding-bottom":{"value":"40px"},"padding-left":{"value":"40px"},"padding-right":{"value":"40px"}}}},"3c822d76-4f8e-4901-97ad-afb1523b6b3c":{"settings":{"element":"heading","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"name":"Gray 80","uid":"gray-80","class":".coh-color-gray-80","variable":"$coh-color-gray-80","value":{"hex":"#323232","rgba":"rgba(50, 50, 50, 1)"},"inuse":true,"wysiwyg":true,"tags":["Dark"]}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":true},{"name":"margin-left","active":true},{"name":"margin-right","active":true},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]},{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]}],"items":[{"title":"heading","type":"container","items":[],"form":null,"selectorType":"child","model":"heading","uuid":"3c822d76-4f8e-4901-97ad-afb1523b6b3c","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]}]}],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-ui-styling
+custom_style_type: generic
+available_in_wysiwyg: false
+parent: null
+weight: 0

@@ -1,0 +1,53 @@
+uuid: 5252de81-ea4b-4b0b-99ab-87dd53c7aff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.acquia_search_index
+    - views.view.et_search_block
+  module:
+    - views
+    - search_api_autocomplete
+id: et_search_block
+label: 'ET Search Block'
+index_id: acquia_search_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes:
+      'entity:cohesion_layout':
+        cohesion_layout: ''
+      'entity:component_content':
+        component_content: ''
+      'entity:node':
+        article: ''
+        clinical_publications: ''
+        config_check: ''
+        event: ''
+        instructional_videos: ''
+        news: ''
+        page: ''
+        person: ''
+        place: ''
+        product: ''
+        product_documentation: ''
+  server:
+    fields: {  }
+suggester_weights:
+  live_results: 0
+  server: 0
+suggester_limits:
+  live_results: 3
+  server: 3
+search_settings:
+  'views:et_search_block':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 3
+  min_length: 1
+  show_count: false
+  autosubmit: false
+  submit_button_selector: ':submit'
+  delay: null

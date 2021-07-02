@@ -1,0 +1,18 @@
+uuid: dd708213-ea2c-4adf-984f-aadc2a1cac59
+langcode: en
+status: false
+dependencies: {  }
+id: node___any___guides_and_articles
+label: 'Guides and Articles (Node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: __any__
+view_mode: guides_and_articles
+master_template: ''

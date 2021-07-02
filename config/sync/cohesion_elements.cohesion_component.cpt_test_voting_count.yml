@@ -1,0 +1,19 @@
+uuid: fb312168-383b-40c4-9c6d-26a4e1e4dee7
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_test_voting_count
+label: 'Test Voting Count'
+json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"de88eaac-3e63-4599-aa5c-1047291b8cb2","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"component-pattern-repeater","title":"Pattern repeater","status":{"collapsed":false},"uuid":"9aecf91b-979a-48e3-aec1-2f24255ad207","parentUid":"container","isContainer":true,"children":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"bdf13046-16c4-4e1c-9687-b0ca4d23df01","parentUid":"component-pattern-repeater","isContainer":true,"children":[{"type":"container","uid":"paragraph","title":"Paragraph","status":{"collapsed":true},"uuid":"f69531a8-eddb-46bd-902c-b54ec872b819","parentUid":"container","isContainer":true,"children":[]},{"type":"container","uid":"list-container","title":"List container","status":{"collapsed":false},"uuid":"d422ea8d-119f-4f8d-a5e6-6a2d75078d33","parentUid":"container","isContainer":true,"children":[]}]}]}]}],"componentForm":[{"type":"form-field","uid":"form-select","title":"Select","translate":false,"status":{"collapsed":false},"uuid":"7bf82712-9d96-42cd-8d87-afadc5bd75d6","parentUid":"root","isContainer":false,"children":[]}],"mapper":{"de88eaac-3e63-4599-aa5c-1047291b8cb2":{},"9aecf91b-979a-48e3-aec1-2f24255ad207":{},"bdf13046-16c4-4e1c-9687-b0ca4d23df01":{},"d422ea8d-119f-4f8d-a5e6-6a2d75078d33":{},"f69531a8-eddb-46bd-902c-b54ec872b819":{}},"model":{"de88eaac-3e63-4599-aa5c-1047291b8cb2":{"settings":{"width":"fluid"}},"bdf13046-16c4-4e1c-9687-b0ca4d23df01":{"settings":{"width":"fluid"}},"d422ea8d-119f-4f8d-a5e6-6a2d75078d33":{"settings":{"element":"ul"}},"7bf82712-9d96-42cd-8d87-afadc5bd75d6":{"settings":{"title":"Who will be the next T20 cricket world cup champion?","type":"cohSelect","selectType":"custom","schema":{"type":"string"},"options":[{"label":"India","value":"IN"},{"label":"Australia","value":"AU"},{"label":"England","value":"EN"},{"label":"Sri Lanka","value":"SR"},{"label":"South Africa","value":"SA"},{"label":"New Zealand","value":"NZ"},{"label":"West Indies","value":"WI"},{"label":"Bangladesh","value":"BA"},{"label":"Pakistan","value":"PA"},{"label":"Ireland","value":"IR"},{"label":"None of these","value":""}],"machineName":"countries","tooltipPlacement":"auto right","tooltipText":"Pick the team that you think will be best contender for this year T20 Cricket World Cup"},"contextVisibility":{"condition":"ALL"},"model":{"value":""}}},"previewModel":{"7bf82712-9d96-42cd-8d87-afadc5bd75d6":{}},"variableFields":{"7bf82712-9d96-42cd-8d87-afadc5bd75d6":[]},"meta":{"fieldHistory":[{"uuid":"7bf82712-9d96-42cd-8d87-afadc5bd75d6","type":"form-select","machineName":"countries"}]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_general_components
+preview_image: {  }
+has_quick_edit: true
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-test-voting-count
+weight: 0

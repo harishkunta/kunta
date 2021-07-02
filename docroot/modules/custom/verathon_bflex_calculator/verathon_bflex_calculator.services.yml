@@ -1,0 +1,13 @@
+services:
+
+  verathon_bflex_calculator.calculator:
+    class: Drupal\verathon_bflex_calculator\Calculator
+    arguments: ['@config.factory']
+
+  verathon_bflex_calculator.twig_extender:
+    class: Drupal\verathon_bflex_calculator\TwigExtension\TwigCustomExtension
+    tags:
+      - { name: twig.extension }
+
+  verathon_bflex_calculator.pdf_generator:
+    class: Drupal\verathon_bflex_calculator\PdfGenerator

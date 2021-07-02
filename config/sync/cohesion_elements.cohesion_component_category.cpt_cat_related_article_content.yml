@@ -1,0 +1,14 @@
+uuid: 3b2bb8c5-e6a9-4762-9cf1-0fca4e9c601f
+langcode: en
+status: true
+dependencies: {  }
+id: cpt_cat_related_article_content
+label: 'Related Article Content'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: false
+selectable: true
+class: category-13
+weight: 11

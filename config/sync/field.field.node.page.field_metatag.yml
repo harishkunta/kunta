@@ -1,0 +1,23 @@
+uuid: e09f4609-e802-4c43-b916-e60b40d8f4f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.page
+  module:
+    - metatag
+id: node.page.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: page
+label: metatag
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:1:{s:20:"schema_article_image";s:102:"a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:47:"[node:field_page_image:entity:image:entity:url]";}";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

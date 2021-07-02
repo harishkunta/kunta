@@ -1,0 +1,6 @@
+verathon_search:
+  js:
+    js/custom-search.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once    

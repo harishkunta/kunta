@@ -1,0 +1,11 @@
+uuid: fc7ba26d-a203-4068-9ded-28f09d41d7c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nithish_harsh
+id: node.nithish_harsh
+target_entity_type_id: node
+target_bundle: nithish_harsh
+default_langcode: site_default
+language_alterable: false

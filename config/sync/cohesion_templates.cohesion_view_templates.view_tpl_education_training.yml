@@ -1,0 +1,14 @@
+uuid: efe74b9e-5794-4369-978b-6ede3a43cbbb
+langcode: en
+status: true
+dependencies: {  }
+id: view_tpl_education_training
+label: 'Education & Training'
+json_values: '{"canvas":[{"type":"container","uid":"drupal-view","title":"View container","status":{"collapsed":false},"uuid":"172fdda4-69ed-476f-a329-3d9370603582","parentUid":"root","isContainer":true,"children":[{"type":"container","uid":"drupal-view-contents","title":"View content","status":{"collapsed":false},"uuid":"79a4c16c-0de0-4587-a333-ff4ecd688630","parentUid":"drupal-view","isContainer":true,"children":[{"type":"container","uid":"pattern-repeater","title":"Pattern repeater","mimicParent":true,"status":{"collapsed":false},"uuid":"227eb976-903a-4460-bb26-a80711f173d3","parentUid":"drupal-view-contents","isContainer":true,"children":[{"type":"item","uid":"drupal-view-item","title":"View item","status":{"collapsed":true},"uuid":"37afb4c5-eedb-41d5-a91b-3c1deb092e5f","parentUid":"pattern-repeater","isContainer":false,"children":[]}]}]}]}],"mapper":{"172fdda4-69ed-476f-a329-3d9370603582":{},"79a4c16c-0de0-4587-a333-ff4ecd688630":{},"227eb976-903a-4460-bb26-a80711f173d3":{},"37afb4c5-eedb-41d5-a91b-3c1deb092e5f":{"settings":{"formDefinition":[{"formKey":"view-item-settings","children":[{"formKey":"view-item-mode","breakpoints":[],"activeFields":[{"name":"view_mode","active":true},{"name":"entity_type","active":true},{"name":"bundle","active":true},{"name":"view_mode","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]}}},"model":{"37afb4c5-eedb-41d5-a91b-3c1deb092e5f":{"settings":{"title":"View item","view_mode":[{"entity_type":"node","bundle":"clinical_publications","view_mode":"default"}],"settings":{"view_mode":[{"entity_type":"node","bundle":"all","view_mode":"default"}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"view-item"}}}},"previewModel":{"37afb4c5-eedb-41d5-a91b-3c1deb092e5f":{}},"variableFields":{"37afb4c5-eedb-41d5-a91b-3c1deb092e5f":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: true
+twig_template: views-view--cohesion-view-tpl-education-training

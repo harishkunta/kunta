@@ -1,0 +1,8 @@
+uuid: 200318a5-06d4-427d-a89d-10a1be4baf45
+langcode: en
+status: true
+dependencies: {  }
+name: Role
+vid: role
+description: 'This vocabulary is used for creating the roles and mapped on the contents..'
+weight: 0

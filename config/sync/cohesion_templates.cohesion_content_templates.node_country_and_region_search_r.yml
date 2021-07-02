@@ -1,0 +1,18 @@
+uuid: 6f97bc03-832a-49ac-9e91-f7ce98474adb
+langcode: en
+status: false
+dependencies: {  }
+id: node_country_and_region_search_r
+label: 'Search result highlighting input (Node, Country and Region)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: country_and_region
+view_mode: search_result
+master_template: ''

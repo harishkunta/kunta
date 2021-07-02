@@ -1,0 +1,32 @@
+uuid: 490453e9-6e5c-44c4-bf41-4f0869a32440
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.role_facet
+  module:
+    - cohesion
+    - collapsiblock
+    - facets
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: role
+theme: cohesion_theme
+region: dx8_hidden
+weight: 8
+provider: null
+plugin: 'facet_block:role_facet'
+settings:
+  id: 'facet_block:role_facet'
+  label: Role
+  provider: facets
+  label_display: visible
+  block_id: role
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

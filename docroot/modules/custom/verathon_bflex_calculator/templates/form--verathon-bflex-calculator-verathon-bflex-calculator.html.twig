@@ -1,0 +1,1055 @@
+{% set config = element['#strings'] %}
+{% if not element['#form_values']|length %}
+  <form method="{{element['#method']}}" id="{{element['#form_id']}}" class="{{element['#attributes']['class'][0]}}" action="{{element['#action']}}" type={{element['#type']}}>
+    {{element.form_id}}
+    {{element.form_token}}
+    {{element.form_build_id}}
+    <div id="bflex-calculator" class="bflex-calculator">
+
+      <div id="hero" class="hero blueBackground">
+        <div class="container">
+          <div class="row">
+            {{config.bflex_page_header.value|raw}}
+          </div>
+          {{config.bflex_page_description.value|raw}}
+          <div class="row">
+            <div class="column100">
+              <nav class="scroll scroll-icon">
+                {{config.scroll_text}}
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step1Wrapper">
+        <div class="step">
+          <h1 class="stepHead">
+            <span>Step 1
+            </span>/ 4</h1>
+          <div class="container">
+            <div class="left">
+              <h2 class="stepHeading">{{config.step_one_heading}}</h2>
+              <div class="descriptionWrapper">
+                {{config.step_one_description.value|raw}}
+              </div>
+            </div>
+            <div class="right">
+              <div class="question facilityName_textField" id="facilityName_textField_1">
+                <div class="row">
+                  <div class="heading">
+                    <label for="facility_name">{{config.facility_name_label}}</label>
+                  </div>
+                </div>
+                <div class="error" id="facilityName_textField_1_textfieldError">{{config.facility_name_error_text.value|striptags}}</div>
+
+
+                <div class="row">
+                  {{element.facility_name}}
+                </div>
+              </div>
+              <div class="question bronchoscopyProcedures_slider" id="bronchoscopyProcedures_slider_1">
+                <div class="row">
+                  <div class="heading">
+                    <label for="total_annual_bronchoscopy_procedures" class="label">{{config.total_annual_bronchoscopy_procedures_label}}</label>
+                  </div>
+                </div>
+                <div class="error" id="bronchoscopyProcedures_slider_1_textfieldError">{{config.total_reusable_bronchoscopes_error_text.value|striptags}}</div>
+
+
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.total_annual_bronchoscopy_procedures}}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">1</div>
+                      <div class="mid"></div>
+                      <div class="max">3000</div>
+                    </div>
+                  </div>
+                  <div class="column2">
+                    <div>
+                      <div class="unit"></div>
+                      <input type="number" required="required" name="total_annual_bronchoscopy_procedures" class="number" value="3000" id="bronchoscopyProcedures_slider_1_number">
+
+                    </div>
+                  </div>
+                  <div class="column3">
+                    <a class="tooltip-icon tooltip" id="bronchoscopyProcedures_slider_1_icon"></a>
+                  </div>
+                </div>
+                <div class="row tooktipTextBoxWrapper" id="bronchoscopyProcedures_slider_1_toggleTip">
+                  <div class="tooktipTextBox">
+                    <div class="tip-arrow arrow"></div>
+                    <div class="tip" id="tip">{{config.total_annual_bronchoscopy_procedures_helptext.value|striptags}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="question numberOfProcedures_slider" id="numberOfProcedures_slider_1">
+                <div class="row">
+                  <div class="heading">
+                    <label for="number_of_procedures_that_could_be_performed_with_single-use_bronchoscopes" class="label">{{config.procedures_count_single_usage_label}}</label>
+                  </div>
+                </div>
+                <div class="error" id="numberOfProcedures_slider_1_textfieldError">{{config.total_reusable_bronchoscopes_error_text.value|striptags}}</div>
+
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.procedures_count_single_usage}}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">1</div>
+                      <div class="mid"></div>
+                      <div class="max">3000</div>
+                    </div>
+                  </div>
+                  <div class="column2">
+                    <div>
+                      <div class="unit"></div><input type="number" required="required" name="number_of_procedures_that_could_be_performed_with_single-use_bronchoscopes" class="number" value="2250" id="numberOfProcedures_slider_1_number">
+                    </div>
+                  </div>
+                  <div class="column3"></div>
+                </div>
+              </div>
+              <div class="question broncoscopyPrice_numberField" id="broncoscopyPrice_numberField_1">
+                <div class="row">
+                  <div class="heading">
+                    <label for="your_bflex™_bronchoscope_price">{{config.your_bronchoscope_price_label}}</label>
+                  </div>
+                </div>
+                <div class="error" id="broncoscopyPrice_numberField_1_textfieldError"></div>
+                <div class="row">
+                  <div class="unit">$</div>
+                  <div class="numberInput">
+                    {{element.your_bronchoscope_price}}</div>
+                  <div class="toolTip column3">
+                    <a class="tooltip-icon tooltip" id="broncoscopyPrice_numberField_1_icon"></a>
+                  </div>
+                </div>
+                <div class="row tooktipTextBoxWrapper" id="broncoscopyPrice_numberField_1_toggleTip">
+                  <div class="tooktipTextBox">
+                    <div class="tip-arrow arrow"></div>
+                    <div class="tip" id="tip">{{config.your_bronchoscope_price_helptext.value|striptags}}</div>
+                  </div>
+                </div>
+                <label>{{config.your_bronchoscope_price_description}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step2Wrapper">
+        <div class="step">
+          <h1 class="stepHead">
+            <span>Step 2
+            </span>/ 4</h1>
+          <div class="container">
+            <div class="left">
+              <h2 class="stepHeading">{{config.step_two_heading}}</h2>
+              <div class="descriptionWrapper">
+                {{config.step_two_description.value|raw}}
+              </div>
+            </div>
+            <div class="right">
+              <div class="question reusableBronchoscopes_slider" id="reusableBronchoscopes_slider_2">
+                <div class="row">
+                  <div class="heading">
+                    <label for="total_number_of_reusable_bronchoscopes" class="label">{{config.step_one_result_string}}</label>
+                  </div>
+                </div>
+                <div class="error" id="reusableBronchoscopes_slider_2_textfieldError"></div>
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.total_reusable_bronchoscopes}}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">1</div>
+                      <div class="mid"></div>
+                      <div class="max">100</div>
+                    </div>
+                  </div>
+                  <div class="column2">
+                    <div>
+                      <div class="unit"></div><input type="number" required="required" name="total_number_of_reusable_bronchoscopes" class="number" value="30" id="reusableBronchoscopes_slider_2_number">
+                    </div>
+                  </div>
+                  <div class="column3"></div>
+                </div>
+              </div>
+              <div class="question serviceAgreementAnnualCost_slider" id="serviceAgreementAnnualCost_slider_2">
+                <div class="row">
+                  <div class="heading">
+                    <label for="annual_cost_of_service_agreement_per_bronchoscope" class="label">{{config.total_reusable_bronchoscopes_label}}</label>
+
+                  </div>
+                </div>
+                <div class="error" id="serviceAgreementAnnualCost_slider_2_textfieldError"></div>
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.annual_service_cost_per_bronchoscope}}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">$1</div>
+                      <div class="mid"></div>
+                      <div class="max">$5000</div>
+                    </div>
+                  </div>
+                  <div class="column2">
+                    <div>
+                      <div class="unit">$</div>
+                      <input type="number" required="required" name="annual_cost_of_service_agreement_per_bronchoscope" class="number" value="5000" id="serviceAgreementAnnualCost_slider_2_number">
+
+                    </div>
+                  </div>
+                  <div class="column3"></div>
+                </div>
+              </div>
+              <div class="question currentAnnualOopRepairAllFactor_slider" id="currentAnnualOopRepairAllFactor_slider_2">
+                <div class="row">
+                  <div class="heading">
+                    <label for="annual_out-of-pocket_repair_costs_for_all_bronchoscopes" class="label">{{config.annual_out_of_pocket_repair_cost_label}}</label>
+                  </div>
+                </div>
+                <div class="error" id="currentAnnualOopRepairAllFactor_slider_2_textfieldError"></div>
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.annual_out_of_pocket_repair_cost}}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">Low</div>
+                      <div class="mid">Average</div>
+                      <div class="max">High</div>
+                    </div>
+                  </div>
+                  <div class=""></div>
+                  <div class="column3">
+                    <a
+                      class="tooltip-icon tooltip" id="currentAnnualOopRepairAllFactor_slider_2_icon">{# <img src="tooltip.png" alt="moreinfo"> #}
+                    </a>
+                  </div>
+                </div>
+                <div class="row tooktipTextBoxWrapper" id="currentAnnualOopRepairAllFactor_slider_2_toggleTip">
+                  <div class="tooktipTextBox">
+                    <div
+                      class="tip-arrow arrow">{# <img src="tooltip-tip.png" alt="moreinfo"> #}
+                    </div>
+                    <div class="tip" id="tip">{{config.annual_out_of_pocket_repair_cost_helptext.value|striptags}}</div>
+
+                  </div>
+                </div>
+                <div class="outputWrap" id="currentAnnualOopRepairAllFactor_slider">
+                  <div class="output">
+                    <span>$159,000</span>
+                    {{config.step_two_result_string}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step3Wrapper">
+        <div class="step">
+          <h1 class="stepHead">
+            <span>Step 3
+            </span>/ 4</h1>
+          <div class="container">
+            <div class="left">
+              <h2 class="stepHeading">{{config.step_three_heading}}</h2>
+              <div class="descriptionWrapper">
+                {{config.step_three_description.value|raw}}
+              </div>
+            </div>
+            <div class="right">
+              <div class="question reprocessingCalcMethod_slider" id="reprocessingCalcMethod_slider_3">
+                <div class="row">
+                  <div class="heading">
+                    <label for="reprocessing_costs" class="label">Reprocessing costs</label>
+                  </div>
+                </div>
+                <div class="error" id="reprocessingCalcMethod_slider_3_textfieldError"></div>
+                <div class="row">
+                  <div class="column1">
+                    <div>
+                      {{element.reprocessing_costs_method}}
+
+                      {# <input type="range" id="reprocessingCalcMethod_slider_3_slider" class="slider" min="0" max="100" value="50" step="50"> #}
+                    </div>
+                    <div class="sliderMinMax">
+                      <div class="min">Low</div>
+                      <div class="mid">Average</div>
+                      <div class="max">High</div>
+                    </div>
+                  </div>
+                  <div class=""></div>
+                  <div class="column3"></div>
+                </div>
+                <div class="outputWrap" id="reprocessingCalcMethod_slider">
+                  <div class="output">
+                    <span>$101.43</span>
+                    {{config.step_three_result_string}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step4Wrapper">
+        <div class="step">
+          <h1 class="stepHead">
+            <span>Step 4
+            </span>/ 4</h1>
+          <div class="container">
+            <div class="left">
+              <h2 class="stepHeading">{{config.step_four_heading}}</h2>
+              <div class="descriptionWrapper">
+                {{config.step_four_description.value|raw}}
+              </div>
+            </div>
+            <div class="right">
+              <div class="question" id="estimatedNumberOfInfections_statistics">
+                <div class="statistic">
+                  <figcaption class="captions">{{config.step_four_result_string}}</figcaption>
+                  <figure class="statisticFigure">21.68</figure>
+                </div>
+              </div>
+              <div class="question" id="estimatedAnnualTreatmentCost_statistics">
+                <div class="statistic">
+                  <figcaption class="captions">{{config.step_four_final_cost_string}}</figcaption>
+                  <figure class="statisticFigure">$615,343</figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="submitSectionWrapper">
+        <div class="container">
+          <div class="row">
+            <div class="column50">
+              <h3>{{config.result_section_copy}}</h3>
+            </div>
+            <div class="column50">
+              {{element.actions}}
+            </div>
+          </div>
+          <div id="logo-hide" class="row">
+            <div class="col-12">
+              <a class="verathon-logo" href="/" target="new"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  {% else %}
+    {% set calculation = element['#calculations'] %}
+    <div class="bflexResults">
+      <div id="bflex-calculator-header" class="results-page-hero">
+        <div id="hero" class="hero blueBackground">
+
+          <div class="container">
+            <div class="row">
+              <div class="heroHead">
+                <h1>{{config.result_page_heading}}</h1>
+                {{config.result_page_description.value|raw}}
+              </div>
+            </div>
+            <a class="button-result-page" href="{{element['#pdf_url']}}">{{config.download_button_text}}</a>
+          </div>
+        </div>
+        <div class="ribbon-wrapper">
+          <div class="container">
+            <div class="column6">
+              <h2 class="heading bigger">{{config.result_current_main_heading}}</h2>
+              <p class="grey-text">{{config.result_current_sub_heading}}</p>
+            </div>
+            <div class="column6">
+              <h2 class="heading bigger green">{{config.result_with_main_heading}}</h2>
+              <p class="grey-text">{{config.result_with_sub_heading}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container results">
+        <div class="row result-section">
+          <div class="column6">
+            <h3>{{config.result_current_bronchoscope_heading}}</h3>
+          </div>
+          <div class="column6 "></div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_single_usage_count_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.equipment_costs.single_use_scopes|number_format}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p class="grey-text">{{config.result_current_single_usage_count_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.equipment_costs.single_use_scopes}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6  total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_bronchoscope_cost_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
+
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6 with total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_bronchoscope_cost_label}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.equipment_costs.total_su_bflex_cost|currency}}</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row result-section">
+          <div class="column6">
+            <h3>{{config.result_current_repair_maintenance_heading}}</h3>
+          </div>
+          <div class="column6 "></div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_reusable_bronchoscope_usage_label}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.repair_maintenance.reusable_scopes_quantity}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_reusable_bronchoscope_usage_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.repair_maintenance.reusable_scopes_quantity}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_annual_cost_of_service_label}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_annual_cost_of_service_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.repair_maintenance.service_agreement_per_bronchoscope|currency}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_annual_oop_cost_of_service_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
+
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_annual_oop_cost_of_service_label}}</p>
+              </div>
+              <div class="column7">
+                <p class="value float">{{calculation.reducing_costs.repair_maintenance.annual_oop_repair_all|currency}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_repair_maintenance_costs_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6 with total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_repair_maintenance_costs_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.repair_maintenance.total_annual_maint_repair|currency}}</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row result-section">
+          <div class="column6">
+            <h3>{{config.result_current_reprocessing_costs_heading}}</h3>
+          </div>
+          <div class="column6 "></div>
+        </div>
+        <div
+          class="row result reprocessing-costs">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_reprocessing_cost_left_column_heading}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{config.result_current_reprocessing_cost_right_column_heading}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_reprocessing_cost_left_column_heading}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{config.result_with_reprocessing_cost_right_column_heading}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_ppe_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_ppe_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.ppe_personal|currency(2)}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_bedside_precleaning_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
+
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_bedside_precleaning_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.bedside_preclean|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_leak_testing_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_leak_testing_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.leak_testing|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_manual_cleaning_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_manual_cleaning_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.manual_cleaning|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_visual_inspection_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_visual_inspection_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.visual_inspection|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_hld_in_aer_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_hld_in_aer_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.hld_in_aer|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result reprocessing">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_dying_storage_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr class="show">
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_dying_storage_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reprocessing_costs.details.drying_storage|currency(2)}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr class="show">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6  total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_reprocessing_costs_label}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6 with total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_reprocessing_costs_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.reprocessing.total_annual_reprocessing_costs|currency}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row result-section">
+          <div class="column6">
+            <h3>{{config.result_current_preventable_infections_heading}}</h3>
+          </div>
+          <div class="column6 "></div>
+        </div>
+        <div
+          class="row result ">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_preventable_infections_patient_infections_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.treating_infections.patient_infections}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_preventable_infections_patient_infections_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.treating_infections.patient_infections}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6 ">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_cost_per_infection_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_cost_per_infection_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.cost_per_infection|currency}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6  total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_preventable_infections_costs_label}}</p>
+
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.current_costs.treating_infections.annual_costs|currency}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6 with total">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_preventable_infections_costs_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.treating_infections.annual_costs|currency}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row result">
+          <!-- CURRENT -->
+          <div class="column6  total grand">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_current_grand_total_label}}</p>
+              </div>
+              <div class="column5 ">
+                <p class="value float">{{calculation.current_costs.total_costs|currency}}</p>
+
+              </div>
+            </div>
+          </div>
+          <!-- WITH -->
+          <div class="column6 with total grand">
+            <div class="row">
+              <div class="column7">
+                <p>{{config.result_with_grand_total_label}}</p>
+              </div>
+              <div class="column5">
+                <p class="value float">{{calculation.reducing_costs.total_costs|currency}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="blue-footer-ribbon" class="results-page-footer-ribbon">
+        <div class="blueBackground">
+          <div class="container footer">
+            <div class="column6">
+              <h2>{{config.result_page_footer}}</h2>
+            </div>
+            <div class="column6 float-right">
+              <a class="button-result-page" href="{{element['#pdf_url']}}">{{config.download_button_text}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}

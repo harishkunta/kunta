@@ -1,0 +1,8 @@
+uuid: 65685651-17fd-4fdc-aa9f-05a0aaeecc48
+langcode: en
+status: true
+dependencies: {  }
+name: Year
+vid: year
+description: 'Terms will be donating year, This vocabulary is mapped with few content types like(Clinical Publications, Events & Live Webinar)'
+weight: 0

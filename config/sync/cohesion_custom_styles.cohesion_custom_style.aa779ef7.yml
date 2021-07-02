@@ -1,0 +1,17 @@
+uuid: b84f7237-5148-40cd-853e-bda514b1f369
+langcode: en
+status: true
+dependencies: {  }
+id: aa779ef7
+label: d-block
+json_values: '{"preview":{"text":"<p><button class=\"coh-preview\" type=\"button\">Default content for ''Button''<\/button><\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"button","class":"","combinator":"","pseudo":""},"fae42180-5582-4426-a95a-5e4f2dccc17c":{"settings":{"element":"","class":"","combinator":"","pseudo":":hover"},"styles":{}},"styles":{"sm":{"custom-css":[{"customCssProperty":{"value":"display"},"customCss":{"value":"block !important"}}]}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"Button","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]},{"formKey":"layout","children":[{"formKey":"padding","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"padding-equal","active":false},{"name":"padding-top","active":true},{"name":"padding-bottom","active":true},{"name":"padding-left","active":true},{"name":"padding-right","active":true},{"name":"padding-block-start","active":false},{"name":"padding-block-end","active":false},{"name":"padding-inline-start","active":false},{"name":"padding-inline-end","active":false}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"sm"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":hover","type":"container","items":[],"selectorType":"pseudo","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"form":null,"allowedTypes":["child","pseudo"],"uuid":"fae42180-5582-4426-a95a-5e4f2dccc17c"}],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-d-block
+custom_style_type: button
+available_in_wysiwyg: false
+parent: null
+weight: 0

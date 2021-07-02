@@ -1,0 +1,68 @@
+uuid: 46f32129-837f-455d-b143-7ca33c3f50a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.person.body
+    - field.field.node.person.field_contact_number
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_place_telephone
+    - node.type.person
+  module:
+    - smart_trim
+    - user
+_core:
+  default_config_hash: D9eHzCyVIaE21UncoQcNoRfBSD5R2Pyyz9BdDLopWpA
+id: node.person.teaser
+targetEntityType: node
+bundle: person
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 128
+      trim_type: chars
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: trim
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_job_title:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_contact_number: true
+  field_email: true
+  field_place_telephone: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: f836d4dd-039c-44d4-b92c-1539196d2f6f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - acquia_claro
+_core:
+  default_config_hash: cr2ri7Fwkh4uQuQHzEKXAb4J3kP_k1egWOGiJgY9jIQ
+id: acquia_claro_local_actions
+theme: acquia_claro
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: ed71fc03-a051-450b-8b2d-abb6cc30167e
+langcode: en
+status: true
+dependencies: {  }
+id: view_tpl_homepage_news
+label: 'Homepage News'
+json_values: '{"canvas":[],"mapper":{},"model":[],"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+custom: true
+twig_template: views-view--cohesion-view-tpl-homepage-news

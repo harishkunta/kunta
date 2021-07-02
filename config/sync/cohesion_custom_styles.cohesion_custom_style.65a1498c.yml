@@ -1,0 +1,17 @@
+uuid: 291d62e1-3b3a-4fe9-9487-8d114a5558f0
+langcode: en
+status: true
+dependencies: {  }
+id: 65a1498c
+label: Modal-layout
+json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Layout''.<\/div>\n","textFormat":"cohesion"},"sBackgroundColour":"#FFFFFF","styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"display":{"value":"flex"},"height":{"value":"auto"},"width":{"value":"70%"},"custom-css":[{"customCssProperty":{"value":"overflow"},"customCss":{"value":"inherit"}}],"background-color":{"value":{"link":true,"name":"Gray 10","uid":"gray-10","class":".coh-color-gray-10","variable":"$coh-color-gray-10","value":{"hex":"#f2f2f2","rgba":"rgba(242, 242, 242, 1)"},"inuse":true,"wysiwyg":true,"tags":["Light"]}}},"sm":{"width":{"value":"90%"}}}},"variableFields":[]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"display","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]},{"formKey":"width","breakpoints":[{"name":"xl"},{"name":"sm"}],"activeFields":[{"name":"min-width","active":false},{"name":"max-width","active":false},{"name":"width","active":true}]},{"formKey":"height","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"min-height","active":false},{"name":"max-height","active":false},{"name":"height","active":true}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]},{"formKey":"background","children":[{"formKey":"background-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"background-color","active":true}]}]}],"items":[],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-modal-layout
+custom_style_type: layout
+available_in_wysiwyg: false
+parent: null
+weight: 0

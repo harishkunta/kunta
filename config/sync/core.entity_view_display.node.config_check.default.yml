@@ -1,0 +1,33 @@
+uuid: a653922b-dd99-44e2-b674-ad813b1337f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.config_check.body
+    - node.type.config_check
+  module:
+    - text
+    - user
+id: node.config_check.default
+targetEntityType: node
+bundle: config_check
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

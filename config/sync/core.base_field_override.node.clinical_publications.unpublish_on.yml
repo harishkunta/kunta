@@ -1,0 +1,18 @@
+uuid: 661926eb-6fdf-485a-9eb5-5dd96c004025
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.clinical_publications
+id: node.clinical_publications.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: clinical_publications
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

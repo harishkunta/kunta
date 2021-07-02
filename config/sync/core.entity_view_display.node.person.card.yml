@@ -1,0 +1,42 @@
+uuid: 5141715c-69af-4f19-9ce3-d6600a1ccb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.person.body
+    - field.field.node.person.field_contact_number
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_place_telephone
+    - node.type.person
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: H5R2SDpmH_E7HfXlQl_iWvGsHJ9JY0N1cuV51-mqrN4
+id: node.person.card
+targetEntityType: node
+bundle: person
+mode: card
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 128
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_contact_number: true
+  field_email: true
+  field_job_title: true
+  field_place_telephone: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
