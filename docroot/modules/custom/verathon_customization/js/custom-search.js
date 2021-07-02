@@ -1,6 +1,9 @@
 (function ($, Drupal) {
   Drupal.behaviors.search = {
     attach: function (context, settings) {
+      if (context !== document) {
+        return;
+      }
       /* 
           Fetches the url parameter 
           Takes parameter name as input
