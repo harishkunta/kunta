@@ -58,14 +58,14 @@
               (function () {
                 var _chip_text = document.createElement('span');
                 _chip_text.classList.add('chip-text');
-                _chip_text.innerHTML = chip;
+                _chip_text.innerText = chip;
 
                 return _chip_text;
               })(),
               (function () {
                 var _chip_close = document.createElement('span');
                 _chip_close.classList.add('chip-button');
-                _chip_close.innerHTML = 'x';
+                _chip_close.innerText = 'x';
                 _chip_close.addEventListener('click', chipClickHandler);
 
                 return _chip_close;
