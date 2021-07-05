@@ -1,6 +1,6 @@
 (function ($, Drupal) {
   Drupal.behaviors.search = {
-    attach: function (context, settings) {
+    attach: function (context) {
       if (context !== document) {
         return;
       }
@@ -14,8 +14,8 @@
           urlParams,
           i;
 
-        for (i = 0; i < urlVariables.length; i++) {
-          urlParams = urlVariables[i].split('=');
+        for (i of urlVariables) {
+          urlParams = i.split('=');
 
           if (urlParams[0] === param) {
             return typeof urlParams[1] === undefined ? true : decodeURIComponent(urlParams[1]);
@@ -26,18 +26,15 @@
       var chipsArray = getUrlParameter('keywords');
 
       /* 
+          Trimming all the empty spaces before and after the search Term
           Filtering all the empty search strings 
       */
       if (chipsArray.length) {
-        chipsArray = chipsArray.split('+');
-        chipsArray = chipsArray.filter(function (el) {
-          return el != "";
-        });
-        chipsArray = chipsArray.join(' ');
+        chipsArray = chipsArray.split('+').join('');
       }
 
       if (chipsArray.length > 1) {
-        chipsArray = chipsArray.split(',');
+        chipsArray = chipsArray.split(',').filter(chip => chip !== '');
         /* 
             Maximum allowable chips are set to 5 
         */
@@ -50,9 +47,9 @@
         /* 
             Adding chips adding event listener for close button on chip 
         */
-        var chipsLen = chipsArray.length,
-          chips = document.querySelector(".chips");
-        for (chip = 0; chip < chipsLen; chip++) {
+        var chips = document.querySelector(".chips");
+
+        chipsArray.map(chip => {
           chips.appendChild(function () {
             var _chip = document.createElement('div');
 
@@ -61,7 +58,7 @@
               (function () {
                 var _chip_text = document.createElement('span');
                 _chip_text.classList.add('chip-text');
-                _chip_text.innerHTML = chipsArray[chip];
+                _chip_text.innerHTML = chip;
 
                 return _chip_text;
               })(),
@@ -77,7 +74,7 @@
 
             return _chip;
           }());
-        }
+        });
       }
 
       /* 
