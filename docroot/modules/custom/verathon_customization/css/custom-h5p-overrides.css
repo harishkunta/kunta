@@ -1,3 +1,6 @@
+.h5p-content ul.h5p-actions {
+  display: none;
+}
 .h5p-image-hotspot { 
   font-size: 1.2rem;
 }
@@ -19,6 +22,17 @@
 }
 .h5p-image-hotspot-popup-body .h5p-text {
   padding: 2.5rem;
+}
+.h5p-image-hotspot-popup-body .h5p-text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4D4D4F;
+}
+.h5p-image-hotspot-popup-body .h5p-text p strong {
+  display: block;
+  line-height: 1.25rem;
+  letter-spacing: 0.13em;
+  margin-bottom: 1.5rem;
 }
 
 @media only screen and (min-device-width: 768px) {
