@@ -6,10 +6,10 @@ dependencies:
     - cohesion
     - ctools
     - moderation_dashboard
-id: gtm_pzz6ht2
-label: GTM-PZZ6HT2
+id: gtm_52wknnk
+label: GTM-52WKNNK
 weight: 0
-container_id: GTM-PZZ6HT2
+container_id: GTM-52WKNNK
 data_layer: dataLayer
 include_classes: false
 whitelist_classes: "google\nnonGooglePixels\nnonGoogleScripts\nnonGoogleIframes"
@@ -34,3 +34,9 @@ conditions:
     context_mapping:
       dashboard_user: '@user.current_user_context:current_user'
       current_user: '@user.current_user_context:current_user'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
