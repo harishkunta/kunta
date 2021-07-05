@@ -3,6 +3,8 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Menu\MenuLinkInterface;
+use Drupal\webform\Plugin\WebformHandlerInterface;
 
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
@@ -41,13 +43,14 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
 /**
  * Implements hook_preprocess_html().
  */
-function cohesion_theme_preprocess_html(array &$variables) {
+function verathon_customization_preprocess_html(array &$variables) {
   $current_theme = \Drupal::service('theme.manager')->getActiveTheme()->getName();
 
   if ($current_theme !== 'cohesion_theme') {
     return;
   }
 
+  $type = NULL;
   $path = \Drupal::service('path.current')->getPath();
   $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
   $path_args = explode('/', $path);
