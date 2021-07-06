@@ -7,6 +7,7 @@ dependencies:
     - taxonomy.vocabulary.countries_and_regions
   module:
     - address
+    - cohesion
     - taxonomy
     - user
 id: global_technical_support
@@ -53,7 +54,10 @@ display:
         options:
           offset: 0
       style:
-        type: default
+        type: cohesion_layout
+        options:
+          views_template: view_tpl_global_technical_supppo
+          master_template: __none__
       row:
         type: 'entity:taxonomy_term'
         options:
@@ -209,7 +213,20 @@ display:
           entity_field: name
           plugin_id: standard
       title: 'Global Technical Support'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<p>Search for devices by Device Name, Serial Number,or Product ID</p>\r\n<a href=\"/\">How to identify my device</a>\r\n"
+            format: cohesion
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
