@@ -40,13 +40,13 @@ class ComposerStaticInit71b7569789b03a6dbc913a804caf1136
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/core/includes/bootstrap.inc',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        'fbeead2280a8f3911a1fe6dd034f7d5e' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvancedInterface.php',
+        '96f8d8288528d52059397cad6ec61f17' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvanced.php',
         '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        'fbeead2280a8f3911a1fe6dd034f7d5e' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvancedInterface.php',
-        '96f8d8288528d52059397cad6ec61f17' => __DIR__ . '/..' . '/mkalkbrenner/php-htmldiff-advanced/src/HtmlDiffAdvanced.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
     );
 
