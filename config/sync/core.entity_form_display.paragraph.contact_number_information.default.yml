@@ -1,0 +1,118 @@
+uuid: 9cd7ee96-3627-4f1d-92df-75cb2ed15077
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_number_information.field_address
+    - field.field.paragraph.contact_number_information.field_contact_number
+    - field.field.paragraph.contact_number_information.field_contact_type
+    - field.field.paragraph.contact_number_information.field_email
+    - field.field.paragraph.contact_number_information.field_number_label
+    - field.field.paragraph.contact_number_information.field_suffix_info
+    - paragraphs.paragraphs_type.contact_number_information
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_contact_number:
+      children:
+        - field_number_label
+        - field_contact_number
+        - field_suffix_info
+      parent_name: group_contact_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: 'Contact Number'
+    group_contact_tabs:
+      children:
+        - group_contact_number
+        - group_email_fieldset
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Contact Tabs'
+    group_email_fieldset:
+      children:
+        - field_email
+        - field_address
+      parent_name: group_contact_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Email & Postal Address'
+id: paragraph.contact_number_information.default
+targetEntityType: paragraph
+bundle: contact_number_information
+mode: default
+content:
+  field_address:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_contact_number:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_type:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_number_label:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_suffix_info:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

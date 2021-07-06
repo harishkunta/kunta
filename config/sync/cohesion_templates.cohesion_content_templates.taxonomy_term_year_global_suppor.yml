@@ -1,9 +1,9 @@
-uuid: e00ba16f-60b0-40f1-844c-c81b6313ab73
+uuid: 26dc36e0-f04e-4729-bf47-b3cb9b6c536e
 langcode: en
 status: false
 dependencies: {  }
-id: taxonomy_term_country_product_su
-label: 'Product Support Cards (Taxonomy_term, Country)'
+id: taxonomy_term_year_global_suppor
+label: 'Global Support Search (Taxonomy_term, Year)'
 json_values: '{"canvas":[],"mapper":null,"model":[]}'
 json_mapper: '{}'
 last_entity_update: entityupdate_0029
@@ -13,6 +13,6 @@ custom: false
 twig_template: null
 default: false
 entity_type: taxonomy_term
-bundle: country
-view_mode: product_support_cards
+bundle: year
+view_mode: global_support_search
 master_template: ''
