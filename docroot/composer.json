@@ -36,6 +36,7 @@
         "drupal/core-vendor-hardening": "^9.1",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/menu_item_extras": "^2.15",
+        "drupal/paragraphs": "^1.12",
         "drush/drush": "^10.5"
     },
     "conflict": {
