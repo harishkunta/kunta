@@ -1,0 +1,21 @@
+uuid: a9f950ee-ac8c-4b3b-bc78-75a8b16b90cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sorting_weight
+    - taxonomy.vocabulary.countries_and_regions
+  module:
+    - options
+id: taxonomy_term.countries_and_regions.field_sorting_weight
+field_name: field_sorting_weight
+entity_type: taxonomy_term
+bundle: countries_and_regions
+label: 'Sorting Weight'
+description: 'Help to add weight to Sorting based on Ascending order.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,18 @@
+uuid: 3172d3fd-ad59-4dd9-9b00-d5dff3cc75e5
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_languages_global_s
+label: 'Global Support Search (Taxonomy_term, Languages)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: languages
+view_mode: global_support_search
+master_template: ''

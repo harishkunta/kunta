@@ -1,0 +1,31 @@
+uuid: 4f631577-920a-4512-8269-6cc81b618c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contact_informations
+    - paragraphs.paragraphs_type.contact_number_information
+    - taxonomy.vocabulary.countries_and_regions
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.countries_and_regions.field_contact_informations
+field_name: field_contact_informations
+entity_type: taxonomy_term
+bundle: countries_and_regions
+label: 'Contact Informations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      contact_number_information: contact_number_information
+    target_bundles_drag_drop:
+      contact_number_information:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
