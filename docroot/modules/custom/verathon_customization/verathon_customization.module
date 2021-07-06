@@ -1,6 +1,10 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Menu\MenuLinkInterface;
+use Drupal\webform\Plugin\WebformHandlerInterface;
 
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
@@ -34,4 +38,33 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
       $form['#attached']['library'][] = 'verathon_customization/verathon_search';
     }
   }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function verathon_customization_preprocess_html(array &$variables) {
+  $current_theme = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+
+  if ($current_theme !== 'cohesion_theme') {
+    return;
+  }
+
+  $type = NULL;
+  $path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  $path_args = explode('/', $path);
+  $path_args = array_filter($path_args);
+
+  if ($path_args[1] == 'node' && is_numeric($path_args[2])) {
+    $node = Node::load($path_args[2]);
+    $type = ucwords($node->getType());
+  }
+
+  $script = Markup::create("dataLayer = [{
+    'pageCategory': '$type',
+    'sitesection' : '$alias',
+  }];");
+
+  $variables['page']['#attached']['html_head'][] = [['#tag' => 'script', '#value' => $script], 'dataLayer'];
 }
