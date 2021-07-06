@@ -38,6 +38,69 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
       $form['#attached']['library'][] = 'verathon_customization/verathon_search';
     }
   }
+  if ($form_id === 'views_exposed_form' && 'views-exposed-form-product-support-cards-product-documentation' === $form['#id']) {
+    if (\Drupal::service('path.current')->getPath() == '/product-documentation') {
+      //Get all the query parameter values from the Current URL
+      $brand = !empty(\Drupal::request()->query->get('brand')) ? \Drupal::request()->query->get('brand') : '';
+      $product = !empty(\Drupal::request()->query->get('product')) ? \Drupal::request()->query->get('product') : '';
+      $language = (empty(\Drupal::request()->query->get('lang')) || (\Drupal::request()->query->get('lang') == 'All')) ? ' ' : \Drupal::request()->query->get('lang');
+      $document = (empty(\Drupal::request()->query->get('doc_type')) || (\Drupal::request()->query->get('doc_type') == 'All')) ? ' ' : \Drupal::request()->query->get('doc_type');
+      // print_r($document); exit;
+      //Adding Class to hide this on loading the page
+      $form['brand']['#attributes']['class'][] = 'product-document-brand'; 
+      //Adding Class to hide this on loading the page
+      $form['product']['#attributes']['class'][] = 'product-document-product'; 
+      // find the dependent language
+      $database = \Drupal::database();
+      $lang_result = $database->select('node__field_language', 'nfl');
+      $lang_result -> fields('nfl', array('field_language_target_id'));
+      $lang_result -> join('node__field_product_documentation', 'nfpd', 'nfl.entity_id = nfpd.field_product_documentation_target_id');
+      //When page loads without document type selection
+      if ($document == ' ') {
+        $lang_result -> condition('nfpd.entity_id', $product, '=');
+        $result = $lang_result->execute()->fetchCol();
+      }
+      //when page loads with document type selected
+      else {
+        $lang_result -> join('node__field_document', 'nfd', 'nfpd.field_product_documentation_target_id = nfd.entity_id');
+        $lang_result -> condition('nfd.field_document_target_id', $document, '=');
+        $result = $lang_result->execute()->fetchCol();
+      }
+      //To unset the independent values in the language select list
+      foreach ($form['lang']['#options'] as $key => $value) {
+        if (!in_array($key, $result) && $key !== 'All') {
+          unset($form['lang']['#options'][$key]);
+        }
+      }
+
+      // Rename the All option label for Language Filter.
+      $form['lang']['#options']['All'] = t('All Languages'); 
+      // find the dependent document Types
+      $database = \Drupal::database();
+      $lang_result = $database->select('node__field_document', 'nfd');
+      $lang_result -> fields('nfd', array('field_document_target_id'));
+      $lang_result -> join('node__field_product_documentation', 'nfpd', 'nfd.entity_id = nfpd.field_product_documentation_target_id');
+      //When page loads without language selection
+      if ($language == ' ') {
+        $lang_result -> condition('nfpd.entity_id', $product, '=');
+        $result = $lang_result->execute()->fetchCol();
+      }
+       //when page loads with language selected
+      else {
+        $lang_result -> join('node__field_language', 'nfl', 'nfpd.field_product_documentation_target_id = nfl.entity_id');
+        $lang_result -> condition('nfl.field_language_target_id', $language, '=');
+        $result = $lang_result->execute()->fetchCol();
+      }
+      //To unset the independent values in the document type select list
+      foreach ($form['doc_type']['#options'] as $key => $value) {
+        if (!in_array($key, $result) && $key !== 'All') {
+          unset($form['doc_type']['#options'][$key]);
+        }
+      }
+      // Rename the All option label for Document Type Filter.
+      $form['doc_type']['#options']['All'] = t('All Documents'); 
+    }
+  }
 }
 
 /**
