@@ -21,7 +21,6 @@ settings:
         -
           name: Format
           items:
-            - Styles
             - Format
         -
           name: Source

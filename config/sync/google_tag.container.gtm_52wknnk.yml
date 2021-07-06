@@ -34,3 +34,9 @@ conditions:
     context_mapping:
       dashboard_user: '@user.current_user_context:current_user'
       current_user: '@user.current_user_context:current_user'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

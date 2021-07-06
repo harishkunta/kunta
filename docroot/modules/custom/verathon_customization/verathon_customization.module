@@ -3,8 +3,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
-use Drupal\Core\Menu\MenuLinkInterface;
-use Drupal\webform\Plugin\WebformHandlerInterface;
 
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
