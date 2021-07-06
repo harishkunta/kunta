@@ -1,8 +1,0 @@
-uuid: b52f46a1-ab35-40b6-9179-676a4d4f4066
-langcode: en
-status: true
-dependencies: {  }
-name: 'Contact Info Label'
-vid: contact_info_label
-description: 'This vocabulary is used for creating the label for the contacts.'
-weight: 0

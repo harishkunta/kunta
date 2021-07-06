@@ -172,7 +172,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<div class="views-field views-field-title"><span class="field-content">{{ title }}</span></div>'
+            text: '<a href="/node/{{ nid }}" data-category="Search" data-action="Auto Suggestion Click" data-label="{{ title|striptags }}" title="{{ title|striptags }}"><div class="views-field views-field-title"><span class="field-content">{{ title }}</span></div></a>'
             make_link: false
             path: ''
             absolute: false
@@ -226,7 +226,7 @@ display:
           field_rendering: false
           fallback_handler: search_api
           fallback_options:
-            link_to_item: true
+            link_to_item: false
             use_highlighting: true
             multi_type: separator
             multi_separator: ', '
