@@ -1,0 +1,19 @@
+uuid: e69102c3-d9dd-4573-b622-d799f35afdc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_final_doc
+    - node.type.product_documentation
+id: node.product_documentation.field_final_doc
+field_name: field_final_doc
+entity_type: node
+bundle: product_documentation
+label: 'Final Doc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

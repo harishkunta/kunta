@@ -1,0 +1,21 @@
+uuid: 99a1948c-bde3-411c-b8d3-55b27ff91cc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market
+    - node.type.product_documentation
+  module:
+    - options
+id: node.product_documentation.field_market
+field_name: field_market
+entity_type: node
+bundle: product_documentation
+label: Market
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

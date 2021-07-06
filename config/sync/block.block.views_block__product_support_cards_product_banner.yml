@@ -17,7 +17,7 @@ third_party_settings:
 id: views_block__product_support_cards_product_banner
 theme: cohesion_theme
 region: content
-weight: 0
+weight: -19
 provider: null
 plugin: 'views_block:product_support_cards-product_banner'
 settings:
@@ -35,5 +35,5 @@ visibility:
     negate: false
   request_path:
     id: request_path
-    pages: /divesh-kumar
+    pages: /product-documentation
     negate: false
