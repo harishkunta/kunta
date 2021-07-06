@@ -204,7 +204,7 @@ handlers:
     handler_id: email_confirmation
     status: false
     conditions: {  }
-    weight: 1
+    weight: -49
     settings:
       states:
         - completed
@@ -241,7 +241,7 @@ handlers:
     handler_id: email_notification
     status: false
     conditions: {  }
-    weight: 2
+    weight: -48
     settings:
       states:
         - completed
@@ -278,7 +278,7 @@ handlers:
     handler_id: remote_post
     status: true
     conditions: {  }
-    weight: 2
+    weight: -50
     settings:
       method: POST
       type: x-www-form-urlencoded

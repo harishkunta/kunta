@@ -155,7 +155,6 @@ module:
   pathauto: 1
   content_translation: 10
   views: 10
-  paragraphs: 11
   acquia_cms: 1000
 theme:
   stable: 0
