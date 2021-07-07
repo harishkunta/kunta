@@ -1,3 +1,4 @@
+label: Evenementen
 display:
   default:
     display_title: Hoofd
@@ -23,5 +24,6 @@ display:
       fields:
         field_event_type:
           separator: ', '
+      title: Evenementen
   page:
     display_title: Pagina

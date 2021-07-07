@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.product.body
     - field.field.node.product.field_image
     - field.field.node.product.field_layout_canvas
+    - field.field.node.product.field_local_sales_representative
     - field.field.node.product.field_media
     - field.field.node.product.field_no_longer_supported
     - field.field.node.product.field_product_documentation
@@ -42,6 +43,7 @@ hidden:
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
   field_layout_canvas: true
+  field_local_sales_representative: true
   field_media: true
   field_no_longer_supported: true
   field_product_documentation: true

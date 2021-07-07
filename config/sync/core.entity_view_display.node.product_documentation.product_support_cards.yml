@@ -6,7 +6,11 @@ dependencies:
     - core.entity_view_mode.node.product_support_cards
     - field.field.node.product_documentation.body
     - field.field.node.product_documentation.field_document
+    - field.field.node.product_documentation.field_document_format
+    - field.field.node.product_documentation.field_event_published_on
+    - field.field.node.product_documentation.field_final_doc
     - field.field.node.product_documentation.field_language
+    - field.field.node.product_documentation.field_market
     - field.field.node.product_documentation.field_media
     - node.type.product_documentation
   module:
@@ -57,5 +61,9 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_document_format: true
+  field_event_published_on: true
+  field_final_doc: true
+  field_market: true
   langcode: true
   search_api_excerpt: true

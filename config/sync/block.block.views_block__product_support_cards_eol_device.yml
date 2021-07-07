@@ -16,7 +16,7 @@ third_party_settings:
     collapse_action: '0'
 id: views_block__product_support_cards_eol_device
 theme: cohesion_theme
-region: dx8_hidden
+region: content
 weight: -19
 provider: null
 plugin: 'views_block:product_support_cards-eol_device'

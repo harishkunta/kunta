@@ -1,0 +1,29 @@
+uuid: 8582e6f6-7d28-4b0e-a003-bf129c5f9f8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - node.type.person
+id: node.person.field_media
+field_name: field_media
+entity_type: node
+bundle: person
+label: 'Sales Representative Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

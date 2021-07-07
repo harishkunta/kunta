@@ -1,0 +1,37 @@
+uuid: 9723ed9c-ff2e-438b-a914-7e381b8c0d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_support_cards
+  module:
+    - cohesion
+    - collapsiblock
+    - system
+    - views
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: exposedformproduct_support_cardsproduct_documentation
+theme: cohesion_theme
+region: content
+weight: -18
+provider: null
+plugin: 'views_exposed_filter_block:product_support_cards-product_documentation'
+settings:
+  id: 'views_exposed_filter_block:product_support_cards-product_documentation'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  request_path:
+    id: request_path
+    pages: /product-documentation
+    negate: false

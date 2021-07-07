@@ -1,0 +1,21 @@
+uuid: f3be28ae-6801-4553-93ab-57763cc7fdb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_published_on
+    - node.type.product_documentation
+  module:
+    - datetime
+id: node.product_documentation.field_event_published_on
+field_name: field_event_published_on
+entity_type: node
+bundle: product_documentation
+label: 'Effective Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
