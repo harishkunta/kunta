@@ -65,9 +65,11 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
     // Find the dependent language and display those in the select list
     $languages = _get_language($database, $product, $document, $null);
     //To unset the independent values in the language select list
-    foreach ($form['lang']['#options'] as $key => $value) {
-      if (!in_array($key, $languages) && $key !== 'All') {
-        unset($form['lang']['#options'][$key]);
+    if (!empty($form['lang'])) {
+      foreach ($form['lang']['#options'] as $key => $value) {
+        if (!in_array($key, $languages) && $key !== 'All') {
+          unset($form['lang']['#options'][$key]);
+        }
       }
     }
     // Rename the All option label for Language Filter.
@@ -76,9 +78,11 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
     // Find the dependent document type and display those in the select list
     $doc_types = _get_document_type($database, $product, $language, $null);
     //To unset the independent values in the document type select list
-    foreach ($form['doc_type']['#options'] as $key => $value) {
-      if (!in_array($key, $doc_types) && $key !== 'All') {
-        unset($form['doc_type']['#options'][$key]);
+    if (!empty($form['doc_type'])) {
+      foreach ($form['doc_type']['#options'] as $key => $value) {
+        if (!in_array($key, $doc_types) && $key !== 'All') {
+          unset($form['doc_type']['#options'][$key]);
+        }
       }
     }
     // Rename the All option label for Document Type Filter.
