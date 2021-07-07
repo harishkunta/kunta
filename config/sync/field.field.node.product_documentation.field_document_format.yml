@@ -1,0 +1,21 @@
+uuid: 4ddccec5-7399-4a4a-be14-e8d3a8adade0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_format
+    - node.type.product_documentation
+  module:
+    - options
+id: node.product_documentation.field_document_format
+field_name: field_document_format
+entity_type: node
+bundle: product_documentation
+label: 'Document Format'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

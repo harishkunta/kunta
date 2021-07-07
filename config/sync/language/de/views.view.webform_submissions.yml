@@ -64,6 +64,7 @@ display:
           label: Erstellt
           separator: ', '
         completed:
+          label: Abgeschlossen
           separator: ', '
         remote_addr:
           label: IP-Adresse
@@ -98,6 +99,7 @@ display:
           label: Erstellt
           separator: ', '
         completed:
+          label: Abgeschlossen
           separator: ', '
         remote_addr:
           label: IP-Adresse
@@ -134,6 +136,7 @@ display:
           label: Erstellt
           separator: ', '
         completed:
+          label: Abgeschlossen
           separator: ', '
         remote_addr:
           label: IP-Adresse

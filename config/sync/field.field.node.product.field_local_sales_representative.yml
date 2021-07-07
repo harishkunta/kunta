@@ -1,0 +1,29 @@
+uuid: 26554ea7-cdf0-4a54-921f-3fb58b4d9cec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_local_sales_representative
+    - node.type.person
+    - node.type.product
+id: node.product.field_local_sales_representative
+field_name: field_local_sales_representative
+entity_type: node
+bundle: product
+label: 'Local Sales Representative'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,3 +1,4 @@
+label: Évènements
 display:
   default:
     display_title: Maître
@@ -23,5 +24,6 @@ display:
       fields:
         field_event_type:
           separator: ', '
+      title: Évènements
   page:
     display_title: Page

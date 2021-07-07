@@ -14,6 +14,15 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <p> <h1> <pre>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <sup> <sub> <p> <h1> <pre> <span class="coh-style-paragraph-extra-large coh-style-link-button-light coh-style-heading-3-size coh-style-link-with-icon coh-style-heading-2-size coh-style-tick-list coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-link-button-dark coh-style-paragraph-small coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-link-button-color coh-style-verathon-solutions-wrap coh-style-pre-heading-light coh-style-paragraph-large coh-color-brand-color-light coh-color-brand-color coh-color-brand-color-dark coh-color-gray coh-color-gray-10 coh-color-gray-20 coh-color-gray-30 coh-color-gray-70 coh-color-gray-80 coh-color-black coh-color-gray-90 coh-color-white coh-color-verathon-blue coh-color-verathon-silver coh-color-bladderscan coh-color-bflex coh-color-verathon-gray-1">'
       filter_html_help: true
       filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

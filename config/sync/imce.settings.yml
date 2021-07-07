@@ -1,4 +1,4 @@
-abs_urls: false
+abs_urls: true
 admin_theme: false
 roles_profiles: {  }
 _core:
