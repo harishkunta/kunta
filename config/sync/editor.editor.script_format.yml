@@ -27,6 +27,7 @@ settings:
           name: Source
           items:
             - Source
+            - DX8InlineStyles
   plugins:
     language:
       language_list: un

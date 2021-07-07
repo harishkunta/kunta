@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.person.field_contact_number
     - field.field.node.person.field_email
     - field.field.node.person.field_job_title
+    - field.field.node.person.field_media
     - field.field.node.person.field_place_telephone
     - node.type.person
   module:
@@ -36,6 +37,7 @@ hidden:
   field_contact_number: true
   field_email: true
   field_job_title: true
+  field_media: true
   field_place_telephone: true
   langcode: true
   links: true

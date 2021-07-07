@@ -1,3 +1,4 @@
+label: Veranstaltungen
 display:
   default:
     display_title: Master
@@ -23,5 +24,6 @@ display:
       fields:
         field_event_type:
           separator: ', '
+      title: Veranstaltungen
   page:
     display_title: Seite

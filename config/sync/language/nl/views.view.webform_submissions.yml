@@ -64,6 +64,7 @@ display:
           label: Aangemaakt
           separator: ', '
         completed:
+          label: Voltooid
           separator: ', '
         remote_addr:
           label: IP-adres
@@ -98,6 +99,7 @@ display:
           label: Aangemaakt
           separator: ', '
         completed:
+          label: Voltooid
           separator: ', '
         remote_addr:
           label: IP-adres
@@ -134,6 +136,7 @@ display:
           label: Aangemaakt
           separator: ', '
         completed:
+          label: Voltooid
           separator: ', '
         remote_addr:
           label: IP-adres
