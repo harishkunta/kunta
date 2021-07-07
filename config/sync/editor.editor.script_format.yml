@@ -32,7 +32,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "p.global-uni-sans| P Product Name\r\nh1.global-uni-sans| H1 Product Name\r\nh2.global-uni-sans| H2 Product Name\r\nh3.global-uni-sans| H3 Product Name\r\nh4.global-uni-sans| H4 Product Name\r\nh5.global-uni-sans| H5 Product Name\r\nh6.global-uni-sans| H6 Product Name"
 image_upload:
   status: false
   scheme: public
