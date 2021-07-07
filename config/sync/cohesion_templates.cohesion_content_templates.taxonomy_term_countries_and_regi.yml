@@ -1,0 +1,18 @@
+uuid: a53eb190-7f06-47af-8070-fb73b8e7d69d
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_countries_and_regi
+label: 'Taxonomy term page (Taxonomy_term, Countries and Regions)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: countries_and_regions
+view_mode: full
+master_template: ''

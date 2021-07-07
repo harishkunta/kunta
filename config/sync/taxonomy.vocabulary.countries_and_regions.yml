@@ -1,0 +1,8 @@
+uuid: dacc741c-a4f4-4377-b381-c20ea163485a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Countries and Regions'
+vid: countries_and_regions
+description: 'Listing the countries and Informations.'
+weight: 0

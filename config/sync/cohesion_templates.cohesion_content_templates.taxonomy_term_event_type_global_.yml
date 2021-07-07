@@ -1,0 +1,18 @@
+uuid: 5ac83baa-e578-4fb2-9173-84159322a71c
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_event_type_global_
+label: 'Global Support Search (Taxonomy_term, Event Type)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: event_type
+view_mode: global_support_search
+master_template: ''
