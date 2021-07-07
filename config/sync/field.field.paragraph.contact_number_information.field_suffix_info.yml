@@ -1,0 +1,19 @@
+uuid: af6adf55-b6ba-4c40-ae0a-324d8561e442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_suffix_info
+    - paragraphs.paragraphs_type.contact_number_information
+id: paragraph.contact_number_information.field_suffix_info
+field_name: field_suffix_info
+entity_type: paragraph
+bundle: contact_number_information
+label: 'Suffix Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

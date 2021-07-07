@@ -1,0 +1,21 @@
+uuid: bf9e2aa4-e050-497e-b100-af9e70559421
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_suffix_info
+field_name: field_suffix_info
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
