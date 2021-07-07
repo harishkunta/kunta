@@ -262,3 +262,8 @@
   margin-right: 5px;
   font-size: 16px;
 }
+
+
+p.global-uni-sans, h1.global-uni-sans, h2.global-uni-sans, h3.global-uni-sans, h4.global-uni-sans, h5.global-uni-sans, h6.global-uni-sans {
+  font-family: 'Uni Sans Book';
+}
