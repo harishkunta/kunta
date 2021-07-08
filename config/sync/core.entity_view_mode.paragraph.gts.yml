@@ -1,0 +1,10 @@
+uuid: 31b422ae-59e2-40a1-8062-50a6470fa85b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.gts
+label: 'GTS: Contact Number Information'
+targetEntityType: paragraph
+cache: true

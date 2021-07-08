@@ -1,0 +1,18 @@
+uuid: 7ae574ac-8efa-4c60-8640-c50bd2f6da4f
+langcode: en
+status: false
+dependencies: {  }
+id: paragraph_contact_number_infor_0
+label: 'GTS: Contact Number Information (Paragraph, Contact Number Information)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: paragraph
+bundle: contact_number_information
+view_mode: gts
+master_template: ''

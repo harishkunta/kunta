@@ -29,7 +29,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: default
+      view_mode: gts
       link: ''
     third_party_settings: {  }
     region: content
@@ -38,7 +38,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      view_mode: default
+      view_mode: gts
       link: ''
     third_party_settings: {  }
     region: content
