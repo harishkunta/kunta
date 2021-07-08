@@ -1,0 +1,23 @@
+uuid: 4e852745-59fc-484e-936b-53da8aba7094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_product
+    - node.type.page
+id: node.page.field_is_product
+field_name: field_is_product
+entity_type: node
+bundle: page
+label: 'Is it a Product'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Is it a Product'
+  off_label: 'Off'
+field_type: boolean
