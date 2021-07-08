@@ -15,3 +15,22 @@ function cohesion_theme_form_alter(&$form, FormStateInterface $form_state, $form
         $form['keys']['#attributes']['placeholder'] = t('Search');
     }
 }
+
+/**
+ * template_preprocess_paragraph__PARAGRAH_TYPE.
+ */
+function cohesion_theme_preprocess_paragraph__contact_number_information (&$vars) {
+    // Whether the paragraph is number or mail or address.
+    if ( isset($vars['content']['field_contact_number']['#object']) ) {
+        $vars['content']['field_contact_number']['flag'] = 'number';
+        $vars['content']['field_contact_number']['number'] = $vars['content']['field_contact_number']['#object']->get('field_contact_number')->value;
+    }
+    elseif ( isset($vars['content']['field_email']['#object']) ) {
+        $vars['content']['field_email']['mail'] = $vars['content']['field_email']['#object']->get('field_email')->value;
+        $vars['content']['field_contact_number']['flag'] = 'mail';
+    }
+    elseif ( isset($vars['content']['field_address']['#object']) ) {
+        $vars['content']['field_address']['mail'] = $vars['content']['field_address']['#object']->get('field_address')->value;
+        $vars['content']['field_contact_number']['flag'] = 'address';
+    }
+}

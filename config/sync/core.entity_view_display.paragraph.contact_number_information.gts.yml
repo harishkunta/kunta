@@ -1,0 +1,69 @@
+uuid: f90bb399-128a-4c0e-935f-12466ebfa623
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.gts
+    - field.field.paragraph.contact_number_information.field_address
+    - field.field.paragraph.contact_number_information.field_contact_number
+    - field.field.paragraph.contact_number_information.field_contact_type
+    - field.field.paragraph.contact_number_information.field_email
+    - field.field.paragraph.contact_number_information.field_number_label
+    - field.field.paragraph.contact_number_information.field_suffix_info
+    - paragraphs.paragraphs_type.contact_number_information
+id: paragraph.contact_number_information.gts
+targetEntityType: paragraph
+bundle: contact_number_information
+mode: gts
+content:
+  field_address:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_contact_number:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_contact_type:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_email:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_number_label:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_suffix_info:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true
