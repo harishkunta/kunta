@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_categories
+    - field.field.node.page.field_is_product
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_metatag
     - field.field.node.page.field_page_image
@@ -26,6 +27,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_is_product:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_layout_canvas:
     type: cohesion_entity_reference_revisions_entity_view
     weight: 2
@@ -49,6 +60,9 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_categories: true
   field_page_image: true
   field_tags: true

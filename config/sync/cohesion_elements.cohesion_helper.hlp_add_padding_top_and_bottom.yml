@@ -1,0 +1,17 @@
+uuid: 55f1ef64-8401-4ef3-ab2f-f89c2ab6cea1
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_add_padding_top_and_bottom
+label: 'Add Padding Top and Bottom'
+json_values: '{"canvas":[{"type":"form-field","uid":"form-select","title":"Select","translate":false,"status":{"collapsed":false},"uuid":"221ebef1-30dd-4cb7-84e3-c5ce264bf824","parentUid":"root","isContainer":false,"children":[]}],"mapper":{},"model":{"221ebef1-30dd-4cb7-84e3-c5ce264bf824":{"settings":{"title":"Add padding on Top and Bottom","type":"cohSelect","selectType":"custom","schema":{"type":"string"},"options":[{"label":"Default","value":""},{"label":"No Spacing - Top & Bottom","value":"no-padding"},{"label":"Spacing - Small","value":".padding-sm"},{"label":"Spacing - Medium","value":".padding-md"},{"label":"Spacing - Large","value":".padding-lg"}],"machineName":"add-padding-on-top-and-bottom","tooltipPlacement":"auto right","tooltipText":"Add\/Remove Spacing on Top and Bottom"},"contextVisibility":{"condition":"ALL"},"model":{"value":""}}},"previewModel":{"221ebef1-30dd-4cb7-84e3-c5ce264bf824":{}},"variableFields":{"221ebef1-30dd-4cb7-84e3-c5ce264bf824":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_miscellaneous
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.horizontal_card
     - field.field.node.page.body
     - field.field.node.page.field_categories
+    - field.field.node.page.field_is_product
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_metatag
     - field.field.node.page.field_page_image
@@ -50,7 +51,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_categories: true
+  field_is_product: true
   field_metatag: true
   field_page_image: true
   field_tags: true
