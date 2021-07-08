@@ -142,6 +142,8 @@ function verathon_customization_preprocess_html(array &$variables) {
     return;
   }
 
+  $variables['#attached']['library'][] =  'verathon_customization/global-styling';
+
   $type = NULL;
   $path = \Drupal::service('path.current')->getPath();
   $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);

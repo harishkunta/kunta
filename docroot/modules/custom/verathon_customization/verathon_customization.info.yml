@@ -4,3 +4,6 @@ description: This module is for customizations of Verathon project.
 package: Verathon
 core: 8.x
 core_version_requirement: ^8 || ^9
+
+libraries:
+  - verathon_customization/global-styling
