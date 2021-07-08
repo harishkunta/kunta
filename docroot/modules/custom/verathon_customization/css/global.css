@@ -105,3 +105,91 @@
     padding-bottom: 7.5rem;
   }
 }
+
+.product-documents {
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+
+}
+
+.product-support-detail {
+  /* padding: 60px 120px; */
+}
+
+.product-support-detail .supoort-detail-border {
+  /* padding-bottom: 20px; */
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+
+.product-support-detail .supoort-detail-border h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.product-support-detail .supoort-detail-border h2 > a{
+  color: rgb(33, 37, 41);
+  font-weight: 600;
+}
+
+.product-support-detail .supoort-detail-border .table-block {
+  font-size: 18px;
+}
+
+.product-support-detail .supoort-detail-border .table-block .table-line {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.product-support-detail .supoort-detail-border .table-block .table-line span.first {
+  flex-basis: 8%;
+}
+
+.product-support-detail .supoort-detail-border .table-block .table-line span.last {
+  flex-basis: 92%;
+}
+/*Remove this*/
+/* .product-support-detail .supoort-detail-border .table-block .table-line span.last:last-child {
+  display: none;
+} */
+
+.product-support-detail .supoort-detail-border .table-block .table-line span.last-item {
+  display: block;
+}
+
+.product-support-detail .supoort-detail-border .table-block .table-line:nth-last-child(2) {
+  margin-bottom: 5px;
+}
+
+.product-support-detail .supoort-detail-border .download {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+
+/*
+*remove first and last child and add class with help of drupal
+*/
+.product-support-detail .supoort-detail-border .download a:first-child {
+  text-decoration: none;
+  margin-bottom: 24px;
+  position: relative;
+  bottom: 0px;
+  right: 10px;
+  color: rgb(21,124, 209);
+  font-size: 16px;
+}
+
+.product-support-detail .supoort-detail-border .download a:last-child {
+  background: rgb(21,124, 209);
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+}
+
+.product-support-detail .supoort-detail-border .download a:last-child span {
+  font-size: 24px;
+}
