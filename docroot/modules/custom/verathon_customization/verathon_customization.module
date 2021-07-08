@@ -3,8 +3,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
-use Drupal\Core\Menu\MenuLinkInterface;
-use Drupal\webform\Plugin\WebformHandlerInterface;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 
@@ -144,20 +142,27 @@ function verathon_customization_preprocess_html(array &$variables) {
 
   $variables['#attached']['library'][] =  'verathon_customization/global-styling';
 
-  $type = NULL;
+  $pageCategory = $siteSection = NULL;
   $path = \Drupal::service('path.current')->getPath();
-  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
   $path_args = explode('/', $path);
   $path_args = array_filter($path_args);
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  $alias_args = explode('/', $alias);
+  $alias_args = array_filter($alias_args);
 
   if ($path_args[1] == 'node' && is_numeric($path_args[2])) {
     $node = Node::load($path_args[2]);
-    $type = ucwords($node->getType());
+    $pageCategory = ucwords($node->bundle());
+    $is_product = $node->get('field_is_product')->value;
+    if (!empty($is_product) && $is_product == 1) {
+      $pageCategory = 'Product';
+    }
+    $siteSection = $alias_args[1] ?? '';
   }
 
   $script = Markup::create("dataLayer = [{
-    'pageCategory': '$type',
-    'sitesection' : '$alias',
+    'pageCategory': '$pageCategory',
+    'siteSection' : '$siteSection',
   }];");
 
   $variables['page']['#attached']['html_head'][] = [['#tag' => 'script', '#value' => $script], 'dataLayer'];
