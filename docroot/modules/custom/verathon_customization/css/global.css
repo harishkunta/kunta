@@ -1,3 +1,8 @@
+:root {
+  --lightgreen: #2eb3b7;
+  --lightgray: #e6e6e6;
+}
+
 /* Styles Provided by Analytics Team */
 #sg-popup {
   text-align: center;
@@ -17,7 +22,7 @@
 }
 
 #ijs_open {
-  background: lightseagreen;
+  background: var(--lightgreen);
   color: white;
   border-radius: 0;
   font-size: 1rem;
@@ -29,7 +34,7 @@
 }
 
 #ijs_close {
-  background: lightgray;
+  background: var(--lightgray);
   color: black;
   border-radius: 0;
   font-size: 1rem;
