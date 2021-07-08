@@ -111,11 +111,9 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 60px;
+  padding-left: 120px;
+  padding-right: 120px;
 
-}
-
-.product-support-detail {
-  /* padding: 60px 120px; */
 }
 
 .product-support-detail .supoort-detail-border {
@@ -192,4 +190,193 @@
 
 .product-support-detail .supoort-detail-border .download a:last-child span {
   font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-documents{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* Css for hero banner on Prodcut Support Page*/
+
+.support-product {
+  display: flex;
+  background: #F7F7F7;
+}
+
+.support-product .hero-section {
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+      padding-left: 120px;
+}
+
+.support-product .hero-section .support-landing-desc {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.support-product .hero-section .support-landing-desc h1 {
+  font-size: 48px;
+  line-height: 56px;
+  margin-top: 125px;
+  font-weight: 700;
+  max-width: 344px;
+  margin-bottom: 60px;
+}
+
+.support-product .hero-section .support-landing-desc h6 {
+  letter-spacing: 0.13em;
+  margin-top: 80px;
+  line-height: 19.49px;
+  text-transform: capitalize;
+  color: #0078AB;
+  font-weight: 700;
+}
+
+.support-product .hero-section .support-landing-container {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.support-product .hero-section .support-landing-img {
+  max-width: 418px;
+}
+
+/* .support-product .support-landing-select {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  background: #EBECEC;
+} */
+
+/* .support-product .support-landing-select .support-landing-select-container {
+  padding-left: 40px;
+  padding-top: 142px;
+  padding-right: 124px;
+  width: 380px;
+}
+
+.support-product .support-landing-select .support-landing-select-container p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
+
+.support-product .support-landing-select .support-landing-select-container select {
+  display: block;
+  border: none;
+  padding: 10px 24px;
+  height: 52px;
+  width: 100%;
+  margin-bottom: 36px;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../images/$symbols.chevron.down (1).png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+} */
+
+@media screen and (max-width: 768px) {
+  .support-product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            padding-bottom: 40px;
+  }
+  .support-product .hero-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .support-product .hero-section .support-landing-desc h1 {
+    margin-top: 24px;
+    font-size: 36px;
+    line-height: 48px;
+    max-width: 335px;
+  }
+  .support-product .hero-section .support-landing-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .support-product .hero-section .support-landing-container .support-landing-img img {
+    max-width: 100%;
+  }
+  .support-product .support-landing-select .support-landing-select-container {
+    padding-top: 40px;
+    width: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.views-exposed-form form {
+  position: absolute;
+  padding-top: 1000px;
+  padding-bottom: 60px;
+  width: 35%;
+  right: 0;
+  bottom: 0;
+  background: #EBECEC;
+}
+.views-exposed-form form > * {
+  padding: 0;
+}
+.views-exposed-form form .form-type-select{
+  padding-left: 40px;
+  padding-right: 14.28%;
+  padding-top: 36px;
+}
+.views-exposed-form form .form-type-select select {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 14px 0px;
+  padding-left: 24px;
+  height: 52px;
+}
+
+/* .views-exposed-form form::after{
+  content: '';
+  clear: both;
+  display: table;
+} */
+
+@media screen and (max-width: 768px) {
+  .support-product .hero-section {
+    padding-left: 20px;
+  }
+
+  .support-product .hero-section .support-landing-desc h6 {
+    margin-top: 40px;
+  }
+
+  .views-exposed-form form {
+    position: static;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+    width: 100%;
+  }
+  .views-exposed-form form .form-type-select{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
 }
