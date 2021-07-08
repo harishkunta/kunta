@@ -3,4 +3,10 @@ verathon_search:
     js/custom-search.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once    
+    - core/jquery.once
+
+global-styling:
+  version: VERSION
+  css:
+    component:
+      css/global.css: {}
