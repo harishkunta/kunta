@@ -1,0 +1,17 @@
+uuid: 3c824d56-fe69-4bc0-96cb-ff474b3870ee
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_padding_top_bottom
+label: 'Padding Top Bottom'
+json_values: '{"canvas":[{"type":"form-field","uid":"form-select","title":"Select","translate":false,"status":{"collapsed":false},"uuid":"aa5e6c6c-8a28-4f12-8d88-98cb6a46eb0e","parentUid":"root","isContainer":false,"children":[]}],"mapper":{},"model":{"aa5e6c6c-8a28-4f12-8d88-98cb6a46eb0e":{"settings":{"title":"Add padding on Top and Bottom","type":"cohSelect","selectType":"custom","schema":{"type":"string"},"options":[{"label":"Top & Bottom Spacing","value":"add-padding-top-bottom"},{"label":"No Spacing","value":"no-spacing"}],"machineName":"display-page","tooltipPlacement":"auto right","tooltipText":"Select the display size \"Top & Bottom Spacing\" to add padding on top and bottom"},"contextVisibility":{"condition":"ALL"},"model":{"value":"no-spacing"}}},"previewModel":{"aa5e6c6c-8a28-4f12-8d88-98cb6a46eb0e":{}},"variableFields":{"aa5e6c6c-8a28-4f12-8d88-98cb6a46eb0e":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_layout_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null
