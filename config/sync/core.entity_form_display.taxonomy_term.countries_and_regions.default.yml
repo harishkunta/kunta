@@ -6,7 +6,6 @@ dependencies:
     - field.field.taxonomy_term.countries_and_regions.field_address
     - field.field.taxonomy_term.countries_and_regions.field_contact_informations
     - field.field.taxonomy_term.countries_and_regions.field_contact_right_side_info
-    - field.field.taxonomy_term.countries_and_regions.field_sorting_weight
     - taxonomy.vocabulary.countries_and_regions
   module:
     - address
@@ -78,12 +77,6 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
-  field_sorting_weight:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   langcode:
     type: language_select
