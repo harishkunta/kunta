@@ -224,7 +224,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<p>Search for devices by Device Name, Serial Number,or Product ID</p>\r\n<a href=\"/\">How to identify my device</a>\r\n"
+            value: "<p>Search for devices by Device Name, Serial Number, or Product ID</p>\r\n"
             format: cohesion
           plugin_id: text
       footer: {  }
@@ -265,6 +265,7 @@ display:
     display_options:
       display_extenders: {  }
       path: global-support
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
