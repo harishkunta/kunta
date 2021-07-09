@@ -92,6 +92,9 @@
         $('#views-exposed-form-acquia-search-search input[name=keywords]').val(updatedstring);
         $('#views-exposed-form-acquia-search-search input[value=Search]').trigger('click');
       }
+
+      // Hiding the menu links with associated image or video.
+      jQuery('img.menu-image-link').parent('ul.menu-level-2 li.sub-menu-image-link').children('a').hide();
     }
   };
 })(jQuery, Drupal);

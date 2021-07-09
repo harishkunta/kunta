@@ -4,13 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.menu_link_content.field_video
+    - media.type.image
     - media.type.video
     - system.menu.navigation-bar
 id: menu_link_content.navigation-bar.field_video
 field_name: field_video
 entity_type: menu_link_content
 bundle: navigation-bar
-label: Video
+label: Video/Image
 description: ''
 required: false
 translatable: false
@@ -20,10 +21,11 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      image: image
       video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference
