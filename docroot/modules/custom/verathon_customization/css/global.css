@@ -34,15 +34,22 @@
 
 .product-support-detail .supoort-detail-border .table-block .table-line {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 16px; 
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content:flex-end;
 }
 
 .product-support-detail .supoort-detail-border .table-block .table-line span.first {
-  flex-basis: 8%;
+  flex-basis: 12%;
+  width: 12%;
+  text-align: left;
 }
 
 .product-support-detail .supoort-detail-border .table-block .table-line span.last {
-  flex-basis: 92%;
+  flex-basis: 88%;
+  width: 88%;
+  flex-direction: column;
 }
 /*Remove this*/
 /* .product-support-detail .supoort-detail-border .table-block .table-line span.last:last-child {
@@ -92,6 +99,17 @@
   .product-documents{
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .product-support-detail .supoort-detail-border .table-block {
+    padding-bottom: 40px;
+  }
+  .product-support-detail .supoort-detail-border .table-block .table-line span.first {
+    display: block;
+    flex-basis: 35%;
+  }
+  .product-support-detail .supoort-detail-border .table-block .table-line span.last {
+    flex-basis: 65%;
   }
 }
 
@@ -206,6 +224,7 @@
     font-size: 36px;
     line-height: 48px;
     max-width: 335px;
+    margin-bottom: 24px;
   }
   .support-product .hero-section .support-landing-container {
     margin-right: auto;
@@ -246,6 +265,10 @@
   padding: 14px 0px;
   padding-left: 24px;
   height: 52px;
+  background-image: url("../images/$symbols.chevron.down (1).png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
 }
 
 /* .views-exposed-form form::after{
