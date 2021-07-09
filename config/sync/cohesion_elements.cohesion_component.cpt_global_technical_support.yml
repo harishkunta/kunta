@@ -9,7 +9,7 @@ json_mapper: '{}'
 last_entity_update: entityupdate_0029
 locked: false
 modified: true
-selectable: false
+selectable: true
 category: cpt_cat_product_support
 preview_image: {  }
 has_quick_edit: false
