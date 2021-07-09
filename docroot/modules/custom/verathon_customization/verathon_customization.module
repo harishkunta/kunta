@@ -5,6 +5,7 @@ use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
+use Drupal\Component\Utility\Html;
 
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
@@ -166,4 +167,16 @@ function verathon_customization_preprocess_html(array &$variables) {
   }];");
 
   $variables['page']['#attached']['html_head'][] = [['#tag' => 'script', '#value' => $script], 'dataLayer'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-devices' ) {
+    $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-eol-product-documentation-list');
+  }
+  if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' ) {
+    $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
+  }
 }
