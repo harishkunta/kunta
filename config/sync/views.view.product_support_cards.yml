@@ -386,6 +386,7 @@ display:
         filters: false
         filter_groups: false
         relationships: false
+        css_class: false
       row:
         type: fields
         options:
@@ -1084,6 +1085,7 @@ display:
           admin_label: 'field_local_sales_representative: Content'
           required: false
           plugin_id: standard
+      css_class: coh-style-eol-devices
     cache_metadata:
       max-age: -1
       contexts:
@@ -1120,6 +1122,7 @@ display:
         filter_groups: false
         exposed_form: false
         empty: false
+        css_class: false
       style:
         type: default
         options:
@@ -1465,7 +1468,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"download\">\r\n                <a href=\"{{ field_media }}\" class=\"link\">Download</a>\r\n                <a href=\"{{ field_media }}\" class=\"img\"><span>i</span></a>\r\n            </div>\r\n        </div>\r\n    </div>"
+            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n             <div class=\"download\">\r\n                 <a class=\"link-sign\" href=\"{{field_media}}\" target=\"_blank\">Download<i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
             make_link: false
             path: ''
             absolute: false
@@ -1836,6 +1839,7 @@ display:
             value: '<h3>No Document found for this Product </h3>'
             format: filtered_html
           plugin_id: text
+      css_class: coh-style-eol-product-documentation-list
     cache_metadata:
       max-age: -1
       contexts:
@@ -2262,6 +2266,7 @@ display:
         footer: false
         filters: false
         filter_groups: false
+        css_class: false
       row:
         type: fields
         options:
@@ -2511,6 +2516,7 @@ display:
         operator: AND
         groups:
           1: AND
+      css_class: coh-style-product-documentation-banner
     cache_metadata:
       max-age: -1
       contexts:
@@ -2542,6 +2548,7 @@ display:
         filter_groups: false
         exposed_form: false
         empty: false
+        css_class: false
       style:
         type: default
         options:
@@ -2887,7 +2894,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"download\">\r\n                <a href=\"{{field_media}}\" class=\"link\">Download</a>\r\n                <a href={{field_media}}\" class=\"img\"><span>i</span></a>\r\n            </div>\r\n        </div>\r\n    </div>"
+            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"download\">\r\n                 <a class=\"link-sign\" href=\"{{field_media}}\" target=\"_blank\">Download<i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
             make_link: false
             path: ''
             absolute: false
@@ -3258,6 +3265,7 @@ display:
             value: '<h3>No Document found for this Product </h3>'
             format: filtered_html
           plugin_id: text
+      css_class: coh-style-product-documentation-form-and-list
     cache_metadata:
       max-age: -1
       contexts:
