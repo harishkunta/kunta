@@ -14,7 +14,6 @@ dependencies:
     - node.type.product_documentation
   module:
     - datetime
-    - inline_entity_form
     - media_library
     - text
 id: node.product_documentation.default
@@ -60,20 +59,9 @@ content:
     region: content
   field_language:
     weight: 16
-    settings:
-      form_mode: default
-      revision: false
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
-      allow_duplicate: false
+    settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   field_market:
     weight: 29
