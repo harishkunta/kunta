@@ -8,12 +8,13 @@ dependencies:
     - node
     - search_api
   config:
-    - field.storage.node.body
     - field.storage.node.field_article_type
+    - field.storage.node.body
     - field.storage.node.field_department
     - field.storage.node.field_job_title
     - field.storage.node.field_layout_canvas
     - field.storage.node.field_news_type
+    - field.storage.node.field_procedure
     - field.storage.node.field_product_line
     - field.storage.node.field_role
     - field.storage.node.field_topic
@@ -123,6 +124,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_news_type
+  field_procedure:
+    label: Procedure
+    datasource_id: 'entity:node'
+    property_path: field_procedure
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_procedure
   field_product_line:
     label: 'Product Line'
     datasource_id: 'entity:node'

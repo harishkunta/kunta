@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.instructional_videos.body
     - field.field.node.instructional_videos.field_department
+    - field.field.node.instructional_videos.field_procedure
     - field.field.node.instructional_videos.field_product_line
     - field.field.node.instructional_videos.field_role
     - field.field.node.instructional_videos.field_select_parent
@@ -40,6 +41,7 @@ hidden:
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
   field_department: true
+  field_procedure: true
   field_product_line: true
   field_role: true
   field_select_parent: true

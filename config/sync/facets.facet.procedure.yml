@@ -1,4 +1,4 @@
-uuid: 54759a63-c5c5-474f-9a06-0e05504e11d1
+uuid: 2a8b4364-c84a-4f55-bb9b-0a4458619774
 langcode: en
 status: true
 dependencies:
@@ -7,56 +7,48 @@ dependencies:
     - views.view.acquia_search
   module:
     - search_api
-id: topic_facet
-name: Topic
-url_alias: topic
+id: procedure
+name: Procedure
+url_alias: procedure
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_topic
+field_identifier: field_procedure
 facet_source_id: 'search_api:views_page__acquia_search__search'
 widget:
-  type: checkbox
+  type: links
   config:
-    show_numbers: true
     soft_limit: 0
     soft_limit_settings:
       show_less_label: 'Show less'
       show_more_label: 'Show more'
     show_reset_link: false
-    reset_text: 'Show all'
     hide_reset_when_no_selection: false
-query_operator: or
+    reset_text: 'Show all'
+    show_numbers: false
+query_operator: null
 use_hierarchy: false
 keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
-hard_limit: 0
+hard_limit: null
 exclude: false
-only_visible_when_facet_source_is_visible: false
+only_visible_when_facet_source_is_visible: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
     weights:
       sort: 20
-    settings:
-      sort: DESC
+    settings: {  }
   count_widget_order:
     processor_id: count_widget_order
     weights:
       sort: 30
-    settings:
-      sort: DESC
+    settings: {  }
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
       sort: 40
-    settings:
-      sort: ASC
-  translate_entity:
-    processor_id: translate_entity
-    weights:
-      build: 5
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
@@ -66,4 +58,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: false
+show_title: null

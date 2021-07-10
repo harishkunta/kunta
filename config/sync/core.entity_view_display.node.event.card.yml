@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.event.field_event_start
     - field.field.node.event.field_event_type
     - field.field.node.event.field_job_description
+    - field.field.node.event.field_procedure
     - field.field.node.event.field_product_line
     - field.field.node.event.field_role
     - field.field.node.event.field_select_parent
@@ -98,6 +99,7 @@ hidden:
   field_event_published_on: true
   field_event_type: true
   field_job_description: true
+  field_procedure: true
   field_product_line: true
   field_role: true
   field_select_parent: true

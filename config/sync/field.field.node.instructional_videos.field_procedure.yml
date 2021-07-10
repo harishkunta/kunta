@@ -1,0 +1,29 @@
+uuid: 9927e06c-16f4-40b4-8f98-e36a6f600405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_procedure
+    - node.type.instructional_videos
+    - taxonomy.vocabulary.procedure
+id: node.instructional_videos.field_procedure
+field_name: field_procedure
+entity_type: node
+bundle: instructional_videos
+label: Procedure
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      procedure: procedure
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
