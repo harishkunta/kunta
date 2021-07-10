@@ -7,6 +7,9 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 
+/**
+ * Implements hook_css_alter().
+ */
 function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
   $styles[] = (object) array(
     // Path relative to drupal root
@@ -15,18 +18,22 @@ function verathon_customization_h5p_styles_alter(&$styles, $libraries, $mode) {
     'version' => '?ver=1',
   );
 }
+
+/**
+ * Implements hook_js_alter().
+ */
 function verathon_customization_h5p_scripts_alter(&$scripts, $libraries, $mode) {
-    $scripts[] = (object) array(
-      // Path relative to drupal root
-      'path' => drupal_get_path('module', 'verathon_customization') . '/js/custom-h5p-overrides.js',
-      // Cache buster
-      'version' => '?ver=1',
-    );
+  $scripts[] = (object) array(
+    // Path relative to drupal root
+    'path' => drupal_get_path('module', 'verathon_customization') . '/js/custom-h5p-overrides.js',
+    // Cache buster
+    'version' => '?ver=1',
+  );
 }
 
 /**
-* Implements hook_form_alter().
-*/
+ * Implements hook_form_alter().
+ */
 function verathon_customization_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id === 'views_exposed_form' && isset($form['field_product_line'])) {
     if ('views-exposed-form-et-search-block-search' === $form['#id']) {
@@ -154,9 +161,11 @@ function verathon_customization_preprocess_html(array &$variables) {
   if ($path_args[1] == 'node' && is_numeric($path_args[2])) {
     $node = Node::load($path_args[2]);
     $pageCategory = ucwords($node->bundle());
-    $is_product = $node->get('field_is_product')->value;
-    if (!empty($is_product) && $is_product == 1) {
-      $pageCategory = 'Product';
+    if ($node->bundle() == 'page') {
+      $is_product = $node->get('field_is_product')->value;
+      if (!empty($is_product) && $is_product == 1) {
+        $pageCategory = 'Product';
+      }
     }
     $siteSection = $alias_args[1] ?? '';
   }
@@ -175,6 +184,8 @@ function verathon_customization_preprocess_html(array &$variables) {
 function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-devices' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-eol-product-documentation-list');
+    $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-container-boxed');
+
   }
   if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
