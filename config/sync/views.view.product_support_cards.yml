@@ -19,6 +19,11 @@ dependencies:
     - taxonomy.vocabulary.documents
     - taxonomy.vocabulary.languages
     - taxonomy.vocabulary.product_line
+  content:
+    - 'taxonomy_term:product_line:289ab8ae-603c-4e90-86c9-b366274ebcd1'
+    - 'taxonomy_term:product_line:c41e2e22-4a42-49db-a931-79cc81f0fdce'
+    - 'taxonomy_term:product_line:cf655121-30c6-4c60-9d82-bf6e2c40df91'
+    - 'taxonomy_term:product_line:df6fadc5-5dba-4d83-8ab0-3a8ef9c777b3'
   module:
     - better_exposed_filters
     - datetime
@@ -1080,7 +1085,7 @@ display:
           admin_label: 'field_local_sales_representative: Content'
           required: false
           plugin_id: standard
-      css_class: coh-style-eol-devices
+      css_class: 'coh-style-eol-devices coh-container-boxed'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1834,7 +1839,7 @@ display:
             value: '<h3>No Document found for this Product </h3>'
             format: filtered_html
           plugin_id: text
-      css_class: coh-style-eol-product-documentation-list
+      css_class: 'coh-style-eol-product-documentation-list coh-container-boxed'
     cache_metadata:
       max-age: -1
       contexts:
