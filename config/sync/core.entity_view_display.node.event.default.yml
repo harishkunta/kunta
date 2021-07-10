@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.event.field_event_start
     - field.field.node.event.field_event_type
     - field.field.node.event.field_job_description
+    - field.field.node.event.field_procedure
     - field.field.node.event.field_product_line
     - field.field.node.event.field_role
     - field.field.node.event.field_select_parent
@@ -130,6 +131,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_procedure:
+    weight: 20
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_product_line:
     weight: 8

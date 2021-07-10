@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.clinical_publications.field_call_to_action
     - field.field.node.clinical_publications.field_department
     - field.field.node.clinical_publications.field_image
+    - field.field.node.clinical_publications.field_procedure
     - field.field.node.clinical_publications.field_product_line
     - field.field.node.clinical_publications.field_role
     - field.field.node.clinical_publications.field_select_parent
@@ -30,6 +31,7 @@ third_party_settings:
         - field_year
         - field_topic
         - field_product_line
+        - field_procedure
         - field_role
         - field_department
         - field_select_parent
@@ -73,7 +75,7 @@ content:
     type: link_default
     region: content
   field_department:
-    weight: 19
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -86,6 +88,12 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_procedure:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_product_line:
     weight: 17
     settings: {  }
@@ -93,13 +101,13 @@ content:
     type: options_select
     region: content
   field_role:
-    weight: 18
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_select_parent:
-    weight: 20
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -124,7 +132,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 6
+    weight: 5
     region: content
     settings:
       include_locked: true

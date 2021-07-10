@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_department
     - field.field.node.article.field_display_author
     - field.field.node.article.field_image
+    - field.field.node.article.field_procedure
     - field.field.node.article.field_product_line
     - field.field.node.article.field_role
     - field.field.node.article.field_select_parent
@@ -144,6 +145,7 @@ hidden:
   field_article_type: true
   field_categories: true
   field_display_author: true
+  field_procedure: true
   field_tags: true
   field_weight_to_sort: true
   langcode: true
