@@ -1,0 +1,195 @@
+uuid: 33995ee0-6f6a-4d87-93c6-839dedb08d05
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: request_a_quote
+title: 'Request a Quote'
+description: ''
+category: ''
+elements: "productofinterest:\n  '#type': select\n  '#title': 'Product Of Interest'\n  '#options':\n    bladderscan: BladderScan\n    bladderscan-i10: 'BladderScan i10'\n    bladderscan-prime-plus: 'BladderScan Prime Plus'\n    bladderscan-bvi-6400: 'BladderScan BVI 6400'\n    bladderscan-bvi-6100: 'BladderScan BVI 6100'\n    bladderscan-training: 'BladderScan Training'\n    glidescope: GlideScope\n    glidescope-bflex: 'GlideScope BFlex'\n    glidescope-core: 'GlideScope Core'\n    glidescope-video-baton: 'GlideScope Video Baton'\n    glidescope-go: 'GlideScope Go'\n    glidescope-titanium-reusable: 'GlideScope Titanium Reusable'\n    glidescope-spectrum-single-use: 'GlideScope Spectrum Single-use'\n    glidescope-avl-single-use: 'GlideScope AVL Single-use'\n    glidescope-avl-preterm/small-child: 'GlideScope AVL Preterm/Small Child'\n    gliderite-stylets: 'GlideRite Stylets'\n  '#empty_option': 'Select One'\n  '#empty_value': gf_placeholder\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#default_value': '[current-page:query:productofinterest]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nscheduledemovisit:\n  '#type': radios\n  '#title': 'Schedule Demo Visit?'\n  '#options':\n    'yes': 'Yes'\n    'no': 'No'\n  '#default_value': '[current-page:query:scheduledemovisit]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\ntitle:\n  '#type': textfield\n  '#title': Title\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nemail:\n  '#type': email\n  '#title': Email\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nphone:\n  '#type': tel\n  '#title': Phone\n  '#autocomplete': 'off'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\ncompany:\n  '#type': textfield\n  '#title': Company\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\ncountry:\n  '#type': webform_address\n  '#title': Country\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\n  '#address__access': false\n  '#address_2__access': false\n  '#city__access': false\n  '#state_province__access': false\n  '#postal_code__access': false\n  '#country__required': true\nzip_postcode:\n  '#type': textfield\n  '#title': Zip/Postcode\n  '#autocomplete': 'off'\n  '#required': true\n  '#required_error': 'This field is required.'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nadditional_details:\n  '#type': textarea\n  '#title': 'Additional details about your request'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n  '#captcha_admin_mode': true\nutm_medium:\n  '#type': hidden\n  '#title': Medium\n  '#default_value': '[current-page:query:utm_medium]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nutm_campaign:\n  '#type': hidden\n  '#title': Campaign\n  '#default_value': '[current-page:query:utm_campaign]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nutm_source:\n  '#type': hidden\n  '#title': Source\n  '#default_value': '[current-page:query:utm_source]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nutm_content:\n  '#type': hidden\n  '#title': Content\n  '#default_value': '[current-page:query:utm_content]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nutm_term:\n  '#type': hidden\n  '#title': Term\n  '#default_value': '[current-page:query:utm_term]'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#access_create_roles':\n    - authenticated\n    - anonymous\n  '#access_update_roles':\n    - authenticated\n    - anonymous\n  '#access_view_roles':\n    - authenticated\n    - anonymous\n  '#submit__label': Submit"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /contact-us
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: 'https://www.verathon.com/contact-us/?productofinterest=glidescope&scheduledemovisit=yes&utm_campaign=&utm_medium=&utm_source=&utm_content=&utm_term='
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
