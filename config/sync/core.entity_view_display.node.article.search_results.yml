@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_department
     - field.field.node.article.field_display_author
     - field.field.node.article.field_image
+    - field.field.node.article.field_procedure
     - field.field.node.article.field_product_line
     - field.field.node.article.field_role
     - field.field.node.article.field_select_parent
@@ -72,6 +73,7 @@ hidden:
   field_department: true
   field_display_author: true
   field_image: true
+  field_procedure: true
   field_product_line: true
   field_role: true
   field_select_parent: true

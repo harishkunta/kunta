@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_department
     - field.field.node.article.field_display_author
     - field.field.node.article.field_image
+    - field.field.node.article.field_procedure
     - field.field.node.article.field_product_line
     - field.field.node.article.field_role
     - field.field.node.article.field_select_parent
@@ -91,6 +92,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_procedure:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_product_line:
     weight: 9

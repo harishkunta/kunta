@@ -1,0 +1,11 @@
+uuid: 181a32f4-9c0e-44d0-8a09-650a263a6d03
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.procedure
+id: taxonomy_term.procedure
+target_entity_type_id: taxonomy_term
+target_bundle: procedure
+default_langcode: site_default
+language_alterable: false

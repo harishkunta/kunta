@@ -1,0 +1,8 @@
+uuid: 1733ca28-afd9-40bf-8710-11905075502c
+langcode: en
+status: true
+dependencies: {  }
+name: Procedure
+vid: procedure
+description: ''
+weight: 0

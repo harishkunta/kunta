@@ -1,0 +1,18 @@
+uuid: 41b38a7f-e528-4541-8b6a-851b25c4a01d
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_procedure_global_s
+label: 'Global Support Search (Taxonomy_term, Procedure)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: procedure
+view_mode: global_support_search
+master_template: ''

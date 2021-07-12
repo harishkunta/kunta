@@ -2,8 +2,12 @@ uuid: 5590ffa4-a713-4cf4-915a-1341e03396c1
 langcode: en
 status: true
 dependencies:
+  config:
+    - search_api.index.content
+    - views.view.places
   module:
     - facets_pretty_paths
+    - search_api
 third_party_settings:
   facets_pretty_paths:
     coder: taxonomy_term_name_coder
@@ -30,6 +34,7 @@ widget:
     hide_reset_when_no_selection: false
 query_operator: or
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
