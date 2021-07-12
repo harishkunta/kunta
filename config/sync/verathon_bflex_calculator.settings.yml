@@ -55,7 +55,7 @@ _core:
   default_config_hash: y0KyhFTxpVntMXwI2LcabEOdQwCjHFgyZzRKzRWpRY0
 step_one_heading: 'Current bronchoscope usage'
 step_two_heading: 'Repair and maintenance'
-step_three_heading: 'Repair and maintenance'
+step_three_heading: 'Hidden reprocessing costs'
 step_four_heading: 'Preventable infections'
 step_one_description:
   value: "<p class=\"description\">Indicate your hospital’s volume of annual bronchoscopy procedures and current costs. We’ll use this data as the basis for your results.</p>\r\n"
