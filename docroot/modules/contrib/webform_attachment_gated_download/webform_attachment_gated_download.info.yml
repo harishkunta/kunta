@@ -1,0 +1,15 @@
+name: 'Webform Attachment Gated Download'
+type: module
+description: 'Provide a formatter linking to a gated webform, attaching the file via the webform email handler'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Webform'
+dependencies:
+  - webform:webform
+  - webform:webform_attachment
+  - drupal:file
+
+# Information added by Drupal.org packaging script on 2020-06-08
+version: '8.x-1.4'
+project: 'webform_attachment_gated_download'
+datestamp: 1591620093
