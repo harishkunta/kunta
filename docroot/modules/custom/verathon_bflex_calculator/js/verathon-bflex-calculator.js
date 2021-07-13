@@ -1,21 +1,32 @@
+const configValues = window.drupalSettings.config,
+    annual_oop_repair_factor_low = configValues.annual_oop_repair_factor_low ? configValues.annual_oop_repair_factor_low : 53,
+    annual_oop_repair_factor_high = configValues.annual_oop_repair_factor_high ? configValues.annual_oop_repair_factor_high : 148,
+    annual_oop_repair_factor_average = configValues.annual_oop_repair_factor_average ? configValues.annual_oop_repair_factor_average : 100,
+    reprocessing_range_low = configValues.reprocessing_range_low ? configValues.reprocessing_range_low : 50.14,
+    reprocessing_range_high = configValues.reprocessing_range_high ? configValues.reprocessing_range_high : 152.66,
+    reprocessing_range_average = configValues.reprocessing_range_average ? configValues.reprocessing_range_average : 101.43,
+    cross_contamination_factor_a = configValues.cross_contamination_factor_a ? configValues.cross_contamination_factor_a : 0.034,
+    cross_contamination_factor_b = configValues.cross_contamination_factor_b ? configValues.cross_contamination_factor_b : 0.2125,
+    cost_per_infection = configValues.cost_per_infection ? configValues.cost_per_infection : 28383;
+
 //to calculate maintenance cost
 function calculateMaintenanceCost() {
     var $totalprocedures = $('#edit-total-annual-bronchoscopy-procedures').val();
     var $repairstatus = $('#edit-annual-out-of-pocket-repair-cost').val();
-    var $repaircost = $repairstatus < 50 ? 53 : ($repairstatus > 50 ? 148 : 100);
+    var $repaircost = $repairstatus < 50 ? annual_oop_repair_factor_low : ($repairstatus > 50 ? annual_oop_repair_factor_high : annual_oop_repair_factor_average);
     $('.currentAnnualOopRepairAllFactor_slider').find('span').text(`$${Intl.NumberFormat().format($totalprocedures * $repaircost)}`);
 }
 //to calculate reprocessing cost
 function calculateReprocessingCost() {
     var $processingValue = $('#edit-reprocessing-costs-method').val();
-    var $processingCost = $processingValue < 50 ? 50.14 : ($processingValue > 50 ? 152.66 : 101.43);
+    var $processingCost = $processingValue < 50 ? reprocessing_range_low : ($processingValue > 50 ? reprocessing_range_high : reprocessing_range_average);
     $('.reprocessingCalcMethod_slider').find('span').text(`$${Intl.NumberFormat().format($processingCost)}`);
 }
 //to calculate cross contamination infection cost
 function calculateCrossContaminationInfectionCost() {
     var $totalProcedures = $('#edit-total-annual-bronchoscopy-procedures').val(),
-        $totalCost = Math.fround(($totalProcedures * 0.034 * 0.2125).toFixed(2)),
-        $annualTreatmentCost = Math.floor(($totalCost * 28383) + 0.5);
+        $totalCost = Math.fround(($totalProcedures * cross_contamination_factor_a * cross_contamination_factor_b).toFixed(2)),
+        $annualTreatmentCost = Math.floor(($totalCost * cost_per_infection) + 0.5);
     $('#estimatedNumberOfInfections_statistics').find('figure').text(Intl.NumberFormat().format($totalCost));
     $('#estimatedAnnualTreatmentCost_statistics').find('figure').text(`$${Intl.NumberFormat().format($annualTreatmentCost)}`);
 }
@@ -106,7 +117,7 @@ function validateInput(id, type) {
         }
     }
     let checkOverallErrors = false;
-    $(".error").each(function() {
+    $(".error").each(function () {
         if (($(this).css('display') == 'block') || ($(".error.active").length > 0)) {
             checkOverallErrors = true;
         }
@@ -149,13 +160,13 @@ function triggerAction(id, type) {
 }
 
 
-(function($, Drupal) {
+(function ($, Drupal) {
     console.log(Drupal.settings);
     //Behavior definition for tooltip.
     Drupal.behaviors.tooltip = {
-        attach: function(context, settings) {
-            $(".tooltip-icon", context).each(function() {
-                $(this).on('click', function() {
+        attach: function (context, settings) {
+            $(".tooltip-icon", context).each(function () {
+                $(this).on('click', function () {
                     triggerAction($(this).attr("id"), "tooltip")
                 });
             });
@@ -164,9 +175,9 @@ function triggerAction(id, type) {
 
     // Behavior Definition for Slider.
     Drupal.behaviors.slider = {
-        attach: function(context, settings) {
-            $(".slider", context).each(function() {
-                $(this).on('change', function() {
+        attach: function (context, settings) {
+            $(".slider", context).each(function () {
+                $(this).on('change', function () {
                     let sliderId = $(this).attr("id");
                     triggerAction(sliderId, "slider");
                     validateInput(sliderId, "sliderFieldInput");
@@ -183,9 +194,9 @@ function triggerAction(id, type) {
 
     // Behavior defination of Number calculations.
     Drupal.behaviors.number = {
-        attach: function(context, settings) {
-            $(".number", context).each(function() {
-                $(this).on('change', function() {
+        attach: function (context, settings) {
+            $(".number", context).each(function () {
+                $(this).on('change', function () {
                     let numberId = $(this).attr("id")
                     triggerAction(numberId, "number")
                     validateInput(numberId, "slider_numberFieldInput")
@@ -201,17 +212,17 @@ function triggerAction(id, type) {
 
     // Behavior definition for Textfield & Number box.
     Drupal.behaviors.input = {
-        attach: function(context, settings) {
-            $(".form-text", context).each(function() {
-                $(this).on('focusout', function() {
+        attach: function (context, settings) {
+            $(".form-text", context).each(function () {
+                $(this).on('focusout', function () {
                     let textFieldId = $(this).attr("id")
                     validateInput(textFieldId, "textFieldInput");
                     $("#" + textFieldId).attr("value", $("#" + textFieldId).val());
                 });
             });
 
-            $(".form-number", context).each(function() {
-                $(this).on('change', function() {
+            $(".form-number", context).each(function () {
+                $(this).on('change', function () {
                     let numberId = $(this).attr("id")
                     validateInput(numberId, "numberFieldInput")
                     $("#" + numberId).attr("value", $("#" + numberId).val());
