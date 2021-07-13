@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ae333a3ea981209c103e897427e05c5ed06fa233',
+    'reference' => '71d4f65c9e8a5d1803fce4cfeb152c7fa39bb3db',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ae333a3ea981209c103e897427e05c5ed06fa233',
+      'reference' => '71d4f65c9e8a5d1803fce4cfeb152c7fa39bb3db',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -1690,15 +1690,6 @@
       ),
       'reference' => '8.x-1.3',
     ),
-    'drupal/smtp' => 
-    array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8.x-1.0',
-    ),
     'drupal/social_media_links' => 
     array (
       'pretty_version' => '2.8.0',
@@ -2405,15 +2396,6 @@
       array (
       ),
       'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
-    ),
-    'phpmailer/phpmailer' => 
-    array (
-      'pretty_version' => 'v6.5.0',
-      'version' => '6.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'a5b5c43e50b7fba655f793ad27303cd74c57363c',
     ),
     'phpspec/prophecy' => 
     array (

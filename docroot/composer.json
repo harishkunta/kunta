@@ -37,7 +37,6 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/menu_item_extras": "^2.15",
         "drupal/paragraphs": "^1.12",
-        "drupal/smtp": "^1.0",
         "drupal/webform_attachment_gated_download": "^1.4",
         "drush/drush": "^10.5"
     },
