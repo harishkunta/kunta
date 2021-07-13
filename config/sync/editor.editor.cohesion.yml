@@ -35,6 +35,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - Iframe
         -
           name: Lists
           items:

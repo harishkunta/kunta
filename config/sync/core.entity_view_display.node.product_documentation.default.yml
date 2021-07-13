@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.product_documentation.body
     - field.field.node.product_documentation.field_document
     - field.field.node.product_documentation.field_document_format
     - field.field.node.product_documentation.field_event_published_on
@@ -15,20 +14,12 @@ dependencies:
   module:
     - datetime
     - options
-    - text
     - user
 id: node.product_documentation.default
 targetEntityType: node
 bundle: product_documentation
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_document:
     weight: 105
     label: hidden
