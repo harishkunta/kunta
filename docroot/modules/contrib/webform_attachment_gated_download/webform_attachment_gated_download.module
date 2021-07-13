@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains webform_attachment_gated_download.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\webform_attachment_gated_download\QueryParser;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webform_attachment_gated_download_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webform_attachment_gated_download module.
+    case 'help.page.webform_attachment_gated_download':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provide a gated download via webform') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function webform_attachment_gated_download_webform_submission_presave(Drupal\Core\Entity\EntityInterface $webform_submission) {
+  $fid = QueryParser::getFidFromUrlParameters();
+  $data = $webform_submission->getData();
+  $data['webform_attachment_gated_download_fid'] = $fid;
+  $webform_submission->setData($data);
+}
+
