@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '71d4f65c9e8a5d1803fce4cfeb152c7fa39bb3db',
+    'reference' => 'ca6661839e544edaf5fdc3f0c6b26e3d62058899',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '71d4f65c9e8a5d1803fce4cfeb152c7fa39bb3db',
+      'reference' => 'ca6661839e544edaf5fdc3f0c6b26e3d62058899',
     ),
     'acquia/acquia_cms' => 
     array (
