@@ -46,98 +46,6 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
       $form['#attached']['library'][] = 'verathon_customization/verathon_search';
     }
   }
-
-  /** Conditions to display filter values and views result */
-  if (($form_id === 'views_exposed_form') && ($form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' || 'views-exposed-form-product-support-cards-eol-devices') && (\Drupal::service('path.current')->getPath() === '/product-documentation' || '/eol-devices')) {
-    /**
-     * Database connection
-     */
-    $database = \Drupal::database();
-    //Request variable to fetch values from the URL
-    $request = \Drupal::request()->query;
-    //declaring a variable for Null Value
-    $null = ' ';
-
-    //Get all the query parameter values from the Request Variable
-    $brand = !empty($request->get('brand')) ? $request->get('brand') : '';
-    $product = !empty($request->get('product')) ? $request->get('product') : '';
-    $language = (empty($request->get('lang')) || ($request->get('lang') == 'All')) ? ' ' : $request->get('lang');
-    $document = (empty($request->get('doc_type')) || ($request->get('doc_type') == 'All')) ? ' ' : $request->get('doc_type');
-
-    //Adding Class to hide these fields (Brands & Products) on loading the page
-    $form['brand']['#attributes']['class'][] = 'product-document-brand d-none'; 
-    $form['product']['#attributes']['class'][] = 'product-document-product d-none'; 
-
-    // Find the dependent language and display those in the select list
-    $languages = _get_language($database, $product, $document, $null);
-    //To unset the independent values in the language select list
-    if (!empty($form['lang'])) {
-      foreach ($form['lang']['#options'] as $key => $value) {
-        if (!in_array($key, $languages) && $key !== 'All') {
-          unset($form['lang']['#options'][$key]);
-        }
-      }
-    }
-    // Rename the All option label for Language Filter.
-    $form['lang']['#options']['All'] = t('All Languages');
-
-    // Find the dependent document type and display those in the select list
-    $doc_types = _get_document_type($database, $product, $language, $null);
-    //To unset the independent values in the document type select list
-    if (!empty($form['doc_type'])) {
-      foreach ($form['doc_type']['#options'] as $key => $value) {
-        if (!in_array($key, $doc_types) && $key !== 'All') {
-          unset($form['doc_type']['#options'][$key]);
-        }
-      }
-    }
-    // Rename the All option label for Document Type Filter.
-    $form['doc_type']['#options']['All'] = t('All Documents'); 
-  }
-}
-
-/**
- *  Returns the language ids based on the Product and document selected. If document is not selected, all the languages mapped to the product will get listed
- */
-function _get_language($database, $product, $document, $null) {
-  $lang_result = $database->select('node__field_language', 'nfl');
-  $lang_result->fields('nfl', array('field_language_target_id'));
-  $lang_result->join('node__field_product_documentation', 'nfpd', 'nfl.entity_id = nfpd.field_product_documentation_target_id');
-  //When page loads without document type selection
-  if ($document == $null) {
-    $lang_result->condition('nfpd.entity_id', $product, '=');
-    $language_ids = $lang_result->execute()->fetchCol();
-  }
-  //when page loads with document type selected
-  if (is_numeric($document)){
-    $lang_result->join('node__field_document', 'nfd', 'nfpd.field_product_documentation_target_id = nfd.entity_id');
-    $lang_result->condition('nfd.field_document_target_id', $document, '=');
-    $lang_result->condition('nfpd.entity_id', $product, '=');
-    $language_ids = $lang_result->execute()->fetchCol();
-  }
-  return $language_ids;
-}
-
-/**
- *  Returns the document type ids based on the Product and language selected. If language is not selected, all the document types mapped to the product will get listed
- */
-function _get_document_type($database, $product, $language, $null) {
-  $lang_result = $database->select('node__field_document', 'nfd');
-  $lang_result->fields('nfd', array('field_document_target_id'));
-  $lang_result->join('node__field_product_documentation', 'nfpd', 'nfd.entity_id = nfpd.field_product_documentation_target_id');
-  //When page loads without language selection
-  if ($language == $null) {
-    $lang_result->condition('nfpd.entity_id', $product, '=');
-    $document_type_ids = $lang_result->execute()->fetchCol();
-  }
-  //when page loads with language selected
-  if (is_numeric($language)) {
-    $lang_result->join('node__field_language', 'nfl', 'nfpd.field_product_documentation_target_id = nfl.entity_id');
-    $lang_result->condition('nfl.field_language_target_id', $language, '=');
-    $lang_result->condition('nfpd.entity_id', $product, '=');
-    $document_type_ids = $lang_result->execute()->fetchCol();
-  }
-  return $document_type_ids;
 }
 
 /**
@@ -184,12 +92,49 @@ function verathon_customization_preprocess_html(array &$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-devices' ) {
+  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-devices' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-eol-product-documentation-list');
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-container-boxed');
-
+    $form = change_labels($form);
   }
-  if ( !empty($form) && $form_id === 'views_exposed_form' &&  $form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' ) {
+  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
+    $form = change_labels($form);
   }
+}
+
+/**
+ * Function to change the title value from a view
+ */
+function changetitlevalue($title) {
+  return (strtolower(preg_replace('/[[:space:]]+/', '-', htmlspecialchars_decode($title))));
+}
+/**
+ * Implements hook_preprocess_views_view_field()
+ * Preprocess vars for views-view-field.tpl.php.
+ */
+function verathon_customization_preprocess_views_view_field(&$vars) {
+  if ($vars['view']->current_display == 'product_support_card' && $vars['field']->options['id'] == 'title') {
+    $title_value = $vars['field']->original_value;
+    $vars['output'] = changetitlevalue($title_value);
+    $vars['field']->last_render = $vars['output'];
+  }
+  if ($vars['view']->current_display == 'legacy_product_list' && $vars['field']->options['id'] == 'title') {
+    $title_value = $vars['field']->original_value;
+    $vars['output'] = changetitlevalue($title_value);
+    $vars['field']->last_render = $vars['output'];
+  }
+}
+
+/**
+ * Change Labels for the default value in the exposed form select list
+ */
+function change_labels($form) {
+  if(isset($form['lang'])) {
+    $form['lang']['#options']['All'] = t('All Languages');
+  }
+  if(isset($form['doc_type'])) {
+    $form['doc_type']['#options']['All'] = t('All Documents');
+  }
+  return $form;
 }
