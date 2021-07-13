@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'ca6661839e544edaf5fdc3f0c6b26e3d62058899',
+    'reference' => 'c66d366d8c8d7b6a19c27ed23738ef21f504cf92',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -44,7 +44,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'ca6661839e544edaf5fdc3f0c6b26e3d62058899',
+      'reference' => 'c66d366d8c8d7b6a19c27ed23738ef21f504cf92',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -1865,24 +1865,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '6.0.3',
-    ),
-    'drupal/webform_attachment' => 
-    array (
-      'pretty_version' => '6.0.4',
-      'version' => '6.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => NULL,
-    ),
-    'drupal/webform_attachment_gated_download' => 
-    array (
-      'pretty_version' => '1.4.0',
-      'version' => '1.4.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8.x-1.4',
     ),
     'drupal/workbench_email' => 
     array (

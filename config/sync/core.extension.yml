@@ -151,10 +151,6 @@ module:
   verathon_customization: 0
   views_ui: 0
   webform: 0
-  webform_attachment: 0
-  webform_attachment_gated_download: 0
-  webform_entity_print: 0
-  webform_entity_print_attachment: 0
   webform_ui: 0
   workbench_email: 0
   workflows: 0
