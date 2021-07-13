@@ -966,10 +966,10 @@ display:
           plugin_id: field
       footer: {  }
       arguments:
-        nid:
-          id: nid
+        title:
+          id: title
           table: node_field_data
-          field: nid
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -980,11 +980,10 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: query_parameter
+          default_argument_type: raw
           default_argument_options:
-            query_param: product
-            fallback: all
-            multiple: and
+            index: 1
+            use_alias: true
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -1000,11 +999,15 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          break_phrase: true
-          not: false
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: true
+          break_phrase: false
           entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
+          entity_field: title
+          plugin_id: string
       title: 'EOL Device'
       block_description: 'EOL Device'
       filters:
@@ -1123,6 +1126,8 @@ display:
         exposed_form: false
         empty: false
         css_class: false
+        arguments: false
+        use_ajax: false
       style:
         type: default
         options:
@@ -1468,7 +1473,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"product-support-detail\">\r\n        <div class=\"support-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n             <div class=\"download\">\r\n              <a href=\"{{field_media}}\" class=\"link\">Download</a>\r\n              <a class=\"link-sign\" href=\"{{field_media}}\" class=\"img\"><i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
+            text: "<div class=\"product-support-detail\">\r\n        <div class=\"support-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n             <div class=\"download\">\r\n              <a href=\"{{field_media}}\" class=\"link\" target=\"_blank\">Download</a>\r\n              <a class=\"link-sign\" href=\"{{field_media}}\" class=\"img\" target=\"_blank\"><i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
             make_link: false
             path: ''
             absolute: false
@@ -1558,40 +1563,31 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_product_line_target_id:
-          id: field_product_line_target_id
-          table: node__field_product_line
-          field: field_product_line_target_id
+        field_no_longer_supported_value:
+          id: field_no_longer_supported_value
+          table: node__field_no_longer_supported
+          field: field_no_longer_supported_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: '='
+          value: '1'
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: field_product_line_target_id_op
+            operator_id: ''
             label: ''
             description: ''
             use_operator: false
-            operator: field_product_line_target_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: brand
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              administrator: '0'
-              developer: '0'
-              site_builder: '0'
-              content_administrator: '0'
-              content_author: '0'
-              content_editor: '0'
-              user_administrator: '0'
-              anonymous: '0'
-            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -1604,13 +1600,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: product_line
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          plugin_id: boolean
         nid:
           id: nid
           table: node_field_data
@@ -1797,15 +1787,8 @@ display:
               input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
-              secondary_open: false
+              secondary_open: true
             filter:
-              field_product_line_target_id:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
               nid:
                 plugin_id: default
                 advanced:
@@ -1817,14 +1800,14 @@ display:
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
-                  is_secondary: false
+                  is_secondary: true
               field_document_target_id:
                 plugin_id: default
                 advanced:
                   rewrite:
                     filter_rewrite_values: ''
                   collapsible: false
-                  is_secondary: false
+                  is_secondary: true
       empty:
         area:
           id: area
@@ -1836,10 +1819,54 @@ display:
           empty: true
           tokenize: false
           content:
-            value: '<h3>No Document found for this Product </h3>'
+            value: '<div class="coh-container-boxed"><h3>No Document found for this Product </h3></div>'
             format: filtered_html
           plugin_id: text
       css_class: 'coh-style-eol-product-documentation-list coh-container-boxed'
+      arguments:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: true
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: true
+          break_phrase: false
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -2078,9 +2105,9 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<a href="/eol-devices?brand={{tid}}&product={{nid}}">{{title}}</a>'
             make_link: false
             path: ''
@@ -2114,6 +2141,71 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        title_1:
+          id: title_1
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/eol-devices/{{title}}">{{title_1}}</a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -2277,10 +2369,10 @@ display:
       block_description: 'Product Banner'
       title: 'Product Banner'
       arguments:
-        nid:
-          id: nid
+        title:
+          id: title
           table: node_field_data
-          field: nid
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -2291,11 +2383,10 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: query_parameter
+          default_argument_type: raw
           default_argument_options:
-            query_param: product
-            fallback: All
-            multiple: and
+            index: 1
+            use_alias: true
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -2311,11 +2402,15 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: true
           break_phrase: false
-          not: false
           entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
+          entity_field: title
+          plugin_id: string
       fields:
         field_media:
           id: field_media
@@ -2549,6 +2644,8 @@ display:
         exposed_form: false
         empty: false
         css_class: false
+        arguments: false
+        use_ajax: false
       style:
         type: default
         options:
@@ -2894,7 +2991,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"download\">\r\n              <a href=\"{{field_media}}\" class=\"link\">Download</a>\r\n              <a class=\"link-sign\" href=\"{{field_media}}\" class=\"img\"><i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
+            text: "<div class=\"product-support-detail\">\r\n        <div class=\"supoort-detail-border\">\r\n            <h2>{{ title }}</h2>\r\n            <div class=\"table-block\">\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Type:</span>\r\n                    <span class=\"last\">{{ field_document }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Brand:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\">Product:</span>\r\n                    <span class=\"last\">{{ field_product_line }}</span>\r\n                    <span class=\"last\">{{ title_1 }}</span>\r\n                </div>\r\n                <div class=\"table-line\">\r\n                    <span class=\"first\"></span>\r\n                    <span class=\"last-item\">{{ field_event_published_on }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"download\">\r\n              <a href=\"{{field_media}}\" class=\"link\" target=\"_blank\">Download</a>\r\n              <a class=\"link-sign\" href=\"{{field_media}}\" class=\"img\" target=\"_blank\"><i class=\"fa fa-download\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>"
             make_link: false
             path: ''
             absolute: false
@@ -2984,59 +3081,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_product_line_target_id:
-          id: field_product_line_target_id
-          table: node__field_product_line
-          field: field_product_line_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_product_line_target_id_op
-            label: ''
-            description: ''
-            use_operator: false
-            operator: field_product_line_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: brand
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              developer: '0'
-              site_builder: '0'
-              content_administrator: '0'
-              content_author: '0'
-              content_editor: '0'
-              user_administrator: '0'
-              anonymous: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: product_line
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         nid:
           id: nid
           table: node_field_data
@@ -3053,7 +3097,7 @@ display:
           exposed: true
           expose:
             operator_id: nid_op
-            label: ''
+            label: ID
             description: ''
             use_operator: false
             operator: nid_op
@@ -3262,10 +3306,54 @@ display:
           empty: true
           tokenize: false
           content:
-            value: '<h3>No Document found for this Product </h3>'
+            value: '<div class="coh-container-boxed"><h3>No Document found for this Product </h3></div>'
             format: filtered_html
           plugin_id: text
       css_class: coh-style-product-documentation-form-and-list
+      arguments:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: true
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: true
+          break_phrase: false
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -3470,72 +3558,6 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
-          relationship: field_product_line
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -3556,8 +3578,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
+          entity_type: node
+          entity_field: nid
           plugin_id: field
         title:
           id: title
@@ -3567,10 +3589,10 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: "<div class=\"product-line\">\r\n<a href=\"/product-documentation?brand={{tid}}&product={{nid}}\" class=\"product\"> {{ field_media }} <p>{{ title }}</p> </a>\r\n</div>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -3605,6 +3627,71 @@ display:
           element_default_classes: false
           empty: ''
           hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        title_1:
+          id: title_1
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"product-line\">\r\n<a href=\"/product-documentation/{{title}}\" class=\"product\"> {{ field_media }} <p>{{ title_1 }}</p> </a>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63cccee9eed26e1448ccbcec9bbda1f8",
+    "content-hash": "fcd36ecea321f126bfea2ae91bbaf38d",
     "packages": [
         {
             "name": "acquia/acquia_cms",
@@ -8010,108 +8010,6 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
-            }
-        },
-        {
-            "name": "drupal/webform_attachment",
-            "version": "6.0.4",
-            "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/webform": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "6.0.4",
-                    "datestamp": "1624461046",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "DanChadwick",
-                    "homepage": "https://www.drupal.org/user/504278"
-                },
-                {
-                    "name": "Liam Morland",
-                    "homepage": "https://www.drupal.org/user/493050"
-                },
-                {
-                    "name": "jrockowitz",
-                    "homepage": "https://www.drupal.org/user/371407"
-                },
-                {
-                    "name": "quicksketch",
-                    "homepage": "https://www.drupal.org/user/35821"
-                },
-                {
-                    "name": "torotil",
-                    "homepage": "https://www.drupal.org/user/865256"
-                }
-            ],
-            "description": "Provides an element that generates or loads a file that can be attached to a submission or email.",
-            "homepage": "https://www.drupal.org/project/webform",
-            "support": {
-                "source": "https://git.drupalcode.org/project/webform"
-            }
-        },
-        {
-            "name": "drupal/webform_attachment_gated_download",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/webform_attachment_gated_download.git",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_attachment_gated_download-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "201bd056e0b24a8ca39b119d286b92b533756537"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/webform": "*",
-                "drupal/webform_attachment": "*"
-            },
-            "require-dev": {
-                "drupal/webform": "^5.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1591620091",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "David Whitchurch-Bennett (Dubs)",
-                    "homepage": "https://www.drupal.org/u/dubs",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Provide a formatter linking to a gated webform, attaching the file via the webform email handler.",
-            "homepage": "https://drupal.org/project/webform_attachment_gated_download",
-            "support": {
-                "source": "https://git.drupalcode.org/project/webform_attachment_gated_download",
-                "issues": "https://www.drupal.org/project/issues/webform_attachment_gated_download?version=8.x",
-                "forum": "https://drupal.stackexchange.com/questions/tagged/webform_attachment_gated_download"
             }
         },
         {
