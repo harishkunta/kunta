@@ -112,6 +112,7 @@ function _get_language($database, $product, $document, $null) {
   if (is_numeric($document)){
     $lang_result->join('node__field_document', 'nfd', 'nfpd.field_product_documentation_target_id = nfd.entity_id');
     $lang_result->condition('nfd.field_document_target_id', $document, '=');
+    $lang_result->condition('nfpd.entity_id', $product, '=');
     $language_ids = $lang_result->execute()->fetchCol();
   }
   return $language_ids;
@@ -133,6 +134,7 @@ function _get_document_type($database, $product, $language, $null) {
   if (is_numeric($language)) {
     $lang_result->join('node__field_language', 'nfl', 'nfpd.field_product_documentation_target_id = nfl.entity_id');
     $lang_result->condition('nfl.field_language_target_id', $language, '=');
+    $lang_result->condition('nfpd.entity_id', $product, '=');
     $document_type_ids = $lang_result->execute()->fetchCol();
   }
   return $document_type_ids;

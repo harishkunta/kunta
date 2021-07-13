@@ -2081,7 +2081,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/eol-devices?brand={{tid}}&product[0]={{nid}}">{{title}}</a>'
+            text: '<a href="/eol-devices?brand={{tid}}&product={{nid}}">{{title}}</a>'
             make_link: false
             path: ''
             absolute: false
