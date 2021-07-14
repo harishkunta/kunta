@@ -67,6 +67,7 @@ function verathon_customization_preprocess_html(array &$variables) {
   $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
   $alias_args = explode('/', $alias);
   $alias_args = array_filter($alias_args);
+  $siteSection = $alias_args[1] ?? '';
 
   if ($path_args[1] == 'node' && is_numeric($path_args[2])) {
     $node = Node::load($path_args[2]);
@@ -77,7 +78,9 @@ function verathon_customization_preprocess_html(array &$variables) {
         $pageCategory = 'Product';
       }
     }
-    $siteSection = $alias_args[1] ?? '';
+  }
+  else {
+    $pageCategory = 'sitepage';
   }
 
   $script = Markup::create("dataLayer = [{

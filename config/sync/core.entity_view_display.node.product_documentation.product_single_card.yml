@@ -4,7 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.product_single_card
-    - field.field.node.product_documentation.body
     - field.field.node.product_documentation.field_document
     - field.field.node.product_documentation.field_document_format
     - field.field.node.product_documentation.field_event_published_on
@@ -14,20 +13,12 @@ dependencies:
     - field.field.node.product_documentation.field_media
     - node.type.product_documentation
   module:
-    - text
     - user
 id: node.product_documentation.product_single_card
 targetEntityType: node
 bundle: product_documentation
 mode: product_single_card
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_document:
     weight: 105
     label: hidden
