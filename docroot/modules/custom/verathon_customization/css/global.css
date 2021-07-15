@@ -94,8 +94,8 @@
     width: 100%;
   }
 
-  .search-results-container .search form .form-type-select,
-  .search-results-container .search form .form-item .form-text {
+  div.search-results-container .search form .form-type-select,
+  div.search-results-container .search form .form-item .form-text {
     border: 1px solid;
   }
 }
