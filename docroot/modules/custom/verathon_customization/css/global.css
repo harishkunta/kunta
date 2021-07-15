@@ -68,6 +68,11 @@
   background-repeat: no-repeat;
 }
 
+/* Loader CSS - Search Box */
+form .form-item input.form-text {
+  background-image: none;
+}
+
 /* Search Related CSS */
 .search form .form-type-select select {
   cursor: pointer;
