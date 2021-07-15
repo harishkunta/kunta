@@ -68,9 +68,36 @@
   background-repeat: no-repeat;
 }
 
-/* Search Select Cursor type */
+/* Search Related CSS */
 .search form .form-type-select select {
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .search-results-container .search form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .search-results-container .search form>* {
+    margin-bottom: 0.75rem;
+  }
+
+  .search-results-container .coh-container .coh-container {
+    padding: 0;
+  }
+
+  .search-results-container .search input.form-autocomplete,
+  .search-results-container .search form :is(.form-submit, .form-type-select select) {
+    width: 100%;
+  }
+
+  .search-results-container .search form .form-type-select,
+  .search-results-container .search form .form-item .form-text {
+    border: 1px solid;
+  }
 }
 
 /* Added Padding Adjustment Capability for Product Card, Category Features, Support, Guides and Articles */
