@@ -1,0 +1,18 @@
+uuid: 4cbccce6-c88c-40d3-a71c-c0227b26d81e
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_horizontal_card
+label: 'Horizontal card (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: horizontal_card
+master_template: ''

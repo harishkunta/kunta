@@ -1,0 +1,32 @@
+uuid: 7a6dd0fa-e07d-4eec-a899-a484c96dee8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gated_form
+    - node.type.product_documentation
+    - webform.webform.request_a_quote
+  module:
+    - webform
+id: node.product_documentation.field_gated_form
+field_name: field_gated_form
+entity_type: node
+bundle: product_documentation
+label: 'Gated Form'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: closed
+    open: ''
+    close: ''
+    target_uuid: 33995ee0-6f6a-4d87-93c6-839dedb08d05
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

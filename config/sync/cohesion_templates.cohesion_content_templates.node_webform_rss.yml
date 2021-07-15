@@ -1,0 +1,18 @@
+uuid: 1ac5828f-96ff-4ba8-ab09-2940676e44ce
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_rss
+label: 'RSS (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: rss
+master_template: ''

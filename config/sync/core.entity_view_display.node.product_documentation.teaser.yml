@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.product_documentation.field_document_format
     - field.field.node.product_documentation.field_event_published_on
     - field.field.node.product_documentation.field_final_doc
+    - field.field.node.product_documentation.field_gated_form
     - field.field.node.product_documentation.field_language
     - field.field.node.product_documentation.field_market
     - field.field.node.product_documentation.field_media
@@ -32,6 +33,7 @@ hidden:
   field_document_format: true
   field_event_published_on: true
   field_final_doc: true
+  field_gated_form: true
   field_language: true
   field_market: true
   field_media: true

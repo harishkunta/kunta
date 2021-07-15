@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.product_documentation.field_document_format
     - field.field.node.product_documentation.field_event_published_on
     - field.field.node.product_documentation.field_final_doc
+    - field.field.node.product_documentation.field_gated_form
     - field.field.node.product_documentation.field_language
     - field.field.node.product_documentation.field_market
     - field.field.node.product_documentation.field_media
@@ -14,6 +15,7 @@ dependencies:
   module:
     - datetime
     - media_library
+    - webform
 id: node.product_documentation.default
 targetEntityType: node
 bundle: product_documentation
@@ -44,6 +46,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_gated_form:
+    weight: 31
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
     region: content
   field_language:
     weight: 16
