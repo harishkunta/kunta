@@ -1,0 +1,29 @@
+uuid: f84b5351-3b29-459a-9ef3-5f88891603a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_parent
+    - node.type.news
+    - node.type.page
+id: node.news.field_select_parent
+field_name: field_select_parent
+entity_type: node
+bundle: news
+label: 'Select Parent Page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
