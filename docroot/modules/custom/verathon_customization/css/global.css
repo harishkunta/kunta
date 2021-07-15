@@ -68,6 +68,11 @@
   background-repeat: no-repeat;
 }
 
+/* Search Select Cursor type */
+.search form .form-type-select select {
+  cursor: pointer;
+}
+
 /* Added Padding Adjustment Capability for Product Card, Category Features, Support, Guides and Articles */
 .coh-container .no-padding {
   padding-top: 0;
