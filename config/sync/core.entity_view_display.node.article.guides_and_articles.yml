@@ -23,13 +23,9 @@ dependencies:
     - field.field.node.article.field_year
     - node.type.article
   module:
-    - entity_print
     - link
     - text
     - user
-third_party_settings:
-  entity_print:
-    pdf_label: 'View PDF'
 _core:
   default_config_hash: R0NQG5cnJoSsZIZmF0JJaGQatVKJHpQiRyXN16sUKQo
 id: node.article.guides_and_articles

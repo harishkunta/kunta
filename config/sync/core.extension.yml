@@ -50,7 +50,6 @@ module:
   diff: 0
   editor: 0
   entity_clone: 0
-  entity_print: 0
   entity_reference_revisions: 0
   example_element: 0
   facets: 0
@@ -151,8 +150,8 @@ module:
   verathon_customization: 0
   views_ui: 0
   webform: 0
+  webform_node: 0
   webform_ui: 0
-  workbench_email: 0
   workflows: 0
   pathauto: 1
   content_translation: 10

@@ -1,0 +1,18 @@
+uuid: bbe34503-aab9-4031-948f-d478ae27d295
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_full
+label: 'Full content (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: full
+master_template: ''
