@@ -122,7 +122,6 @@ module:
   schema_metatag: 0
   schema_person: 0
   schema_place: 0
-  search: 0
   search_api: 0
   search_api_autocomplete: 0
   search_api_db: 0
