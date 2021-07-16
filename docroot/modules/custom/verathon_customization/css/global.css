@@ -78,6 +78,10 @@ form .form-item input.form-text {
   cursor: pointer;
 }
 
+form .form-select:not(.editor):focus-visible {
+  outline: none;
+}
+
 @media screen and (max-width: 480px) {
   .search-results-container .search form {
     -webkit-box-orient: vertical;
