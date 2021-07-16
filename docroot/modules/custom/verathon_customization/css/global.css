@@ -90,10 +90,6 @@ form .form-item input.form-text {
     margin-bottom: 0.75rem;
   }
 
-  .search-results-container .coh-container .coh-container {
-    padding: 0;
-  }
-
   .search-results-container .search input.form-autocomplete,
   .search-results-container .search form :is(.form-submit, .form-type-select select) {
     width: 100%;
