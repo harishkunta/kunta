@@ -1,7 +1,9 @@
 uuid: e3b5b027-bfaf-4d2f-9cb9-f747b77bd18c
 langcode: en
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - verathon_bflex_calculator
 open: null
 close: null
 weight: 0
@@ -25,7 +27,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -94,7 +96,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -191,5 +193,14 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  bflex_custom_handler:
+    id: bflex_calculator
+    label: 'Bflex - Custom Handler'
+    notes: ''
+    handler_id: bflex_custom_handler
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
 variants: {  }

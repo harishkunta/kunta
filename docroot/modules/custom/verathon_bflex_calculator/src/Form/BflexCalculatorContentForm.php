@@ -76,6 +76,14 @@ class BflexCalculatorContentForm extends ConfigFormBase
       ],
       '#default_value' => $config['scroll_text'],
     ];
+    $form['global']['bflex_pardot_url'] = [
+      '#type' => 'url',
+      '#title' => $this->t('Bflex - Pardot URL'),
+      '#attributes' => [
+        'placeholder' => $this->t('Enter Pardot URL for Bflex Gating Form.'),
+      ],
+      '#default_value' => $config['bflex_pardot_url'],
+    ];
     // Step One Section Fields.
     $form['step_one'] = [
       '#type' => 'details',
@@ -320,10 +328,11 @@ class BflexCalculatorContentForm extends ConfigFormBase
         ->set('facility_name_error_text', $form_state->getValue('facility_name_error_text'))
         ->set('total_reusable_bronchoscopes_error_text', $form_state->getValue('total_reusable_bronchoscopes_error_text'))
         ->set('scroll_text', $form_state->getValue('scroll_text'))
+        ->set('bflex_pardot_url', $form_state->getValue('bflex_pardot_url'))
         ->save();
       parent::submitForm($form, $form_state);
     } catch (\Exception $e) {
-      \Drupal::messagener()->error($e->getMessage());
+      \Drupal::messenger()->addError($e->getMessage());
     }
   }
 }
