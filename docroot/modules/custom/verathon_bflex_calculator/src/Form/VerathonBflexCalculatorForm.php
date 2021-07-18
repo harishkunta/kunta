@@ -36,7 +36,7 @@ class VerathonBflexCalculatorForm extends FormBase
     if (!empty($_COOKIE['calculator_args'])) {
       // Parsing String from HTTP_QUERY.
       parse_str($_COOKIE['calculator_args'], $arguments);
-
+      $form['#form_values'] = $arguments;
       $form['#calculations'] = \Drupal::service('verathon_bflex_calculator.calculator')->calculate(
         $arguments['facilityName'],
         (int) $arguments['totalProcedures'],
@@ -59,8 +59,9 @@ class VerathonBflexCalculatorForm extends FormBase
         'caoraf' => (int) $arguments['currentAnnualOopRepairAllFactor'],
       ]);
       $form['#pdf_url'] = $url;
+
       // Removing the temporary storage.
-      $temp_storage->delete('calculator_args');
+      setcookie("calculator_args", null, -1);
     }
     // If opening first time.
     else {

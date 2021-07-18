@@ -47,6 +47,9 @@ display:
         type:
           expose:
             label: 'Type de contenu'
+        moderation_state:
+          expose:
+            label: 'État de modération'
         langcode:
           expose:
             label: Langue

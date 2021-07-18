@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.product_documentation.field_document_format
     - field.field.node.product_documentation.field_event_published_on
     - field.field.node.product_documentation.field_final_doc
-    - field.field.node.product_documentation.field_gated_form
     - field.field.node.product_documentation.field_language
     - field.field.node.product_documentation.field_market
     - field.field.node.product_documentation.field_media
@@ -16,29 +15,28 @@ dependencies:
     - datetime
     - options
     - user
-    - webform
 id: node.product_documentation.default
 targetEntityType: node
 bundle: product_documentation
 mode: default
 content:
   field_document:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: above
+    weight: 105
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_document_format:
-    weight: 6
+    weight: 110
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_event_published_on:
-    weight: 3
+    weight: 107
     label: above
     settings:
       format_type: medium
@@ -47,23 +45,15 @@ content:
     type: datetime_default
     region: content
   field_final_doc:
-    weight: 4
+    weight: 108
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_gated_form:
-    weight: 7
-    label: above
-    settings:
-      source_entity: true
-    third_party_settings: {  }
-    type: webform_entity_reference_entity_view
-    region: content
   field_language:
-    weight: 1
+    weight: 102
     label: hidden
     settings:
       link: true
@@ -71,14 +61,22 @@ content:
     type: entity_reference_label
     region: content
   field_market:
-    weight: 5
+    weight: 109
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
+  field_media:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
-    weight: 0
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -86,6 +84,5 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
-  field_media: true
   langcode: true
   search_api_excerpt: true

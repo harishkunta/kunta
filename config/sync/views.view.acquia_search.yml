@@ -400,7 +400,7 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<div class="views-field views-field-body"><span class="field-content">{{ body }}</span></div>'
             make_link: false
             path: ''
@@ -416,7 +416,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 400
+            max_length: 100
             word_boundary: true
             ellipsis: true
             more_link: false

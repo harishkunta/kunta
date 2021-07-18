@@ -8,7 +8,6 @@ dependencies:
     - node
     - taxonomy
     - search_api
-    - media
   config:
     - field.storage.node.body
     - field.storage.node.field_article_type
@@ -294,18 +293,15 @@ field_settings:
       module:
         - node
 datasource_settings:
-  'entity:media':
+  'entity:node':
     bundles:
       default: false
       selected:
-        - document
-    languages:
-      default: true
-      selected: {  }
-  'entity:node':
-    bundles:
-      default: true
-      selected: {  }
+        - article
+        - event
+        - page
+        - person
+        - place
     languages:
       default: true
       selected: {  }
@@ -415,8 +411,8 @@ processor_settings:
       preprocess_query: -3
 tracker_settings:
   default:
-    indexing_order: lifo
+    indexing_order: fifo
 options:
   index_directly: true
-  cron_limit: 100
+  cron_limit: 50
 server: acquia_search_server
