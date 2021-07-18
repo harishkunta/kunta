@@ -9,6 +9,11 @@
  * @see https://www.drupal.org/node/2217931
  */
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\social_media_links\Plugin\SocialMediaLinks\Platform\Drupal;
+
 /**
  * @inheritDoc
  *
@@ -16,6 +21,7 @@
  */
 function verathon_bflex_calculator_theme_suggestions_form_alter(&$suggestions, $variables)
 {
+
   if ($variables['theme_hook_original'] == 'form') {
     $suggestions[] = 'form__' . $variables['element']['#form_id'];
   }
