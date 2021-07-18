@@ -30,7 +30,6 @@ class VerathonBflexCalculatorForm extends FormBase
   {
 
     $config = \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get();
-    $temp_storage = \Drupal::service('tempstore.private')->get('verathon_bflex_calculator');
     $form['#strings'] = $config;
     // check if form has been submitted.
     if (!empty($_COOKIE['calculator_args'])) {
