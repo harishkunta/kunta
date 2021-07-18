@@ -2,9 +2,12 @@
 
 namespace Drupal\verathon_bflex_calculator\Form;
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\InvokeCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\Cookie;
 
 /**
  * Provides a Verathon Bflex Calculator form.
@@ -25,13 +28,15 @@ class VerathonBflexCalculatorForm extends FormBase
    */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
+
     $config = \Drupal::service('config.factory')->getEditable('verathon_bflex_calculator.settings')->get();
-    $values = $form_state->getValues();
+    $temp_storage = \Drupal::service('tempstore.private')->get('verathon_bflex_calculator');
     $form['#strings'] = $config;
     // check if form has been submitted.
-    if ($form_state->has('submitted') && $form_state->get('submitted')) {
-      $form['#form_values'] = $values;
-      $arguments = $form_state->get('calculator_args');
+    if (!empty($_COOKIE['calculator_args'])) {
+      // Parsing String from HTTP_QUERY.
+      parse_str($_COOKIE['calculator_args'], $arguments);
+
       $form['#calculations'] = \Drupal::service('verathon_bflex_calculator.calculator')->calculate(
         $arguments['facilityName'],
         (int) $arguments['totalProcedures'],
@@ -54,6 +59,8 @@ class VerathonBflexCalculatorForm extends FormBase
         'caoraf' => (int) $arguments['currentAnnualOopRepairAllFactor'],
       ]);
       $form['#pdf_url'] = $url;
+      // Removing the temporary storage.
+      $temp_storage->delete('calculator_args');
     }
     // If opening first time.
     else {
@@ -167,8 +174,12 @@ class VerathonBflexCalculatorForm extends FormBase
       $form['actions']['submit'] = [
         '#type' => 'submit',
         '#value' => $config['result_button_label'] ? $config['result_button_label'] : 'See Results',
+        '#ajax' => [
+          'callback' => '::ajaxCallback',
+        ],
       ];
     }
+
 
     $form['#attached']['library'][] = 'verathon_bflex_calculator/verathon_bflex_calculator';
     $form['#attached']['drupalSettings']['config'] = $config;
@@ -176,16 +187,6 @@ class VerathonBflexCalculatorForm extends FormBase
     $form['#theme'] = 'form__verathon_bflex_calculator_verathon_bflex_calculator';
     $form['#config'] = $config;
     return $form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
-    // if (mb_strlen($form_state->getValue('message')) < 10) {
-    //   $form_state->setErrorByName('name', $this->t('Message should be at least 10 characters.'));
-    // }
   }
 
   /**
@@ -205,8 +206,23 @@ class VerathonBflexCalculatorForm extends FormBase
       'reprocessingCalcMethod' => $submission_values['reprocessing_costs_method'],
       'currentAnnualOopRepairAllFactor' => $submission_values['annual_out_of_pocket_repair_cost'],
     ];
+
     $form_state->set('calculator_args', $values);
 
+    // setcookie("calculator_args", implode(",", $values), $arr_cookie_options);
+    setcookie("calculator_args", http_build_query($values), time() + 3600) or die('unable to create cookie');
+    $temp_storage = \Drupal::service('tempstore.private')->get('verathon_bflex_calculator');
+    $temp_storage->set('calculator_args', $values);
     $form_state->set('submitted', true)->setRebuild(true);
+  }
+
+  /**
+   * A custom callback for the AJAX handler.`
+   */
+  public function ajaxCallback(array &$form, FormStateInterface $form_state)
+  {
+    $response = new AjaxResponse();
+    $response->addCommand(new InvokeCommand('.form-button-bflex', 'click'));
+    return $response;
   }
 }

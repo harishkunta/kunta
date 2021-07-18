@@ -159,9 +159,12 @@ function triggerAction(id, type) {
     }
 }
 
+// This method is created to submit the BFlex form.
 
+// Final Trigger for the module's js code execution.
 (function ($, Drupal) {
-    console.log(Drupal.settings);
+
+
     //Behavior definition for tooltip.
     Drupal.behaviors.tooltip = {
         attach: function (context, settings) {
