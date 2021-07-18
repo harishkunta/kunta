@@ -23,8 +23,12 @@ dependencies:
     - field.field.node.article.field_year
     - node.type.article
   module:
+    - entity_print
     - text
     - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
 _core:
   default_config_hash: 5SHfv58oIIGADRSnSrHpaDcVsSFOR75hikf8rb6WRbo
 id: node.article.card

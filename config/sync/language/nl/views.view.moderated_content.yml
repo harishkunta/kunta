@@ -47,6 +47,9 @@ display:
         type:
           expose:
             label: Inhoudstype
+        moderation_state:
+          expose:
+            label: Moderatiestatus
         langcode:
           expose:
             label: Taal
