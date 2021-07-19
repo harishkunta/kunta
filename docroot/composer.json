@@ -30,6 +30,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/asset_injector": "^2.7",
         "drupal/better_exposed_filters": "^5.0",
+        "drupal/block_exclude_pages": "^2.0",
         "drupal/config_ignore": "^2.3",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
