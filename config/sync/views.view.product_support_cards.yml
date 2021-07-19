@@ -977,7 +977,7 @@ display:
           title: ''
           default_argument_type: raw
           default_argument_options:
-            index: 1
+            index: 2
             use_alias: true
           default_argument_skip_url: false
           summary_options:
@@ -1107,7 +1107,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      path: eol-devices
+      path: service-and-support/eol-devices
       title: 'EOL Product Documentation'
       defaults:
         title: false
@@ -1836,7 +1836,7 @@ display:
           title: ''
           default_argument_type: raw
           default_argument_options:
-            index: 1
+            index: 2
             use_alias: true
           default_argument_skip_url: false
           summary_options:
@@ -2191,7 +2191,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/eol-devices/{{title}}">{{title_1}}</a>'
+            text: '<a href="/service-and-support/eol-devices/{{title}}">{{title_1}}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -2648,7 +2648,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      path: product-documentation
+      path: service-and-support
       title: 'Product Documentation'
       defaults:
         title: false
@@ -3644,7 +3644,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"product-line\">\r\n<a href=\"/product-documentation/{{title}}\" class=\"product\"> {{ field_media }} <p>{{ title_1 }}</p> </a>\r\n</div>"
+            text: "<div class=\"product-line\">\r\n<a href=\"/service-and-support/{{title}}\" class=\"product\"> {{ field_media }} <p>{{ title_1 }}</p> </a>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
