@@ -32,14 +32,6 @@ bundles:
   'node:person': 'node:person'
   'node:place': 'node:place'
 recipient_types:
-  role:
-    id: role
-    provider: workbench_email
-    status: true
-    settings:
-      roles:
-        content_administrator: content_administrator
-        content_editor: content_editor
   author:
     id: author
     provider: workbench_email
@@ -68,6 +60,14 @@ recipient_types:
     provider: workbench_email
     status: false
     settings: {  }
+  role:
+    id: role
+    provider: workbench_email
+    status: true
+    settings:
+      roles:
+        content_administrator: content_administrator
+        content_editor: content_editor
   roles_with_access:
     id: roles_with_access
     provider: workbench_email

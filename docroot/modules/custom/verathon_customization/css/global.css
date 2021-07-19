@@ -202,3 +202,12 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
     padding-bottom: 0.75rem;
     line-height: 1.625rem;
 }
+
+/* Global Technical Support CSS */
+
+#block-views-block-global-technical-support-gts-block .gts-banner-container {
+    background-image: url('/sites/default/files/2021-07/global_support_map_search.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
