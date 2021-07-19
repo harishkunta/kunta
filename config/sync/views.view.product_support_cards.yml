@@ -3100,60 +3100,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: nid_op
-            label: ID
-            description: ''
-            use_operator: false
-            operator: nid_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: product
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              developer: '0'
-              site_builder: '0'
-              content_administrator: '0'
-              content_author: '0'
-              content_editor: '0'
-              user_administrator: '0'
-              anonymous: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: nid
-          plugin_id: numeric
         field_language_target_id:
           id: field_language_target_id
           table: node__field_language
@@ -3167,7 +3113,7 @@ display:
           exposed: true
           expose:
             operator_id: field_language_target_id_op
-            label: ''
+            label: 'PDF Support Documents:'
             description: ''
             use_operator: false
             operator: field_language_target_id_op
