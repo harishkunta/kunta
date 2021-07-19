@@ -19,11 +19,6 @@ dependencies:
     - taxonomy.vocabulary.documents
     - taxonomy.vocabulary.languages
     - taxonomy.vocabulary.product_line
-  content:
-    - 'taxonomy_term:product_line:289ab8ae-603c-4e90-86c9-b366274ebcd1'
-    - 'taxonomy_term:product_line:c41e2e22-4a42-49db-a931-79cc81f0fdce'
-    - 'taxonomy_term:product_line:cf655121-30c6-4c60-9d82-bf6e2c40df91'
-    - 'taxonomy_term:product_line:df6fadc5-5dba-4d83-8ab0-3a8ef9c777b3'
   module:
     - better_exposed_filters
     - datetime
@@ -1128,6 +1123,7 @@ display:
         css_class: false
         arguments: false
         use_ajax: false
+        pager: false
       style:
         type: default
         options:
@@ -1867,12 +1863,34 @@ display:
           entity_field: title
           plugin_id: string
       use_ajax: true
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -2646,6 +2664,7 @@ display:
         css_class: false
         arguments: false
         use_ajax: false
+        pager: false
       style:
         type: default
         options:
@@ -3081,60 +3100,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: nid_op
-            label: ID
-            description: ''
-            use_operator: false
-            operator: nid_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: product
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              developer: '0'
-              site_builder: '0'
-              content_administrator: '0'
-              content_author: '0'
-              content_editor: '0'
-              user_administrator: '0'
-              anonymous: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: nid
-          plugin_id: numeric
         field_language_target_id:
           id: field_language_target_id
           table: node__field_language
@@ -3148,7 +3113,7 @@ display:
           exposed: true
           expose:
             operator_id: field_language_target_id_op
-            label: ''
+            label: 'PDF Support Documents:'
             description: ''
             use_operator: false
             operator: field_language_target_id_op
@@ -3354,12 +3319,34 @@ display:
           entity_field: title
           plugin_id: string
       use_ajax: true
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: 3
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

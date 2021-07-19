@@ -10,7 +10,6 @@
 /autoload.php
 /example.gitignore
 /index.php
-/robots.txt
 /update.php
 /web.config
 sites/default/settings.php
@@ -42,3 +41,6 @@ node_modules
 # Ignore some css related stuff
 *.css.map
 *.css.map.map
+
+# Ignore vim swap file
+*.swp

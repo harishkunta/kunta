@@ -7,9 +7,7 @@ dependencies:
     - field.storage.node.field_video_thumbnail
     - search_api.index.acquia_search_index
     - taxonomy.vocabulary.product_line
-    - views.view.search_fallback
   module:
-    - acquia_cms_search
     - cohesion
     - search_api
     - text
@@ -400,7 +398,7 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<div class="views-field views-field-body"><span class="field-content">{{ body }}</span></div>'
             make_link: false
             path: ''
@@ -416,7 +414,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 400
+            max_length: 100
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -819,19 +817,8 @@ display:
           tokenize: false
           content:
             value: 'No results found.'
-            format: basic_html
+            format: script_format
           plugin_id: text
-        view_fallback:
-          id: view_fallback
-          table: views
-          field: view_fallback
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          view_to_insert: 'search_fallback:search_fallback_block'
-          inherit_arguments: 0
-          plugin_id: view_fallback
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
