@@ -33,5 +33,5 @@ visibility:
     negate: false
   request_path:
     id: request_path
-    pages: "/eol-devices\r\n/eol-devices/*"
+    pages: '/service-and-support/eol-devices/*'
     negate: false

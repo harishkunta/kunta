@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '93b7e91ec1f2cb811ad98167ab12e9a88b9e1d8c',
+    'reference' => '9e14253d314ce2542a199d78c053c47bca1c8546',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '93b7e91ec1f2cb811ad98167ab12e9a88b9e1d8c',
+      'reference' => '9e14253d314ce2542a199d78c053c47bca1c8546',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -528,6 +528,15 @@
       array (
         0 => '9.1.9',
       ),
+    ),
+    'drupal/block_exclude_pages' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.0',
     ),
     'drupal/book' => 
     array (
