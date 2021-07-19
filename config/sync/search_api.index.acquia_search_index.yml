@@ -3,15 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - acquia_search
     - search_api_solr
     - cohesion_elements
     - node
     - search_api
-    - media
   config:
-    - field.storage.node.body
     - field.storage.node.field_article_type
+    - field.storage.node.body
     - field.storage.node.field_department
     - field.storage.node.field_document
     - field.storage.node.field_job_title
@@ -24,8 +22,6 @@ dependencies:
     - field.storage.node.field_year
     - search_api.server.acquia_search_server
 third_party_settings:
-  acquia_search:
-    use_edismax: 1
   search_api_solr:
     finalize: false
     commit_before_finalize: false
@@ -71,7 +67,7 @@ _core:
 id: acquia_search_index
 name: 'Acquia Search Solr Index'
 description: ''
-read_only: true
+read_only: false
 field_settings:
   body:
     label: Body
@@ -270,14 +266,6 @@ datasource_settings:
     languages:
       default: true
       selected: {  }
-  'entity:media':
-    bundles:
-      default: false
-      selected:
-        - document
-    languages:
-      default: true
-      selected: {  }
   'entity:node':
     bundles:
       default: true
@@ -344,8 +332,8 @@ processor_settings:
       preprocess_index: 0
 tracker_settings:
   default:
-    indexing_order: lifo
+    indexing_order: fifo
 options:
   index_directly: true
-  cron_limit: 100
+  cron_limit: 50
 server: acquia_search_server
