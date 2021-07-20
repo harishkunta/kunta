@@ -169,7 +169,7 @@ function change_labels($form) {
  * Implements hook_views_pre_render().
  */
 function verathon_customization_views_pre_render(ViewExecutable $view) {
-  if ($view->name == 'acquia_search') {
+  if ($view->element['#name'] == 'acquia_search' && $view->current_display == 'search') {
 
     // Get array of results from view object.
     $results = $view->result;
