@@ -6,6 +6,7 @@ use Drupal\node\Entity\Node;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_css_alter().
@@ -162,4 +163,71 @@ function change_labels($form) {
     $form['doc_type']['#options']['All'] = t('All Documents');
   }
   return $form;
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function verathon_customization_views_pre_render(ViewExecutable $view) {
+  if ($view->name == 'acquia_search') {
+
+    // Get array of results from view object.
+    $results = $view->result;
+
+    // Initialize empty array that we will use to save results
+    // grouped by content type.
+    $grouped_results = array();
+
+    // Each $result is an object within the $results array.
+    foreach ($results as $result) {
+      $content_type = $result->node_type;
+
+      // Rank content types in order to be sorted.
+      // Ranking closest to 1 will be listed first.
+      // Ranking with highest number will be listed last.
+      switch ($content_type) {
+        case 'product_documentation':
+          $ranking = 1;
+          break;
+        case 'instructional_videos':
+          $ranking = 10;
+          break;
+        case 'clinical_publications':
+          $ranking = 20;
+          break;
+        case 'article':
+          $ranking = 30;
+          break;
+        case 'news':
+          $ranking = 40;
+          break;
+        case 'page':
+          $ranking = 50;
+          break;     
+        default:
+          $ranking = 200;
+      }
+
+      // Add result to new array where results are grouped by ranking.
+      $grouped_results[$ranking][] = $result;
+    }
+
+    // Sort results by ranking.
+    ksort($grouped_results);
+
+    // Now initialize new array that will save search results in order per ranking
+    // but without results being grouped by ranking.
+    $ranked_results = array();
+
+    // Reorganize $grouped_results so $results are no longer grouped
+    // just listed in order of ranking.
+    foreach ($grouped_results as $ranking) {
+      foreach ($ranking as $result) {
+        $ranked_results[] = $result;
+      }
+    }
+
+    // Set views results array to new ranked results array.
+    $view->result = $ranked_results;
+  }
 }
