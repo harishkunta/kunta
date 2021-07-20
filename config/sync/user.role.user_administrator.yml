@@ -17,5 +17,6 @@ permissions:
   - 'administer shield'
   - 'administer site configuration'
   - 'administer users'
+  - 'display eu cookie compliance popup'
   - 'manage password reset'
   - 'view the administration theme'

@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
  *
  * @WebformHandler(
  *   id = "pdf_file",
- *   label = @Translation("PDF file download link."),
+ *   label = @Translation("PDF file download link"),
  *   category = @Translation("External"),
  *   description = @Translation("Allows Webform settings to be overridden based on submission data."),
  *   cardinality = \Drupal\webform\Plugin\WebformHandlerInterface::CARDINALITY_SINGLE,

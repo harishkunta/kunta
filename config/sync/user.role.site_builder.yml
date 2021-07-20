@@ -20,6 +20,7 @@ permissions:
   - 'administer helpers'
   - 'administer style helpers'
   - 'administer style_guide'
+  - 'display eu cookie compliance popup'
   - 'use text format cohesion'
   - 'use text format filtered_html'
   - 'use text format script_format'
