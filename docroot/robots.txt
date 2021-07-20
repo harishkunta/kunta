@@ -8,3 +8,9 @@
 #
 User-agent: googlebot
 Disallow: /
+
+User-agent: *
+Disallow: /
+
+User-agent: Chrome-Lighthouse
+Allow: /
