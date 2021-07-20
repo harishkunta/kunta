@@ -12,6 +12,7 @@
 
 .h5p-image-hotspot-popup {
   padding: 0;
+  transition: none;
 }
 
 .h5p-image-hotspot-has-header .h5p-image-hotspot-popup-body {
