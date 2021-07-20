@@ -435,6 +435,7 @@ body {
 .bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText {
     background-color: #D8D8D8;
     color: black;
+    transition: none;
 }
 
 .bflex-calculator .submitSectionWrapper .row>.column50:nth-child(2) .form-actions .disableSubmitText {
