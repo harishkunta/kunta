@@ -53,6 +53,7 @@ permissions:
   - 'administer style_guide'
   - 'administer view templates'
   - 'administer website settings'
+  - 'display eu cookie compliance popup'
   - 'use text format cohesion'
   - 'use text format filtered_html'
   - 'view the administration theme'

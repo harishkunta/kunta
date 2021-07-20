@@ -68,6 +68,9 @@ display:
         langcode:
           expose:
             label: Langue
+        field_categories_target_id:
+          expose:
+            label: Catégories
         field_tags_target_id:
           expose:
             label: Étiquettes
