@@ -16,7 +16,7 @@ conditions:
     negate: false
   request_path:
     id: request_path
-    pages: /service-support
+    pages: /service-and-support
     negate: false
 contexts: {  }
 header: false
