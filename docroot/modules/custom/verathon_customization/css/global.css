@@ -204,6 +204,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 
 .education-training .search form input.form-autocomplete,
 .education-training .search form .form-item .form-select:not(.editor) {
+<<<<<<< HEAD
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   line-height: 1.625rem;
@@ -223,3 +224,65 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 .search-results-container .coh-style-search-block .button.form-submit {
   border: none;
 }
+=======
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.625rem;
+}
+
+
+/* Bflex Calculator - 'see results' form styles */
+
+.webform-submission-gated-form-bflex-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.webform-submission-gated-form-bflex-form>* {
+    flex-basis: 100%;
+}
+
+.webform-submission-gated-form-bflex-form .form-item-first-name input,
+.webform-submission-gated-form-bflex-form .form-item-last-name input,
+.webform-submission-gated-form-bflex-form .form-item-email input {
+    height: 2.125rem;
+}
+
+.webform-submission-gated-form-bflex-form .form-item-first-name {
+    padding-right: 12px;
+}
+
+.webform-submission-gated-form-bflex-form .form-item-last-name {
+    padding-left: 12px;
+}
+
+.webform-submission-gated-form-bflex-form .form-type-checkbox {
+    display: block;
+}
+
+.webform-submission-gated-form-bflex-form .form-type-checkbox label {
+    display: inline-block;
+    text-align: left;
+    color: gray;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description {
+    display: inline;
+    line-height: 1.5;
+    padding-left: 5px;
+    font-weight: normal;
+    color: gray;
+}
+
+.webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+.webform-submission-gated-form-bflex-form .form-item-first-name,
+.webform-submission-gated-form-bflex-form .form-item-last-name {
+    flex-basis: 50%;
+}
+>>>>>>> 18dd93b46 (bflex gated form UI)
