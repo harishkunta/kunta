@@ -68,9 +68,6 @@ display:
         langcode:
           expose:
             label: Taal
-        field_categories_target_id:
-          expose:
-            label: Categorieën
         field_tags_target_id:
           expose:
             label: Labels

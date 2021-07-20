@@ -91,7 +91,6 @@ permissions:
   - 'delete own person content'
   - 'delete own place content'
   - 'delete own video media'
-  - 'display eu cookie compliance popup'
   - 'edit own article content'
   - 'edit own document media'
   - 'edit own event content'

@@ -81,7 +81,6 @@ permissions:
   - 'administer taxonomy'
   - 'bypass node access'
   - 'clone node entity'
-  - 'display eu cookie compliance popup'
   - 'schedule publishing of nodes'
   - 'use editorial transition archive'
   - 'use editorial transition archived_published'
