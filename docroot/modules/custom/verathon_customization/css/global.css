@@ -204,27 +204,6 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 
 .education-training .search form input.form-autocomplete,
 .education-training .search form .form-item .form-select:not(.editor) {
-<<<<<<< HEAD
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  line-height: 1.625rem;
-}
-
-/* Global Technical Support CSS */
-
-#block-views-block-global-technical-support-gts-block .gts-banner-container {
-  background-image: url('/sites/default/files/2021-07/global_support_map_search.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Search Results page search button issue */
-
-.search-results-container .coh-style-search-block .button.form-submit {
-  border: none;
-}
-=======
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     line-height: 1.625rem;
@@ -285,4 +264,3 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 .webform-submission-gated-form-bflex-form .form-item-last-name {
     flex-basis: 50%;
 }
->>>>>>> 18dd93b46 (bflex gated form UI)
