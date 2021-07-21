@@ -1,6 +1,8 @@
 :root {
   --lightgreen: #2eb3b7;
   --lightgray: #e6e6e6;
+  --verblue1: #70c3e9;
+  --verblue2: #26a3dd;
 }
 
 
@@ -91,7 +93,7 @@ form .form-select:not(.editor):focus-visible {
 }
 
 .search-results-container .coh-style-search-block .button.form-submit {
-  border: 1px solid #51B5DF;
+  border: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -204,63 +206,206 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 
 .education-training .search form input.form-autocomplete,
 .education-training .search form .form-item .form-select:not(.editor) {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    line-height: 1.625rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  line-height: 1.625rem;
 }
 
+/* Global Technical Support CSS */
+
+#block-views-block-global-technical-support-gts-block .gts-banner-container {
+  background-image: url('/sites/default/files/2021-07/global_support_map_search.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* Bflex Calculator - 'see results' form styles */
 
 .webform-submission-gated-form-bflex-form {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .webform-submission-gated-form-bflex-form>* {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .webform-submission-gated-form-bflex-form .form-item-first-name input,
 .webform-submission-gated-form-bflex-form .form-item-last-name input,
 .webform-submission-gated-form-bflex-form .form-item-email input {
-    height: 2.125rem;
+  height: 2.125rem;
 }
 
 .webform-submission-gated-form-bflex-form .form-item-first-name {
-    padding-right: 12px;
+  padding-right: 12px;
 }
 
 .webform-submission-gated-form-bflex-form .form-item-last-name {
-    padding-left: 12px;
+  padding-left: 12px;
 }
 
 .webform-submission-gated-form-bflex-form .form-type-checkbox {
-    display: block;
+  display: block;
 }
 
 .webform-submission-gated-form-bflex-form .form-type-checkbox label {
-    display: inline-block;
-    text-align: left;
-    color: gray;
-    margin-bottom: 6px;
-    font-weight: bold;
+  display: inline-block;
+  text-align: left;
+  color: gray;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
 
 .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description {
-    display: inline;
-    line-height: 1.5;
-    padding-left: 5px;
-    font-weight: normal;
-    color: gray;
+  display: inline;
+  line-height: 1.5;
+  padding-left: 5px;
+  font-weight: normal;
+  color: gray;
 }
 
 .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description a {
-    text-decoration: none;
-    color: #0d6efd;
+  text-decoration: none;
+  color: #0d6efd;
 }
 
 .webform-submission-gated-form-bflex-form .form-item-first-name,
 .webform-submission-gated-form-bflex-form .form-item-last-name {
-    flex-basis: 50%;
+  flex-basis: 50%;
+}
+
+/* Pager Styles in Support page */
+
+nav.pager {
+  margin-top: 2rem;
+}
+
+nav.pager ul.pager__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav.pager ul.pager__items li.pager__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+}
+
+nav.pager ul.pager__items li.pager__item.pager__item--last a,
+nav.pager ul.pager__items li.pager__item.pager__item--next a,
+nav.pager ul.pager__items li.pager__item.pager__item--first a,
+nav.pager ul.pager__items li.pager__item.pager__item--previous a {
+  background-color: black;
+}
+
+nav.pager ul.pager__items li.pager__item.pager__item--last a:hover,
+nav.pager ul.pager__items li.pager__item.pager__item--next a:hover,
+nav.pager ul.pager__items li.pager__item.pager__item--first a:hover,
+nav.pager ul.pager__items li.pager__item.pager__item--previous a:hover {
+  background-color: black;
+  color: var(--verblue1);
+}
+
+nav.pager ul.pager__items li.pager__item a {
+  background-color: white;
+  display: block;
+  min-height: 2rem;
+  min-width: 2rem;
+  border-radius: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+nav.pager ul.pager__items li.pager__item a:hover {
+  background-color: var(--verblue2);
+  color: white;
+}
+
+nav.pager ul.pager__items li.pager__item.is-active a {
+  background-color: black;
+  color: white;
+}
+
+nav.pager ul.pager__items li.pager__item.is-active a:hover {
+  background-color: black;
+}
+
+/* Floating Widget Cursor */
+
+.floating-widget .contact-widget-text,
+.floating-widget .contact-widget-link {
+  cursor: pointer;
+}
+
+.floating-widget .contact-widget-text:hover,
+.floating-widget .contact-widget-link:hover {
+  position: relative;
+  bottom: 0.0625rem;
+}
+
+/* Cookie Disclaimer */
+
+#sliding-popup .eu-cookie-compliance-content{
+  text-align: center;
+  padding: 15px 0px;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-message {
+  display: inline;
+  float: none;
+  margin: 0;
+  max-width: none;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-message p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-message p a{
+  color: #2daaae;
+  font-weight: bold;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons {
+  float: none;
+  display: inline-block;
+  margin: 0;
+  max-width: none;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons .eu-cookie-compliance-secondary-button {
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #2daaae;
+  background: transparent;
+  margin: 0 5px;
+  width: auto;
+}
+
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons .eu-cookie-compliance-default-button {
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #2daaae;
+  background: transparent;
+  color: #fff;
+  margin: 0 5px;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: normal;
 }

@@ -1,0 +1,22 @@
+uuid: 6f2c62d5-0ea9-4256-9a77-a31b0ce5b724
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: clinical_publications_path
+label: 'Clinical Publications Path'
+type: 'canonical_entities:node'
+pattern: 'clinical-publication/[node:title]'
+selection_criteria:
+  22666826-aa8d-440e-8c0d-edcde2d52829:
+    id: node_type
+    bundles:
+      clinical_publications: clinical_publications
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 22666826-aa8d-440e-8c0d-edcde2d52829
+selection_logic: and
+weight: -5
+relationships: {  }

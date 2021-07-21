@@ -1,0 +1,22 @@
+uuid: e59938e3-95e9-4391-ba08-873107eba4f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: product_documentation_path
+label: 'Product Documentation Path'
+type: 'canonical_entities:node'
+pattern: 'product-documentation/[node:title]'
+selection_criteria:
+  d1669e26-5cba-45ea-bc51-25e363f91816:
+    id: node_type
+    bundles:
+      product_documentation: product_documentation
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d1669e26-5cba-45ea-bc51-25e363f91816
+selection_logic: and
+weight: -5
+relationships: {  }
