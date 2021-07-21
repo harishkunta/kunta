@@ -1,4 +1,4 @@
-uuid: 9723ed9c-ff2e-438b-a914-7e381b8c0d13
+uuid: e1702323-c44b-4d97-a65e-931020d90b72
 langcode: en
 status: true
 dependencies:
@@ -14,14 +14,14 @@ dependencies:
 third_party_settings:
   collapsiblock:
     collapse_action: '0'
-id: exposedformproduct_support_cardsproduct_documentation
+id: exposedformproduct_support_cardseol_prod_doc_list
 theme: cohesion_theme
 region: content
-weight: -18
+weight: 0
 provider: null
-plugin: 'views_exposed_filter_block:product_support_cards-product_documentation'
+plugin: 'views_exposed_filter_block:product_support_cards-eol_prod_doc_list'
 settings:
-  id: 'views_exposed_filter_block:product_support_cards-product_documentation'
+  id: 'views_exposed_filter_block:product_support_cards-eol_prod_doc_list'
   label: ''
   provider: views
   label_display: '0'
@@ -33,5 +33,5 @@ visibility:
     negate: false
   request_path:
     id: request_path
-    pages: '/service-and-support/*'
+    pages: '/service-and-support/eol-devices/*'
     negate: false
