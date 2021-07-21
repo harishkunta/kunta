@@ -412,10 +412,7 @@ form.webform-submission-form fieldset {
   margin: 0;
 }
 
-form.webform-submission-form fieldset legend span {
-  font-weight: 400;
-}
-
+form.webform-submission-form fieldset legend span,
 form.webform-submission-form label {
   font-weight: 400;
 }
