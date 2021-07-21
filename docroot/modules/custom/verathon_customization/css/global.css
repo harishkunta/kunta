@@ -412,6 +412,10 @@ form.webform-submission-form fieldset {
   margin: 0;
 }
 
+form.webform-submission-form fieldset legend span {
+  font-weight: 400;
+}
+
 form.webform-submission-form label {
   font-weight: 400;
 }
@@ -420,6 +424,8 @@ form.webform-submission-form fieldset .fieldset-wrapper {
   display: flex;
 }
 
+
+form.webform-submission-form fieldset input.form-text,
 form.webform-submission-form fieldset .form-select:not(.editor) {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
