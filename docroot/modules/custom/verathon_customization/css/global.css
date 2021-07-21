@@ -441,6 +441,8 @@ form.webform-submission-form div.form-actions {
   padding: 0;
 }
 
+/* Just to override inline styles from from Important is being used here */
+
 .ui-widget.ui-widget-content {
   width: 100% !important;
   max-width: 31.25rem;
