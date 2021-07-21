@@ -300,18 +300,11 @@ nav.pager ul.pager__items li.pager__item {
   list-style-type: none;
 }
 
-nav.pager ul.pager__items li.pager__item.pager__item--last a,
-nav.pager ul.pager__items li.pager__item.pager__item--next a,
-nav.pager ul.pager__items li.pager__item.pager__item--first a,
-nav.pager ul.pager__items li.pager__item.pager__item--previous a {
-  background-color: black;
-}
-
 nav.pager ul.pager__items li.pager__item.pager__item--last a:hover,
 nav.pager ul.pager__items li.pager__item.pager__item--next a:hover,
 nav.pager ul.pager__items li.pager__item.pager__item--first a:hover,
 nav.pager ul.pager__items li.pager__item.pager__item--previous a:hover {
-  background-color: black;
+  background-color: transparent;
   color: var(--verblue1);
 }
 
@@ -356,7 +349,7 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
 
 /* Cookie Disclaimer */
 
-#sliding-popup .eu-cookie-compliance-content{
+#sliding-popup .eu-cookie-compliance-content {
   text-align: center;
   padding: 15px 0px;
 }
@@ -375,7 +368,7 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
   margin: 0;
 }
 
-#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-message p a{
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-message p a {
   color: #2daaae;
   font-weight: bold;
 }
@@ -408,4 +401,75 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
   box-shadow: none;
   text-shadow: none;
   font-weight: normal;
+}
+
+/* Gated Form Styles */
+
+form.webform-submission-form fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+form.webform-submission-form fieldset legend span {
+  display: none;
+}
+
+form.webform-submission-form fieldset input.form-text,
+form.webform-submission-form fieldset .form-select:not(.editor) {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+form.webform-submission-form fieldset label {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+form.webform-submission-form div.form-item {
+  padding: 0;
+  margin: 0;
+}
+
+form.webform-submission-form div.form-item :is(input, select, textarea) {
+  margin-bottom: 1rem;
+}
+
+form.webform-submission-form div.form-actions {
+  padding: 0;
+}
+
+.ui-widget.ui-widget-content {
+  width: 100% !important;
+  max-width: 31.25rem;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  float: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane button.webform-button--submit {
+  font-size: 1rem;
+  width: auto;
+  border: none;
+  background-color: #157cd1;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.8;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.ui-dialog .ui-dialog-buttonpane button.webform-button--submit:hover {
+  background-color: #157cd1;
+  opacity: 1;
 }
