@@ -221,8 +221,9 @@ class VerathonBflexCalculatorForm extends FormBase
    */
   public function ajaxCallback(array &$form, FormStateInterface $form_state)
   {
+
     $response = new AjaxResponse();
-    $response->addCommand(new InvokeCommand('.form-button-bflex', 'click'));
+    $response->addCommand(new InvokeCommand('body', 'checkValid'));
     return $response;
   }
 }

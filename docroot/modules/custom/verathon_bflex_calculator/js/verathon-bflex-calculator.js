@@ -117,7 +117,7 @@ function validateInput(id, type) {
         }
     }
     let checkOverallErrors = false;
-    $(".error").each(function() {
+    $(".error").each(function () {
         if (($(this).css('display') == 'block') || ($(".error.active").length > 0)) {
             checkOverallErrors = true;
         }
@@ -162,14 +162,14 @@ function triggerAction(id, type) {
 // This method is created to submit the BFlex form.
 
 // Final Trigger for the module's js code execution.
-(function($, Drupal) {
+(function ($, Drupal) {
 
 
     //Behavior definition for tooltip.
     Drupal.behaviors.tooltip = {
-        attach: function(context, settings) {
-            $(".tooltip-icon", context).each(function() {
-                $(this).on('click', function() {
+        attach: function (context, settings) {
+            $(".tooltip-icon", context).each(function () {
+                $(this).on('click', function () {
                     triggerAction($(this).attr("id"), "tooltip")
                 });
             });
@@ -178,9 +178,9 @@ function triggerAction(id, type) {
 
     // Behavior Definition for Slider.
     Drupal.behaviors.slider = {
-        attach: function(context, settings) {
-            $(".slider", context).each(function() {
-                $(this).on('change', function() {
+        attach: function (context, settings) {
+            $(".slider", context).each(function () {
+                $(this).on('change', function () {
                     let sliderId = $(this).attr("id");
                     triggerAction(sliderId, "slider");
                     validateInput(sliderId, "sliderFieldInput");
@@ -197,9 +197,9 @@ function triggerAction(id, type) {
 
     // Behavior defination of Number calculations.
     Drupal.behaviors.number = {
-        attach: function(context, settings) {
-            $(".number", context).each(function() {
-                $(this).on('change', function() {
+        attach: function (context, settings) {
+            $(".number", context).each(function () {
+                $(this).on('change', function () {
                     let numberId = $(this).attr("id")
                     triggerAction(numberId, "number")
                     validateInput(numberId, "slider_numberFieldInput")
@@ -215,34 +215,42 @@ function triggerAction(id, type) {
 
     // Behavior definition for Textfield & Number box.
     Drupal.behaviors.input = {
-        attach: function(context, settings) {
-            $(".form-text", context).each(function() {
-                $(this).on('focusout', function() {
+        attach: function (context, settings) {
+            $(".form-text", context).each(function () {
+                $(this).on('focusout', function () {
                     let textFieldId = $(this).attr("id")
                     validateInput(textFieldId, "textFieldInput");
                     $("#" + textFieldId).attr("value", $("#" + textFieldId).val());
                 });
             });
-
-            $(".form-number", context).each(function() {
-                $(this).on('change', function() {
+            $(".form-number", context).each(function () {
+                $(this).on('change', function () {
                     let numberId = $(this).attr("id")
                     validateInput(numberId, "numberFieldInput")
                     $("#" + numberId).attr("value", $("#" + numberId).val());
                 });
             });
-            $("#submit-see-results", context).each(function() {
-                $(this).on("click", function() {
-                    var errorCheck;
-                    errorCheck = validateInput("edit-facility-name", "textFieldInput");
-                    console.log(errorCheck)
-                });
-            });
+            // $("#submit-see-results", context).each(function () {
+            //     $(this).on("click", function () {
+            //         var errorCheck;
+            //         errorCheck = validateInput("edit-facility-name", "textFieldInput");
+            //     });
+            // });
         }
     };
+
 
     calculateMaintenanceCost();
     calculateReprocessingCost();
     calculateCrossContaminationInfectionCost();
 
+    // Invoking the form submit.
+    $.fn.checkValid = function checkValid() {
+        errorCheck = validateInput("edit-facility-name", "textFieldInput");
+        if (!errorCheck) {
+            $('.form-button-bflex').click();
+        }
+    }
+
 })(jQuery, Drupal);
+
