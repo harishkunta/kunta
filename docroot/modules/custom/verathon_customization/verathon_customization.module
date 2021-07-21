@@ -47,6 +47,7 @@ function verathon_customization_form_alter(&$form, FormStateInterface $form_stat
       $form['#attached']['library'][] = 'verathon_customization/verathon_search';
     }
   }
+
 }
 
 /**
@@ -116,7 +117,7 @@ function verathon_customization_preprocess_html(array &$variables) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function verathon_customization_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-prod-doc-list' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-eol-product-documentation-list');
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-container-boxed');
@@ -125,6 +126,19 @@ function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Co
   if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-prod-support-doc-list' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
     $form = change_labels($form);
+  }
+  // List the countries which is created under the Countries and Regions vocabulary.
+  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-global-technical-support-gts-block' ) {
+    // Fetching the country code from the Address table.
+    $query = \Drupal::database()->select('taxonomy_term__field_address', 'fa');
+    $query->addField('fa', 'field_address_country_code');
+    $query->condition('fa.bundle', 'countries_and_regions');
+    $country_codes = $query->orderBy('field_address_country_code', 'ASC')->execute()->fetchCol();
+    $countries['All'] = $form['field_address_country_code']['#options']['All'];
+    foreach ($country_codes as $country_code) {
+      $countries[$country_code] = $form['field_address_country_code']['#options'][$country_code];
+    }
+    $form['field_address_country_code']['#options'] = $countries;
   }
 }
 
