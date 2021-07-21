@@ -906,7 +906,7 @@ display:
               content_author: '0'
               content_editor: '0'
               user_administrator: '0'
-            placeholder: ''
+            placeholder: 'Search Verathon.com'
           is_grouped: false
           group_info:
             label: ''
