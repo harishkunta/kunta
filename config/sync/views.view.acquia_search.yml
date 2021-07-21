@@ -3,12 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.media.field_media_file
     - field.storage.node.body
+    - field.storage.node.field_call_to_action
+    - field.storage.node.field_media
     - field.storage.node.field_video_thumbnail
     - search_api.index.acquia_search_index
     - taxonomy.vocabulary.product_line
   module:
     - cohesion
+    - file
+    - link
+    - media
     - search_api
     - text
     - user
@@ -242,6 +248,232 @@ display:
                 display_method: label
           entity_type: node
           plugin_id: search_api_field
+        field_call_to_action:
+          id: field_call_to_action
+          table: search_api_datasource_acquia_search_index_entity_node
+          field: field_call_to_action
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_media:
+          id: field_media
+          table: search_api_datasource_acquia_search_index_entity_node
+          field: field_media
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: default
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              document:
+                display_method: id
+                view_mode: default
+              image:
+                display_method: id
+                view_mode: default
+              video:
+                display_method: id
+                view_mode: embedded
+          entity_type: node
+          plugin_id: search_api_field
+        field_media_file:
+          id: field_media_file
+          table: search_api_entity_media
+          field: field_media_file
+          relationship: field_media
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: media
+          plugin_id: search_api_field
         title:
           id: title
           table: search_api_index_acquia_search_index
@@ -253,7 +485,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<a href="/node/{{ nid }}" data-category="Search" data-action="Auto Suggestion Click" data-label="{{ title|striptags }}" title="{{ title|striptags }}" ><div class="views-field views-field-title"><span class="field-content">{{ title }}</span></div></a>'
+            text: "{% if field_call_to_action  is not empty %}\r\n<a href=\"{{ field_call_to_action }}\" target=\"_blank\" data-category=\"Search\" data-action=\"Auto Suggestion Click\" data-label=\"{{ title|striptags }}\" title=\"{{ title|striptags }}\" ><div class=\"views-field views-field-title\"><span class=\"field-content\">{{ title }}</span></div></a>\r\n{%  elseif field_media is not empty %}\r\n<a href=\"{{ field_media_file }}\" target=\"_blank\" data-category=\"Search\" data-action=\"Auto Suggestion Click\" data-label=\"{{ title|striptags }}\" title=\"{{ title|striptags }}\" ><div class=\"views-field views-field-title\"><span class=\"field-content\">{{ title }}</span></div></a>\r\n{% else %}\r\n<a href=\"/node/{{ nid }}\" data-category=\"Search\" data-action=\"Auto Suggestion Click\" data-label=\"{{ title|striptags }}\" title=\"{{ title|striptags }}\" ><div class=\"views-field views-field-title\"><span class=\"field-content\">{{ title }}</span></div></a>\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -674,7 +906,7 @@ display:
               content_author: '0'
               content_editor: '0'
               user_administrator: '0'
-            placeholder: ''
+            placeholder: 'Search Verathon.com'
           is_grouped: false
           group_info:
             label: ''
@@ -819,7 +1051,18 @@ display:
             value: 'No results found.'
             format: script_format
           plugin_id: text
-      relationships: {  }
+      relationships:
+        field_media:
+          id: field_media
+          table: search_api_datasource_acquia_search_index_entity_node
+          field: field_media
+          relationship: none
+          group_type: group
+          admin_label: 'News Image: Media'
+          required: false
+          skip_access: false
+          entity_type: node
+          plugin_id: search_api
       arguments: {  }
       display_extenders: {  }
       filter_groups:
@@ -839,7 +1082,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_call_to_action'
+        - 'config:field.storage.node.field_media'
         - 'config:field.storage.node.field_video_thumbnail'
         - 'config:search_api.index.acquia_search_index'
   search:
@@ -878,6 +1124,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_call_to_action'
+        - 'config:field.storage.node.field_media'
         - 'config:field.storage.node.field_video_thumbnail'
         - 'config:search_api.index.acquia_search_index'
