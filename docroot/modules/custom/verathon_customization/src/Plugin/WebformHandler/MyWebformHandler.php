@@ -45,13 +45,41 @@ class MyWebformHandler extends WebformHandlerBase {
   protected $configFactory;
 
   /**
+   * The database object.
+   *
+   * @var object
+   */
+  protected $database;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
     $instance->httpClient = $container->get('http_client');
     $instance->configFactory = $container->get('config.factory');
+    $instance->database = $container->get('database');
     return $instance;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
+    $values = $webform_submission->getData();
+    $fileName = $values['file_name'];
+    $query = $this->database->select('file_managed', 'f');
+    $query->fields('f', ['uri']);
+    $query->condition('filename', $fileName);
+    $uri = $query->execute()->fetchField();
+    $headers = [
+      'Content-Type' => 'application/pdf',
+      'Content-Description' => 'File Download',
+      'Content-Disposition' => 'attachment;filename=' . $fileName
+    ];
+
+    $response = new BinaryFileResponse($uri, 200, $headers, true);
+    $form_state->setResponse($response);
   }
 
   /**
@@ -65,15 +93,16 @@ class MyWebformHandler extends WebformHandlerBase {
       $config = $this->configFactory->get('verathon_bflex_calculator.settings')->get();
       // Get an array of the values from the submission.
       $values = $webform_submission->getData();
-      $file_path = pathinfo($values['file_path']);
+      $file_path = pathinfo($values['file_name']);
       $options = [
         'attributes' => [
           'target' => '_blank',
           'class' => ['download']
         ]
       ];
+      $urlObject = Url::fromUri($base_url . $values['file_path'], $options);
       // Forming the default URL for pardot form handler.
-      $download_file_link = Link::fromTextAndUrl($file_path['basename'], Url::fromUri($base_url . $values['file_path'], $options))->toString();
+      $download_file_link = Link::fromTextAndUrl($file_path['basename'], $urlObject)->toString();
       $webform = $webform_submission->getWebform();
       $webform->setSetting('confirmation_message', t('Here is your file: @title', ['@title' => $download_file_link]));
       // Forming the default URL for pardot form handler.
