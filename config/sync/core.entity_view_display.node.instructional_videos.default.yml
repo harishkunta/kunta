@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.instructional_videos.body
+    - field.field.node.instructional_videos.field_call_to_action
     - field.field.node.instructional_videos.field_department
     - field.field.node.instructional_videos.field_procedure
     - field.field.node.instructional_videos.field_product_line
@@ -12,10 +13,13 @@ dependencies:
     - field.field.node.instructional_videos.field_topic
     - field.field.node.instructional_videos.field_video_thumbnail
     - field.field.node.instructional_videos.field_video_url
+    - field.field.node.instructional_videos.field_weight_to_sort
     - field.field.node.instructional_videos.field_year
     - node.type.instructional_videos
   module:
+    - link
     - media
+    - options
     - text
     - user
 id: node.instructional_videos.default
@@ -29,6 +33,18 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_call_to_action:
+    weight: 111
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_department:
     weight: 106
@@ -94,6 +110,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_weight_to_sort:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_year:
     weight: 102

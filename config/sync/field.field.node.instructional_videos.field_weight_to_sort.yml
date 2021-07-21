@@ -1,0 +1,23 @@
+uuid: 679dac7f-ceb9-4786-ad9e-3a4ceb7d7eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_to_sort
+    - node.type.instructional_videos
+  module:
+    - options
+id: node.instructional_videos.field_weight_to_sort
+field_name: field_weight_to_sort
+entity_type: node
+bundle: instructional_videos
+label: 'Instructional Videos Weight to Sort'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 20
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
