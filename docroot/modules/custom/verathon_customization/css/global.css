@@ -331,7 +331,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 .path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-closethick{
 	display: none;
 }
-.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close{
+.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close,.ui-dialog .ui-dialog-titlebar-close{
 	border-radius: 0;
   color: #fff;
 	font-size: .8125rem;
@@ -351,6 +351,8 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 }
 .path-bflex-calculator .ui-widget.ui-widget-content{
 	border: .0625rem solid #555555;
+	width: 100% !important;
+	max-width: 400px;
 }
 .path-bflex-calculator .ui-dialog input{
 	background-color: white;
@@ -367,8 +369,8 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 }
 
 @media screen and (min-width: 768px){
-	.path-bflex-calculator .ui-dialog{
-		min-width: 31.25rem;
+	.path-bflex-calculator .ui-widget.ui-widget-content{
+		max-width: 500px;
 	}
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name,
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
