@@ -391,7 +391,8 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
   width: auto;
 }
 
-#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons .eu-cookie-compliance-default-button {
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons .eu-cookie-compliance-default-button,
+#sliding-popup .eu-cookie-compliance-content .eu-cookie-compliance-buttons .eu-cookie-compliance-hide-button {
   font-size: 1em;
   padding: 5px 10px;
   border-radius: 5px;
