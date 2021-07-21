@@ -3,6 +3,7 @@
   --lightgray: #e6e6e6;
   --verblue1: #70c3e9;
   --verblue2: #26a3dd;
+  --buttonblue: #157cd1;
 }
 
 
@@ -178,7 +179,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   cursor: pointer;
   border-radius: 0;
   border: none;
-  background: #157cd1;
+  background: var(--buttonblue);
   color: #fff;
   display: inline-block;
   vertical-align: top;
@@ -223,46 +224,46 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 /* Bflex Calculator - 'see results' form styles */
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form>* {
-  flex-basis: 100%;
+    flex-basis: 100%;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name input,
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name input,
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email input {
-  height: 2.125rem;
+    height: 2.125rem;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox {
-	display: block;
-	padding-bottom: 0;
+    display: block;
+    padding-bottom: 0;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox label {
-  display: inline-block;
-  text-align: left;
-  color: gray;
-  margin-bottom: .375rem;
-	font-weight: bold;
-	line-height: 21px;
+    display: inline-block;
+    text-align: left;
+    color: gray;
+    margin-bottom: .375rem;
+    font-weight: bold;
+    line-height: 21px;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description {
-  display: inline;
-  line-height: 1.5;
-  padding-left: .3125rem;
-  font-weight: normal;
-	color: gray;
-	font-size: 1rem;
+    display: inline;
+    line-height: 1.5;
+    padding-left: .3125rem;
+    font-weight: normal;
+    color: gray;
+    font-size: 1rem;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description a {
-  text-decoration: none;
-  color: #0d6efd;
+    text-decoration: none;
+    color: #0d6efd;
 }
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-checkbox{
 	opacity: 1;
@@ -275,7 +276,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 	margin-right: .1875rem;
 }
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label:before{
-  display: none;
+    display: none;
 }
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label{
 	display: block;
@@ -313,14 +314,13 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 .path-bflex-calculator .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button{
 	border-radius: 0;
 	border: none;
-	background: #157cd1;
-	color: #fff;
+	background: var(--buttonblue);
+	color: white;
 	font: .875rem;
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
 	padding: .4375rem 1.0625rem;
-	text-transform: uppercase;
 }
 .path-bflex-calculator .ui-widget-header{
 	border: none;
@@ -332,22 +332,21 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 	display: none;
 }
 .path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close,.ui-dialog .ui-dialog-titlebar-close{
-	border-radius: 0;
-  color: #fff;
-	font-size: .8125rem;
-  text-transform: uppercase;
-  background: #157cd1;
-  border-color: #157cd1;
-	float: right;
-	width: auto;
-	margin: 0;
-	height: auto;
-	text-indent: 0%;
-	font-weight: 600;
-	padding: .25rem .625rem;
-	position: relative;
-  top: -0.1875rem;
-  left: .1875rem;
+    border-radius: 0;
+    color: white;
+    font-size: .8125rem;
+    background: var(--buttonblue);
+    border-color: var(--buttonblue);
+    float: right;
+    width: auto;
+    margin: 0;
+    height: auto;
+    text-indent: 0;
+    font-weight: 600;
+    padding: .25rem .625rem;
+    position: relative;
+    top: -0.1875rem;
+    left: .1875rem;
 }
 .path-bflex-calculator .ui-widget.ui-widget-content{
 	border: .0625rem solid #555555;
@@ -357,7 +356,6 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 .path-bflex-calculator .ui-dialog input{
 	background-color: white;
 	border: .0625rem solid #999;
-	outline: none;
 }
 
 .path-bflex-calculator .ui-dialog .ui-dialog-titlebar{
@@ -374,15 +372,15 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 	}
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name,
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
-  flex-basis: 50%;
+        flex-basis: 50%;
 	}
 
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name {
-  padding-right: .75rem;
+        padding-right: .75rem;
 	}
 
 	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
-	padding-left: .75rem;
+	    padding-left: .75rem;
 	}
 }
 
@@ -514,7 +512,7 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
   border-radius: 5px;
   border: 2px solid #2daaae;
   background: transparent;
-  color: #fff;
+  color: white;
   margin: 0 5px;
   box-shadow: none;
   text-shadow: none;
