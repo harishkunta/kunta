@@ -126,6 +126,11 @@ function verathon_customization_form_views_exposed_form_alter(&$form, FormStateI
   if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-prod-support-doc-list' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
     $form = change_labels($form);
+    //Adding a new field in the exposed form for Product Support page
+    $form['contact_rep_text'] = [
+      '#type' => 'markup',
+      '#markup' => Markup::create('<div class="contact-rep"><span class="contact-local-rep">' .t("To obtain a previous version of a manual, please contact your local representative or Customer Care") . '</span></div>'),
+    ];
   }
   // List the countries which is created under the Countries and Regions vocabulary.
   if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-global-technical-support-gts-block' ) {
