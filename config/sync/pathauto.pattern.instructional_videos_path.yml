@@ -1,0 +1,22 @@
+uuid: c57acbf4-2959-457e-a553-49a815864130
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: instructional_videos_path
+label: 'Instructional Videos Path'
+type: 'canonical_entities:node'
+pattern: 'instructional-videos/[node:title]'
+selection_criteria:
+  dd4b4f89-379b-4f60-b587-6b598e9a94fc:
+    id: node_type
+    bundles:
+      instructional_videos: instructional_videos
+    negate: false
+    context_mapping:
+      node: node
+    uuid: dd4b4f89-379b-4f60-b587-6b598e9a94fc
+selection_logic: and
+weight: -5
+relationships: {  }
