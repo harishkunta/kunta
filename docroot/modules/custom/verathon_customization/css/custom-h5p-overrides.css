@@ -4,6 +4,17 @@
 
 .h5p-image-hotspot {
   font-size: 1.2rem;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.h5p-image-hotspot-popup-pointer {
+  transition: none;
+}
+
+.h5p-image-hotspot-popup-content .h5p-image-hotspot-popup-header {
+  display: none;
 }
 
 .h5p-content-controls {

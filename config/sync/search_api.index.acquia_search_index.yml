@@ -8,8 +8,8 @@ dependencies:
     - node
     - search_api
   config:
-    - field.storage.node.body
     - field.storage.node.field_article_type
+    - field.storage.node.body
     - field.storage.node.field_department
     - field.storage.node.field_document
     - field.storage.node.field_job_title
@@ -310,10 +310,12 @@ processor_settings:
     alt: true
     tags:
       b: 2
+      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
+      u: 1
     weights:
       preprocess_index: -15
       preprocess_query: -15
@@ -324,23 +326,8 @@ processor_settings:
       preprocess_index: 0
   type_boost:
     boosts:
-      'entity:cohesion_layout':
-        datasource_boost: !!float 1
-      'entity:component_content':
-        datasource_boost: !!float 1
       'entity:node':
         datasource_boost: !!float 1
-        bundle_boosts:
-          article: !!float 5
-          clinical_publications: !!float 8
-          event: 0.1
-          instructional_videos: !!float 13
-          news: !!float 3
-          page: 0.2
-          person: 0.1
-          place: 0.1
-          product: 0.1
-          product_documentation: !!float 21
     weights:
       preprocess_index: 0
 tracker_settings:
