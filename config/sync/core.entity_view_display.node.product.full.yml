@@ -14,39 +14,18 @@ dependencies:
     - field.field.node.product.field_product_line
     - node.type.product
   module:
-    - image
-    - text
     - user
 id: node.product.full
 targetEntityType: node
 bundle: product
 mode: full
-content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_image:
-    weight: 102
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
+  body: true
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_image: true
   field_layout_canvas: true
   field_local_sales_representative: true
   field_media: true
@@ -54,4 +33,5 @@ hidden:
   field_product_documentation: true
   field_product_line: true
   langcode: true
+  links: true
   search_api_excerpt: true

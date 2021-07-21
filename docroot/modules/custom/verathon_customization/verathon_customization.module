@@ -117,38 +117,14 @@ function verathon_customization_preprocess_html(array &$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function verathon_customization_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-devices' ) {
+  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-eol-prod-doc-list' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-eol-product-documentation-list');
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-container-boxed');
     $form = change_labels($form);
   }
-  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-product-documentation' ) {
+  if ( !empty($form) &&  $form['#id'] === 'views-exposed-form-product-support-cards-prod-support-doc-list' ) {
     $form['#attributes']['class'][] = Html::cleanCssIdentifier('coh-style-product-documentation-form-and-list');
     $form = change_labels($form);
-  }
-}
-
-/**
- * Function to change the title value from a view
- */
-function changetitlevalue($title) {
-  return (strtolower(preg_replace('/[[:space:]]+/', '-', htmlspecialchars_decode($title))));
-}
-
-/**
- * Implements hook_preprocess_views_view_field()
- * Preprocess vars for views-view-field.tpl.php.
- */
-function verathon_customization_preprocess_views_view_field(&$vars) {
-  if ($vars['view']->current_display == 'product_support_card' && $vars['field']->options['id'] == 'title') {
-    $title_value = $vars['field']->original_value;
-    $vars['output'] = changetitlevalue($title_value);
-    $vars['field']->last_render = $vars['output'];
-  }
-  if ($vars['view']->current_display == 'legacy_product_list' && $vars['field']->options['id'] == 'title') {
-    $title_value = $vars['field']->original_value;
-    $vars['output'] = changetitlevalue($title_value);
-    $vars['field']->last_render = $vars['output'];
   }
 }
 

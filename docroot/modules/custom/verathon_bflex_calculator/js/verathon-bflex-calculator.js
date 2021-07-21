@@ -133,7 +133,7 @@ function validateInput(id, type) {
         button.removeClass("disabled");
         $("#disableSubmitText").length ? $("#disableSubmitText").css("display", "none") : null;
     }
-    return errorCheck;
+    return checkOverallErrors;
 }
 
 
@@ -223,7 +223,6 @@ function triggerAction(id, type) {
                     $("#" + textFieldId).attr("value", $("#" + textFieldId).val());
                 });
             });
-
             $(".form-number", context).each(function () {
                 $(this).on('change', function () {
                     let numberId = $(this).attr("id")
@@ -231,11 +230,27 @@ function triggerAction(id, type) {
                     $("#" + numberId).attr("value", $("#" + numberId).val());
                 });
             });
+            // $("#submit-see-results", context).each(function () {
+            //     $(this).on("click", function () {
+            //         var errorCheck;
+            //         errorCheck = validateInput("edit-facility-name", "textFieldInput");
+            //     });
+            // });
         }
     };
+
 
     calculateMaintenanceCost();
     calculateReprocessingCost();
     calculateCrossContaminationInfectionCost();
 
+    // Invoking the form submit.
+    $.fn.checkValid = function checkValid() {
+        errorCheck = validateInput("edit-facility-name", "textFieldInput");
+        if (!errorCheck) {
+            $('.form-button-bflex').click();
+        }
+    }
+
 })(jQuery, Drupal);
+
