@@ -247,7 +247,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<p>Search for devices by Device Name, Serial Number, or Product ID</p>\r\n"
+            value: "<p>Select the Country to View Support Contact </p>\r\n"
             format: cohesion
           plugin_id: text
       footer: {  }
