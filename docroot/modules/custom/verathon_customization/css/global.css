@@ -4,6 +4,7 @@
   --verblue1: #70c3e9;
   --verblue2: #26a3dd;
   --verblue3: #157cd1;
+  --vergray: #999999;
 }
 
 
@@ -411,15 +412,21 @@ form.webform-submission-form fieldset {
   margin: 0;
 }
 
-form.webform-submission-form fieldset legend span {
-  display: none;
+form.webform-submission-form label {
+  font-weight: 400;
 }
 
-form.webform-submission-form fieldset input.form-text,
+form.webform-submission-form fieldset .fieldset-wrapper {
+  display: flex;
+}
+
 form.webform-submission-form fieldset .form-select:not(.editor) {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
+  appearance: auto;
+  padding: 8px 4px;
+  cursor: pointer;
 }
 
 form.webform-submission-form fieldset label {
@@ -431,10 +438,14 @@ form.webform-submission-form fieldset label {
 form.webform-submission-form div.form-item {
   padding: 0;
   margin: 0;
+  padding-right: 1rem;
+  width: 50%;
 }
 
 form.webform-submission-form div.form-item :is(input, select, textarea) {
   margin-bottom: 1rem;
+  padding: 0.3125rem 0.25rem;
+  border-color: var(--vergray);
 }
 
 form.webform-submission-form div.form-actions {
@@ -446,6 +457,12 @@ form.webform-submission-form div.form-actions {
 .ui-widget.ui-widget-content {
   width: 100% !important;
   max-width: 31.25rem;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 1rem;
+  background: transparent;
+  border: none;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
@@ -462,9 +479,10 @@ form.webform-submission-form div.form-actions {
   font-size: 1rem;
   width: auto;
   border: none;
+  border-radius: unset;
   background-color: var(--verblue3);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.4375rem 1.0625rem;
   font-weight: 600;
   opacity: 0.8;
   -webkit-transition: opacity 300ms ease;
