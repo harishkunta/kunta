@@ -155,7 +155,6 @@ module:
   workbench_email: 0
   workflows: 0
   pathauto: 1
-  trailing_slash: 1
   content_translation: 10
   views: 10
   paragraphs: 11
