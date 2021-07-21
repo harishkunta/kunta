@@ -465,7 +465,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"eol-device\">\r\n  <div class=\"title\"> <h1> {{ title }} </h1></div>\r\n  <div class=\"no-longer-text\"><p>This product was no longer supported</p></div>\r\n  <div class=\"description\">{{ body }}</div>\r\n  <div class=\"request-link\"> <a href=\"#\" class=\"button\">Request EOL Letter</a></div> \r\n</div>"
+            text: "<div class=\"eol-device\">\r\n  <div class=\"title\"> <h1> {{ title }} </h1></div>\r\n  <div class=\"no-longer-text\"><p>This product was no longer supported</p></div>\r\n  <div class=\"description\">{{ body }}</div>\r\n  <div class=\"request-link\"> <a href=\"/contact-us\" class=\"button\">Request EOL Letter</a></div> \r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1806,10 +1806,10 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: ‹
+            next: ›
+            first: «
+            last: »
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -2904,10 +2904,10 @@ display:
           id: 0
           total_pages: 3
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: ‹
+            next: ›
+            first: «
+            last: »
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
