@@ -431,7 +431,7 @@ form.webform-submission-form fieldset .form-select:not(.editor) {
   -ms-flex-order: 2;
   order: 2;
   appearance: auto;
-  padding: 8px 4px;
+  padding: 0.5rem 0.25rem;
   cursor: pointer;
 }
 
