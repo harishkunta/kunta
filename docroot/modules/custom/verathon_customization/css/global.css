@@ -3,6 +3,7 @@
   --lightgray: #e6e6e6;
   --verblue1: #70c3e9;
   --verblue2: #26a3dd;
+  --verblue3: #157cd1;
 }
 
 
@@ -459,10 +460,9 @@ form.webform-submission-form div.form-actions {
   font-size: 1rem;
   width: auto;
   border: none;
-  background-color: #157cd1;
-  color: #fff;
+  background-color: var(--verblue3);
+  color: white;
   padding: 0.75rem 1.5rem;
-  text-transform: uppercase;
   font-weight: 600;
   opacity: 0.8;
   -webkit-transition: opacity 300ms ease;
@@ -470,6 +470,6 @@ form.webform-submission-form div.form-actions {
 }
 
 .ui-dialog .ui-dialog-buttonpane button.webform-button--submit:hover {
-  background-color: #157cd1;
+  background-color: var(--verblue3);
   opacity: 1;
 }
