@@ -300,13 +300,6 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 	justify-content: center;
 	margin: 1.5625rem 0 1.5rem;
 }
-.path-bflex-calculator .webform-submission-gated-form-bflex-form:before{
-	content: "Please fill out the form to see your results.";
-	margin: .5rem auto 1.5625rem;
-	font-size: 1.125rem;
-	text-align: center;
-	line-height: 1.3125rem;
-}
 .path-bflex-calculator .ui-dialog .ui-dialog-buttonpane{
 	border: none;
 	padding: 0 1.875rem 1.875rem;
@@ -352,7 +345,8 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
     right: 0;
 }
 .path-bflex-calculator .ui-widget.ui-widget-content{
-	border: .0625rem solid #555555;
+    border: .0625rem solid #555555;
+    /* using important to override inline styles, so that form width adjusts according to device size*/
 	width: 100% !important;
 	max-width: 400px;
 }
