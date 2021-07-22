@@ -6,6 +6,7 @@
   --buttonblue: #157cd1;
   --verblue3: #157cd1;
   --vergray: #999999;
+  --vergray2: #555555;
 }
 
 
@@ -226,163 +227,182 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 /* Bflex Calculator - 'see results' form styles */
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form>* {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name input,
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name input,
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email input {
-    height: 2.125rem;
-    margin-bottom: 1.875rem;
+  height: 2.125rem;
+  margin-bottom: 1.875rem;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox {
-    display: block;
-    padding-bottom: 0;
+  display: block;
+  padding-bottom: 0;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox label {
-    display: inline-block;
-    text-align: left;
-    color: gray;
-    margin-bottom: .375rem;
-    font-weight: bold;
-    line-height: 21px;
+  display: inline-block;
+  text-align: left;
+  color: gray;
+  margin-bottom: .375rem;
+  font-weight: bold;
+  line-height: 21px;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description {
-    display: inline;
-    line-height: 1.5;
-    padding-left: .3125rem;
-    font-weight: normal;
-    color: gray;
-    font-size: 1rem;
+  display: inline;
+  line-height: 1.5;
+  padding-left: .3125rem;
+  font-weight: normal;
+  color: gray;
+  font-size: 1rem;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox .webform-element-description a {
-    text-decoration: none;
-    color: #0d6efd;
+  text-decoration: none;
+  color: #0d6efd;
 }
-.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-checkbox{
-	opacity: 1;
-	appearance: auto;
-	float: left;
-	width: .75rem;
-	height: .75rem;
-	position: relative;
-	top: .25rem;
-    margin-right: .1875rem;
-    margin-bottom: 0;
+
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-checkbox {
+  opacity: 1;
+  appearance: auto;
+  float: left;
+  width: .75rem;
+  height: .75rem;
+  position: relative;
+  top: .25rem;
+  margin-right: .1875rem;
+  margin-bottom: 0;
 }
-.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label:before{
-    display: none;
+
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label:before {
+  display: none;
 }
-.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label{
-	display: block;
-	margin-bottom: .5rem;
+
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications label {
+  display: block;
+  margin-bottom: .5rem;
 }
-.path-bflex-calculator .ui-dialog-content .form-actions{
-	padding: 0;
+
+.path-bflex-calculator .ui-dialog-content .form-actions {
+  padding: 0;
 }
-.path-bflex-calculator .ui-dialog-content{
-	padding: .625rem 1.875rem;
+
+.path-bflex-calculator .ui-dialog-content {
+  padding: .625rem 1.875rem;
 }
-.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications p{
-	margin-bottom: 0;
+
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications p {
+  margin-bottom: 0;
 }
-.path-bflex-calculator .webform-ajax-form-wrapper:before{
-	content: url(../../../custom/verathon_bflex_calculator/images/GlideScope_Logo_Blue.png);
-	display: flex;
-	justify-content: center;
-	margin: 1.5625rem 0 1.5rem;
+
+.path-bflex-calculator .webform-ajax-form-wrapper:before {
+  content: url(../../../custom/verathon_bflex_calculator/images/GlideScope_Logo_Blue.png);
+  display: flex;
+  justify-content: center;
+  margin: 1.5625rem 0 1.5rem;
 }
-.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane{
-	border: none;
-	padding: 0 1.875rem 1.875rem;
+
+.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane {
+  border: none;
+  padding: 0 1.875rem 1.875rem;
 }
-.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{
-	float: left;
+
+.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  float: left;
 }
-.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button{
-	border-radius: 0;
-	border: none;
-	background: var(--buttonblue);
-	color: white;
-	font: .875rem;
-	display: inline-block;
-	vertical-align: top;
-	text-decoration: none;
-	padding: .4375rem 1.0625rem;
+
+.path-bflex-calculator .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
+  border-radius: 0;
+  border: none;
+  background: var(--buttonblue);
+  color: white;
+  font: .875rem;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: .4375rem 1.0625rem;
 }
-.path-bflex-calculator .ui-widget-header{
-	border: none;
-	background-color: white;
+
+.path-bflex-calculator .ui-widget-header {
+  border: none;
+  background-color: white;
 }
+
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email-communications .description,
 .path-bflex-calculator .ui-widget-header .ui-dialog-title,
-.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-closethick{
-	display: none;
-}
-.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close,.ui-dialog .ui-dialog-titlebar-close{
-    border-radius: 0;
-    color: white;
-    font-size: .8125rem;
-    background: var(--buttonblue);
-    border-color: var(--buttonblue);
-    float: right;
-    width: auto;
-    margin: 0;
-    height: auto;
-    text-indent: 0;
-    font-weight: 600;
-    padding: .25rem .625rem;
-    position: relative;
-    top: 0;
-    right: 0;
-}
-.path-bflex-calculator .ui-widget.ui-widget-content{
-    border: .0625rem solid #555555;
-    /* using important to override inline styles, so that form width adjusts according to device size*/
-	width: 100% !important;
-	max-width: 400px;
-}
-.path-bflex-calculator .ui-dialog input{
-	background-color: white;
-	border: .0625rem solid #999;
+.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-closethick {
+  display: none;
 }
 
-.path-bflex-calculator .ui-dialog .ui-dialog-titlebar{
-	padding: 0;
-}
-.path-bflex-calculator .ui-widget-overlay{
-	background-color: black;
-	opacity: .5;
-}
-.ui-dialog{
-    padding: 0;
+.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close,
+.ui-dialog .ui-dialog-titlebar-close {
+  border-radius: 0;
+  color: white;
+  font-size: .8125rem;
+  background: var(--buttonblue);
+  border-color: var(--buttonblue);
+  float: right;
+  width: auto;
+  margin: 0;
+  height: auto;
+  text-indent: 0;
+  font-weight: 600;
+  padding: .25rem .625rem;
+  position: relative;
+  top: 0;
+  right: 0;
 }
 
-@media screen and (min-width: 768px){
-	.path-bflex-calculator .ui-widget.ui-widget-content{
-		max-width: 500px;
-	}
-	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name,
-	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
-        flex-basis: 50%;
-	}
+.path-bflex-calculator .ui-widget.ui-widget-content {
+  border: .0625rem solid var(--vergray2);
+  /* using important to override inline styles, so that form width adjusts according to device size*/
+  width: 100% !important;
+  max-width: 400px;
+}
 
-	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name {
-        padding-right: .75rem;
-	}
+.path-bflex-calculator .ui-dialog input {
+  background-color: white;
+  border: .0625rem solid var(--vergray);
+}
 
-	.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
-	    padding-left: .75rem;
-	}
+.path-bflex-calculator .ui-dialog .ui-dialog-titlebar {
+  padding: 0;
+}
+
+.path-bflex-calculator .ui-widget-overlay {
+  background-color: black;
+  opacity: .5;
+}
+
+.ui-dialog {
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .path-bflex-calculator .ui-widget.ui-widget-content {
+    max-width: 500px;
+  }
+
+  .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name,
+  .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
+    flex-basis: 50%;
+  }
+
+  .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name {
+    padding-right: .75rem;
+  }
+
+  .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name {
+    padding-left: .75rem;
+  }
 }
 
 /* Pager Styles in Support page */
@@ -454,7 +474,6 @@ nav.pager ul.pager__items li.pager__item.is-active a:hover {
 .floating-widget .contact-widget-text:hover,
 .floating-widget .contact-widget-link:hover {
   position: relative;
-  bottom: 0.0625rem;
 }
 
 /* Cookie Disclaimer */
