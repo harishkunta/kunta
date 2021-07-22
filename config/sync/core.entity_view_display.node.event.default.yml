@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_call_to_action
     - field.field.node.event.field_categories
     - field.field.node.event.field_contact_number
     - field.field.node.event.field_contact_person
@@ -29,6 +30,7 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - link
     - telephone
     - text
     - user
@@ -51,6 +53,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_call_to_action:
+    weight: 21
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_contact_number:
     weight: 15
     label: above
