@@ -16,7 +16,7 @@ conditions:
     negate: false
   request_path:
     id: request_path
-    pages: "<front>\r\n/bladderscan\r\n/glidescope\r\n/bflex"
+    pages: "<front>\r\n/bladderscan\r\n/glidescope-home\r\n/bflex"
     negate: false
 contexts: {  }
 media: all
