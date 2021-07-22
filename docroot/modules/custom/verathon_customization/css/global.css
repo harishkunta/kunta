@@ -419,7 +419,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 
 .path-bflex-calculator form.webform-submission-form div.js-form-type-webform-markup{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 
