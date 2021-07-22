@@ -42,6 +42,7 @@ module:
   config_translation: 0
   content_moderation: 0
   contextual: 0
+  cookieconsent: 0
   crop: 0
   ctools: 0
   datetime: 0
@@ -159,7 +160,6 @@ module:
   views: 10
   paragraphs: 11
   acquia_cms: 1000
-  eu_cookie_compliance: 1001
 theme:
   stable: 0
   claro: 0
