@@ -347,6 +347,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   border-radius: 0;
   color: white;
   font-size: .8125rem;
+  opacity: 0.8;
   background: var(--buttonblue);
   border-color: var(--buttonblue);
   float: right;
@@ -356,9 +357,25 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   text-indent: 0;
   font-weight: 600;
   padding: .25rem .625rem;
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  z-index: 101;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover {
+  background: var(--buttonblue);
+  border-color: var(--buttonblue);
+  color: white;
+  font-weight: bold;
+  padding: .25rem .625rem;
+  opacity: 1;
+}
+
+.ui-dialog .ui-dialog-titlebar-close .ui-button-icon.ui-icon.ui-icon.ui-icon-closethick {
+  display: none;
 }
 
 .path-bflex-calculator .ui-widget.ui-widget-content {
@@ -581,6 +598,16 @@ form.webform-submission-form div.form-item :is(input, select, textarea) {
 
 form.webform-submission-form div.form-actions {
   padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  form.webform-submission-form div.form-item {
+    width: 100%;
+  }
+
+  form.webform-submission-form fieldset .fieldset-wrapper {
+    flex-direction: column;
+  }
 }
 
 /* Just to override inline styles from from Important is being used here */
