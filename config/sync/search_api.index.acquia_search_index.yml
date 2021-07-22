@@ -1,6 +1,6 @@
 uuid: 806b32b9-b0bf-434f-b5c4-5e6d4b2958d1
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - search_api_solr
@@ -20,6 +20,7 @@ dependencies:
     - field.storage.node.field_role
     - field.storage.node.field_topic
     - field.storage.node.field_year
+    - search_api.server.acquia_search_server
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -332,7 +333,6 @@ processor_settings:
         bundle_boosts:
           article: !!float 5
           clinical_publications: !!float 8
-          country_and_region: 0.1
           event: 0.1
           instructional_videos: !!float 13
           news: !!float 3
@@ -349,4 +349,4 @@ tracker_settings:
 options:
   index_directly: true
   cron_limit: 50
-server: null
+server: acquia_search_server
