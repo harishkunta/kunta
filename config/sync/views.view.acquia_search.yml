@@ -774,7 +774,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ type }}\r\n{{ title }}\r\n{{ created }}\r\n{{ body }}"
+            text: "{{ type }}\r\n{{ title }}\r\n{{ created }}\r\n{{ body|length > 200 ? body|slice(0, 150)|raw ~ '...' : body|raw }}"
             make_link: false
             path: ''
             absolute: false
