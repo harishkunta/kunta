@@ -26,14 +26,14 @@ popup_height: null
 popup_hide_agreed: true
 popup_hide_button_message: Hide
 popup_info:
-  value: "<p>May we use cookies to track your activities? We take your privacy very seriously. Please see our <a href=\"https://www.verathon.com/legal\">privacy policy</a>&nbsp;for details and any questions.</p>\r\n"
+  value: "<p>May we use cookies to track your activities? We take your privacy very seriously. Please see our <a href=\"/legal\">privacy policy</a>&nbsp;for details and any questions.</p>\r\n"
   format: cohesion
 mobile_popup_info:
   value: ''
   format: filtered_html
 popup_info_template: new
 mobile_breakpoint: 768
-popup_link: 'https://www.verathon.com/legal'
+popup_link: /legal
 popup_link_new_window: true
 popup_position: false
 fixed_top_position: true
@@ -53,7 +53,7 @@ automatic_cookies_removal: true
 allowed_cookies: ''
 consent_storage_method: do_not_store
 withdraw_message:
-  value: "<p>May we use cookies to track your activities? We take your privacy very seriously. Please see our <a href=\"https://www.verathon.com/legal\">privacy policy</a>&nbsp;for details and any questions.</p>\r\n"
+  value: "<p>May we use cookies to track your activities? We take your privacy very seriously. Please see our <a href=\"/legal\">privacy policy</a>&nbsp;for details and any questions.</p>\r\n"
   format: cohesion
 withdraw_action_button_label: 'Withdraw consent'
 withdraw_tab_button_label: 'Privacy policy'

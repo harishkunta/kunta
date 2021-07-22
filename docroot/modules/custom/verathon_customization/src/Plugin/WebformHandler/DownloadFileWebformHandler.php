@@ -28,7 +28,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
  *   tokens = TRUE,
  * )
  */
-class MyWebformHandler extends WebformHandlerBase {
+class DownloadFileWebformHandler extends WebformHandlerBase {
 
   /**
    * The HTTP client to fetch the feed data with.
