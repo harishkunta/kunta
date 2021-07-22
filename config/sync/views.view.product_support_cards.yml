@@ -2902,7 +2902,7 @@ display:
           items_per_page: 10
           offset: 0
           id: 0
-          total_pages: 3
+          total_pages: null
           tags:
             previous: ‹
             next: ›
