@@ -2,6 +2,8 @@
 
 namespace Drupal\verathon_customization\Plugin\WebformHandler;
 
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
@@ -78,8 +80,11 @@ class DownloadFileWebformHandler extends WebformHandlerBase {
       'Content-Disposition' => 'attachment;filename=' . $fileName
     ];
 
-    $response = new BinaryFileResponse($uri, 200, $headers, true);
-    $form_state->setResponse($response);
+    $file_response = new BinaryFileResponse($uri, 200, $headers, true);
+    $form_state->setResponse($file_response);
+    $ajax_response = new AjaxResponse();
+    $ajax_response->addCommand(new CloseModalDialogCommand());
+    return $ajax_response;
   }
 
   /**
@@ -93,16 +98,20 @@ class DownloadFileWebformHandler extends WebformHandlerBase {
       $config = $this->configFactory->get('verathon_bflex_calculator.settings')->get();
       // Get an array of the values from the submission.
       $values = $webform_submission->getData();
-      $file_path = pathinfo($values['file_name']);
+      $fileName = $values['file_name'];
+      $query = $this->database->select('file_managed', 'f');
+      $query->fields('f', ['uri']);
+      $query->condition('filename', $fileName);
+      $uri = $query->execute()->fetchField();
       $options = [
         'attributes' => [
           'target' => '_blank',
           'class' => ['download']
         ]
       ];
-      $urlObject = Url::fromUri($base_url . $values['file_path'], $options);
+      $urlObject = Url::fromUri($uri, $options);
       // Forming the default URL for pardot form handler.
-      $download_file_link = Link::fromTextAndUrl($file_path['basename'], $urlObject)->toString();
+      $download_file_link = Link::fromTextAndUrl($fileName, $urlObject)->toString();
       $webform = $webform_submission->getWebform();
       $webform->setSetting('confirmation_message', t('Here is your file: @title', ['@title' => $download_file_link]));
       // Forming the default URL for pardot form handler.

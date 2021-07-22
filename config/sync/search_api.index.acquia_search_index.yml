@@ -315,7 +315,7 @@ processor_settings:
       h3: 2
       strong: 2
     weights:
-      preprocess_index: -15
+      preprocess_index: -47
       preprocess_query: -15
   language_with_fallback: {  }
   rendered_item: {  }
@@ -333,6 +333,7 @@ processor_settings:
         bundle_boosts:
           article: !!float 5
           clinical_publications: !!float 8
+          country_and_region: !!float 0
           event: 0.1
           instructional_videos: !!float 13
           news: !!float 3
@@ -342,7 +343,7 @@ processor_settings:
           product: 0.1
           product_documentation: !!float 21
     weights:
-      preprocess_index: 0
+      preprocess_index: -48
 tracker_settings:
   default:
     indexing_order: fifo
