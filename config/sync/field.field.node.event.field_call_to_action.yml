@@ -1,0 +1,23 @@
+uuid: 15e400c7-96db-4ecd-84a0-3921c9ba9d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_to_action
+    - node.type.event
+  module:
+    - link
+id: node.event.field_call_to_action
+field_name: field_call_to_action
+entity_type: node
+bundle: event
+label: 'Call To Action'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.event.body
+    - field.field.node.event.field_call_to_action
     - field.field.node.event.field_categories
     - field.field.node.event.field_contact_number
     - field.field.node.event.field_contact_person
@@ -87,6 +88,7 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_call_to_action: true
   field_categories: true
   field_contact_number: true
   field_contact_person: true
