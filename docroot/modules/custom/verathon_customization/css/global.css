@@ -241,10 +241,21 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   height: 2.125rem;
   margin-bottom: 1.875rem;
 }
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name input:focus,
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name input:focus,
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email input:focus{
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox {
   display: block;
   padding-bottom: 0;
+}
+
+.ui-dialog-content .messages--error{
+  margin-bottom: 20px;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox label {
@@ -363,6 +374,9 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
   z-index: 101;
+}
+.path-bflex-calculator form.webform-submission-form div.form-item{
+  padding-right: 0;
 }
 
 .ui-dialog .ui-dialog-titlebar-close:hover {
