@@ -635,6 +635,7 @@ form.webform-submission-form div.form-actions {
 .ui-widget.ui-widget-content {
   width: 100% !important;
   max-width: 31.25rem;
+  z-index: 5000;
 }
 
 .ui-dialog .ui-dialog-titlebar {
