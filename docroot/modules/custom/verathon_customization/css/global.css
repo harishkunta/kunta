@@ -417,6 +417,12 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   padding: 0;
 }
 
+.path-bflex-calculator form.webform-submission-form div.js-form-type-webform-markup{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 @media screen and (min-width: 768px) {
   .path-bflex-calculator .ui-widget.ui-widget-content {
     max-width: 500px;
