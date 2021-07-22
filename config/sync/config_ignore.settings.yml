@@ -1,5 +1,6 @@
 ignored_config_entities:
   - search_api.server.acquia_search_server
   - search_api.index.acquia_search_index
+  - trailing_slash.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
