@@ -255,7 +255,19 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
 }
 
 .ui-dialog-content .messages--error{
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  border: .0625rem solid;
+  color: #a51b00;
+  border-color: #f9c9bf;
+  box-shadow: none;
+}
+
+.ui-dialog-content .messages--error ul li{
+  line-height: 1rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  list-style-type: none;
+  font-size: .875rem;
 }
 
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-type-checkbox label {
