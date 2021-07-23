@@ -1,0 +1,17 @@
+uuid: 583f2f0e-d40f-4b96-8ac0-4a3f217c024b
+langcode: en
+status: true
+dependencies: {  }
+id: '19162e18'
+label: 'Default Gray'
+json_values: '{"preview":{"text":"<p>Default content for ''Generic''.<\/p>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xl":{"color":{"value":{"link":true,"value":{"hex":"#666666","rgba":"rgba(102, 102, 102, 1)"},"name":"Verathon Silver","uid":"verathon-silver","class":".coh-color-verathon-silver","variable":"$coh-color-verathon-silver","wysiwyg":true,"tags":["Silver"],"inuse":true}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xl"}],"activeFields":[{"name":"font-family","active":false},{"name":"font-weight","active":false},{"name":"color","active":true}]}]}],"items":[],"form":null}}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-default-gray
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 0
