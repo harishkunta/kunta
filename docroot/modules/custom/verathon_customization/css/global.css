@@ -366,8 +366,8 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   display: none;
 }
 
-.path-bflex-calculator .ui-dialog .ui-dialog-titlebar-close,
-.ui-dialog .ui-dialog-titlebar-close {
+.path-bflex-calculator .ui-dialog.ui-dialog-buttons .ui-dialog-titlebar-close,
+.ui-dialog.ui-dialog-buttons .ui-dialog-titlebar-close {
   border-radius: 0;
   color: white;
   font-size: .8125rem;
@@ -393,7 +393,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   padding-right: 0;
 }
 
-.ui-dialog .ui-dialog-titlebar-close:hover {
+.ui-dialog.ui-dialog-buttons .ui-dialog-titlebar-close:hover {
   background: var(--buttonblue);
   border-color: var(--buttonblue);
   color: white;
