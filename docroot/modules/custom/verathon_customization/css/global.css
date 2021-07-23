@@ -241,9 +241,10 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   height: 2.125rem;
   margin-bottom: 1.875rem;
 }
+
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-first-name input:focus,
 .path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-last-name input:focus,
-.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email input:focus{
+.path-bflex-calculator .webform-submission-gated-form-bflex-form .form-item-email input:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
@@ -254,7 +255,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   padding-bottom: 0;
 }
 
-.ui-dialog-content .messages--error{
+.ui-dialog-content .messages--error {
   margin-bottom: 1.25rem;
   border: .0625rem solid;
   color: #a51b00;
@@ -262,7 +263,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   box-shadow: none;
 }
 
-.ui-dialog-content .messages--error ul li{
+.ui-dialog-content .messages--error ul li {
   line-height: 1rem;
   margin-bottom: 0;
   margin-left: 1rem;
@@ -387,7 +388,8 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   transition: opacity 300ms ease;
   z-index: 101;
 }
-.path-bflex-calculator form.webform-submission-form div.form-item{
+
+.path-bflex-calculator form.webform-submission-form div.form-item {
   padding-right: 0;
 }
 
@@ -429,7 +431,7 @@ form:is(#user-login-form, #user-register-form, #user-pass, #search-form, #search
   padding: 0;
 }
 
-.path-bflex-calculator form.webform-submission-form div.js-form-type-webform-markup{
+.path-bflex-calculator form.webform-submission-form div.js-form-type-webform-markup {
   text-align: center;
   margin-bottom: 1.25rem;
 }
@@ -683,4 +685,10 @@ form.webform-submission-form div.form-actions {
 .ui-dialog .ui-dialog-buttonpane button.webform-button--submit:hover {
   background-color: var(--verblue3);
   opacity: 1;
+}
+
+/* Anchor with Button */
+
+a.arrow-right::after {
+  content: url(/sites/default/files/2021-07/arrow.png);
 }
