@@ -7,6 +7,7 @@ use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\views\ViewExecutable;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_css_alter().
@@ -153,4 +154,19 @@ function change_labels($form) {
     $form['doc_type']['#options']['All'] = t('All Documents');
   }
   return $form;
+}
+
+/**
+ * Implements hook_views_post_execute().
+ */
+function verathon_customization_views_post_execute(ViewExecutable $view) {
+  if (isset($view) && $view->id() === 'product_support_cards' && $view->current_display === 'legacy_product_list') {
+    foreach ($view->result as $key => $result) {
+      $tid = isset($result->taxonomy_term_field_data_node__field_product_line_tid) ? $result->taxonomy_term_field_data_node__field_product_line_tid : '';
+      $term_status = Term::load($tid)->get('status')->value;
+      if(isset($term_status) && $term_status == FALSE) {
+        unset($view->result[$key]);
+      } 
+    }
+  }
 }
