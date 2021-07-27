@@ -7,7 +7,7 @@ cookie_same_site: Lax
 open_settings_hash: editCookieSettings
 show_deny_all: true
 settings_as_link: false
-group_consent: true
+group_consent: false
 cookie_docs: false
 lib_load_from_cdn: true
 lib_scroll_limit: 250

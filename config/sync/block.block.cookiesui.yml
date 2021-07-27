@@ -1,4 +1,4 @@
-uuid: 30027826-8cb0-4877-b919-afe172d3248a
+uuid: cb28e078-1646-498e-96f3-45c8b4150ff4
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,6 @@ dependencies:
     - cohesion
     - collapsiblock
     - cookies
-    - system
   theme:
     - cohesion_theme
 third_party_settings:
@@ -14,8 +13,8 @@ third_party_settings:
     collapse_action: '0'
 id: cookiesui
 theme: cohesion_theme
-region: dx8_hidden
-weight: 14
+region: content
+weight: -14
 provider: null
 plugin: cookies_ui_block
 settings:
@@ -28,7 +27,3 @@ visibility:
     id: cohesion_master_template
     using_master_template: 0
     negate: false
-  request_path:
-    id: request_path
-    pages: "/admin/*\r\n"
-    negate: true
