@@ -1,0 +1,9 @@
+default:
+  version: VERSION
+  js:
+    js/cookies_video.js: {}
+  css:
+    component:
+      css/cookies_video.css: {}
+  dependencies:
+    - cookies/cookies.lib

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Installation information for the 'Cookies IVW' module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function cookies_ivw_install() {
+  // Load cookies_ivw module after the third-party library.
+  module_set_weight('cookies_ivw', 11);
+}
