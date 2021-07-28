@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Installation and update functions for this project.
+ */
+
+/**
+ * Add configuration to the module config for CDN, scroll limit and time out.
+ */
+function cookies_update_8001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookies.config');
+  $update_config = [
+    'lib_load_from_cdn' => 1,
+    'lib_scroll_limit' => 250,
+    'lib_timeout' => 0,
+  ];
+  foreach ($update_config as $key => $value) {
+    if ($config->get($key) === NULL) {
+      $config->set($key, $value);
+    }
+  }
+  $config->save(TRUE);
+}
