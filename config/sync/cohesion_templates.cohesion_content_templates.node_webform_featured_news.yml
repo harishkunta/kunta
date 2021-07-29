@@ -1,0 +1,18 @@
+uuid: 194bd427-37dd-4ac3-b4a1-caec71813786
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_featured_news
+label: 'Featured News - Left Column (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: featured_news
+master_template: ''

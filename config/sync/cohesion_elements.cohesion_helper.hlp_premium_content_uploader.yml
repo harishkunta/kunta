@@ -1,0 +1,17 @@
+uuid: 758122b1-b48c-418c-ba0d-105f5a2ea6a0
+langcode: en
+status: true
+dependencies: {  }
+id: hlp_premium_content_uploader
+label: 'Premium Content Uploader'
+json_values: '{"canvas":[{"type":"form-container","uid":"form-section","title":"Field group","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"776226a0-1744-4664-a578-c81041f6567c","parentUid":"root","isContainer":true,"children":[{"type":"form-field-container","uid":"form-field-repeater","title":"Field repeater","selected":false,"status":{"collapsed":false,"isopen":false},"options":{"formBuilder":true},"uuid":"7faaa2e0-38a3-4057-95ee-67fd8200f0eb","parentUid":"form-section","isContainer":true,"children":[]}]}],"mapper":{},"model":{"776226a0-1744-4664-a578-c81041f6567c":{"settings":{"title":"Premium Content Uploader","type":"cohSection","hideRowHeading":0,"removePadding":0,"columnCount":"coh-component-field-group-1-col","breakpointIcon":"","breakpoints":false,"propertiesMenu":false,"disableScrollbar":true,"disableEllipsisMenu":true,"isOpen":true},"contextVisibility":{"condition":"ALL"}},"7faaa2e0-38a3-4057-95ee-67fd8200f0eb":{"settings":{"title":"Premium Content Links","type":"cohArray","componentField":true,"noTitle":true,"htmlClass":"coh-array--field-repeater","disableScrollbar":true,"addText":"Add new link","key":"field-repeater","sortable":true,"sortableOptions":{"axis":"y","handle":true},"schema":{"type":"array"},"machineName":"premium-content-links","min":1,"max":3,"increment":1,"tooltipPlacement":"auto right"},"sortable":true,"sortableOptions":{"axis":"y","handle":true},"contextVisibility":{"condition":"ALL"}}},"previewModel":{"776226a0-1744-4664-a578-c81041f6567c":{},"7faaa2e0-38a3-4057-95ee-67fd8200f0eb":{}},"variableFields":{"776226a0-1744-4664-a578-c81041f6567c":[],"7faaa2e0-38a3-4057-95ee-67fd8200f0eb":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_general_helpers
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: null

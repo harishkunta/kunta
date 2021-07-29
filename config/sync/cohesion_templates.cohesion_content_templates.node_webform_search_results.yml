@@ -1,0 +1,18 @@
+uuid: 21135d11-fe59-4a8a-b7b0-c66755b78763
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_search_results
+label: 'Search Results (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: search_results
+master_template: ''

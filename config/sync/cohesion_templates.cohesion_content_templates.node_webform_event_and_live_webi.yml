@@ -1,0 +1,18 @@
+uuid: 0fef4ad5-08f8-4975-a32f-6e3426f53622
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_event_and_live_webi
+label: 'Event and Live Webinars (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: event_and_live_webinars
+master_template: ''

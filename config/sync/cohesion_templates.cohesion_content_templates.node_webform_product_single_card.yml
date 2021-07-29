@@ -1,0 +1,18 @@
+uuid: cfe1d978-ec79-44b9-90fa-5476e266d193
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_product_single_card
+label: 'Product Single Card (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: product_single_card
+master_template: ''
