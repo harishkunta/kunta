@@ -1,0 +1,18 @@
+uuid: 3631752a-1d04-413b-bce3-f3bf2d3cd8cd
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_pdf
+label: 'PDF (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: pdf
+master_template: ''

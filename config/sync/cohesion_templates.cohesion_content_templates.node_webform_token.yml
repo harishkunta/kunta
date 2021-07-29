@@ -1,0 +1,18 @@
+uuid: 62e3128e-82e1-4eab-8ef3-3449109ebf38
+langcode: en
+status: false
+dependencies: {  }
+id: node_webform_token
+label: 'Token (Node, Webform)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: webform
+view_mode: token
+master_template: ''
