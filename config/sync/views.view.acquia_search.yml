@@ -10,6 +10,10 @@ dependencies:
     - field.storage.node.field_video_thumbnail
     - search_api.index.acquia_search_index
     - taxonomy.vocabulary.product_line
+  content:
+    - 'taxonomy_term:product_line:804411b6-2895-41ed-bd2d-3e52f908ef10'
+    - 'taxonomy_term:product_line:8ed9e01c-6e58-45d1-8f95-444656be7d8d'
+    - 'taxonomy_term:product_line:cf655121-30c6-4c60-9d82-bf6e2c40df91'
   module:
     - cohesion
     - file
@@ -902,7 +906,10 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: {  }
+          value:
+            436: 436
+            431: 431
+            51: 51
           group: 1
           exposed: true
           expose:
