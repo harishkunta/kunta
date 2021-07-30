@@ -1,5 +1,0 @@
-cookies.texts:
-  title: 'COOKiES widget texts'
-  base_route_name: cookies.texts
-  names:
-    - cookies.texts

@@ -1,9 +1,0 @@
-default:
-  version: VERSION
-  js:
-    js/cookies_base.js: {}
-  css:
-    component:
-      css/cookies_base.css: {}
-  dependencies:
-    - cookies/cookiesjsr
