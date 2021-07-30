@@ -6,11 +6,6 @@
 #
 # See also: https://docs.acquia.com/acquia-cloud/manage/domains/#search-indexing-is-blocked-for-acquia-sites-com-domains
 #
-User-agent: googlebot
-Disallow: /
 
 User-agent: *
-Disallow: /
-
-User-agent: Chrome-Lighthouse
 Allow: /
