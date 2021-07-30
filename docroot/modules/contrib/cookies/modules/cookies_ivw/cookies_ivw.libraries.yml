@@ -1,4 +1,0 @@
-ivw:
-  version: VERSION
-  js:
-    js/cookies_ivw.js: {}
