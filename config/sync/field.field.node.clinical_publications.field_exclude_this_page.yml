@@ -1,0 +1,23 @@
+uuid: 8bdf60bc-c1f4-423f-9c76-4767c31efde6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclude_this_page
+    - node.type.clinical_publications
+id: node.clinical_publications.field_exclude_this_page
+field_name: field_exclude_this_page
+entity_type: node
+bundle: clinical_publications
+label: 'Exclude this Page from Search'
+description: 'When you checked this field then, this content won''t show on the Global Search page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

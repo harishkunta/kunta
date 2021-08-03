@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_call_to_action
+    - field.field.node.news.field_exclude_this_page
     - field.field.node.news.field_media
     - field.field.node.news.field_news_type
     - field.field.node.news.field_select_parent
@@ -37,6 +38,16 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_exclude_this_page:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_media:
     weight: 3
