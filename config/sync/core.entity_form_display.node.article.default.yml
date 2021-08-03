@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_categories
     - field.field.node.article.field_department
     - field.field.node.article.field_display_author
+    - field.field.node.article.field_exclude_this_page
     - field.field.node.article.field_image
     - field.field.node.article.field_procedure
     - field.field.node.article.field_product_line
@@ -58,6 +59,13 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_exclude_this_page:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_procedure:
     type: options_select
     weight: 4

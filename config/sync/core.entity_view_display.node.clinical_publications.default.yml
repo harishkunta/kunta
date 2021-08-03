@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.clinical_publications.body
     - field.field.node.clinical_publications.field_call_to_action
     - field.field.node.clinical_publications.field_department
+    - field.field.node.clinical_publications.field_exclude_this_page
     - field.field.node.clinical_publications.field_image
     - field.field.node.clinical_publications.field_procedure
     - field.field.node.clinical_publications.field_product_line
@@ -52,6 +53,16 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_exclude_this_page:
+    weight: 113
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_image:
     weight: 108

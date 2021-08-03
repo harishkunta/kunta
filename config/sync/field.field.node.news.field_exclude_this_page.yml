@@ -1,0 +1,23 @@
+uuid: a3301be8-954f-4e18-9a5b-04b472fb6c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclude_this_page
+    - node.type.news
+id: node.news.field_exclude_this_page
+field_name: field_exclude_this_page
+entity_type: node
+bundle: news
+label: 'Exclude this Page from Search'
+description: 'When you checked this field then, this content won''t show on the Global Search page.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
