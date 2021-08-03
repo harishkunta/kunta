@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_categories
+    - field.field.node.page.field_exclude_this_page
     - field.field.node.page.field_is_product
     - field.field.node.page.field_layout_canvas
     - field.field.node.page.field_metatag
@@ -27,6 +28,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_exclude_this_page:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_is_product:
     weight: 4
     label: above
