@@ -1119,6 +1119,7 @@ display:
         arguments: false
         use_ajax: false
         pager: false
+        sorts: false
       style:
         type: default
         options:
@@ -1819,6 +1820,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -2301,6 +2303,7 @@ display:
         arguments: false
         use_ajax: false
         pager: false
+        sorts: false
       style:
         type: default
         options:
@@ -2970,6 +2973,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
