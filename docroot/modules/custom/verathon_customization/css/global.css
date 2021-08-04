@@ -692,3 +692,14 @@ form.webform-submission-form div.form-actions {
 a.arrow-right::after {
   content: url(/sites/default/files/2021-07/arrow.png);
 }
+
+/* Hide/Display CTA based on the toggle value between Normal CTA and Gated CTA */
+a.gated-form-true{
+  display: none !important;
+}
+a.gated-form-true.use-ajax {
+  display: block !important;
+}
+a.gated-form-false.use-ajax {
+  display: none;
+}
