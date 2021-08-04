@@ -1527,6 +1527,15 @@ display:
           admin_label: 'field_product_documentation: Content'
           required: false
           plugin_id: standard
+        field_language:
+          id: field_language
+          table: node__field_language
+          field: field_language
+          relationship: field_product_documentation
+          group_type: group
+          admin_label: 'field_language: Taxonomy term'
+          required: false
+          plugin_id: standard
       footer: {  }
       filters:
         status:
@@ -1820,7 +1829,21 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      sorts: {  }
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_language
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
@@ -2711,6 +2734,15 @@ display:
           admin_label: 'field_product_documentation: Content'
           required: false
           plugin_id: standard
+        field_language:
+          id: field_language
+          table: node__field_language
+          field: field_language
+          relationship: field_product_documentation
+          group_type: group
+          admin_label: 'field_language: Taxonomy term'
+          required: false
+          plugin_id: standard
       footer: {  }
       filters:
         status:
@@ -2973,7 +3005,21 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      sorts: {  }
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_language
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
