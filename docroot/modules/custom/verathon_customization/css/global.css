@@ -705,8 +705,3 @@ a.gated-form-true.use-ajax {
 a.gated-form-false.use-ajax {
   display: none;
 }
-
-/* Hotspot border issue */
-html.h5p-iframe .h5p-content {
-  border: none;
-}
