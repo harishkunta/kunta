@@ -694,12 +694,19 @@ a.arrow-right::after {
 }
 
 /* Hide/Display CTA based on the toggle value between Normal CTA and Gated CTA */
-a.gated-form-true{
+a.gated-form-true {
   display: none !important;
 }
+
 a.gated-form-true.use-ajax {
   display: block !important;
 }
+
 a.gated-form-false.use-ajax {
   display: none;
+}
+
+/* Hotspot border issue */
+html.h5p-iframe .h5p-content {
+  border: none;
 }
