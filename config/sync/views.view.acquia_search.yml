@@ -9,7 +9,7 @@ dependencies:
     - field.storage.node.field_media
     - field.storage.node.field_video_thumbnail
     - search_api.index.acquia_search_index
-    - taxonomy.vocabulary.product_line
+    - taxonomy.vocabulary.procedure
   module:
     - cohesion
     - file
@@ -894,10 +894,10 @@ display:
           entity_type: node
           plugin_id: search_api_field
       filters:
-        field_product_line:
-          id: field_product_line
+        field_procedure:
+          id: field_procedure
           table: search_api_index_acquia_search_index
-          field: field_product_line
+          field: field_procedure
           relationship: none
           group_type: group
           admin_label: ''
@@ -906,14 +906,14 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: field_product_line_op
+            operator_id: field_procedure_op
             label: ''
             description: ''
             use_operator: false
-            operator: field_product_line_op
+            operator: field_procedure_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_product_line
+            identifier: field_procedure
             required: false
             remember: false
             multiple: false
@@ -943,7 +943,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: product_line
+          vid: procedure
           hierarchy: false
           error_message: true
           plugin_id: search_api_term
@@ -1005,44 +1005,6 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_boolean
-        field_exclude_this_page:
-          id: field_exclude_this_page
-          table: search_api_index_acquia_search_index
-          field: field_exclude_this_page
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '!='
           value: '1'
           group: 1
           exposed: false
