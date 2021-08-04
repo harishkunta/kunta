@@ -75,3 +75,8 @@
     flex-direction: row;
   }
 }
+
+/* Hotspot border issue */
+html.h5p-iframe .h5p-content {
+  border: none;
+}
