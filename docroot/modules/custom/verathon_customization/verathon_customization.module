@@ -155,7 +155,12 @@ function verathon_customization_form_views_exposed_form_alter(&$form, FormStateI
     $country_codes = $query->orderBy('field_address_country_code', 'ASC')->execute()->fetchCol();
     $countries['All'] = $form['field_address_country_code']['#options']['All'];
     foreach ($country_codes as $country_code) {
-      $countries[$country_code] = $form['field_address_country_code']['#options'][$country_code];
+      if ($country_code == 'HK') {
+        $countries[$country_code] = t('Hong Kong');
+      }
+      else {
+        $countries[$country_code] = $form['field_address_country_code']['#options'][$country_code];
+      }
     }
     $form['field_address_country_code']['#options'] = $countries;
   }
@@ -196,6 +201,7 @@ function verathon_customization_views_post_execute(ViewExecutable $view) {
  * @param $hook
  */
 function verathon_customization_preprocess_field__field_address(&$variables, $hook) {
+
   if ($variables['items'][0]['content']['country']['#value'] === 'China') {
     unset($variables['items'][0]['content']['locality']['#value']);
     $variables['items'][0]['content']['administrative_area']['#value'] = $variables['items'][0]['content']['administrative_area']['#value'] == 'Shanghai Shi' ? t('Shanghai') : $variables['items'][0]['content']['administrative_area']['#value'];
