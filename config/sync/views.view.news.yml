@@ -736,6 +736,7 @@ display:
           offset: 0
       defaults:
         pager: false
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
