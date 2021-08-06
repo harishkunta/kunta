@@ -1,0 +1,7 @@
+verathon_customization.thank_you: 
+  path: '/thankyou' 
+  defaults: 
+    _controller: '\Drupal\verathon_customization\Controller\PdfDownloadController::downloadPdf' 
+    _title: 'Thank you!'
+  requirements: 
+    _permission: 'access content'

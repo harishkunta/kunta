@@ -68,23 +68,8 @@ class DownloadFileWebformHandler extends WebformHandlerBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state, WebformSubmissionInterface $webform_submission) {
-    $values = $webform_submission->getData();
-    $fileName = $values['file_name'];
-    $query = $this->database->select('file_managed', 'f');
-    $query->fields('f', ['uri']);
-    $query->condition('filename', $fileName);
-    $uri = $query->execute()->fetchField();
-    $headers = [
-      'Content-Type' => 'application/pdf',
-      'Content-Description' => 'File Download',
-      'Content-Disposition' => 'attachment;filename=' . $fileName
-    ];
-
-    $file_response = new BinaryFileResponse($uri, 200, $headers, true);
-    $form_state->setResponse($file_response);
-    $ajax_response = new AjaxResponse();
-    $ajax_response->addCommand(new CloseModalDialogCommand());
-    return $ajax_response;
+    $form_state->setRedirect('verathon_customization.thank_you');
+    return;
   }
 
   /**

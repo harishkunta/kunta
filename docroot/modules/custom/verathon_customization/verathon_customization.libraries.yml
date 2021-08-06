@@ -1,9 +1,12 @@
 verathon_search:
   js:
     js/custom-search.js: {}
+    js/verathon-cookie.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
+    - core/drupal
+    - core/js-cookie
 
 global-styling:
   version: VERSION
