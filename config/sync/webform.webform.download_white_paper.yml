@@ -19,7 +19,7 @@ css: ''
 javascript: ''
 settings:
   ajax: false
-  ajax_scroll_top: form
+  ajax_scroll_top: ''
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
@@ -114,10 +114,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: modal
+  confirmation_type: none
   confirmation_title: 'Thank you!'
-  confirmation_message: ''
-  confirmation_url: 'https://www.verathon.com/contact-us/?productofinterest=glidescope&scheduledemovisit=yes&utm_campaign=&utm_medium=&utm_source=&utm_content=&utm_term='
+  confirmation_message: 'Thank you'
+  confirmation_url: /thank-you
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
