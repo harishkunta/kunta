@@ -188,3 +188,27 @@ function verathon_customization_views_post_execute(ViewExecutable $view) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_field().
+ *
+ * @param $variables
+ * @param $hook
+ */
+function verathon_customization_preprocess_field__field_address(&$variables, $hook) {
+  if ($variables['items'][0]['content']['country']['#value'] === 'China') {
+    unset($variables['items'][0]['content']['locality']['#value']);
+    $variables['items'][0]['content']['administrative_area']['#value'] = $variables['items'][0]['content']['administrative_area']['#value'] == 'Shanghai Shi' ? t('Shanghai') : $variables['items'][0]['content']['administrative_area']['#value'];
+  }
+  if ($variables['items'][0]['content']['country']['#value'] === 'Netherlands') {
+    $variables['items'][0]['content']['country']['#value'] = t('The Netherlands');
+  }
+  if ($variables['items'][0]['content']['country']['#value'] === 'Italy') {
+    $variables['items'][0]['content']['country']['#value'] = t('Italia');
+    unset($variables['items'][0]['content']['administrative_area']['#value']);
+  }
+  if ($variables['items'][0]['content']['country']['#value'] === 'Hong Kong SAR China') {
+    $variables['items'][0]['content']['country']['#value'] = t('Hong Kong');
+    unset($variables['items'][0]['content']['administrative_area']['#value']);
+  }
+}
