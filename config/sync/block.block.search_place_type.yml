@@ -1,0 +1,30 @@
+uuid: ac6e9e8e-7654-46be-a800-14e6769abd3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.search_place_type
+  module:
+    - cohesion
+    - facets
+  theme:
+    - cohesion_theme
+_core:
+  default_config_hash: qSr7xrCVUuIExAhGhrPVswy-GzRNWXelb_PDvgzw0Fo
+id: search_place_type
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'facet_block:search_place_type'
+settings:
+  id: 'facet_block:search_place_type'
+  label: 'Place Type'
+  provider: facets
+  label_display: '0'
+  block_id: search_place_type
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

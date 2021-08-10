@@ -1,0 +1,30 @@
+uuid: 338a1b7e-b906-4726-916e-a81f74251c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.articles_article_type
+  module:
+    - cohesion
+    - facets
+  theme:
+    - cohesion_theme
+_core:
+  default_config_hash: jt070m2rW3uloU9ApJfJMBpxYi4J1jKZYRjQ__sJUHw
+id: articles_article_type
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'facet_block:articles_article_type'
+settings:
+  id: 'facet_block:articles_article_type'
+  label: 'Article Type'
+  provider: facets
+  label_display: '0'
+  block_id: articles_article_type
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

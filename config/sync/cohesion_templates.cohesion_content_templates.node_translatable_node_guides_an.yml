@@ -1,0 +1,18 @@
+uuid: efe6e4bb-bb76-47a8-a2e1-02d2cbc11466
+langcode: en
+status: false
+dependencies: {  }
+id: node_translatable_node_guides_an
+label: 'Guides and Articles (Node, Translatable node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: translatable_node
+view_mode: guides_and_articles
+master_template: ''

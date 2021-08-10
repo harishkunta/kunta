@@ -1,0 +1,18 @@
+uuid: 7758d177-4444-48d3-811e-3ea8e78d58ee
+langcode: en
+status: false
+dependencies: {  }
+id: node_translatable_node_product_0
+label: 'Product Support Cards (Node, Translatable node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: translatable_node
+view_mode: product_support_cards
+master_template: ''
