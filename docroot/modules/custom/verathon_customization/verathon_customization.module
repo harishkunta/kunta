@@ -116,7 +116,7 @@ function verathon_customization_preprocess_html(array &$variables) {
   $variables['page']['#attached']['html_head'][] = [$xuacompatible, 'x-ua-compatible'];
 
   // Adding meta tags for service and support pages.
-  if (($variables['node_type'] == 'product') || (($variables['node_type'] == 'page') && ($variables['head_title']['title'] == 'Service & Support | Verathon'))) {
+  if ((isset($variables['node_type']) && $variables['node_type'] == 'product') || ((isset($variables['node_type']) && $variables['node_type'] == 'page') && ($variables['head_title']['title'] == 'Service & Support | Verathon'))) {
     $robots = [
       '#tag' => 'meta',
       '#attributes' => [
