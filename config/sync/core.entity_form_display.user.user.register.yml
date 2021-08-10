@@ -1,41 +1,23 @@
-uuid: 32846b84-26c0-4c79-a491-aa50b9348cb0
+uuid: 578a18de-cede-4b6e-b5eb-39a4a6ad30f4
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
     - field.field.user.user.tmgmt_translation_skills
   module:
-    - datetime
     - path
     - tmgmt_language_combination
     - user
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: -10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_last_password_reset:
-    type: datetime_default
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_password_expiration:
-    type: boolean_checkbox
-    weight: 3
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    region: content
-  google_analytics:
-    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -62,4 +44,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_last_password_reset: true
+  field_password_expiration: true
   langcode: true

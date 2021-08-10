@@ -1,0 +1,30 @@
+uuid: 906944a4-e5c2-45a4-98d3-6fa7dc890c4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.search_category
+  module:
+    - cohesion
+    - facets
+  theme:
+    - cohesion_theme
+_core:
+  default_config_hash: boOigLbJyJwd6ZMS0o7tWxTZ_bzubUFrUsCKa1Adis8
+id: search_category
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'facet_block:search_category'
+settings:
+  id: 'facet_block:search_category'
+  label: Category
+  provider: facets
+  label_display: '0'
+  block_id: search_category
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

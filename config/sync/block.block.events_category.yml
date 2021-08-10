@@ -1,0 +1,30 @@
+uuid: b92827da-d0d8-427e-bfd1-5d16a6285f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.events_category
+  module:
+    - cohesion
+    - facets
+  theme:
+    - cohesion_theme
+_core:
+  default_config_hash: uhLpAKlHQaZB8D68gE619vZ_YntjGEDg0-fjD55j-yc
+id: events_category
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'facet_block:events_category'
+settings:
+  id: 'facet_block:events_category'
+  label: Category
+  provider: facets
+  label_display: '0'
+  block_id: events_category
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

@@ -1,0 +1,18 @@
+uuid: 504051dc-e590-457d-8168-7f0eaf46ad95
+langcode: en
+status: false
+dependencies: {  }
+id: node_translatable_node_token
+label: 'Token (Node, Translatable node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0029
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: translatable_node
+view_mode: token
+master_template: ''
