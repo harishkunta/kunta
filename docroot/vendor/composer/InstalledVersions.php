@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'cb876bb482a3534527874b9df4843a4a4ababc13',
+    'reference' => 'a23822d82b19c7ee5ea40e46eb791ae9a829709c',
     'name' => 'acquia/acquia-cms-project',
   ),
   'versions' => 
@@ -44,7 +44,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'cb876bb482a3534527874b9df4843a4a4ababc13',
+      'reference' => 'a23822d82b19c7ee5ea40e46eb791ae9a829709c',
     ),
     'acquia/acquia_cms' => 
     array (
@@ -1817,6 +1817,15 @@ private static $installed = array (
         0 => '9.1.9',
       ),
     ),
+    'drupal/tmgmt' => 
+    array (
+      'pretty_version' => '1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.12',
+    ),
     'drupal/token' => 
     array (
       'pretty_version' => '1.9.0',
@@ -1846,6 +1855,16 @@ private static $installed = array (
       array (
         0 => '9.1.9',
       ),
+    ),
+    'drupal/trailing_slash' => 
+    array (
+      'pretty_version' => 'dev-1.x',
+      'version' => 'dev-1.x',
+      'aliases' => 
+      array (
+        0 => '1.x-dev',
+      ),
+      'reference' => '3448155ba259a5fb76497fd95b8e073b890e7d81',
     ),
     'drupal/update' => 
     array (
