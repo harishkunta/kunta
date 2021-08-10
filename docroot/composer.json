@@ -39,6 +39,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/menu_item_extras": "^2.15",
         "drupal/paragraphs": "^1.12",
+        "drupal/tmgmt": "^1.12",
         "drupal/trailing_slash": "^1.0",
         "drupal/views_block_filter_block": "^1.0",
         "drush/drush": "^10.5"
