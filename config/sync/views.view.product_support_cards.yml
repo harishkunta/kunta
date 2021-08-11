@@ -3224,7 +3224,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"hero-section\">\r\n            <div class=\"support-landing-desc\">\r\n                <h6>Product support</h6>\r\n                {{ body }}\r\n                <h1>{{ title }}</h1>\r\n            </div>\r\n            <div class=\"support-landing-container\">\r\n                <div class=\"support-landing-img\">\r\n                    {{ field_media }}\r\n                </div>\r\n            </div>\r\n        </div>"
+            text: "<div class=\"hero-section\">\r\n            <div class=\"support-landing-desc\">\r\n                <a href=\"\" class=\"browser-back\">Go Back</a>\r\n                <h6>Product support</h6>\r\n                {{ body }}\r\n                <h1>{{ title }}</h1>\r\n            </div>\r\n            <div class=\"support-landing-container\">\r\n                <div class=\"support-landing-img\">\r\n                    {{ field_media }}\r\n                </div>\r\n            </div>\r\n        </div>"
             make_link: false
             path: ''
             absolute: false
