@@ -3844,6 +3844,18 @@ display:
           entity_type: taxonomy_term
           entity_field: weight
           plugin_id: standard
+        field_weight_to_sort_value:
+          id: field_weight_to_sort_value
+          table: node__field_weight_to_sort
+          field: field_weight_to_sort_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
