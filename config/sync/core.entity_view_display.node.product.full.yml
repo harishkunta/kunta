@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.product.field_no_longer_supported
     - field.field.node.product.field_product_documentation
     - field.field.node.product.field_product_line
+    - field.field.node.product.field_weight_to_sort
     - node.type.product
   module:
     - user
@@ -32,6 +33,7 @@ hidden:
   field_no_longer_supported: true
   field_product_documentation: true
   field_product_line: true
+  field_weight_to_sort: true
   langcode: true
   links: true
   search_api_excerpt: true

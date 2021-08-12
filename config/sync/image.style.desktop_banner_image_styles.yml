@@ -1,0 +1,15 @@
+uuid: f2d94d50-e75c-49dd-b96e-7bf34dd66f70
+langcode: en
+status: true
+dependencies: {  }
+name: desktop_banner_image_styles
+label: 'Desktop Banner Image Styles (100% * 624px)'
+effects:
+  9484a1b7-54d8-42a7-879e-538620cf284e:
+    uuid: 9484a1b7-54d8-42a7-879e-538620cf284e
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 624
+      upscale: true
