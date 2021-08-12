@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_article_type
     - field.storage.node.field_department
     - field.storage.node.field_document
+    - field.storage.node.field_exclude_this_page
     - field.storage.node.field_job_title
     - field.storage.node.field_layout_canvas
     - field.storage.node.field_news_type
@@ -109,6 +110,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_document
+  field_exclude_this_page:
+    label: 'Exclude this Page from Search'
+    datasource_id: 'entity:node'
+    property_path: field_exclude_this_page
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_exclude_this_page
   field_job_title:
     label: 'Job Title'
     datasource_id: 'entity:node'
@@ -315,7 +324,7 @@ processor_settings:
       h3: 2
       strong: 2
     weights:
-      preprocess_index: -15
+      preprocess_index: -47
       preprocess_query: -15
   language_with_fallback: {  }
   rendered_item: {  }
@@ -325,14 +334,15 @@ processor_settings:
   type_boost:
     boosts:
       'entity:cohesion_layout':
-        datasource_boost: !!float 1
+        datasource_boost: !!float 0
       'entity:component_content':
-        datasource_boost: !!float 1
+        datasource_boost: !!float 0
       'entity:node':
         datasource_boost: !!float 1
         bundle_boosts:
           article: !!float 5
           clinical_publications: !!float 8
+          country_and_region: !!float 0
           event: 0.1
           instructional_videos: !!float 13
           news: !!float 3
@@ -342,7 +352,7 @@ processor_settings:
           product: 0.1
           product_documentation: !!float 21
     weights:
-      preprocess_index: 0
+      preprocess_index: -48
 tracker_settings:
   default:
     indexing_order: fifo

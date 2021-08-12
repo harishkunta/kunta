@@ -3,8 +3,6 @@
 namespace Drupal\verathon_customization\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\verathon_customization\Controller\PdfDownloadController;
-
 
 /**
  * {@inheritdoc}
@@ -26,11 +24,11 @@ class PdfDownloadController extends ControllerBase {
       $element = array( 
         '#markup' => '<div align="center" class="coh-container-boxed"><h3>Thank you for your Interest!</h3><a align="center" href=' .$brochure_url. ' download>' .t("Click Here to Download the Brochure") . '</a></div>', 
       ); 
-      // setcookie("gatedFile", null, -1);
+      setcookie("gatedFile", null, -1);
       return $element;
     }
     $element = array( 
-      '#markup' => '<div class="coh-container-boxed"><h1>Thank you for Visiting!<h1></div>', 
+      '#markup' => '<div align="center" class="coh-container-boxed"><h3>Thank you for your Interest!</h3></div>', 
     ); 
     return $element;
   }
