@@ -47,7 +47,7 @@ backend_config:
     api_host: 'https://api.sr-prod02.acquia.com'
     skip_schema_check: true
     scheme: http
-    host: s7003-us-west-2.sr-prod02.acquia.com
+    host: s7016-us-west-2.sr-prod02.acquia.com
     port: 8983
     path: /solr/LUYZ-204244.dev.verathon
     core: LUYZ-204244.dev.verathon

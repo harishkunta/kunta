@@ -3,8 +3,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
-use Drupal\media\Entity\Media;
-use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\views\ViewExecutable;
 use Drupal\taxonomy\Entity\Term;
@@ -216,5 +214,29 @@ function verathon_customization_preprocess_field__field_address(&$variables, $ho
   if ($variables['items'][0]['content']['country']['#value'] === 'Hong Kong SAR China') {
     $variables['items'][0]['content']['country']['#value'] = t('Hong Kong');
     unset($variables['items'][0]['content']['administrative_area']['#value']);
+  }
+}
+/**
+ * Implements hook_preprocess_views_view
+ */
+function verathon_customization_preprocess_views_view(&$vars){
+// Only use unique IDs for view.
+  if ($vars['view']->id() === 'product_support_cards' && $vars['display_id'] === 'prod_support_doc_list') {
+    $rows = [];
+    if (isset($vars['rows'][0])) {
+      $rows = $vars['rows'][0]['#rows'];
+    }
+    $new_rows = [];
+    $used_nids = [];
+    if (is_array($rows)) {
+      foreach ($rows as $row){
+        $nid = $row['#row']->node_field_data_node__field_product_documentation_nid; // Change to the field you want to be unique.
+        if (!in_array($nid, $used_nids)) {
+          $used_nids[] = $nid;
+          $new_rows[] = $row;
+        }
+      }
+      $vars['rows'][0]['#rows'] = $new_rows;
+    }
   }
 }

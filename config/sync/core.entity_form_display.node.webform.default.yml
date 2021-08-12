@@ -14,8 +14,16 @@ targetEntityType: node
 bundle: webform
 mode: default
 content:
-  webform:
+  title:
+    type: string_textfield
     weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  webform:
+    weight: 1
     settings:
       default_data: true
       webforms: {  }
@@ -32,7 +40,6 @@ hidden:
   publish_state: true
   status: true
   sticky: true
-  title: true
   uid: true
   unpublish_on: true
   unpublish_state: true
