@@ -697,11 +697,19 @@ a.arrow-right::after {
 a.gated-form-true {
   display: none !important;
 }
-
 a.gated-form-true.use-ajax {
   display: block !important;
 }
-
 a.gated-form-false.use-ajax {
   display: none;
+}
+
+/*Back Button Style in Product Banner*/
+a.browser-back{
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  color: #169BD5;
+  cursor: pointer;
 }
